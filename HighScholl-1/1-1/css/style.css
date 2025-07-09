@@ -226,7 +226,9 @@ button.after_hand::after {content:''; display:inline-block; width:72px; height:8
 /*H-5-01*/
 .H_5_01_con {width:100%; max-width:1600px; margin:0 auto; background-image:url("../img/H_5_01_con_bg.png"); background-repeat:no-repeat; background-size:1600px; background-position:center;}
 .H_5_01_con > .contents_con {height:900px; padding:60px 56px 0 50px;}
-.H_5_01_con > .contents_con > .title_con {width:789px; height:199px; background-image:url("../img/H_5_01_title_text.png"); background-repeat:no-repeat; background-size:789px; background-position:center; margin:0 0 69px 0; text-indent:-999px; font-size:0;}
+.H_5_01_con > .contents_con > .title_con {
+	width:789px; height:199px;
+	 background-image:url("../img/H_5_01_title_text.png"); background-repeat:no-repeat; background-size:789px; background-position:center; margin:0 0 69px 0; text-indent:-999px; font-size:0;}
 .H_5_01_con > .contents_con > .contents_con {position:relative; top:0; left:0;}
 .H_5_01_con > .contents_con > .contents_con:after {content:""; display:block; clear:both;}
 .H_5_01_con > .contents_con > .contents_con > .nav {float:left; padding:190px 0 0 0;}

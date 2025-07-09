@@ -22,7 +22,15 @@ video::cue {
 /*H-5-01*/
 .H_5_01_con {max-width:min(1600px, 100vw); background-size:min(1600px, 100vw);}
 .H_5_01_con > .contents_con {height:min(900px, 56.25vw); padding:min(60px, 3.75vw) min(56px, 3.5vw) 0 min(50px, 3.13vw);}
-.H_5_01_con > .contents_con > .title_con {width:min(789px, 49.31vw); height:min(199px, 12.44vw); background-size:min(789px, 49.31vw); margin:0 0 min(69px, 4.31vw) 0; font-size: min(134px, 8.37vw);}
+.H_5_01_con > .contents_con > .title_con {
+	margin:min(26px, 1.63vw) 0 min(69px, 4.31vw) min(10px, 0.63vw) ;
+  font-size: min(130px, 8.125vw); 
+	color:#fff;
+	font-family: "WAGURI", sans-serif;
+	font-weight: 400;
+	text-indent: 0;
+
+}
 .H_5_01_con > .contents_con > .contents_con > .nav {padding:min(190px, 11.88vw) 0 0 0;}
 .H_5_01_con > .contents_con > .contents_con > .nav > ul > li {margin:min(18px, 1.13vw) 0 0 0;}
 .H_5_01_con > .contents_con > .contents_con > .nav > ul > li > .text_con span {font-size:min(50px, 3.13vw); letter-spacing:max(-0.5px, -0.03vw);}
