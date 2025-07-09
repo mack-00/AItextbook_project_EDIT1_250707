@@ -456,7 +456,15 @@ button.after_hand::after {width:min(72px, 4.50vw); height:min(86px, 5.38vw);}
 .H_2_07_con .text01 {margin-top:min(5px, 0.31vw); font-size:min(26px, 1.63vw);}
 
 .H_2_07_con .main_both {gap:min(17px, 1.06vw); margin-top:min(20px, 1.25vw);}
-.H_2_07_con .main_both .img {flex-basis:min(877px, 54.81vw);}
+.H_2_07_con .main_both .img_item {
+	flex-basis:min(877px, 54.81vw);
+	display:flex;
+	flex-wrap: wrap;
+	align-self: flex-start;
+}
+.H_2_07_con .main_both .img_item p{
+	width: 50%;
+}
 .H_2_07_con .main_both .tit {height:min(45px, 2.81vw); margin-bottom:min(5px, 0.31vw); font-size:min(26px, 1.63vw); }
 .H_2_07_con .main_both .item + .item {margin-top:min(10px, 0.63vw);}
 .H_2_07_con .exam_textarea {height:min(150px, 9.38vw);}

@@ -584,9 +584,16 @@ button.after_hand::after {width:min(72px, 4.50vw); height:min(86px, 5.38vw);}
 .H_212_18_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .question_con > .list_con > ul > li > .text_con .num_text.text02 {top:min(3px, 0.19vw);}
 .H_212_18_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .question_con > .list_con > ul > li > .text_con .num_text.text03 {top:min(9px, 0.56vw);}
 .H_212_18_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .question_con > .list_con > ul > li > .text_con .text_div {margin:min(6px, 0.38vw) 0 0 0;}
-.H_212_18_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .question_con > .list_con > ul > li > .text_con .text_div > .blank_con {width:min(200px, 12.5vw); height:min(50px, 3.13vw); border:min(2px, 0.13vw) solid #CCC; margin:0 min(7px, 0.44vw) 0 0; border-radius:min(10px, 0.63vw);}
-.H_212_18_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .question_con > .list_con > ul > li > .text_con .text_div > .blank_con span.draggable {width:min(200px, 12.5vw); border:min(3px, 0.19vw) solid #EF5E5E; margin:max(-2px, -0.13vw) 0 0 max(-2px, -0.13vw); font-size:min(32px, 2vw); line-height:min(44px, 2.75vw); border-radius:min(10px, 0.63vw); box-shadow:0px min(4px, 0.25vw) min(4px, 0.25vw) 0px rgba(0,0,0,0.25);}
-.H_212_18_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .question_con > .list_con > ul > li > .text_con .text_div > .text_con span {font-size:min(32px, 2vw); line-height:min(41.6px, 2.6vw);}
+.H_212_18_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > 
+.question_con > .list_con > ul > li > .text_con .text_div > .blank_con 
+{width:min(190px, 11.875vw);  height:min(50px, 3.13vw); border:min(2px, 0.13vw) solid #CCC; margin:0 min(7px, 0.44vw) 0 0; border-radius:min(10px, 0.63vw);   margin-right: min(5px, 0.313vw) !important;}
+.H_212_18_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .question_con > 
+.list_con > ul > li > .text_con .text_div > .blank_con span.draggable 
+{width:min(190px, 11.875vw); border:min(3px, 0.19vw) solid #EF5E5E; margin:max(-2px, -0.13vw) 0 0 max(-2px, -0.13vw); font-size:min(32px, 2vw); line-height:min(44px, 2.75vw); border-radius:min(10px, 0.63vw); box-shadow:0px min(4px, 0.25vw) min(4px, 0.25vw) 0px rgba(0,0,0,0.25);}
+.H_212_18_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .question_con > 
+.list_con > ul > li > .text_con .text_div > .text_con span
+ {font-size:min(32px, 2vw); line-height:min(41.6px, 2.6vw);
+}
 .H_212_18_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .answer_con {margin:min(184px, 11.50vw) 0 0 0; padding:0 min(301px, 18.81vw) 0 0;}
 .H_212_18_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .answer_con > .title_con {margin:0 0 min(15px, 0.94vw) 0;}
 .H_212_18_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .answer_con > .title_con span {font-size:min(32px, 2vw); line-height:min(51px, 3.19vw);}

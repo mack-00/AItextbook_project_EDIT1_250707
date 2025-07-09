@@ -811,7 +811,7 @@ button.after_hand::after {content:''; display:inline-block; width:72px; height:8
 .H_2_07_con .text01 {margin-top:5px; font-size:26px; line-height:130%;}
 
 .H_2_07_con .main_both {gap:17px; margin-top:20px;}
-.H_2_07_con .main_both .img {flex-basis:877px; flex-shrink:0; background: url(../img/H_2_07_img01.png) no-repeat; background-size: contain;}
+/*.H_2_07_con .main_both .img {flex-basis:877px; flex-shrink:0; background: url(../img/H_2_07_img01.png) no-repeat; background-size: contain;}*/
 .H_2_07_con .main_both .form_wrap {flex:1;}
 .H_2_07_con .main_both .tit {height:45px; margin-bottom:5px; background: rgba(80, 84, 234, 0.20); font-size:26px; font-weight:600;}
 .H_2_07_con .main_both .item + .item {margin-top:10px;}
