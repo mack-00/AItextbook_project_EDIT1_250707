@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>문제 발견하기</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+    <script src="https://acv001.aiktbook.com/api/static/message-channel-iframe.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_3_07_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">창의∙융합 프로젝트</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h2>
+								별 정보를 어떻게 효율적으로 관리할까? 
+							</h2>
+
+							<h1>
+								문제 발견하기
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_con" tabindex="0">
+						<span>
+							&nbsp;&nbsp;‘프로그래머’가 되기 위해서는 다양한 분야의 문제를 해결하는 프로그래밍 능력을 길러야 한다. 다음 글을 읽고 발견한<br> 
+							문제를 정리하여 적어 보자.
+						</span>
+					</div>
+					<div class="detail_con">
+						<div class="left_con">
+							<div class="text_con" tabindex="0">
+								<span>
+									&nbsp;&nbsp;밤하늘의 빛나는 별을 관찰해 보자. 별은 저마다 다른 빛을 내며 반짝인다.<br>
+									그런데 별들은 왜 색이 서로 다를까? 그렇다. 별의 색이 다른 까닭은 별마다 표면<br>
+									온도가 다르기 때문이다.<br>
+									&nbsp;&nbsp;우리가 관찰한 별들과 별들의 색을 기록한다고 생각해 보자. 별의 수가 너무 많아<br>
+									손으로 기록하기는 힘들 것이다. 별들의 표면 온도 정보를 관리하고, 우리가 <br>
+									궁금해하는 두 별의 표면 온도를 비교해 주는 프로그램이 있다면 별을 관찰하는<br> 
+									연구가 한결 편리해지지 않을까?
+								</span>
+							</div>
+							<div class="img_con">
+								<img src="img/H_3_07_visual.png" alt="별을 관찰하는 두 사람">
+							</div>
+						</div>
+						<div class="right_con">
+							<div class="title_con" tabindex="0">
+								<span>문제 정의</span>
+							</div>
+							<form id="frm1" onsubmit="return false">
+								<input type="hidden" name="aidt_pageTitle" value="창의융합: 문제 발견하기">
+								<input type="hidden" name="aidt_examId" value="1">
+								<input type="hidden" name="aidt_exam" value="문제 정의">
+								<input type="hidden" name="aidt_answer" value="">
+								<input type="hidden" name="aidt_mcqYn" value="N">
+								<input type="hidden" name="aidt_type" value="narrative">
+								<textarea class="round_form_cont" placeholder="내용을 입력해 보자" name="aidt_input"></textarea>
+								<div class="btn_con">
+									<button id="btn1" class="a_btn a_btn01" type="button" aria-label="제출하기" tabindex="0">제출하기</button>
+									<button id="a_btn02" class="a_btn a_btn02" type="button" aria-label="다시 제출하기" style="display:none;" tabindex="0">다시 제출하기</button>
+								</div>			
+							</form>			
+
+						</div>
+						
+						
+					</div>
+					
+				</div>
+
+				
+				<div class="popup_con_bg popup01"></div>
+				<div class="popup_con popup01" role="alert"></div>
+
+				<div class="popup_con_bg popup02"></div>
+				<div class="popup_con popup02" role="alert"></div>				
+				
+			</div>
+		</main>
+
+	<script>
+		const child = new ClientAPI();
+	$(document).ready(function() {
+
+	function showPopup(type) {
+		const $bg = $(".popup_con_bg." + type);
+		const $popup = $(".popup_con." + type);
+
+		$bg.fadeIn(200);
+		$popup.fadeIn(200);
+
+		setTimeout(function() {
+		$bg.fadeOut(200);
+		$popup.fadeOut(200);
+		}, 1500);
+	}
+
+	function validateAndSubmit() {
+		const val = $("textarea[name='aidt_input']").val().trim();
+
+		if (val === "") {
+		showPopup("popup01");
+		} else {
+		showPopup("popup02");
+        child.sendFormData('frm1');
+		$("#btn1").hide();
+		$("#a_btn02").show();
+		}
+	}
+
+	// 제출하기 클릭
+	$("#btn1").on("click", function(e) {
+		e.preventDefault();
+		validateAndSubmit();
+	});
+
+	// 다시 제출하기 클릭
+	$("#a_btn02").on("click", function(e) {
+		e.preventDefault();
+		validateAndSubmit();
+	});
+
+	});
+	</script>
+
+	</div>
+
+	<script>
+		const contentId = 'H-3-07';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

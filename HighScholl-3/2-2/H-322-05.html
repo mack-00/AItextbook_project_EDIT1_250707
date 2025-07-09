@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>표준 입력 함수</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_322_05_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								표준 입력 함수
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01">
+						&nbsp;&nbsp;표준 입력을 위해 input( ) 함수를 사용한다. 괄호 안의 문자열을 모니터에 보이고, 키보드로 입력받은 값을 문자열로 저장 한다. 입력받은 값은 좌변의 변수에 저장한다.<br />
+					</div>
+					<div class="sub_title_dot">표준 입력 프로그램 예시</div>
+					<div class="video_wrap">
+						<div class="video_con">
+							<div class="contents_con">
+								<div class="video-container">
+									<video id="player01" data-content-id="H-322-05" controls crossorigin></video>
+								</div>
+							</div>
+						</div>
+						<button class="btn_data_popup" aria-label="보충자료" aria-controls="fullpopup01"></button>
+					</div>
+					
+
+				</div>
+				<!-- popup -->
+				<div class="full_popup_wrap H_322_05_full_popup" id="fullpopup01">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>int() 함수</span>
+						</div>
+						<div class="full_popoup_content">
+							<div class="text01">
+								input( ) 함수로 입력받은 값은 문자열로 저장된다. 문자열을 정수로 변환하고 싶다면 int( ) 함수를 사용한다.
+							</div>
+
+							<div class="code_box rd_10">
+								age = <span class="point">int(</span>input('나이를 입력하세요.')<span class="point">)</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- //popup -->
+			</div>
+		</main>
+
+	</div>
+<script>
+
+$(document).ready(function(){
+	// 보충자료
+	$(".H_322_05_con .btn_data_popup, .btn_active").on("click", function(){
+		var popSelector = "#" + $(this).attr("aria-controls");
+		$(popSelector).show();
+	});
+	$(".full_popup_wrap .btn_close").on("click", function(){
+		$(this).parents(".full_popup_wrap").hide();
+	});
+
+
+});
+
+	
+</script>
+<script>
+	const contentId = 'H-322-05';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+<script>
+	const videoList = [
+		{ 
+			id: "H-322-05",
+			src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-322-05_4000k.mp4,H-322-05_2000k.mp4,H-322-05_1000k.mp4,lang/kor/H-322-05.vtt,.smil/master.m3u8" 
+		}
+	];
+</script>
+<script type="text/javascript" src="./js/xapi.video.js"></script>
+
+</body>
+</html>

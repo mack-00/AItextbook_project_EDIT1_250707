@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>단방향 암호화 방법</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<link rel="stylesheet" href="./css/swiper.css">
+	<script src="./js/swiper.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_212_13_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								단방향 암호화 방법
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					
+					<div class="text_01 fw_600">단방향 암호화인 해시 함수를 사용해서 메시지를 암호화하고 확인해 보자.</div>
+
+					<form id="frm1" onsubmit="return false">
+					<input type="hidden" name="aidt_pageTitle" value="단방향 암호화 방법">
+						<div class="slide_wrap_con">
+							<div class="slide_con">
+								<div class="swiper-container H_212_13_slide">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide H_212_13_slide_div">
+											<div class="contents_con">
+												<div class="contents_div">
+													<div class="text_01 num_title">
+														<span class="number_icon">1</span>
+														입력 메시지를 따라 입력한 후, 해시 함수를 사용하여 암호화해 보자.
+													</div>
+													<div class="both_wrap main_both">
+														<div class="in_box">
+															<div class="tit">입력 메시지: 안녕하세요.</div>
+															<textarea placeholder="내용을 입력해 보자." class="textarea01"></textarea>
+														</div>
+														<button type="button" class="btn_hash btn_confirm01" aria-label="해시함수"></button>
+														<div class="out_box">
+															<div class="tit">해시값(출력값)</div>
+															<div class="out_txt result01"></div>
+														</div>
+													</div>
+
+													<div class="text_01 num_title">
+														<span class="number_icon">2</span>
+														<span class="number_icon">1</span>의 입력 메시지를 일부 수정하여 입력한 후, 해시 함수를 사용하여 암호화해 보자.
+													</div>
+													<div class="both_wrap main_both">
+														<div class="in_box">
+															<div class="tit">입력 메시지: 안녕하세요?</div>
+															<textarea placeholder="내용을 입력해 보자."  class="textarea02"></textarea>
+														</div>
+														<button type="button" class="btn_hash btn_confirm02" aria-label="해시함수"></button>
+														<div class="out_box">
+															<div class="tit">해시값(출력값)</div>
+															<div class="out_txt result02"></div>
+														</div>
+													</div>
+
+
+													
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide H_212_13_slide_div">
+
+											<div class="text_01 num_title" >
+												<span class="number_icon">3</span>
+												<span class="number_icon">1</span>~<span class="number_icon">2</span>를 수행한 뒤, 다음 질문에 답해 보자.
+											</div>
+
+											<!-- table -->
+											<div class="tab_con">
+												<table>
+													<caption>1~2을 수행한 뒤, 다음 질문에 답해 보자.</caption>
+													<colgroup>
+														<col style="width:70%"/>
+														<col>
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col" tabindex="0">
+																<span>질문</span>
+															</th>
+															<th scope="col" tabindex="0">
+																<span>예</span>
+															</th>
+															<th scope="col" tabindex="0">
+																<span>아니요</span>
+															</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th class="info_td" scope="row" tabindex="0">
+																<span>
+																입력 데이터의 크기와 상관없이 항상 고정된 길이의 해시값을 생성한다.
+																</span>
+															</th>
+															<td class="info_td" tabindex="0">
+																<span class="input_radio">
+																<input type="radio" name="aidt_input1" data-group-id="1" value="예" />
+																</span>
+															</td>
+															<td class="info_td" tabindex="0">
+																<span class="input_radio">
+																<input type="radio" name="aidt_input1" data-group-id="1" value="아니오" />
+																</span>
+															</td>
+														</tr>
+														<tr>
+															<th class="info_td" scope="row" tabindex="0">
+																<span>
+																입력값이 아주 조금만 바뀌면 해시값은 달라지지 않는다.
+																</span>
+															</th>
+															<td class="info_td" tabindex="0">
+																<span class="input_radio">
+																<input type="radio" name="aidt_input2" data-group-id="2" value="예" />
+																</span>
+															</td>
+															<td class="info_td" tabindex="0">
+																<span class="input_radio">
+																<input type="radio" name="aidt_input2" data-group-id="2" value="아니오" />
+																</span>
+															</td>
+														</tr>
+													</tbody>
+													</table>
+											</div>
+											<!-- //table -->
+
+											<div class="btn_con">
+												<button id="btn1" class="a_btn a_btn01" type="button" aria-label="확인하기" tabindex="0">확인하기</button>
+												<button id="btn1_1" class="a_btn a_btn02" type="button" aria-label="다시 하기" style="display:none;" tabindex="0">다시 하기</button>
+											</div>
+											 
+											
+										</div>
+									</div>
+									<div class="swiper-pagination H_212_13_slide_swiper-pagination"></div>
+								</div>
+
+
+								<div class="slide_btn prev H_212_13_slide_prev_btn swiper-button-prev" aria-label="슬라이드 이전 버튼" tabindex="0"></div>
+								<div class="slide_btn next H_212_13_slide_next_btn swiper-button-next" aria-label="슬라이드 다음 버튼" tabindex="0"></div>
+							</div>
+
+							
+
+							
+						</div>
+					</form>
+
+					<div class="popup_con_bg popup01"></div>
+					<div class="popup_con popup01" role="alert"></div>
+
+					<div class="popup_con_bg popup02"></div>
+					<div class="popup_con popup02" role="alert"></div>
+
+					<div class="popup_con_bg popup03"></div>
+					<div class="popup_con popup03" role="alert"></div>
+
+					<div class="popup_con_bg popup04"></div>
+					<div class="popup_con popup04" role="alert"></div>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			
+			// H_212_13 슬라이드
+			H_212_13_slide = new Swiper ('.H_212_13_slide', {
+				slidesPerView: 'auto',
+				effect : 'fade', 
+					fadeEffect: { 
+					crossFade: true 
+				},
+				speed: 100,
+				loop: false,
+				pagination: {
+					el: ".H_212_13_slide_swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.H_212_13_slide_next_btn',
+					prevEl: '.H_212_13_slide_prev_btn',
+				},
+				observer: true,
+				observeParents: true,
+				simulateTouch: false,
+				allowTouchMove: false,
+				on: {
+					slideChange: function () {
+						if( this.activeIndex == "1" ){
+							$(".H_212_13_con > .contents_con > .contents_con .write_con > .btn_con").show();
+						}else{
+							$(".H_212_13_con > .contents_con > .contents_con .write_con > .btn_con").hide();
+						}
+					}
+				}
+			});
+
+
+			// 제출하기 - 내용 없음
+			function btn_event01(){
+				$(".H_212_13_con > .contents_con > .contents_con  .btn_con .a_btn").blur();
+				$(".H_212_13_con > .contents_con > .contents_con .popup_con_bg.popup01").fadeIn();
+				$(".H_212_13_con > .contents_con > .contents_con .popup_con.popup01").fadeIn();
+
+				setTimeout(function(){
+					$(".H_212_13_con > .contents_con > .contents_con .popup_con_bg.popup01").fadeOut();
+					$(".H_212_13_con > .contents_con > .contents_con .popup_con.popup01").fadeOut();
+				}, 1000);
+			}
+
+			// 제출하기 - 내용 있음
+			function btn_event02(){
+				child.sendFormData('frm1');
+				//$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn").blur();
+				$(".H_212_13_con > .contents_con > .contents_con .popup_con_bg.popup02").fadeIn();
+				$(".H_212_13_con > .contents_con > .contents_con .popup_con.popup02").fadeIn();
+
+				setTimeout(function(){
+					$(".H_212_13_con > .contents_con > .contents_con .popup_con_bg.popup02").fadeOut();
+					$(".H_212_13_con > .contents_con > .contents_con .popup_con.popup02").fadeOut();
+				}, 1000);
+			}
+
+			// 정답
+			function btn_event03(){
+				//$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn").blur();
+				$(".H_212_13_con > .contents_con > .contents_con .popup_con_bg.popup04").fadeIn();
+				$(".H_212_13_con > .contents_con > .contents_con .popup_con.popup04").fadeIn();
+
+				setTimeout(function(){
+					$(".H_212_13_con > .contents_con > .contents_con .popup_con_bg.popup04").fadeOut();
+					$(".H_212_13_con > .contents_con > .contents_con .popup_con.popup04").fadeOut();
+					//$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn01").css("display","none");
+					//$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn02").css("display","inline-block");
+
+				}, 1000);
+			}
+
+			//해시태그버튼 1
+			$(".btn_confirm01").on("click", function(){
+				var text = $(".textarea01").val();
+				if(text === "") {
+					btn_event01();
+				}else if(text === "안녕하세요.") {
+					$(".result01").text("E53e643c131b8fe3c4ba6c58a355064c5d4c31f7");
+					btn_event03();
+				}else {
+					btn_event02();
+				}
+			});
+
+			//해시태그버튼 2
+			$(".btn_confirm02").on("click", function(){
+				var text = $(".textarea02").val();
+				if(text === "") {
+					btn_event01();
+				}else if(text === "안녕하세요?") {
+					$(".result02").text("2bd829f45a18b75bb0ae5371959feca3e9348aba");
+					btn_event03();
+				}else {
+					btn_event02();
+				}
+			});
+
+			// 질문답
+			$(".a_btn01").on("click", function(){
+				if($("input[type=radio]:checked").length < 2) {
+					btn_event01();
+				}else if($("input[name=aidt_input1]:checked").val() == "예" && $("input[name=aidt_input2]:checked").val() == "아니오") {
+					btn_event03();
+					$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn01").css("display","none");
+					$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn02").css("display","inline-block");
+				}else {
+					btn_event02();
+				}
+			});
+
+			
+
+			$(".a_btn02").on("click", function(){
+				$("input[type=radio]").prop("checked", false);
+				$(this).hide();
+				$(".a_btn01").show();
+			});
+		</script>
+
+	</div>
+	<script>
+		const contentId = 'H-212-13';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

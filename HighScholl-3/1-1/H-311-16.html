@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>알고리즘 설계</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_311_16_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								알고리즘 설계
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01">
+						&nbsp;&nbsp;<span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip01">알고리즘</span>은 문제를 해결하기 위한 일련의 단계적 절차나 방법이며, 
+						<strong class="fw_700">알고리즘 설계</strong>는 핵심 요소와 모델링한 결과를 기반으로 알고리즘을 작성하는 과정을 말한다. 
+					</div>
+
+					<div class="sub_title_dot">알고리즘 설계 예시</div>
+					<div class="video_con">
+						<div class="contents_con">
+							<div class="video-container">
+								<video id="player01" data-content-id="H-311-16" controls crossorigin></video>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 팝업 -->
+				<div class="text_popup_con H_311_16_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0" id="popup-title">
+							<span>
+								알고리즘의 유래
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								페르시아 수학자인 알-콰리즈미(al-Khwarizmi)의 이름에서 유래하였다. 대수학을 뜻하는 ‘알지브라(algebra)’도 그의 책 『알-자브라 왈-무카발라(al-Jabra wal-Muqabala)』에서 유래하였다고 한다.
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- //팝업 -->
+			</div>
+		</main>
+
+	</div>
+<script>
+$(document).ready(function(){
+		// 팝업열기
+		$(".H_311_16_con .link_tooltip").on("click", function(){
+			var popSelector = "#" + $(this).attr("aria-controls");
+			if($(popSelector).css("display") == "none") {
+				$(".H_311_16_con .text_popup_con").not(popSelector).hide();
+				$(popSelector).show();
+			}else {
+				$(popSelector).hide();
+			}
+		});
+		// 팝업닫기
+		$(".H_311_16_con .text_popup_con .a_btn").on("click", function(){
+			$(this).parents(".text_popup_con").hide();
+		});
+
+		
+	});
+</script>	
+
+<script>
+	const contentId = 'H-311-16';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+<script>
+	const videoList = [
+		{ 
+			id: "H-311-16",
+			src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-311-16_4000k.mp4,H-311-16_2000k.mp4,H-311-16_1000k.mp4,lang/kor/H-311-16.vtt,.smil/master.m3u8" 
+		}
+	];
+</script>
+<script type="text/javascript" src="./js/xapi.video.js"></script>
+
+</body>
+</html>

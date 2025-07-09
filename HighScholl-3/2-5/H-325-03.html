@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>객체와 클래스</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_325_03_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								객체와 클래스
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_con01" tabindex="0">
+						<span>
+							<strong class="fw_600">&nbsp;&nbsp;객체(object)</strong>는 프로그램 개발에 필요한 개념이나 사물을 추상화하여 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip01">속성</span>(데이터)과 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip02">메소드</span>(동작)으로 묶은 단위를 말한다. 
+							객체를 생성하기 위한 설계도를 <strong class="fw_600">클래스(class)</strong>라고 부르며, 객체를 생성하려면 먼저 객체에 대한 클래스가 정의되어야 한다. 
+							이렇게 생성된 객체를 클래스의 <strong class="fw_600">인스턴스(instance)</strong>라 한다.
+							<button class="btn_popup" aria-label="보충자료"></button>
+						</span>
+					</div>
+
+					<div class="title_sub" tabindex="0">
+						<span>객체와 클래스</span>
+					</div>
+					<div class="video_con">
+						<div class="contents_con">
+							<div class="video-container">
+								<video id="player01" data-content-id="H-325-03" controls crossorigin></video>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- 팝업 -->
+				<div class="text_popup_con H_325_03_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0" id="popup-title">
+							<span>
+								속성
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								객체가 가지는 특성 또는 데이터를 말한다.
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- //팝업 -->
+
+				<!-- 팝업 -->
+				<div class="text_popup_con H_325_03_pop_02" id="tooltip02" role="dialog" aria-modal="true" aria-labelledby="popup-title02">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0" id="popup-title02">
+							<span>
+								메소드
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								객체가 수행하는 동작을 정의한 함수를 말한다.
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- //팝업 -->
+
+				<!-- 팝업 -->
+				<div class="full_popup_wrap H_325_03_full_popup" id="fullpopup01">
+					<div class="contents_con">
+						<div class="close_btn">
+							<button aria-label="팝업 닫기"></button>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>인스턴스</span>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp;&nbsp;클래스를 자동차의 설계도에, 객체를 설계도를 기반으로 실제로 제작한 자동차에 비유할 수 있다. 이처럼 클래<br>스에서 실체화된 객체를 인스턴스라고 한다.
+							</span>
+						</div>
+
+						<div class="detail_con">
+							<div class="left_con">
+								<div class="title_con" tabindex="0">
+									<span>클래스</span>
+								</div>
+								<div class="contents_con">
+									<span class="img_car"></span>
+									<div class="list_con">
+										<ul>
+											<li tabindex="0">
+												<div class="title_sub" tabindex="0">
+													<span>속성</span>
+												</div>
+												<ul class="dot_con">
+													<li tabindex="0">
+														<span>종류</span>
+													</li>
+													<li tabindex="0">
+														<span>색상</span>
+													</li>
+													<li tabindex="0">
+														<span>최대 속도</span>
+													</li>
+												</ul>
+											</li>
+											<li tabindex="0">
+												<div class="title_sub" tabindex="0">
+													<span>메소드</span>
+												</div>
+												<ul class="dot_con">
+													<li tabindex="0">
+														<span>전진</span>
+													</li>
+													<li tabindex="0">
+														<span>후진</span>
+													</li>
+													<li tabindex="0">
+														<span>정지</span>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>	
+								</div>
+							</div>
+
+							<div class="btn_con">
+								<div class="bnt_group">
+									<button aria-label="객체 생성"></button>
+									<span class="hand"></span>
+								</div>
+							</div>
+
+							<div class="right_con">
+								<div class="title_con" tabindex="0">
+									<span>객체</span>
+								</div>
+								<div class="contents_con">
+									<div class="list_con">
+										<ul>
+											<li tabindex="0">
+												<div class="title_sub" tabindex="0">
+													<span>인스턴스</span>
+												</div>
+												<span class="img_car">
+													<img src="img/H_325_03_con_car02.png" alt="컨버터블, 검은색, 250km / 전진 후진, 정지">
+												</span>
+												<div class="text_con" tabindex="0">
+													<span>속성: 컨버터블, 검은색, 250km<br>메소드: 전진 후진, 정지</span>
+												</div>
+											</li>
+											<li tabindex="0">
+												<div class="title_sub" tabindex="0">
+													<span>인스턴스</span>
+												</div>
+												<span class="img_car">
+													<img src="img/H_325_03_con_car03.png" alt="세단, 파란색, 240km / 전진 후진, 정지">
+												</span>
+												<div class="text_con" tabindex="0">
+													<span>속성: 세단, 파란색, 240km<br>메소드: 전진 후진, 정지</span>
+												</div>
+											</li>
+											<li tabindex="0">
+												<div class="title_sub" tabindex="0">
+													<span>인스턴스</span>
+												</div>
+												<span class="img_car">
+													<img src="img/H_325_03_con_car04.png" alt="SUV, 주황색, 250km / 전진 후진, 정지">
+												</span>
+												<div class="text_con" tabindex="0">
+													<span>속성: SUV, 주황색, 250km<br>메소드: 전진 후진, 정지</span>
+												</div>
+											</li>
+											<li tabindex="0">
+												<div class="title_sub" tabindex="0">
+													<span>인스턴스</span>
+												</div>
+												<span class="img_car">
+													<img src="img/H_325_03_con_car05.png" alt="픽업트럭, 갈색, 240km / 전진 후진, 정지">
+												</span>
+												<div class="text_con" tabindex="0">
+													<span>속성: 픽업트럭, 갈색, 240km<br>메소드: 전진 후진, 정지</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //팝업 -->
+
+
+			</div>
+		</main>
+
+		<script>
+			$(document).ready(function(){
+				// 팝업
+				$(".H_325_03_con .btn_popup").on("click", function(){
+					$(".H_325_03_con .full_popup_wrap").show();
+				});
+				$(".H_325_03_con .full_popup_wrap .close_btn").on("click", function(){
+					$(this).parents(".full_popup_wrap").hide();
+				});
+				// 팝업열기
+				$(".H_325_03_con .link_tooltip").on("click", function(){
+					var popSelector = "#" + $(this).attr("aria-controls");
+					if($(popSelector).css("display") == "none") {
+						$(".H_325_03_con .text_popup_con").not(popSelector).hide();
+						$(popSelector).show();
+					}else {
+						$(popSelector).hide();
+					}
+				});
+				// 팝업닫기
+				$(".H_325_03_con .text_popup_con .a_btn").on("click", function(){
+					$(this).parents(".text_popup_con").hide();
+				});
+
+				// 객체 생성
+				$(".H_325_03_con .bnt_group").on("click", function(){
+					var $listItems = $('.H_325_03_con .full_popup_wrap .right_con .list_con li');
+					var delayTime = 800;
+
+					 $listItems.each(function(index) {
+						var $currentItem = $(this);
+
+						setTimeout(function() {
+							$currentItem.addClass('on');
+						}, delayTime * index);
+					});
+				});
+
+			});
+			
+		</script>
+		<script>
+			const contentId = 'H-325-03';
+		</script>
+		<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+		<script>
+			const videoList = [
+				{ 
+					id: "H-325-03",
+					src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-325-03_4000k.mp4,H-325-03_2000k.mp4,H-325-03_1000k.mp4,lang/kor/H-325-03.vtt,.smil/master.m3u8" 
+				}
+			];
+		</script>
+		<script type="text/javascript" src="./js/xapi.video.js"></script>
+
+	</div>
+</body>
+</html>

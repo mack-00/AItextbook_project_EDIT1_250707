@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>탐색 알고리즘의 장단점 비교</title>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<link rel="stylesheet" href="GoogleTranslate.css">
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	<script type="text/javascript" src="GoogleTranslate.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+
+<body>
+	<div id="wrap">
+
+		<main class="H_313_07_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								탐색 알고리즘의 장단점 비교
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01">
+						순차 탐색과 이진 탐색의 장점과 단점을 비교해 보자.
+					</div>
+
+					<!-- table -->
+					<div class="tab_con">
+						<table>
+							<caption>순차 탐색과 이진 탐색의 수행 시간 비교 결과</caption>
+							<thead>
+								<tr>
+									<th scope="col">알고리즘</th>
+									<th scope="col">장점</th>
+									<th scope="col">단점</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row" class="title_td">
+										<span>순차 탐색</span>
+									</th>
+									<td class="info_td">
+										<ul class="list_disc">
+											<li>정렬되지 않은 데이터에서도 사용 가능함.</li>
+											<li>구현이 간단하고 이해하기 쉬움.</li>
+										</ul>
+									</td>
+									<td class="info_td">
+										<ul class="list_disc">
+											<li>평균적으로 수행 시간이 O(n)로 길어질 가능성 높음.</li>
+											<li>데이터가 많아질수록 비효율적임.</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="title_td">
+										<span>이진 탐색</span>
+									</th>
+									<td class="info_td">
+										<ul class="list_disc">
+											<li>수행 시간이 적게 소요됨.</li>
+											<li>데이터가 많아져도 효율적으로 수행함.</li>
+										</ul>
+									</td>
+									<td class="info_td">
+										<ul class="list_disc">
+											<li>반드시 정렬된 데이터가 필요함.</li>
+											<li>구현이 순차 탐색보다 복잡함.</li>
+											<li>데이터가 자주 추가되거나 삭제되면 정렬부터 다시 수행해야 해서 비효율적임.</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+					<!-- //table -->
+
+				</div>
+			</div>
+		</main>
+
+	</div>
+
+	<script>
+		const contentId = 'H-313-07';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+
+</html>

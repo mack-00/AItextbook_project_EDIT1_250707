@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>학업 계획 점검</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	
+	<script src="https://acv001.aiktbook.com/api/static/message-channel-iframe.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_11_02_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">학업 계획 점검</h2>
+							<div class="bg"></div>
+						</div>
+						<div class="text_con" tabindex="0">
+							<h1>
+								1. 네트워크
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">	
+					
+					<form id="frm1" onsubmit="return false">
+					<input type="hidden" name="aidt_pageTitle" value="학업 계획 점검">
+						<div class="write_con">
+							<div class="title_con" tabindex="0">
+								<h2>
+									핵심 질문의 답과 새롭게 알게 된 점을 작성해 보자.
+								</h2>
+							</div>
+
+							<div class="input_con">
+								<ul>
+									<li>
+										<div class="list_div">
+											<div class="title_con" tabindex="0">
+												<div class="dot" aria-hidden="true"></div>
+
+												<span>
+													<span class="color_text">핵심 질문</span>: 다양한 컴퓨팅 시스템에서 네트워크 환경을 어떻게 구성할 수 있을까?
+												</span>
+											</div>
+
+											<div class="contents_con">
+												<div class="textarea_con">
+													<div class="title_con">
+														<div class="icon_con" tabindex="0">
+															<span>
+																예시
+															</span>
+														</div>
+
+														<div class="text_con" tabindex="0">
+															<span>
+																유선 및 무선 연결을 통해 네트워크를 구성한다.
+															</span>
+														</div>
+													</div>
+
+													<div class="input_con">
+														<input type="hidden" name="aidt_examId" value="1">
+														<input type="hidden" name="aidt_exam" value="핵심 질문 : 가장 효율적인 네트워크 경로를 어떻게 구성할 수 있을까?">
+														<input type="hidden" name="aidt_answer" value="">
+														<input type="hidden" name="aidt_mcqYn" value="N">
+														<input type="hidden" name="aidt_type" value="narrative">
+														<textarea name="aidt_input" placeholder="내용을 입력해 보자." class="textarea01"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="list_div">
+											<div class="title_con" tabindex="0">
+												<div class="dot" aria-hidden="true"></div>
+
+												<span>
+													새롭게 알게 된 점
+												</span>
+											</div>
+
+											<div class="contents_con">
+												<div class="textarea_con">
+													<div class="title_con">
+														<div class="icon_con" tabindex="0">
+															<span>
+																예시
+															</span>
+														</div>
+
+														<div class="text_con" tabindex="0">
+															<span>
+																클라우드로 데이터를 공유하는 방법을 알게 되었다.
+															</span>
+														</div>
+													</div>
+
+													<div class="input_con">
+														<input type="hidden" name="aidt_examId" value="2">
+														<input type="hidden" name="aidt_exam" value="새롭게 알게 된 점">
+														<input type="hidden" name="aidt_answer" value="">
+														<input type="hidden" name="aidt_mcqYn" value="N">
+														<input type="hidden" name="aidt_type" value="narrative">
+														<textarea name="aidt_input" placeholder="내용을 입력해 보자." class="textarea02"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="btn_con">
+								<button id="btn1" class="a_btn a_btn01" type="button" aria-label="제출하기" tabindex="0">제출하기</button>
+								<button id="btn1_1" class="a_btn a_btn02" type="button" aria-label="다시 제출하기" style="display:none;" tabindex="0">다시 제출하기</button>
+							</div>
+
+							<div class="popup_con_bg popup01"></div>
+							<div class="popup_con popup01" role="alert"></div>
+
+							<div class="popup_con_bg popup02"></div>
+							<div class="popup_con popup02" role="alert"></div>
+						</div>
+					</form>
+
+
+				</div>
+			</div>
+		</main>
+
+		<script>
+		const child = new ClientAPI();
+
+		// 제출 여부 받아서 버튼 제어 (수정기능용 응답 대기)
+		child.receiveMessage((data) => {
+			if(data.submitYn === 'Y'){
+				$("#btn1").hide();        // 제출 버튼 숨김
+				$("#btn1_1").show();      // 수정 버튼 표시
+			}
+		});
+
+		// [제출하기] 버튼 클릭
+		document.getElementById('btn1').addEventListener('click', function () {
+			sendFormData(); // 유효성 검사 후 처리
+		});
+
+		// [수정하기] 버튼 클릭
+		document.getElementById('btn1_1').addEventListener('click', function () {
+			sendFormData(); // 그냥 전송
+		});
+
+		// 제출하기 동작 정의
+		function sendFormData() {
+			const textareaList = $(".H_11_02_con textarea.textarea01");
+			let allFilled = true;
+
+			textareaList.each(function() {
+				if ($(this).val().trim() === "") {
+					allFilled = false;
+				}
+			});
+
+			if (!allFilled) {
+				showPopup(".popup01"); // 내용 없음
+			} else {
+				showPopup(".popup02"); // 정상 제출
+				$("#btn1").hide();
+				$("#btn1_1").show();
+				child.sendFormData('frm1'); // 실제 전송
+			}
+		}
+
+		// 공통 팝업 함수
+		function showPopup(popupClass) {
+			$(".H_11_02_con .btn_con .a_btn").blur();
+			$(".H_11_02_con " + popupClass + "_bg").fadeIn();
+			$(".H_11_02_con " + popupClass).fadeIn();
+
+			setTimeout(() => {
+				$(".H_11_02_con " + popupClass + "_bg").fadeOut();
+				$(".H_11_02_con " + popupClass).fadeOut();
+			}, 1000);
+		}
+	</script>
+
+	</div>
+	<script>
+		const contentId = 'H-11-02';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

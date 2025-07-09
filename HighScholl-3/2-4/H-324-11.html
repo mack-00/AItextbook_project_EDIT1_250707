@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>for문 실행 순서</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_324_11_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								for문 실행 순서
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_con" tabindex="0">
+						<span>프로그램의 각 행의 명령어 실행 순서에서 i와 sum 변수의 값 변화를 적어 보자.</span>
+					</div>
+					<div class="box_con">
+						<div class="left_con">
+							<ul>
+								<li>1&nbsp;&nbsp;&nbsp;sum = 0</li>
+								<li>2&nbsp;&nbsp;&nbsp;score = [88, 70, 94]</li>
+								<li>3&nbsp;&nbsp;&nbsp;for i in score:</li>
+								<li>4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += i</li>
+								<li>5&nbsp;&nbsp;&nbsp;print('점수의 총합은', sum, '입니다.')</li>
+								<li>6&nbsp;&nbsp;&nbsp;print('평균은', sum / len(score), '입니다.')</li>
+							</ul>
+						</div>
+						<div class="right_con">
+							<div class="title_sub" tabindex="0">
+								<span>실행 결과</span>
+							</div>
+							<div class="answer" tabindex="0">
+								<span>
+									점수의 총합은 252 입니다.<br>평균은 84.0 입니다.
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="tab_con">
+						<table role="grid" aria-label="i와 sum 변수의 값 변화를 적어 보자.">
+							<thead>
+								<tr>
+									<th scope="col">
+										<span></span>
+									</th>
+									<th scope="col" tabindex="0">
+										<span>1</span>
+									</th>
+									<th scope="col" tabindex="0">
+										<span>2</span>
+									</th>
+									<th scope="col" tabindex="0">
+										<span>3</span>
+									</th>
+									<th scope="col" tabindex="0">
+										<span>4</span>
+									</th>
+									<th scope="col" tabindex="0">
+										<span>5</span>
+									</th>
+									<th scope="col" tabindex="0">
+										<span>6</span>
+									</th>
+									<th scope="col" tabindex="0">
+										<span>7</span>
+									</th>
+									<th scope="col" tabindex="0">
+										<span>8</span>
+									</th>
+									<th scope="col" tabindex="0">
+										<span>9</span>
+									</th>
+									<th scope="col" tabindex="0">
+										<span>10</span>
+									</th>
+									<th scope="col" tabindex="0">
+										<span>11</span>
+									</th>
+								</tr>
+							</thead>
+							<tbody>	
+								<tr>
+									<th scope="col">
+										<span>명령어</span>
+									</th>
+									<td  tabindex="0">
+										<span>1</span>
+									</td>
+									<td  tabindex="0">
+										<span>2</span>
+									</td>
+									<td  tabindex="0">
+										<span>3</span>
+									</td>
+									<td  tabindex="0">
+										<span>4</span>
+									</td>
+									<td  tabindex="0">
+										<span>3</span>
+									</td>
+									<td  tabindex="0">
+										<span>4</span>
+									</td>
+									<td  tabindex="0">
+										<span>3</span>
+									</td>
+									<td  tabindex="0">
+										<span>4</span>
+									</td>
+									<td  tabindex="0">
+										<span>3</span>
+									</td>
+									<td  tabindex="0">
+										<span>5</span>
+									</td>
+									<td  tabindex="0">
+										<span>6</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col">
+										<span>i</span>
+									</th>
+									<td  tabindex="0"></td>
+									<td  tabindex="0"></td>
+									<td  tabindex="0">
+										<span>88</span>
+									</td>
+									<td  tabindex="0">
+										<span>88</span>
+									</td>
+									<td  tabindex="0">
+										<label><input type="text" data-answer="70"></label>
+									</td>
+									<td  tabindex="0">
+										<span>70</span>
+									</td>
+									<td  tabindex="0">
+										<label><input type="text" data-answer="94"></label>
+									</td>
+									<td  tabindex="0">
+										<span>94</span>
+									</td>
+									<td  tabindex="0">
+										<span>94</span>
+									</td>
+									<td  tabindex="0">
+										<span>94</span>
+									</td>
+									<td  tabindex="0">
+										<span>94</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col" tabindex="0">
+										<span>sum</span>
+									</th>
+									<td  tabindex="0">
+										<span>0</span>
+									</td>
+									<td  tabindex="0">
+										<span>0</span>
+									</td>
+									<td  tabindex="0">
+										<span>0</span>
+									</td>
+									<td  tabindex="0">
+										<label><input type="text" data-answer="88"></label>
+									</td>
+									<td  tabindex="0">
+										<span>88</span>
+									</td>
+									<td  tabindex="0">
+										<label><input type="text" data-answer="158"></label>
+									</td>
+									<td  tabindex="0">
+										<span>158</span>
+									</td>
+									<td  tabindex="0">
+										<label><input type="text" data-answer="252"></label>
+									</td>
+									<td  tabindex="0">
+										<span>252</span>
+									</td>
+									<td  tabindex="0">
+										<span>252</span>
+									</td>
+									<td  tabindex="0">
+										<span>252</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="expl_con">
+						<div class="text_con" tabindex="0">
+							<span>실행 순서(단계)</span>
+						</div>
+						<div class="text_con" tabindex="0">
+							<span>코드 줄 번호</span>
+						</div>
+					</div>
+					<div class="btn_con">
+						<button type="button" class="a_btn btn_confirm" aria-label="확인하기">확인하기</button>
+						<button id="btn1_1" class="a_btn a_btn02" type="submit" aria-label="다시 하기" style="display:none;" tabindex="0">다시 하기</button>
+					</div>
+				</div>
+
+				<div class="popup_con_bg popup01"></div>
+				<div class="popup_con popup01" role="alert"></div>
+
+				<div class="popup_con_bg popup02"></div>
+				<div class="popup_con popup02" role="alert"></div>
+
+				<div class="popup_con_bg popup03"></div>
+				<div class="popup_con popup03" role="alert"></div>
+
+				<div class="popup_con_bg popup04"></div>
+				<div class="popup_con popup04" role="alert"></div>
+
+			</div>
+		</main>
+		
+	</div>
+<script>
+$(document).ready(function(){
+	let try_count = 0;
+
+	// 입력칸 비어 있는지 확인
+	function isNull() {
+		let result = false;
+		$(".H_324_11_con input[type=text]").each(function(){
+			if ($(this).val() === "") {
+				result = true;
+				return false;
+			}
+		});
+		return result;
+	}
+
+	// 입력이 모두 정답인지 확인
+	function answerCheck() {
+		let result = true;
+		$(".H_324_11_con input[type=text]").each(function(){
+			if ($(this).val() !== $(this).attr("data-answer")) {
+				result = false;
+				return false;
+			}
+		});
+		return result;
+	}
+
+	// 정답값 자동 채우기
+	function fillCorrectAnswers() {
+		$(".H_324_11_con input[type=text]").each(function(){
+			const correct = $(this).attr("data-answer");
+			$(this).val(correct);
+		});
+	}
+
+	// 확인하기 버튼
+	$(".btn_confirm").on("click", function(){
+		if (isNull()) {
+			$(".H_324_11_con .popup_con_bg.popup03").fadeIn();
+			$(".H_324_11_con .popup_con.popup03").fadeIn();
+			setTimeout(function(){
+				$(".H_324_11_con .popup_con_bg.popup03").fadeOut();
+				$(".H_324_11_con .popup_con.popup03").fadeOut();
+			}, 1000);
+			return;
+		}
+
+		if (answerCheck()) {
+			// 정답일 때
+			$(".H_324_11_con .popup_con_bg.popup02").fadeIn();
+			$(".H_324_11_con .popup_con.popup02").fadeIn();
+			setTimeout(function(){
+				$(".H_324_11_con .popup_con_bg.popup02").fadeOut();
+				$(".H_324_11_con .popup_con.popup02").fadeOut();
+			}, 1000);
+			try_count = 0;
+		} else {
+			// 오답일 때
+			try_count++;
+
+			if (try_count === 1) {
+				// 1차 오답
+				$(".H_324_11_con .popup_con_bg.popup01").fadeIn();
+				$(".H_324_11_con .popup_con.popup01").fadeIn();
+				setTimeout(function(){
+					$(".H_324_11_con .popup_con_bg.popup01").fadeOut();
+					$(".H_324_11_con .popup_con.popup01").fadeOut();
+				}, 1000);
+			} else if (try_count === 2) {
+				// 2차 오답 → 정답 자동 표출 및 popup04, 버튼 교체
+				fillCorrectAnswers();
+
+				$(".H_324_11_con .popup_con_bg.popup04").fadeIn();
+				$(".H_324_11_con .popup_con.popup04").fadeIn();
+				setTimeout(function(){
+					$(".H_324_11_con .popup_con_bg.popup04").fadeOut();
+					$(".H_324_11_con .popup_con.popup04").fadeOut();
+				}, 1000);
+
+				$(".btn_confirm").hide();
+				$("#btn1_1").show();
+			}
+		}
+	});
+
+	// 다시 하기 버튼
+	$("#btn1_1").on("click", function(){
+		try_count = 0;
+		$(".H_324_11_con input[type=text]").val("");
+		$(".btn_confirm").show();
+		$(this).hide();
+	});
+});
+</script>
+
+<script>
+	const contentId = 'H-324-11';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>정렬 알고리즘의 장단점 비교</title>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="GoogleTranslate.css">
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script type="text/javascript" src="GoogleTranslate.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+
+<body>
+	<div id="wrap">
+
+		<main class="H_312_07_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								정렬 알고리즘의 장단점 비교
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01">
+						버블 정렬, 삽입 정렬, 퀵 정렬의 장점과 단점을 비교해 보자.
+					</div>
+
+					<!-- table -->
+					<div class="tab_con">
+						<table>
+							<caption>버블 정렬, 삽입 정렬, 퀵 정렬의 장점과 단점</caption>
+							<thead>
+								<tr>
+									<th scope="col">알고리즘</th>
+									<th scope="col">장점</th>
+									<th scope="col">단점</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">버블 정렬</th>
+									<td>
+										<ul class="list_disc">
+											<li>구현이 매우 간단함.</li>
+											<li>추가적인 메모리 사용이 적음.</li>
+										</ul>
+									</td>
+									<td>
+										<ul class="list_disc">
+											<li>수행 시간이 O(n<sup>2</sup>)로 많이 소요됨.</li>
+											<li>데이터가 많아질수록 비효율적임.</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">삽입 정렬</th>
+									<td>
+										<ul class="list_disc">
+											<li>대부분 정렬된 데이터에 대해 수행 시간이 매우 적게 소요됨.</li>
+											<li>데이터가 적은 경우 효율적임.</li>
+											<li>추가적인 메모리가 거의 필요 없음.</li>
+										</ul>
+									</td>
+									<td>
+										<ul class="list_disc">
+											<li>최악의 경우 수행 시간이 O(n<sup>2</sup>)로 많이 소요됨.</li>
+											<li>데이터가 많아질수록 비효율적임.</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">퀵 정렬</th>
+									<td>
+										<ul class="list_disc">
+											<li>평균적으로 수행 시간이 매우 적게 소요됨.</li>
+											<li>대부분의 경우 효율적임.</li>
+											<li>데이터가 많은 경우 적합함.</li>
+											<li>추가적인 메모리가 거의 필요 없음.</li>
+										</ul>
+									</td>
+									<td>
+										<ul class="list_disc">
+											<li>피벗을 잘못 선택할 경우 수행 시간이 O(n<sup>2</sup>)까지 증가함.</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //table -->
+				</div>
+			</div>
+		</main>
+
+	</div>
+
+	<script>
+		const contentId = 'H-312-07';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+
+</html>

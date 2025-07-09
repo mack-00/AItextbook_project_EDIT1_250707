@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>빅데이터 전처리</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src= "https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<script>
+
+		const originalOrder = []; // 처음 섞여 있는 순서 저장용
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const draggables = document.querySelectorAll('.draggable');
+            const dropZones = document.querySelectorAll('.drop-zone');
+            const optionsContainer = document.querySelector('.options-container');
+            let draggedElement = null;
+
+			let adapt_answer = 0; // 적용한 답변 수
+			let correct_answer = 0; // 정답 수
+			let try_check = 0; // 확인하기 시도 수
+			
+			draggables.forEach(item => {
+				originalOrder.push(item); // 처음 순서 저장
+			});
+
+			// 모든 항목을 원래 자리로 이동
+			const returnItemsToContainer = () => {
+				// 모든 drop-zone에서 draggable 회수
+				dropZones.forEach(zone => {
+					const draggable = zone.querySelector('.draggable');
+					if (draggable) {
+						optionsContainer.appendChild(draggable);
+						zone.classList.remove('occupied');
+					}
+				});
+
+				// 순서를 처음 섞였던 상태로 되돌림
+				originalOrder.forEach(item => {
+					optionsContainer.appendChild(item);
+				});
+
+				adapt_answer = 0;
+				correct_answer = 0;
+			};
+
+			// 모든 항목을 정답 자리로 이동
+			const placeItemsInCorrectPositions = () => {
+				returnItemsToContainer();
+				
+				draggables.forEach(item => {
+					const correctZone = Array.from(dropZones).find(
+						zone => zone.dataset.position === item.dataset.answer
+					);
+					if (correctZone) {
+						correctZone.appendChild(item);
+						correctZone.classList.add('occupied');
+					}
+				});
+			};
+
+            // 드래그 앤 드롭 이벤트 처리
+            draggables.forEach(draggable => {
+                draggable.addEventListener('dragstart', (e) => {
+                    draggedElement = draggable;
+                    draggable.classList.add('dragging');
+                    e.dataTransfer.setData('text/plain', '');
+                    e.dataTransfer.effectAllowed = 'move';
+                });
+				
+                draggable.addEventListener('dragend', () => {
+                    draggable.classList.remove('dragging');
+                    draggedElement = null;
+                });
+            });
+
+			// 정답 확인 이벤트 처리
+			const checkButton = document.querySelector('.check-btn');
+			checkButton.addEventListener('click', () => {
+				adapt_answer = 0;
+				correct_answer = 0;
+
+				let values = []; // 답변 수집용
+				let firstZoneCorrect = false;
+
+				dropZones.forEach(zone => {
+					const answer = zone.querySelector('.draggable');
+					const position = zone.dataset.position;
+
+					if (answer) {
+						adapt_answer++;
+
+						const val = answer.textContent.trim();
+
+						// 첫 번째 빈칸은 '빅데이터'만 정답
+						if (position === "1") {
+							if (val === "데이터 전처리") {
+								firstZoneCorrect = true;
+							}
+						} else {
+							values.push(val);
+						}
+					}
+				});
+
+				const correctPool = ["데이터 정리", "데이터 정규화", "데이터 통합"];
+				const valuesSet = new Set(values);
+				const correctSet = new Set(correctPool);
+
+				const matched = [...valuesSet].filter(v => correctSet.has(v));
+				const isRemainingCorrect = matched.length === 3;
+
+				if (firstZoneCorrect && isRemainingCorrect) {
+					correct_answer = 4;
+				}
+
+				if (adapt_answer !== 4) {
+					$(".H_222_06_con .popup_con_bg.popup01, .H_222_06_con .popup_con.popup01").fadeIn().delay(1000).fadeOut();
+					adapt_answer = 0;
+					correct_answer = 0;
+				} else {
+					try_check++;
+
+					if (correct_answer === 4) {
+						$(".H_222_06_con .popup_con_bg.popup04, .H_222_06_con .popup_con.popup04").fadeIn().delay(1000).fadeOut();
+						$(".H_222_06_con .a_btn01").hide();
+						$(".H_222_06_con .a_btn02").show();
+					} else if (try_check === 1) {
+						$(".H_222_06_con .popup_con_bg.popup02, .H_222_06_con .popup_con.popup02").fadeIn().delay(1000).fadeOut();
+						setTimeout(returnItemsToContainer, 500);
+					} else if (try_check === 2) {
+						$(".H_222_06_con .popup_con_bg.popup03, .H_222_06_con .popup_con.popup03").fadeIn().delay(1000).fadeOut();
+						$(".H_222_06_con .a_btn01").hide();
+						$(".H_222_06_con .a_btn02").show();
+						try_check = 0;
+						setTimeout(placeItemsInCorrectPositions, 500);
+					}
+				}
+			});
+			
+			// 다시 하기 이벤트 처리
+			const retryButton = document.querySelector('.retry-btn');
+			retryButton.addEventListener('click', () => {
+				try_check = 0;
+				
+				returnItemsToContainer();
+
+				
+				$(".H_222_06_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn01").css("display","inline-block");
+				$(".H_222_06_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn02").css("display","none");
+			});
+
+            // 드롭존 이벤트 처리
+            const dropTargets = [...dropZones, optionsContainer];
+            dropTargets.forEach(target => {
+                target.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    if (target.classList.contains('drop-zone') && target.children.length > 1) {
+                        return; // 이미 답변이 있는 경우 드롭 불가
+                    }
+                    target.classList.add('dragover');
+                });
+
+                target.addEventListener('dragleave', () => {
+                    target.classList.remove('dragover');
+                });
+
+                target.addEventListener('drop', (e) => {
+					e.preventDefault();
+					target.classList.remove('dragover');
+
+					if (!draggedElement) return;
+
+					// 드롭존인 경우
+					if (target.classList.contains('drop-zone')) {
+						const existing = target.querySelector('.draggable');
+						
+						// 이미 요소가 있으면 되돌림
+						if (existing) {
+							optionsContainer.appendChild(existing);
+							existing.parentElement.classList.remove('occupied');
+						}
+
+						// 새로운 요소 추가
+						target.appendChild(draggedElement);
+						target.classList.add('occupied');
+					} else {
+						// 옵션 컨테이너로 돌아가는 경우
+						draggedElement.parentElement.classList.remove('occupied');
+						target.appendChild(draggedElement);
+					}
+				});
+            });
+        });
+    </script>
+	
+	<style>
+		.drop-zone {
+            transition: all 0.2s ease;
+        }
+
+        .drop-zone.dragover {
+            background-color: #e9ecef;
+            border-color: #007bff;
+        }
+
+        .drop-zone.occupied {
+            border-style: solid;
+        }
+		
+        .draggable {
+            cursor: move;
+            cursor: -webkit-grab;
+            cursor: grab;
+            user-select: none;
+            transition: all 0.2s ease;
+        }
+
+        .draggable.dragging {
+            opacity: 0.5;
+			cursor: -webkit-grabbing;
+            cursor: grabbing;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_222_06_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 정리하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								2-2. 빅데이터 전처리
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					
+					<div class="blank_word_test_con">
+						<div class="contents_con">
+							<div class="question_con">	
+								<div class="list_con">
+									<ul>
+										<li>
+											<div class="text_con">
+												<span class="num_text text01">1</span>
+
+												<div class="text_div">
+													<div class="blank_con drop-zone" role="region" aria-label="첫번째 답변 영역" data-position="1" tabindex="0">
+														<span class="sr-only">답변을 이 곳에 놓으세요</span>
+													</div>
+													
+													<div class="text_con" tabindex="0">
+														<span>
+															(은)는 원시 데이터를 원하는 형식으로 변환하는 작업을 의미하며, 여러 데이터 처리 작업에서
+													</span>
+													</div>
+												</div>
+
+												<div class="text_div">
+													<div class="text_con" tabindex="0">
+														<span>
+															가장 기초가 되는 단계이다.
+														</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="text_con">
+												<span class="num_text text02">2</span>
+
+												<div class="text_div">
+													<div class="text_con" tabindex="0">
+														<span>
+															데이터 전처리 작업은&nbsp;
+													</span>
+													</div>
+
+													<div class="blank_con drop-zone" role="region" aria-label="다섯번째 답변 영역" data-position="2" tabindex="0">
+														<span class="sr-only">답변을 이 곳에 놓으세요</span>
+													</div>
+													
+													<div class="text_con" tabindex="0">
+														<span>
+															,
+												</span>
+													</div>
+
+													<div class="blank_con drop-zone" role="region" aria-label="여섯번째 답변 영역" data-position="3" tabindex="0">
+														<span class="sr-only">답변을 이 곳에 놓으세요</span>
+													</div>
+													
+													<div class="text_con" tabindex="0">
+														<span>
+															,
+													</span>
+													</div>
+
+													<div class="blank_con drop-zone" role="region" aria-label="일곱번째 답변 영역" data-position="4" tabindex="0">
+														<span class="sr-only">답변을 이 곳에 놓으세요</span>
+													</div>
+													
+													<div class="text_con" tabindex="0">
+														<span>(으)로 구분한다.
+													</span>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+							</div>
+
+							<div class="answer_con">
+								<div class="title_con" tabindex="0">
+									<span>
+										빈칸에 알맞은 말을 옮겨 보자.
+									</span>
+								</div>
+
+								<div class="contents_con options-container" role="region" aria-label="사용 가능한 답변들">
+									
+									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="1" tabindex="0">
+										데이터 전처리
+									</span>
+
+									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="4" tabindex="0">
+										데이터 정리
+									</span>
+
+									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="3" tabindex="0">
+										데이터 정규화
+									</span>
+
+									
+									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="2" tabindex="0">
+										데이터 통합
+									</span>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="btn_con">
+							<button  class="a_btn a_btn01 check-btn" type="button" aria-label="확인하기" tabindex="0">확인하기</button>
+							<button  class="a_btn a_btn02 retry-btn" type="button" aria-label="다시 하기" style="display: none;" tabindex="0">다시 하기</button>
+						</div>
+					</div>
+
+					<div class="popup_con_bg popup01"></div>
+					<div class="popup_con popup01" role="alert"></div>
+
+					<div class="popup_con_bg popup02"></div>
+					<div class="popup_con popup02" role="alert"></div>
+
+					<div class="popup_con_bg popup03"></div>
+					<div class="popup_con popup03" role="alert"></div>
+
+					<div class="popup_con_bg popup04"></div>
+					<div class="popup_con popup04" role="alert"></div>
+
+				</div>
+			</div>
+		</main>
+
+	</div>
+	<script>
+		const contentId = 'H-222-06';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

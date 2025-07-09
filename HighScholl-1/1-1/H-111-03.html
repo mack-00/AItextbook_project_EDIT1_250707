@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>네트워크의 개념</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_111_03_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								네트워크의 개념
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text01" tabindex="0">
+						&nbsp;&nbsp;<strong>네트워크</strong>는 컴퓨터나 다양한 디지털 장치들을 유선 또는 무선으로 연결하여 데이터를 송수신하는 통신망이다. 이 통신망은 라우터와 스위치를 통해 연결되며, 각각의 장치들은 고유한 네트워크 주소를 가지고 있어 서로를 구분할 수 있다.
+						<button class="btn_data_popup" aria-label="보충자료" aria-controls="fullpopup01"></button>
+					</div>
+
+					<div class="video_con">
+						<div class="contents_con">
+							<div class="video-container" tabindex="0">
+								<video id="player01" data-content-id="H-111-03" controls crossorigin></video>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- popup -->
+				<div class="full_popup_wrap H_111_03_full_popup" id="fullpopup01">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>라우터와 스위치</span>
+						</div>
+						<div class="full_popoup_content">
+
+							<!-- tab -->
+							<div class="tab_wrap H_111_03_tab_wrap">
+								<div class="tab_list" role="tablist">
+									<button class="tab_btn on" type="button" id="tab01" aria-controls="H_111_03_tab01" role="tab" aria-selected="true">라우터</button>
+									<button class="tab_btn" type="button" id="tab02" aria-controls="H_111_03_tab02" role="tab" aria-selected="false">스위치</button>
+								</div>
+								<div class="tab_contents">
+									<div id="H_111_03_tab01" tabindex="0" role="tabpanel" aria-labelledby="tab01" class="tab_inner on">
+										
+										<p class="txt01"><strong>1. 라우터:</strong> 서로 다른 네트워크를 연결하고 데이터를 가장 효율적인 경로로 전달하는 장치</p>
+										<div class="both_wrap">
+											<div class="exam_txt">
+												<span class="exam_icon">예시</span>
+												<div class="txt">
+													학교 컴퓨터실에 있는 컴퓨터로 도서관에 있는 프린터를 사용하려고 할 때 컴퓨터와 도서관은 서로 다른 네트워크에 속해 있기 때문에 바로 연결되지 않는다. 이때 라우터가 두 네트워크를 연결하여 컴퓨터실에서 도서관의 프린터를 사용할 수 있도록 데이터를 전달한다.
+												</div>
+											</div>
+											<img class="H_111_03_popup_img" src="./img/H_111_03_popup_img01.png" alt="라우터 이미지">
+										</div>
+
+									</div>
+									<div id="H_111_03_tab02" tabindex="0" role="tabpanel" aria-labelledby="tab02" class="tab_inner">
+										
+										<p class="txt01"><strong>2. 스위치:</strong> 같은 네트워크 내에서 여러 장치를 연결하고, 데이터를 직접 전달하는 장치</p>
+										<div class="both_wrap">
+											<div class="exam_txt">
+												<span class="exam_icon">예시</span>
+												<div class="txt">
+													학교 컴퓨터실에 있는 여러 대의 컴퓨터가 한 대의 프린터에 연결되어 있을 때, 스위치는 컴퓨터 간 데이터를 주고받으며, 프린터로 데이터를 정확하게 전송하는 역할을 한다.
+												</div>
+											</div>
+											<img class="H_111_03_popup_img"  src="./img/H_111_03_popup_img02.png" alt="스위치 이미지">
+										</div>
+									
+
+									</div>
+									
+									
+								</div>
+							</div>
+							<!-- //tab  -->
+
+
+						</div>
+					</div>
+				</div>
+				<!-- //popup -->
+
+			</div>
+		</main>
+
+	</div>
+
+
+	<script>
+
+	$(document).ready(function(){
+		// 보충자료
+		$(".H_111_03_con .btn_data_popup").on("click", function(){
+			$(".H_111_03_con .full_popup_wrap").show();
+		});
+		$(".full_popup_wrap .btn_close").on("click", function(){
+			$(this).parents(".full_popup_wrap").hide();
+		});
+
+		// 탭
+		$(".tab_list > .tab_btn").on("click", function(){
+			$(this).siblings().removeClass("on").end().addClass("on");
+			$(this).siblings().attr("aria-selected", "false").end().attr("aria-selected", "true");
+			$("#"+$(this).attr("aria-controls")).siblings().removeClass("on").end().addClass("on");
+		});
+		
+	});
+
+		
+	</script>
+	<script>
+		const contentId = 'H-111-03';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+	<script>
+		const videoList = [
+			{ 
+				id: "H-111-03",
+				src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-111-03_4000k.mp4,H-111-03_2000k.mp4,H-111-03_1000k.mp4,lang/kor/H-111-03.vtt,.smil/master.m3u8" 
+			}
+		];
+	</script>
+	<script type="text/javascript" src="./js/xapi.video.js"></script>
+
+</body>
+</html>

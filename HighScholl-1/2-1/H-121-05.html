@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>사물 인터넷 시스템 구성	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/swiper.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_121_05_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								사물 인터넷 시스템 구성
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01" tabindex="0">
+						&nbsp;&nbsp;사물 인터넷 시스템은 
+						디바이스(<strong class="fw_700">D</strong>evice), 네트워크(<strong class="fw_700">N</strong>etwork), 플랫폼(<strong class="fw_700">P</strong>latform), 서비스(<strong class="fw_700">C</strong>ontents 또는 <strong class="fw_700">S</strong>ervice)로 구성된다.
+						<button class="btn_data_popup" aria-label="보충자료" aria-controls="fullpopup01"></button>
+					</div>
+
+					<!-- table -->
+					<div class="tab_con">
+						<table role="grid" aria-label="사물 인터넷 시스템 구성" tabindex="0">
+							<caption>사물 인터넷 시스템 구성</caption>
+							<thead>
+								<tr>
+									<td >
+										<span>
+											사물 인터넷 시스템 구성
+										</span>
+									</td>
+									<td >
+										<span>
+											설명
+										</span>
+									</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="info_td">
+										<span>
+											디바이스(D)
+										</span>
+									</td>
+									<td class="info_td">
+										<span>
+											정보를 주고받는 사물이다. 디바이스는 센서, 액추에이터, 통신 모듈 그리고 이것을 제어하는 마이크로컨트롤러 등이 포함된다.
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="info_td">
+										<span>
+											네트워크(N)
+										</span>
+									</td>
+									<td class="info_td">
+										<span>
+											디바이스와 플랫폼을 연결하는 역할을 한다. 센서가 수집한 데이터를 전송하거나 사물들이 서로 정보를 교환하도록 유무선 통신을 통해 각종 사물들을 연결해 주는 매개체이다.
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="info_td">
+										<span>
+											플랫폼(P)
+										</span>
+									</td>
+									<td class="info_td">
+										<span>
+											디바이스에서 수집한 데이터를 저장하고 분석하는 역할을 한다.
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="info_td">
+										<span>
+											서비스(C 또는 S)
+										</span>
+									</td>
+									<td class="info_td">
+										<span>
+											사물에 부착된 센서로 수집한 정보를 플랫폼에서 소통하고 융합하여 사용자에게 맞춤형 서비스를 제공하는 역할을 한다.
+										</span>
+									</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+					<!-- //table -->
+
+				</div>
+
+
+				<!-- popup -->
+				<div class="full_popup_wrap H_121_05_full_popup" id="fullpopup01">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>사물 인터넷 시스템 구성 예시</span>
+						</div>
+						<div class="full_popoup_content">
+
+							<!-- tab -->
+							<div class="tab_wrap H_121_05_tab_wrap">
+								<div class="tab_list" role="tablist">
+									<button class="tab_btn on" type="button" id="tab01" aria-controls="H_121_05_tab01" role="tab" aria-selected="true">디바이스</button>
+									<button class="tab_btn" type="button" id="tab02" aria-controls="H_121_05_tab02" role="tab" aria-selected="false">네트워크</button>
+									<button class="tab_btn" type="button" id="tab03" aria-controls="H_121_05_tab03" role="tab" aria-selected="false">플랫폼</button>
+									<button class="tab_btn" type="button" id="tab04" aria-controls="H_121_05_tab04" role="tab" aria-selected="false">서비스</button>
+								</div>
+								<div class="tab_contents">
+									<div id="H_121_05_tab01" tabindex="0" role="tabpanel" aria-labelledby="tab01" class="tab_inner on">
+										<p class="txt01">스마트 홈 시스템은 다양한 센서로부터 수집한 데이터를 처리하며, 그 결과를 토대로 기기들을 제어함으로써 편리하고 안전한 주거 환경을 조성한다.</p>
+										
+										<div class="img H_121_05_tab01_img01">
+											<div class="blind">
+												스마트 홈에서 다양한 센서와 모터의 역할을 설명하는 내용이다. 조명에는 인체 감지 센서가 있어 사람의 움직임을 감지하여 자동으로 조명을 켜거나 끄는 역할을 하고, 화분에는 토양 수분 센서가 있어 적절한 물 공급 시기를 알려준다. 자동차에는 거리를 측정하는 초음파 센서가 있어 자동차와 근접된 물체가 있는지 알 수 있다. 냉장고에는 온습도 센서가 있어 냉장고 속 온도를 일정하게 유지해 준다.
+											</div>
+
+											<button class="button01" aria-label="인체 감지 센서"></button>
+											<button class="button02" aria-label="토양 수분 센서"></button>
+											<button class="button03" aria-label="초음파 센서"></button>
+											<button class="button04" aria-label="모터"></button>
+											<button class="button05" aria-label="온습도 센서"></button>
+										</div>
+
+										<div class="detail_box_wrap">
+											<div class="detail_box">
+												<div class="tit rd_10">인체 감지 센서</div>
+												<div class="con rd_10">
+													<p>사람의 움직임을 감지하는 인체 감지 센서를 사용해서 전등을 켜거나 끈다.</p>
+													<img src="./img/H_121_05_tab01_detail_box_img01.png" alt="인체 감지 센서 이미지">
+												</div>
+											</div>
+											<div class="detail_box">
+												<div class="tit rd_10">토양 수분 센서</div>
+												<div class="con rd_10">
+													<p>토양의 수분을 측정하는
+														토양 수분 센서를 사용해서 식물을 관리한다.</p>
+													<img src="./img/H_121_05_tab01_detail_box_img02.png" alt="토양 수분 센서 이미지">
+												</div>
+											</div>
+											<div class="detail_box">
+												<div class="tit rd_10">초음파 센서</div>
+												<div class="con rd_10">
+													<p>거리를 측정하는 초음파 센서를 사용하면 자동차와 근접된 물체가 있는지 알 수 있다.</p>
+													<img src="./img/H_121_05_tab01_detail_box_img03.png" alt="초음파 센서 이미지">
+												</div>
+											</div>
+											<div class="detail_box">
+												<div class="tit rd_10">모터</div>
+												<div class="con rd_10">
+													<p>속도와 회전 방향을 제어할 수 있는 모터를 사용하여 선풍기를 회전하거나 무선 조종 자동차를 이동시킬 수 있다.</p>
+													<img src="./img/H_121_05_tab01_detail_box_img04.png" alt="모터 이미지">
+												</div>
+											</div>
+											<div class="detail_box">
+												<div class="tit rd_10">온습도 센서</div>
+												<div class="con rd_10">
+													<p>자동으로 온습도를 측정하여 에어컨을 켜거나 끈다. 또한 냉장고의 온도를 일정하게 유지한다.</p>
+													<img src="./img/H_121_05_tab01_detail_box_img05.png" alt="온습도 센서">
+												</div>
+											</div>											
+										</div>
+
+										<div class="btn_con">
+											<button id="btn1_1" style="display: none;"  class="a_btn a_btn02 retry-btn" type="button" aria-label="다시 하기" tabindex="0">다시 하기</button>
+										</div>
+									</div>
+									<div id="H_121_05_tab02" tabindex="0" role="tabpanel" aria-labelledby="tab02" class="tab_inner">
+										<p class="txt01">사물과 사물, 사물과 인터넷을 연결해 주는 기술에는 RFID, NFC, Beacon, Wi-Fi 등이 있다.</p>
+										<!-- slider -->
+										<div class="slide_wrap_con">
+											<div class="slide_con">
+												<div class="swiper-container H_121_05_slide">
+													<div class="swiper-wrapper"  role="region" aria-label="사물과 사물, 사물과 인터넷을 연결해 주는 기술  슬라이드">
+														
+														<div class="swiper-slide H_121_05_slide_01" data-swiper-autoplay="4000" role="group" aria-label="">
+															<div class="both_wrap popup_both">
+																<img src="./img/H_121_05_tab02_img01.png" alt="RFID 태그 아이콘">
+																<div class="txt">
+																	<div class="tit">RFID(알에프아이디)</div>
+																	<p>무선 주파수를 이용하여 사물을 식별할 수 있게 하는 기술이다.</p>
+																	<div class="txt_exam">
+																		<span class="exam_icon">예시</span>
+																		재고 관리, 하이패스
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="swiper-slide H_121_05_slide_02" data-swiper-autoplay="4000" role="group" aria-label="">
+															<div class="both_wrap popup_both">
+																<img src="./img/H_121_05_tab02_img02.png" alt="NFC 기술을 나타내는 아이콘">
+																<div class="txt">
+																	<div class="tit">NFC(엔에프씨)</div>
+																	<p>전자 기기들이 근거리 무선 통신을 할 수 있는 기술이다.</p>
+																	<div class="txt_exam">
+																		<span class="exam_icon">예시</span>
+																		금융 결제, 교통 카드, 스마트 홈
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="swiper-slide H_121_05_slide_03" data-swiper-autoplay="4000" role="group" aria-label="">
+															<div class="both_wrap popup_both">
+																<img src="./img/H_121_05_tab02_img03.png" alt="비콘 기술을 나타내는 아이콘">
+																<div class="txt">
+																	<div class="tit">Beacon(비콘)</div>
+																	<p>블루투스 기반으로 근거리에서 데이터를 전송하는 무선 통신 기술이다.</p>
+																	<div class="txt_exam">
+																		<span class="exam_icon">예시</span>
+																		박물관, 전시회
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="swiper-slide H_121_05_slide_04" data-swiper-autoplay="4000" role="group" aria-label="">
+															<div class="both_wrap popup_both">
+																<img src="./img/H_121_05_tab02_img04.png" alt="와이파이 아이콘">
+																<div class="txt">
+																	<div class="tit">Wi-Fi(와이파이)</div>
+																	<p>전자 기기들이 무선 통신할 수 있게 하는 기술이다.</p>
+																</div>
+															</div>
+														</div>
+
+
+													</div>
+													<div class="swiper-pagination"></div>
+												</div>
+											</div>
+											
+											<div class="slide_btn prev swiper-button-prev H_121_05_slide_prev_btn" aria-label="슬라이드 이전 버튼" tabindex="0"></div>
+											<div class="slide_btn next swiper-button-next H_121_05_slide_next_btn" aria-label="슬라이드 다음 버튼" tabindex="0"></div>
+										</div>
+										<!-- //slider -->
+
+									</div>
+									<div id="H_121_05_tab03" tabindex="0" role="tabpanel" aria-labelledby="tab03" class="tab_inner">
+										<p class="txt01">사물 인터넷 시스템의 플랫폼은 산업 및 가정 환경에서 센서와 디바이스로부터 데이터를 수집하고, 클라우드에서 분석하여 자동화된 제어와 최적화된 서비스를 제공한다.</p>
+										<!-- slider -->
+										<div class="slide_wrap_con">
+											<div class="slide_con">
+												<div class="swiper-container H_121_05_slide02">
+													<div class="swiper-wrapper"  role="region" aria-label="사물 인터넷 시스템의 플랫폼  슬라이드">
+														
+														<div class="swiper-slide H_121_05_slide02_01" data-swiper-autoplay="4000" role="group" aria-label="">
+															<div class="both_wrap popup_both type2">
+																<img src="./img/H_121_05_tab03_img01.png" alt="스마트 농업, 스마트 에너지, 스마트 교통 시스템, 스마트 공장이 사물 인터넷 시스템의 플랫폼과 연결되어 있다.">
+																<div class="txt">
+																	<div class="tit">산업용 클라우드 컴퓨팅 IoT 플랫폼</div>
+																	<p>인공지능 기술을 융합하여 디바이스에서 생성된 데이터를 클라우드에 수집하고 분석한다.</p>
+																</div>
+															</div>
+														</div>
+
+														<div class="swiper-slide H_121_05_slide02_02" data-swiper-autoplay="4000" role="group" aria-label="">
+															<div class="both_wrap popup_both type2">
+																<img src="./img/H_121_05_tab03_img02.png" alt="거실에는 스마트 전등, 스마트 TV, 스마트 에어컨 등이 있으며, 이 기기들은 사물 인터넷 시스템의 플랫폼과 연결되어 있다.">
+																<div class="txt">
+																	<div class="tit">스마트 홈 IoT 플랫폼</div>
+																	<p>스마트폰과 연결하여 집안의 전등, 전자 기기 제어, 전력 제어, 검침 등이 가능한 서비스를 지원한다.</p>
+																</div>
+															</div>
+														</div>
+
+													</div>
+														<div class="swiper-pagination"></div>
+												</div>
+											</div>
+										
+											<div class="slide_btn prev swiper-button-prev H_121_05_slide02_prev_btn" aria-label="슬라이드 이전 버튼" tabindex="0"></div>
+											<div class="slide_btn next swiper-button-next H_121_05_slide02_next_btn" aria-label="슬라이드 다음 버튼" tabindex="0"></div>
+										</div>
+										<!-- //slider -->
+									</div>
+									<div id="H_121_05_tab04" tabindex="0" role="tabpanel" aria-labelledby="tab04" class="tab_inner">
+										<p class="txt01">사물 인터넷 시스템의 서비스는 스마트 의류, 스마트 자동 사료 급식기와 같은 디바이스뿐만 아니라 스마트 결제, 스마트 쇼핑과 같은 디지털 서비스도 포함한다.</p>
+										<!-- slider -->
+										<div class="slide_wrap_con">
+											<div class="slide_con">
+												<div class="swiper-container H_121_05_slide03">
+													<div class="swiper-wrapper"  role="region" aria-label="사물 인터넷 시스템의 서비스  슬라이드">
+														
+														<div class="swiper-slide H_121_05_slide03_01" data-swiper-autoplay="4000" role="group" aria-label="">
+															<div class="both_wrap popup_both type3">
+																<img src="./img/H_121_05_tab04_img01.png" alt="스마트 의류: 검은색 스마트 의류이다. 이 의류에는 신체 활동을 감지하는 센서, 심박수를 측정하는 센서, 호흡 패턴을 감지하는 센서가 있다.">
+																<div class="txt">
+																	<div class="tit">스마트 의류</div>
+																	<p>다양한 센서들을 옷에 부착하여 호흡, 체온 등 <br>
+																		여러 생체 신호를 얻어 이를 활용하거나 사용자의 <br>
+																		몸을 안전하게 보호하는 역할을 한다.</p>
+																</div>
+															</div>
+														</div>
+
+														<div class="swiper-slide H_121_05_slide03_02" data-swiper-autoplay="4000" role="group" aria-label="">
+															<div class="both_wrap popup_both type3">
+																<img src="./img/H_121_05_tab04_img02.png" alt="스마트 자동 사료 급식기: 일정한 시간에 맞춰 사료를 제공하는 스마트 자동 사료 급식기 옆에 강아지가 있다.">
+																<div class="txt">
+																	<div class="tit">스마트 자동 사료 급식기</div>
+																	<p>스마트 자동 사료 인식 서비스는 반려동물을 <br>
+																		효율적으로 관리하기 위하여 카메라와 <br>
+																		이미지 인식 기술을 활용하여 동물이 얼마나 <br>
+																		많은 양의 사료를 섭취했는지 파악한다.</p>
+																</div>
+															</div>
+														</div>
+
+														<div class="swiper-slide H_121_05_slide03_03" data-swiper-autoplay="4000" role="group" aria-label="">
+															<div class="both_wrap popup_both type3">
+																<img src="./img/H_121_05_tab04_img03.png" alt="스마트 결제: 스마트폰을 활용한 결제 장면이다.">
+																<div class="txt">
+																	<div class="tit">스마트 결제</div>
+																	<p>스마트폰, 태블릿, 스마트워치 등에 신용 카드나 <br>
+																		계좌 번호 등의 결제 정보를 등록해 
+																		비밀번호 <br>입력 또는 지문 인식만으로 결제하는 방식이다.</p>
+																</div>
+															</div>
+														</div>
+
+														<div class="swiper-slide H_121_05_slide03_04" data-swiper-autoplay="4000" role="group" aria-label="">
+															<div class="both_wrap popup_both type3">
+																<img src="./img/H_121_05_tab04_img04.png" alt="스마트 쇼핑: 스마트 거울을 통한 가상 피팅 장면이다. 고객이 옷을 입어보지 않고도 가상으로 스타일을 확인할 수 있다.">
+																<div class="txt">
+																	<div class="tit">스마트 쇼핑</div>
+																	<p>매장에 들어가면 고객의 위치와 정보를 확인하고 <br>
+																		 간단한 터치 동작만으로도 상품 검색, <br>
+																		 자동 결제가 되는 방식이다.</p>
+																</div>
+															</div>
+														</div>
+
+													</div>
+													<div class="swiper-pagination"></div>
+												</div>
+											</div>
+											
+											<div class="slide_btn prev swiper-button-prev H_121_05_slide03_prev_btn" aria-label="슬라이드 이전 버튼" tabindex="0"></div>
+											<div class="slide_btn next swiper-button-next H_121_05_slide03_next_btn" aria-label="슬라이드 다음 버튼" tabindex="0"></div>
+										</div>
+										<!-- //slider -->
+									</div>
+									
+								</div>
+							</div>
+							<!-- //tab  -->
+
+						</div>
+					</div>
+				</div>
+				<!-- //popup -->
+
+			</div>
+		</main>
+
+	</div>
+
+	<script>
+
+	$(document).ready(function(){
+		// 보충자료
+		$(".H_121_05_con .btn_data_popup").on("click", function(){
+			$(".H_121_05_con .full_popup_wrap").show();
+		});
+		$(".full_popup_wrap .btn_close").on("click", function(){
+			$(this).parents(".full_popup_wrap").hide();
+		});
+
+		// 탭
+		$(".tab_list > .tab_btn").on("click", function(){
+			$(this).siblings().removeClass("on").end().addClass("on");
+			$(this).siblings().attr("aria-selected", "false").end().attr("aria-selected", "true");
+			$("#"+$(this).attr("aria-controls")).siblings().removeClass("on").end().addClass("on");
+		});
+
+		$(".H_121_05_tab01_img01 button").on("click", function () {
+			const idx = $(".H_121_05_tab01_img01 button").index(this);
+
+			// detail_box 처리
+			$(".detail_box_wrap .detail_box").removeClass("show");
+			$(".detail_box_wrap .detail_box").eq(idx).addClass("show");
+
+			// 클릭한 버튼 숨기기
+			$(this).hide();
+
+			// retry 버튼 보이기
+			$(".retry-btn").fadeIn();
+		});
+
+		$(".retry-btn").on("click", function () {
+			// 모든 버튼 다시 보이기
+			$(".H_121_05_tab01_img01 button").show();
+
+			// retry 버튼 숨기기
+			$(this).fadeOut();
+
+			// detail_box 초기화 (선택사항)
+			$(".detail_box_wrap .detail_box").removeClass("show");
+		});
+		
+	});
+
+
+	// 슬라이드
+	H_121_05_slide = new Swiper ('.H_121_05_slide', {
+		slidesPerView: 'auto',
+		effect : 'fade', 
+			fadeEffect: { 
+			crossFade: true 
+		},
+		speed: 100,
+		loop: false,
+		navigation: {
+			nextEl: '.H_121_05_slide_next_btn',
+			prevEl: '.H_121_05_slide_prev_btn',
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		observer: true,
+		observeParents: true,
+		simulateTouch: false,
+		allowTouchMove: false,
+	});
+
+
+	H_121_05_slide2 = new Swiper ('.H_121_05_slide02', {
+		slidesPerView: 'auto',
+		effect : 'fade', 
+			fadeEffect: { 
+			crossFade: true 
+		},
+		speed: 100,
+		loop: false,
+		navigation: {
+			nextEl: '.H_121_05_slide02_next_btn',
+			prevEl: '.H_121_05_slide02_prev_btn',
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		observer: true,
+		observeParents: true,
+		simulateTouch: false,
+		allowTouchMove: false,
+	});
+
+	H_121_05_slide3 = new Swiper ('.H_121_05_slide03', {
+		slidesPerView: 'auto',
+		effect : 'fade', 
+			fadeEffect: { 
+			crossFade: true 
+		},
+		speed: 100,
+		loop: false,
+		navigation: {
+			nextEl: '.H_121_05_slide03_next_btn',
+			prevEl: '.H_121_05_slide03_prev_btn',
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		observer: true,
+		observeParents: true,
+		simulateTouch: false,
+		allowTouchMove: false,
+	});
+
+		
+	</script>
+	<script>
+		const contentId = 'H-121-05';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

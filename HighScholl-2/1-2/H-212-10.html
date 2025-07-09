@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>전치형 암호화</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+	<script src="https://acv001.aiktbook.com/api/static/message-channel-iframe.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_212_10_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								전치형 암호화
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01 num_title fw_600">
+						<span class="number_icon">1</span>
+						다음 평문을 213이라는 키로 단순 전치 암호화하여 암호문의 빈칸을 채워 완성해 보자.
+					</div>
+
+					<div class="both_wrap both01">
+						<div>
+							<div class="tit">평문</div>
+							<div class="con">
+								HYUN LOVES CHU
+							</div>
+						</div>
+						<div class="arr"></div>
+						<div>
+							<div class="tit">암호문</div>
+							<div class="con">
+								<div>
+									YHUL
+									<input type="text" class="input02" placeholder="입력" />
+									CHU
+								</div>
+							</div>
+						</div>
+
+						<div class="btn_con2">
+							<button class="a_btn btn_confirm" type="button" aria-label="확인하기" tabindex="0">확인하기</button>
+							<button class="a_btn btn_reset" type="button" aria-label="다시 하기" style="display:none;" tabindex="0">다시 하기</button>
+						</div>
+					</div>
+
+					
+					<form id="frm1" onsubmit="return false">
+						<input type="hidden" name="aidt_pageTitle" value="전치형 암호화">
+						<div class="text_01 num_title fw_600">
+							<span class="number_icon">2</span>
+							아래 암호문은 스키테일 원통에 작성된 것이다. 이를 통해 전치형 암호화의 한계점을 적어 보자.
+						</div>
+	
+						<div class="word_list">
+							<span>암</span>
+							<span>독</span>
+							<span>세</span>
+							<span>호</span>
+							<span>해</span>
+							<span>요</span>
+							<span>를</span>
+							<span>보</span>
+							<span>!</span>
+							<span>해</span>
+						</div>
+
+						<div class="exam_textarea">
+							<div class="exam_tit">
+								<span class="exam_icon">예시</span>
+								<p>메시지의 길이가 반복되거나 특정 패턴이 포함된 경우, 암호문에서도 이러한 패턴이 드러날 수 있어 원문을 추측하기 쉬워진다.</p>
+							</div>
+							<div class="exam_con">
+								<input type="hidden" name="aidt_examId" value="1">
+								<input type="hidden" name="aidt_exam" value="아래 암호문은 스키테일 원통에 작성된 것이다. 이를 통해 전치형 암호화의 한계점을 적어 보자.">
+								<input type="hidden" name="aidt_answer" value="">
+								<input type="hidden" name="aidt_mcqYn" value="N">
+								<input type="hidden" name="aidt_type" value="narrative">
+								<textarea class="textarea01" placeholder="내용을 입력해 보자." name="aidt_input"></textarea>
+							</div>
+						</div>
+	
+						<div class="btn_con">
+							<button id="btn1" class="a_btn a_btn01" type="button" aria-label="제출하기" tabindex="0">제출하기</button>
+							<button id="btn1_1" class="a_btn a_btn02" type="button" aria-label="다시 제출하기" style="display:none;" tabindex="0">다시 제출하기</button>
+						</div>
+					</form>
+
+					
+					
+					<!-- 확인하기 팝업 -->
+					<div class="popup_con_bg popup01"></div>
+					<div class="popup_con popup01" role="alert"></div>
+
+					<div class="popup_con_bg popup02"></div>
+					<div class="popup_con popup02" role="alert"></div>
+
+					<div class="popup_con_bg popup03"></div>
+					<div class="popup_con popup03" role="alert"></div>
+
+					<div class="popup_con_bg popup04"></div>
+					<div class="popup_con popup04" role="alert"></div>
+
+					<!-- 제출 하기 팝업 -->
+					<div class="popup_con_bg popup05"></div>
+					<div class="popup_con popup05" role="alert"></div>
+
+					<div class="popup_con_bg popup06"></div>
+					<div class="popup_con popup06" role="alert"></div>
+			</div>
+			</div>
+			
+		</main>
+
+	</div>
+
+	<script>
+		const child = new ClientAPI(); //본 코드는 데이터 전송 페이지마다 각각 별도로 들어있어야 하고, 내부 스크립트의 최상단에 위치해야함. 
+
+
+
+		//제출 여부 받아서 버튼 제어
+		child.receiveMessage((data)=>{
+			if(data.submitYn === 'Y'){
+				document.getElementById('btn1_1').style.display = ""; //수정하기 버튼 표시
+				document.getElementById('btn1').style.display = "none"; //제출 버튼 숨기기
+			}
+		});
+
+		// [제출하기]btn click 시 form#frm1 전송
+		const btn1 = document.getElementById('btn1'); //제출 버튼
+		btn1.addEventListener('click', () => {
+			sendFormData()
+		});
+
+		// [수정하기]btn click 시 form#frm1 전송
+		const btn1_1 = document.getElementById('btn1_1'); //수정 버튼 
+		btn1_1.addEventListener('click', () => {
+			sendFormData()
+		});
+
+		// 확인 - 내용 없음
+		function btn_event01(){
+				$(".H_212_10_con > .contents_con > .contents_con .btn_con2 button").blur();
+				$(".H_212_10_con > .contents_con > .contents_con .popup_con_bg.popup01").fadeIn();
+				$(".H_212_10_con > .contents_con > .contents_con .popup_con.popup01").fadeIn();
+
+				setTimeout(function(){
+					$(".H_212_10_con > .contents_con > .contents_con .popup_con_bg.popup01").fadeOut();
+					$(".H_212_10_con > .contents_con > .contents_con .popup_con.popup01").fadeOut();
+				}, 1000);
+			}
+
+			// 확인 - 내용 있음
+			function 
+			
+			btn_event02(){
+				$(".H_212_10_con > .contents_con > .contents_con .btn_con2 button").blur();
+				$(".H_212_10_con > .contents_con > .contents_con .popup_con_bg.popup02").fadeIn();
+				$(".H_212_10_con > .contents_con > .contents_con .popup_con.popup02").fadeIn();
+				$(".btn_confirm").css("display", "none");
+				$(".btn_reset").css("display", "inline-block");
+				setTimeout(function(){
+					$(".H_212_10_con > .contents_con > .contents_con .popup_con_bg.popup02").fadeOut();
+					$(".H_212_10_con > .contents_con > .contents_con .popup_con.popup02").fadeOut();
+				}, 1000);
+			}
+
+			// 확인 - 정답
+			function btn_event03(){
+				//$(".H_212_10_con > .contents_con > .contents_con .btn_con .a_btn").blur();
+				$(".H_212_10_con > .contents_con > .contents_con .popup_con_bg.popup04").fadeIn();
+				$(".H_212_10_con > .contents_con > .contents_con .popup_con.popup04").fadeIn();
+
+				setTimeout(function(){
+					$(".H_212_10_con > .contents_con > .contents_con .popup_con_bg.popup04").fadeOut();
+					$(".H_212_10_con > .contents_con > .contents_con .popup_con.popup04").fadeOut();
+					$(".H_212_10_con > .contents_con > .contents_con .btn_con2 .btn_confirm").css("display","none");
+					$(".H_212_10_con > .contents_con > .contents_con .btn_con2 .btn_reset").css("display","inline-block");
+
+				}, 1000);
+			}
+
+			
+			// 제출하기
+			function sendFormData(){
+				// 텍스트 영역이 모두 채워졌는지 확인
+				const textarea1Filled = $("textarea[name='aidt_input']").eq(0).val().trim() !== "";
+				
+
+				// 조건 확인 및 적절한 함수 호출
+				if (!textarea1Filled) {
+					btn_event05(); // 텍스트 영역이 하나라도 비어있는 경우
+				} else {
+					btn_event06(); // 모든 항목이 채워진 경우
+				}
+			}
+
+			// 제출하기 - 내용 없음
+			function btn_event05(){
+				$(".H_212_10_con .btn_con .a_btn").blur();
+				$(".H_212_10_con .popup_con_bg.popup05").fadeIn();
+				$(".H_212_10_con .popup_con.popup05").fadeIn();
+				
+				setTimeout(function(){
+					$(".H_212_10_con .popup_con_bg.popup05").fadeOut();
+					$(".H_212_10_con .popup_con.popup05").fadeOut();
+				}, 1000);
+			}
+
+			// 제출하기 - 내용 있음
+			function btn_event06(){
+				$(".H_212_10_con .btn_con .a_btn").blur();
+				$(".H_212_10_con .popup_con_bg.popup06").fadeIn();
+				$(".H_212_10_con .popup_con.popup06").fadeIn();
+
+				// ✅ 버튼 전환 로직 추가!
+				document.getElementById('btn1_1').style.display = "";
+				document.getElementById('btn1').style.display = "none";
+				
+				child.sendFormData('frm1');
+
+				setTimeout(function(){
+					$(".H_212_10_con .popup_con_bg.popup06").fadeOut();
+					$(".H_212_10_con .popup_con.popup06").fadeOut();
+				}, 1000);
+			}
+
+			
+	</script>
+
+	<script>
+	$(document).ready(function () {
+		// 확인하기 버튼 이벤트
+		$(".btn_confirm").on("click", function () {
+			const text2 = $(".input02").val().trim();
+
+			if (text2 === "") {
+				btn_event01(); // 내용 없음
+			} else if (text2 === "NOEVS") {
+				btn_event03(); // 정답
+				$(".input02").val("")
+			} else {
+				btn_event02(); // 오답
+				$(".input02").val(""); // ✅ 정답 자동 입력
+			}
+		});
+
+
+		let resetClickCount = 0;
+
+		$(".btn_reset").on("click", function () {
+			const inputField = $(".input02");
+			const text2 = inputField.val().trim();
+
+			if (text2 === "") {
+				btn_event01(); // 내용 없음
+				return;
+			}
+
+			if (text2 === "NOEVS") {
+				btn_event03(); // 이미 정답이면 정답 팝업
+				inputField.val("");
+				resetClickCount = 0; // 초기화
+				return;
+			}
+
+			if (resetClickCount === 0) {
+				// 첫 번째 클릭: 오답 → 정답 입력 없이 오답 팝업
+				btn_event02();
+				inputField.val(""); // 입력칸 비움
+				resetClickCount++;
+			} else {
+				// 두 번째 클릭: 정답 자동 입력
+				inputField.val("NOEVS");
+
+				$(".H_212_10_con .popup_con_bg.popup03").fadeIn();
+				$(".H_212_10_con .popup_con.popup03").fadeIn();
+
+				setTimeout(function () {
+					$(".H_212_10_con .popup_con_bg.popup03").fadeOut();
+					$(".H_212_10_con .popup_con.popup03").fadeOut();
+				}, 1000);
+
+				resetClickCount = 0; // 초기화
+				$(".btn_confirm").show();
+				$(".btn_reset").hide();
+			}
+
+
+		});
+	});
+	</script>
+	<script>
+		const contentId = 'H-212-10';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>디지털 데이터 압축의 개념</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/swiper.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_211_03_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								디지털 데이터 압축의 개념
+							</h1>
+						</div>
+					</div>
+				</div>			
+
+				<div class="contents_con">	
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp;&nbsp; 디지털 기술의 발달로 전 세계에서 많은 양의 
+								<span class="color_text01" role="button" aria-expanded="false" aria-controls="computing-popup">디지털 데이터</span>가 만들어지고 있어,
+								 데이터를 효율적으로 다루는 방법인 데이터 압축에 대한 관심이 높아졌다. <span class="color_text02">데이터 압축</span>은 원본 데이터를 더 작은 용량의 데이터로 
+								 만드는 것으로 데이터의 불필요한 부분을 제거하거나 반복되는 부분을 효율적으로 표현하여 데이터의 크기를 줄이는 것이다.
+							</span>
+						</div>
+
+						<div class="popup_con text_popup_con" id="computing-popup" role="dialog" aria-modal="true">
+							<div class="contents_con">
+								<div class="close_btn">
+									<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+								</div>
+
+								<div class="title_con" tabindex="0">
+									<span>
+										디지털 데이터
+									</span>
+								</div>
+
+								<div class="info_con" tabindex="0">
+									<span>
+										컴퓨터는 여러 형태의 정보를 0과 1의 
+										숫자로 변환하여 저장하는데, 이처럼 
+										일련의 숫자 형태로 변환한 정보를 
+										디지털 데이터라고 한다.
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="info02_con">
+						<div class="title_con" tabindex="0">
+							<div class="dot" aria-hidden="true"></div>
+
+							<span>
+								일상생활 속 데이터 압축의 예
+							</span>
+						</div>
+
+						<div class="both_wrap">
+							<div class="item">
+								<div class="tit rd_10 f_center">음악 감상</div>
+								<div class="img H_211_03_img01"></div>
+								<div class="con rd_10 f_center">
+									데이터 압축은 고음질의 음악을 언제 어디서나 
+									감상할 수 있게 해 준다. 소리 파일로 주로
+									사용되는 FLAC, MP3 등은 데이터 압축이
+									적용되어 있다.
+								</div>
+							</div>
+							<div class="item">
+								<div class="tit rd_10 f_center">영상 시청</div>
+								<div class="img H_211_03_img02"></div>
+								<div class="con rd_10 f_center">
+									데이터 압축은 고화질의 영상을 끊김 없이 
+시청할 수 있게 해 준다. 영상 파일로 주로 
+사용되는 MPEG, H.264 등은 데이터 압축이 적용되어 있다.
+								</div>
+							</div>
+							<div class="item">
+								<div class="tit rd_10 f_center">사진 촬영</div>
+								<div class="img H_211_03_img03"></div>
+								<div class="con rd_10 f_center">
+									데이터 압축은 스마트폰 등으로 간편하게 
+사진을  촬영하여 저장할 수 있게 해 준다. 
+이미지 파일로 주로 사용되는 JPEG, PNG 
+등은 데이터 압축이 적용되어 있다.
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			// 컴퓨팅 텍스트 팝업 열기/닫기
+			$(document).on("click",".H_211_03_con > .contents_con > .contents_con > .info01_con > .text_con span .color_text01",function(){
+				if( $(".H_211_03_con > .contents_con > .contents_con > .info01_con > .popup_con").css("display") == "none" ){
+					$(".H_211_03_con > .contents_con > .contents_con > .info01_con > .popup_con").show();
+				}else{
+					$(".H_211_03_con > .contents_con > .contents_con > .info01_con > .popup_con").hide();
+				}
+			});
+
+			// 컴퓨팅 팝업 버튼 열기/닫기
+			$(document).on("click",".H_211_03_con > .contents_con > .contents_con > .info01_con > .popup_con > .contents_con > .close_btn .a_btn",function(){
+				if( $(".H_211_03_con > .contents_con > .contents_con > .info01_con > .popup_con").css("display") == "none" ){
+					$(".H_211_03_con > .contents_con > .contents_con > .info01_con > .popup_con").show();
+				}else{
+					$(".H_211_03_con > .contents_con > .contents_con > .info01_con > .popup_con").hide();
+				}
+			});
+
+			
+		</script>
+
+	</div>
+	<script>
+		const contentId = 'H-211-03';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

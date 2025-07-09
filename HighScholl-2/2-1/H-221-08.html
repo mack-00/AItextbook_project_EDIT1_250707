@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>데이터 수집 방법 > 공공 데이터</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_221_08_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h2>데이터 수집 방법</h2>
+							<h1>공공 데이터</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp;&nbsp;<span class="bold_text">공공 데이터</span>는 개별 공공 기관이 일상적 업무 수행의 결과물로 생성하거나 수집한 다양한 형태의 데이터이다. 공공 데이터<br/>의 가장 큰 특징은 개방성이다. 개인 정보 보호 및 국가 안보와 질서를 위반하지 않으면 누구나 자유롭게 쓸 수 있도록 공개<br/>하고 있다. 공공 데이터는 정부의 업무나 연구 목적으로 사용되기 때문에 신뢰성이 높고 법적 근거에 기반하여 수집된다.
+							</span>
+						</div>
+					</div>
+
+					<div class="info02_con">
+						<div class="title_con">
+							<div class="dot" aria-hidden="true"></div>
+
+							<span>
+								공공 데이터를 수집할 수 있는 대표적인 웹 사이트 예 <span class="color_text01" role="button" aria-expanded="false" aria-controls="computing-popup"></span>
+							</span>
+						</div>
+
+						<div class="popup_con" id="computing-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+							<div class="contents_con">
+								<div class="close_btn">
+									<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+								</div>
+
+								<div class="title_con" tabindex="0" id="popup-title" >
+									<span>
+										공공 데이터 수집 웹사이트
+									</span>
+								</div>
+
+								<div class="info_con" tabindex="0">
+									<ul>
+										<li>
+											<div class="text_con">
+												<span>
+													국가 통계 포털(<a href="https://kosis.kr" target="_blank" style="color: #000;">https://kosis.kr</a>): 국내외 통계 데이터를 공유한다.
+												</span>
+											</div>
+										</li>		
+										<li>
+											<div class="text_con">
+												<span>
+													지표누리(<a href="https://www.index.go.kr" target="_blank" style="color: #000;">https://www.index.go.kr</a>): 통계청에서 관리·운영하는 5종의 지표 체계를 공유한다.
+												</span>
+											</div>
+										</li>		
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="contents_con">
+
+							<div class="both_wrap">
+								<div class="item">
+									<div class="tit rd_10 f_center">공공 데이터 포털</div>
+									<div class="img H_221_08_img01"></div>
+									<div class="con rd_10 f_center">
+										<ul class="list_disc">
+											<li>공공 기관에서 보유한 데이터를 개방하여 공공 데이터를 공유한다.</li>
+											<li>웹 사이트: <a href="https://www.data.go.kr"  style="color: #191919;"  target="_blank">https://www.data.go.kr</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="item">
+									<div class="tit rd_10 f_center">기상 자료 개방 포털 </div>
+									<div class="img H_221_08_img02"></div>
+									<div class="con rd_10 f_center">
+										<ul class="list_disc">
+											<li>기상청이 보유한 데이터를 개방하여 공공 데이터로 활용할 수 있도록 공유한다.</li>
+											<li>웹 사이트: <a href=" https://data.kma.go.kr" style="color: #191919;" target="_blank"> https://data.kma.go.kr</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>														
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script>
+
+			// 컴퓨팅 텍스트 팝업 열기/닫기
+			$(document).on("click",".H_221_08_con > .contents_con > .contents_con > .info02_con > .title_con span > .color_text01",function(){
+				if( $(".H_221_08_con > .contents_con > .contents_con > .info02_con > .popup_con").css("display") == "none" ){
+					$(".H_221_08_con > .contents_con > .contents_con > .info02_con > .popup_con").show();
+				}else{
+					$(".H_221_08_con > .contents_con > .contents_con > .info02_con > .popup_con").hide();
+				}
+			});
+
+			// 컴퓨팅 팝업 버튼 열기/닫기
+			$(document).on("click",".H_221_08_con > .contents_con > .contents_con > .info02_con > .popup_con > .contents_con > .close_btn",function(){
+				if( $(".H_221_08_con > .contents_con > .contents_con > .info02_con > .popup_con").css("display") == "none" ){
+					$(".H_221_08_con > .contents_con > .contents_con > .info02_con > .popup_con").show();
+				}else{
+					$(".H_221_08_con > .contents_con > .contents_con > .info02_con > .popup_con").hide();
+				}
+			});
+			
+
+		</script>
+
+	</div>
+	<script>
+		const contentId = 'H-221-08';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

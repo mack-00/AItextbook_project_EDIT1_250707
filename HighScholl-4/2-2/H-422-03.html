@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>개념 학습 - 지도학습의 구분</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_422_03_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+						<div class="text_con">
+							<h2 tabindex="0">
+								지도학습의 유형
+							</h2>
+
+							<h1 tabindex="0">
+								지도학습의 구분
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp; 지도학습은 입력값(<span class="link_tooltip" tabindex="0" role="button" aria-expanded="false" aria-controls="tooltip01">독립 변수</span>)에 대해 인공지능이 예측한 결괏값(<span class="link_tooltip" tabindex="0" role="button" aria-expanded="false" aria-controls="tooltip02">종속변수</span>)의 특성에 따라 분류와 회귀로 구분한다. 분류(classification)는 메일에서 예측한 결괏값이 ‘스팸’, ‘정상’과 같이 <span class="link_tooltip" role="button" tabindex="0" aria-expanded="false" aria-controls="tooltip03">이산적인 값</span>(<span class="link_tooltip" tabindex="0" role="button"  aria-expanded="false" aria-controls="tooltip04">범주형</span>)으로 명확하게 구분된다. 반면, 회귀는 과거의 기온 데이터를 활용하여 온도를 예측하는 것과 같이 예측 결괏값이 온도처럼 연속적인 수칫값을 가진다.
+							</span>
+						</div>
+					</div>
+					<div class="img_con">
+						<span class="img_txt01" tabindex="0">입력 데이터</span>
+						<span class="img_txt02" tabindex="0">지도학습 모델</span>
+						<span class="img_txt03" tabindex="0">예측 결괏값</span>
+						<span class="img_txt04" tabindex="0">값의 유형?</span>
+						<span class="img_txt05" tabindex="0">이산적인 값</span>
+						<span class="img_txt06" tabindex="0">분류</span>
+						<span class="img_txt07" tabindex="0">K-최근접 이웃, <br>의사결정트리, 앙상블, <br>로지스틱 회귀</span>
+						<span class="img_txt08" tabindex="0">연속적인 수칫값</span>
+						<span class="img_txt09" tabindex="0">회귀</span>
+						<span class="img_txt10" tabindex="0">선형 회귀</span>
+						<span class="img_txt11" tabindex="0">활용 분야</span>
+						<span class="img_txt12" tabindex="0">부정 거래 방지, <br>이미지 분류 등</span>
+						<span class="img_txt13" tabindex="0">예보, 예측 등</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- 팝업 -->
+			<div class="text_popup_con H_422_03_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+				<div class="contents_con">
+					<div class="close_btn">
+						<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+					</div>
+
+					<div class="title_con" tabindex="0">
+						<span>
+							독립 변수
+						</span>
+					</div>
+
+					<div class="info_con" tabindex="0">
+						<span>
+							종속변수에 영향을 주는 변수로 예측에 사용되는 입력 변수이다.
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="text_popup_con H_422_03_pop_02" id="tooltip02" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+				<div class="contents_con">
+					<div class="close_btn">
+						<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+					</div>
+
+					<div class="title_con" tabindex="0">
+						<span>
+							종속 변수
+						</span>
+					</div>
+
+					<div class="info_con" tabindex="0">
+						<span>
+							예측하려는 변수로 결과 변수,<br>출력 변수라고도 한다.
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="text_popup_con H_422_03_pop_03" id="tooltip03" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+				<div class="contents_con">
+					<div class="close_btn">
+						<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+					</div>
+
+					<div class="title_con" tabindex="0">
+						<span>
+							이산적인 값<br>(discrete value)
+						</span>
+					</div>
+
+					<div class="info_con" tabindex="0">
+						<span>
+							명확하게 구별된 값들로 이루어졌으며 범주형 데이터가 대표적이다.<br>예) 한 달 동안 읽은 책의 수
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="text_popup_con H_422_03_pop_04" id="tooltip04" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+				<div class="contents_con">
+					<div class="close_btn">
+						<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+					</div>
+
+					<div class="title_con" tabindex="0">
+						<span>
+							범주형(categorical)
+						</span>
+					</div>
+
+					<div class="info_con" tabindex="0">
+						<span>
+							변수의 값이 미리 정의된 몇 가지 범주나 카테고리로 나뉘는 경우이다.<br>예) 성별, 지역
+						</span>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		
+
+	</div>
+	<script>
+		// 팝업열기
+		$(".H_422_03_con .link_tooltip").on("click", function(){
+			var popSelector = "#" + $(this).attr("aria-controls");
+			if($(popSelector).css("display") == "none") {
+				$(".H_422_03_con .text_popup_con").not(popSelector).hide();
+				$(popSelector).show();
+			}else {
+				$(popSelector).hide();
+			}
+		});
+		// 팝업닫기
+		$(".H_422_03_con .text_popup_con .a_btn").on("click", function(){
+			$(this).parents(".text_popup_con").hide();
+		});
+	</script>
+	<script>
+		const contentId = 'H-422-03';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

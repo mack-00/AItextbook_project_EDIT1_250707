@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>하노이 탑 문제 > 문제 분해</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="GoogleTranslate.css">
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script type="text/javascript" src="GoogleTranslate.js"></script> 
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_311_14_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h2>하노이 탑 문제</h2>
+							<h1>문제 분해</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01 fw_600">
+						원반 옮기기 퍼즐인 ‘하노이 탑’ 문제의 해결 방법을 모델링하려고 한다. 
+						<span class="point rd_10">조건</span>과 원반의 이동 모습을 보며 문제를 이해하고 원반을 옮기는 방법을 완성해 보자.
+					</div>
+					<div class="both_wrap main_both">
+						<div class="left">
+							<div class="tit f_center rd_10">조건</div>
+							<div class="con rd_10">
+
+								<div class="num_txt">
+									<span class="number_icon">1</span>
+									크기가 다른 원반 n개를 출발점 기둥(A)에서 도착점 기둥(C)으로 전부 옮긴다.
+								</div>
+
+								<div class="num_txt">
+									<span class="number_icon">2</span>
+									원반은 한 번에 1개씩만 옮길 수 있다.
+								</div>
+
+								<div class="num_txt last">
+									<span class="number_icon">3</span>
+									원반은 한 기둥의 맨 위 원반을 뽑아 다른 기둥의 맨 위로만 옮길 수 있다.
+								</div>
+
+								<div class="num_txt last">
+									<span class="number_icon">4</span>
+									원반을 옮기는 과정에서 큰 원반을 작은 원반 위로 올릴 수 없다.
+								</div>
+
+								<div class="num_txt last">
+									<span class="number_icon">5</span>
+									중간의 보조 기둥(B)을 이용할 수 있다.
+								</div>
+
+
+							</div>
+						</div>
+
+						<div class="img H_311_14_img01">
+							<img src="./img/H_311_14_img01.gif" alt="원반 옮기기 퍼즐인 ‘하노이 탑’ 문제의 해결 방법을 모델링하기">
+						</div>
+					</div>
+
+					<div class="both_wrap sub_both">
+						<div class="left">
+							<div class="tit">
+								<strong class="rd_10">문제 분해</strong>
+								원반의 개수가 1개부터 3개인 경우에 대해 각각 원반을 이동하는 횟수를 빈칸에 적어 보자.
+							</div>
+							<div class="rd_10 q_box">
+								<ul>
+									<li>
+									  1. 원반이 1개일 때 원반 이동 횟수
+										<label class="input_wrap">
+													<input type="text" class="input01" /> 번
+										</label>
+									</li>
+									<li>
+							    	2. 원반이 2개일 때 원반 이동 횟수
+										<label class="input_wrap">
+											<input type="text" class="input02" /> 번
+										</label>
+									</li>
+									<li>
+								    3. 원반이 3개일 때 원반 이동 횟수
+										<label class="input_wrap">
+											<input type="text" class="input03" /> 번
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="btn_con">
+							<button type="button" class="btn_confirm" aria-label="확인하기">확인하기</button>
+							<button type="button" class="btn_reset" aria-label="다시 하기" style="display: none;">다시 하기</button>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="popup_con_bg popup01"></div>
+				<div class="popup_con popup01" role="alert"></div>
+
+				<div class="popup_con_bg popup02"></div>
+				<div class="popup_con popup02" role="alert"></div>
+
+				<div class="popup_con_bg popup03"></div>
+				<div class="popup_con popup03" role="alert"></div>
+
+				<div class="popup_con_bg popup04"></div>
+				<div class="popup_con popup04" role="alert"></div>
+
+			</div>
+		</main>
+
+	</div>
+<script>
+$(document).ready(function(){
+
+	let wrongCount = 0;
+
+	$(".btn_confirm").on("click", function(){
+
+		const val1 = $(".input01").val().trim();
+		const val2 = $(".input02").val().trim();
+		const val3 = $(".input03").val().trim();
+
+		// 빈칸 확인
+		if(val1 === "" || val2 === "" || val3 === ""){
+			$(".H_311_14_con .popup_con_bg.popup03").fadeIn();
+			$(".H_311_14_con .popup_con.popup03").fadeIn();
+
+			setTimeout(function(){
+				$(".H_311_14_con .popup_con_bg.popup03").fadeOut();
+				$(".H_311_14_con .popup_con.popup03").fadeOut();
+			}, 1000);
+			return;
+		}
+
+		// 정답일 경우
+		if(val1 === "1" && val2 === "3" && val3 === "7"){
+			$(".H_311_14_con .popup_con_bg.popup02").fadeIn();
+			$(".H_311_14_con .popup_con.popup02").fadeIn();
+
+			setTimeout(function(){
+				$(".H_311_14_con .popup_con_bg.popup02").fadeOut();
+				$(".H_311_14_con .popup_con.popup02").fadeOut();
+			}, 1000);
+		} else {
+			wrongCount++;
+
+			// 첫 번째 오답
+			if (wrongCount === 1) {
+				$(".H_311_14_con .popup_con_bg.popup01").fadeIn();
+				$(".H_311_14_con .popup_con.popup01").fadeIn();
+
+				// 입력 초기화
+				$(".input01, .input02, .input03").val("");
+
+				setTimeout(function(){
+					$(".H_311_14_con .popup_con_bg.popup01").fadeOut();
+					$(".H_311_14_con .popup_con.popup01").fadeOut();
+				}, 1000);
+			}
+			// 두 번째 오답 이상
+			else if (wrongCount >= 2) {
+				$(".H_311_14_con .popup_con_bg.popup04").fadeIn();
+				$(".H_311_14_con .popup_con.popup04").fadeIn();
+
+				setTimeout(function(){
+					$(".H_311_14_con .popup_con_bg.popup04").fadeOut();
+					$(".H_311_14_con .popup_con.popup04").fadeOut();
+				}, 1000);
+
+				$(".input01").val("1");
+				$(".input02").val("3");
+				$(".input03").val("7");
+				$(".q_box").addClass("correct");
+
+				$(".btn_confirm").hide();
+				$(".btn_reset").show();
+			}
+		}
+	});
+
+	$(".btn_reset").on("click", function(){
+		$(".input01, .input02, .input03").val("");
+		wrongCount = 0;
+		$(".btn_confirm").show();
+		$(".btn_reset").hide();
+		$(".q_box").removeClass("correct");
+	});
+});
+</script>
+
+<script>
+	const contentId = 'H-311-14';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>개념 학습 - 지능 에이전트 구현 과정의 예</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="./css/jquery-ui.min.css">
+		<link rel="stylesheet" href="./css/fonts.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/common_all.css">
+		<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+		<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="./js/jquery-ui.min.js"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<main class="H_411_06_con">
+				<div class="contents_con">
+					<div class="title_con">
+						<div class="contents_con">
+							<div class="text_bg">
+								<h2 class="text" tabindex="1">개념 학습</h2>
+								<div class="bg"></div>
+							</div>
+							<div class="text_con" tabindex="1">
+								<h2> 지능 에이전트 </h2>
+								<h1> 지능 에이전트 구현 과정의 예 </h1>
+							</div>
+						</div>
+					</div>
+					<div class="contents_con">
+						<div class="text_01" tabindex="1">
+							<span>&nbsp;&nbsp;생성형 인공지능 챗봇의 사례를 통해 지능 에이전트의 구현 과정을 확인해 보자. </span>
+						</div>
+						<div class="sub_title" tabindex="1">
+							<strong>목표</strong>
+							<span>사용자의 질문에 적절한 답변을 생성하여 사용자에게 필요한 정보를 제공한다.</span>
+						</div>
+						<div class="both_wrap">
+							<div class="item on">
+								<div class="tit" tabindex="1">
+									<span class="num">1</span> 인식
+								</div>
+								<div class="con rd_20">
+									<span tabindex="1"> 사용자의 질문을 텍스트 형태로 입력받아 문장 구조와 의미 파악(문맥과 질문에 대한 정보 이해) </span>
+									<div class="exam_con" tabindex="1">
+										<strong>예시</strong>
+										<span>사용자가 "오늘 날씨 어때?"라고 질문하면 챗봇은 '날씨', '오늘'이라는 키워드를 인식한다.</span>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="item_in">
+									<div class="tit" tabindex="0">
+										<span class="num">2</span> 학습
+									</div>
+									<div class="con rd_20">
+										<span tabindex="0"> 대규모 데이터셋으로 사전 학습되며 다양한 주제와 맥락에서 텍스트의 패턴과 지식 습득(지속적인 피드백과 추가 데이터로 성능이 개선되도록 학습) </span>
+										<div class="exam_con" tabindex="0">
+											<strong>예시</strong>
+											<span>챗봇은 수많은 날씨 관련 질문과 그에 대한 적절한 응답을 학습한다.</span>
+										</div>
+									</div>
+								</div>
+								<button class="after_hand" aria-label="상세보기" tabindex="1"></button>
+							</div>
+							<div class="item">
+								<div class="item_in">
+									<div class="tit" tabindex="0">
+										<span class="num">3</span> 추론
+									</div>
+									<div class="con rd_20">
+										<span tabindex="0"> 학습한 지식과 패턴을 바탕으로 추론 (새로운 맥락에서도 문제 해결 능력) </span>
+										<div class="exam_con" tabindex="0">
+											<strong>예시</strong>
+											<span>사용자의 질문에 대해, 챗봇은 학습된 데이터와 현재 날씨 정보를 결합하여 답변을 추론한다.</span>
+										</div>
+									</div>
+								</div>
+								<button class="after_hand" aria-label="상세보기" tabindex="1"></button>
+							</div>
+							<div class="item">
+								<div class="item_in">
+									<div class="tit" tabindex="0">
+										<span class="num">4</span> 행동
+									</div>
+									<div class="con rd_20">
+										<span tabindex="0"> 추론을 바탕으로 모델은 사용자의 질문에 대한 최적의 답변을 생성하고 텍스트 형태로 반환 (답변의 맥락, 정확성 및 유용성 고려) </span>
+										<div class="exam_con" tabindex="0">
+											<strong>예시</strong>
+											<span>챗봇은 "오늘 서울의 날씨는 맑고 따뜻합니다."라는 답변을 텍스트 형태로 사용자에게 제공한다.</span>
+										</div>
+									</div>
+								</div>
+								<button class="after_hand" aria-label="상세보기" tabindex="1"></button>
+							</div>
+							<div class="item">
+								<div class="item_in">
+									<div class="tit" tabindex="0">
+										<span class="num">5</span> 평가
+									</div>
+									<div class="con rd_20">
+										<span tabindex="0"> 사용자의 피드백으로 모델의 성능 평가 (더 나은 답변을 생성하기 위해 지속적으로 개선하며 사용자의 만족도 향상을 추구) </span>
+										<div class="exam_con" tabindex="0">
+											<strong>예시</strong>
+											<span>사용자가 답변에 반응하거나 날씨 정보를 요청하면, 챗봇은 응답 적절성을 평가해 학습에 반영한다.</span>
+										</div>
+									</div>
+								</div>
+								<button class="after_hand" aria-label="상세보기" tabindex="1"></button>
+							</div>
+						</div>
+					</div>
+			</main>
+		</div>
+		<script>
+			$(document).ready(function() {
+				//손 가락 클릭
+				$(".after_hand").on("click", function() {
+					$(this).parent().addClass("on");
+				});
+			});
+		</script>
+		<script>
+			const contentId = 'H-411-06';
+		</script>
+		<script type="text/javascript" src="./js/xapi.page.js"></script>
+	</body>
+</html>

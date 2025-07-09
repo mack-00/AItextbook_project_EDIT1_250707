@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>사물 인터넷 시스템 구성과 동작</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+
+	<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const draggables = document.querySelectorAll('.draggable');
+            const dropZones = document.querySelectorAll('.drop-zone');
+            const optionsContainer = document.querySelector('.options-container');
+            let draggedElement = null;
+			let isDragging = false;
+			let startX, startY, initialX, initialY, xOffset = 0, yOffset = 0;
+
+			let adapt_answer = 0; // 적용한 답변 수
+			let correct_answer = 0; // 정답 수
+			let try_check = 0; // 확인하기 시도 수
+			const originalOrder = Array.from(document.querySelectorAll('.draggable'));  // 최상단에 위치
+			const originalOptionsHTML = optionsContainer.innerHTML;
+			// 초기 위치 저장
+			// 모든 항목을 원래 자리로 이동
+			const returnItemsToContainer = () => {
+				// 드롭존에서 버튼을 제거
+				dropZones.forEach(zone => {
+				const draggable = zone.querySelector('.draggable');
+				if (draggable) {
+					zone.removeChild(draggable); // 정확히 제거
+				}
+				zone.classList.remove('occupied');
+				});
+
+				// 원래 구조로 복원
+				optionsContainer.innerHTML = originalOptionsHTML;
+
+				// 새로 바인딩된 드래그 요소들에 이벤트 다시 연결
+				rebindDraggables();
+
+				adapt_answer = 0;
+				correct_answer = 0;
+			};
+			function rebindDraggables() {
+				const newDraggables = document.querySelectorAll('.draggable');
+
+				newDraggables.forEach(draggable => {
+					draggable.addEventListener('dragstart', (e) => {
+						e.preventDefault();
+						return false;
+					});
+
+					draggable.addEventListener('mousedown', (e) => {
+						e.preventDefault();
+						dragStart(e);
+					});
+
+					draggable.addEventListener('touchstart', (e) => {
+						e.preventDefault();
+						dragStart(e);
+					}, { passive: false });
+
+					draggable.addEventListener('touchmove', drag, { passive: false });
+					draggable.addEventListener('touchend', dragEnd, { passive: false });
+				});
+			}
+			// 모든 항목을 정답 자리로 이동
+			const placeItemsInCorrectPositions = () => {
+				returnItemsToContainer();
+
+				// 먼저 options-container를 완전히 비운다
+				optionsContainer.innerHTML = '';
+
+				draggables.forEach(item => {
+					const possibleAnswers = item.dataset.answer.split("|");  // 여러 정답 가능
+
+					// 비어있는 드롭존 중에서 가능한 위치 찾기
+					const correctZone = possibleAnswers.map(pos => {
+						return Array.from(dropZones).find(zone =>
+							zone.dataset.position === pos && !zone.querySelector('.draggable')
+						);
+					}).find(zone => zone);  // 첫 번째 비어 있는 정답존을 선택
+
+					if (correctZone) {
+						correctZone.appendChild(item);
+						correctZone.classList.add('occupied');
+					}
+				});
+			};
+			let hasMoved = false;
+
+			// 수정된 dragStart
+			function dragStart(e) {
+				if (e.type === "touchstart") {
+					initialX = e.touches[0].clientX;
+					initialY = e.touches[0].clientY;
+					draggedElement = e.target;
+				} else {
+					initialX = e.clientX;
+					initialY = e.clientY;
+					draggedElement = e.target;
+				}
+
+				if (draggedElement.classList.contains('draggable')) {
+					hasMoved = false; // 움직였는지 여부 초기화
+					isDragging = true;
+					draggedElement.classList.add('dragging');
+					
+					const rect = draggedElement.getBoundingClientRect();
+					xOffset = initialX - rect.left;
+					yOffset = initialY - rect.top;
+				}
+			}
+
+			function drag(e) {
+				if (isDragging && draggedElement) {
+					e.preventDefault();
+
+					let currentX = (e.type === "touchmove") ? e.touches[0].clientX : e.clientX;
+					let currentY = (e.type === "touchmove") ? e.touches[0].clientY : e.clientY;
+
+					// 움직임이 발생했음을 체크
+					if (Math.abs(currentX - initialX) > 5 || Math.abs(currentY - initialY) > 5) {
+						hasMoved = true;
+					}
+
+					const newX = currentX - xOffset;
+					const newY = currentY - yOffset;
+
+					draggedElement.style.position = 'fixed';
+					draggedElement.style.top = `${newY}px`;
+					draggedElement.style.left = `${newX}px`;
+
+					// dropzone 강조 생략
+				}
+			}
+
+			function dragEnd(e) {
+				if (!isDragging || !draggedElement) return;
+
+				// ✅ 움직이지 않았으면 아무것도 안 하고 초기화만
+				if (!hasMoved) {
+					draggedElement.classList.remove('dragging');
+					draggedElement.style = '';
+					isDragging = false;
+					draggedElement = null;
+					return;
+				}
+
+				// 원래 drop 처리
+				const dropTarget = document.elementFromPoint(
+					e.type === "touchend" ? e.changedTouches[0].clientX : e.clientX,
+					e.type === "touchend" ? e.changedTouches[0].clientY : e.clientY
+				);
+
+				if (dropTarget) {
+					const dropZone = dropTarget.closest('.drop-zone');
+					if (dropZone) {
+						const existing = dropZone.querySelector('.draggable');
+						
+						// 기존 버튼이 있으면 원래 자리로
+						if (existing) {
+							optionsContainer.appendChild(existing);
+						}
+
+						dropZone.appendChild(draggedElement);
+						dropZone.classList.add('occupied');
+					} else {
+						optionsContainer.appendChild(draggedElement);
+					}
+				} else {
+					optionsContainer.appendChild(draggedElement);
+				}
+
+				draggedElement.classList.remove('dragging');
+				draggedElement.style = '';
+				isDragging = false;
+				draggedElement = null;
+			}
+
+            // 드래그 앤 드롭 이벤트 처리
+            draggables.forEach(draggable => {
+                draggable.addEventListener('dragstart', (e) => {
+					e.preventDefault(); // 기본 드래그 동작 방지
+					return false;
+                });
+				
+				// 마우스 이벤트
+				draggable.addEventListener('mousedown', (e) => {
+					e.preventDefault();
+					dragStart(e);
+				});
+
+				// 터치 이벤트
+				draggable.addEventListener('touchstart', (e) => {
+					e.preventDefault();
+					dragStart(e);
+				}, { passive: false });
+
+				draggable.addEventListener('touchmove', drag, { passive: false });
+				draggable.addEventListener('touchend', dragEnd, { passive: false });
+            });
+
+			// 마우스 전역 이벤트
+			document.addEventListener('mousemove', (e) => {
+				if (isDragging) {
+					drag(e);
+				}
+			});
+
+			document.addEventListener('mouseup', (e) => {
+				if (isDragging) {
+					dragEnd(e);
+				}
+			});
+
+			// 기본 드래그 방지
+			document.addEventListener('dragstart', (e) => {
+				e.preventDefault();
+				return false;
+			}, { passive: false });
+
+			// 정답 확인 이벤트 처리
+			const checkButton = document.querySelector('.check-btn');
+			checkButton.addEventListener('click', () => {
+				dropZones.forEach(zone => {
+					const answer = zone.querySelector('.draggable');
+					if (answer) {
+						adapt_answer++; // 답변 수
+						
+						//const isCorrect = answer.dataset.answer === zone.dataset.position;
+						const isCorrect = answer.dataset.answer.split("|").includes(zone.dataset.position);
+
+						if (isCorrect)
+							correct_answer++; // 정답 수
+					}
+				});
+				
+				// 단어를 하나라도 옮기지 않고 확인하기를 눌렀을 때
+				if (adapt_answer !== 9) {
+				//	alert('빈칸에 들어갈 말을 옮긴 후 확인하기를 눌러 주세요.');
+					
+					$(".H_121_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn").blur();
+					$(".H_121_08_con > .contents_con > .contents_con .popup_con_bg.popup01").fadeIn();
+					$(".H_121_08_con > .contents_con > .contents_con .popup_con.popup01").fadeIn();
+
+					setTimeout(function(){
+						$(".H_121_08_con > .contents_con > .contents_con .popup_con_bg.popup01").fadeOut();
+						$(".H_121_08_con > .contents_con > .contents_con .popup_con.popup01").fadeOut();
+					}, 1000);
+
+					adapt_answer = 0;
+					correct_answer = 0;
+					
+					// 닫기 버튼이 없는 팝업이 떴다가 사라짐
+					// 팝업 내용: 빈칸에 들어갈 말을 옮긴 후 확인하기를 눌러 주세요.
+				} else {
+					if (adapt_answer > 0) {
+						try_check++;  // 시도 횟수 증가
+					}
+
+					// 정답을 맞췄을 때
+					if (correct_answer === 9) {
+					//	alert('잘 풀었어요!');
+						
+						$(".H_121_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn").blur();
+						$(".H_121_08_con > .contents_con > .contents_con .popup_con_bg.popup04").fadeIn();
+						$(".H_121_08_con > .contents_con > .contents_con .popup_con.popup04").fadeIn();
+
+						setTimeout(function(){
+							$(".H_121_08_con > .contents_con > .contents_con .popup_con_bg.popup04").fadeOut();
+							$(".H_121_08_con > .contents_con > .contents_con .popup_con.popup04").fadeOut();
+							$(".H_121_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn01").css("display","none");
+							$(".H_121_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn02").css("display","inline-block");
+
+						}, 1000);
+						setTimeout(() => {
+							returnItemsToContainer(); // ✨ 수정된 부분
+						}, 500);
+						// 닫기 버튼이 없는 팝업이 자동으로 나왔다가 사라짐.
+						// 확인하기 버튼이 다시 풀기 버튼으로 변경됨.
+						// 팝업 내용: 잘 풀었어요!
+						// location.reload(true);
+					}
+					// 1회 틀렸을 때
+					else if (try_check === 1) {
+					//	alert('다시 풀어 보세요.');
+
+						$(".H_121_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn").blur();
+						$(".H_121_08_con > .contents_con > .contents_con .popup_con_bg.popup02").fadeIn();
+						$(".H_121_08_con > .contents_con > .contents_con .popup_con.popup02").fadeIn();
+
+						setTimeout(function(){
+							$(".H_121_08_con > .contents_con > .contents_con .popup_con_bg.popup02").fadeOut();
+							$(".H_121_08_con > .contents_con > .contents_con .popup_con.popup02").fadeOut();
+						}, 1000);
+						
+						setTimeout(() => {
+							returnItemsToContainer();
+						}, 500);
+						
+						// 닫기 버튼이 없는 팝업이 자동으로 나왔다가 사라진 후 옮긴 단어가 원래의 자리로 돌아감.
+						// 팝업 내용: 다시 풀어 보세요.
+					}
+					// 2회 틀렸을 때
+					else if (try_check === 2) {
+					//	alert('답을 확인해 보세요.');
+
+						$(".H_121_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn").blur();
+						$(".H_121_08_con > .contents_con > .contents_con .popup_con_bg.popup03").fadeIn();
+						$(".H_121_08_con > .contents_con > .contents_con .popup_con.popup03").fadeIn();
+
+						setTimeout(function(){
+							$(".H_121_08_con > .contents_con > .contents_con .popup_con_bg.popup03").fadeOut();
+							$(".H_121_08_con > .contents_con > .contents_con .popup_con.popup03").fadeOut();
+							$(".H_121_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn01").css("display","none");
+							$(".H_121_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn02").css("display","inline-block");
+						}, 1000);
+						
+						try_check = 0;
+						setTimeout(() => {
+							placeItemsInCorrectPositions();
+						}, 500);
+						
+						// 닫기 버튼이 없는 팝업이 자동으로 나왔다가 사라진 후 모든 단어가 자동으로 정답이 맞춰짐.
+						// 팝업 내용: 답을 확인해 보세요.
+						// location.reload(true);
+					}
+				}
+			});
+			
+			// 다시 하기 이벤트 처리
+			const retryButton = document.querySelector('.retry-btn');
+			retryButton.addEventListener('click', () => {
+				try_check = 0;
+				
+				returnItemsToContainer();
+
+				
+				$(".H_121_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn01").css("display","inline-block");
+				$(".H_121_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn02").css("display","none");
+			});
+
+            // 드롭존 이벤트 처리
+            const dropTargets = [...dropZones, optionsContainer];
+            dropTargets.forEach(target => {
+                target.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    if (target.classList.contains('drop-zone') && target.children.length > 1) {
+                        return; // 이미 답변이 있는 경우 드롭 불가
+                    }
+                    target.classList.add('dragover');
+                });
+
+                target.addEventListener('dragleave', () => {
+                    target.classList.remove('dragover');
+                });
+
+                target.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    target.classList.remove('dragover');
+                    
+                    if (!draggedElement) return;
+
+                    // 드롭존인 경우 검증
+                    if (target.classList.contains('drop-zone')) {
+                        if (target.children.length > 1) return; // 이미 답변이 있으면 무시
+                        target.classList.add('occupied');
+                    } else {
+                        // 옵션 컨테이너로 돌아가는 경우
+                        draggedElement.parentElement.classList.remove('occupied');
+                    }
+
+                    target.appendChild(draggedElement);
+                });
+            });
+        });
+    </script>
+	
+	<style>
+		.drop-zone {
+            transition: all 0.2s ease;
+        }
+
+        .drop-zone.dragover {
+            background-color: #e9ecef;
+            border-color: #007bff;
+        }
+
+        .drop-zone.occupied {
+            border-style: solid;
+        }
+		
+        .draggable {
+            cursor: move;
+            cursor: -webkit-grab;
+            cursor: grab;
+            user-select: none;
+			touch-action: none;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-webkit-tap-highlight-color: transparent;
+			position: relative;
+			display: inline-block;
+			-webkit-user-drag: none;
+			-khtml-user-drag: none;
+			-moz-user-drag: none;
+			-o-user-drag: none;
+        }
+
+        .draggable.dragging {
+			opacity: 0.8;
+			cursor: -webkit-grabbing;
+			cursor: grabbing;
+			z-index: 1000;
+			pointer-events: none;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_121_08_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 정리하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								2-1. 사물 인터넷 시스템 구성과 동작
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">		
+					<div class="blank_word_test_con">
+						<div class="contents_con">
+							<div class="question_con">	
+								<div class="list_con">
+									<ul>
+										<li>
+											<div class="text_con">
+												<span class="num_text text01">1</span>
+
+												<div class="text_div">
+													<div class="blank_con drop-zone" role="region" aria-label="첫번째 답변 영역" data-position="1" tabindex="0">
+														<span class="sr-only">답변을 이 곳에 놓으세요</span>
+													</div>
+
+													<div class="text_con" tabindex="0">
+														<span>
+															은(는) 사물에 다양한 센서와 통신 기능을 장착하여 사물 간에 인터넷 연결이 가능한 것이다.
+														</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="text_con">
+												<span class="num_text text02">2</span>
+
+												<div class="text_div">
+													<div class="text_con" tabindex="0">
+														<span>
+															사물 인터넷 시스템은
+														</span>
+													</div>
+
+													<div class="blank_con drop-zone" role="region" aria-label="두번째 답변 영역" data-position="2" tabindex="0">
+														<span class="sr-only">답변을 이 곳에 놓으세요</span>
+													</div>
+
+													<div class="text_con" tabindex="0">
+														<span>
+															,
+														</span>
+													</div>
+
+													<div class="blank_con drop-zone" role="region" aria-label="세번째 답변 영역" data-position="3" tabindex="0">
+														<span class="sr-only">답변을 이 곳에 놓으세요</span>
+													</div>
+
+													<div class="text_con" tabindex="0">
+														<span>
+															,
+														</span>
+													</div>
+
+													<div class="blank_con drop-zone" role="region" aria-label="네번째 답변 영역" data-position="4" tabindex="0">
+														<span class="sr-only">답변을 이 곳에 놓으세요</span>
+													</div>
+
+													<div class="text_con" tabindex="0">
+														<span>
+															,
+														</span>
+													</div>
+
+													<div class="blank_con drop-zone" role="region" aria-label="다섯번째 답변 영역" data-position="5" tabindex="0">
+														<span class="sr-only">답변을 이 곳에 놓으세요</span>
+													</div>
+
+													<div class="text_con" tabindex="0">
+														<span>
+															(으)로 구성된다.
+														</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="text_con">
+												<span class="num_text text03">3</span>
+
+												<div class="text_div">
+													<div class="text_con" tabindex="0">
+														<span>
+															사물 인터넷 시스템의 동작 원리는 센서를 통한
+														</span>
+													</div>
+
+													<div class="blank_con drop-zone" role="region" aria-label="여섯번째 답변 영역" data-position="6" tabindex="0">
+														<span class="sr-only">답변을 이 곳에 놓으세요</span>
+													</div>
+
+													<div class="text_con" tabindex="0">
+														<span>
+															, 네트워크로
+															</span>
+													</div>
+
+													<div class="blank_con drop-zone" role="region" aria-label="일곱번째 답변 영역" data-position="7" tabindex="0">
+														<span class="sr-only">답변을 이 곳에 놓으세요</span>
+													</div>
+
+													<div class="text_con" tabindex="0">
+														<span>
+															, 정보를 분석하는
+															</span>
+													</div>
+												</div>
+
+												
+
+												<div class="text_div">
+
+													<div class="blank_con drop-zone" role="region" aria-label="여덟번째 답변 영역" data-position="8" tabindex="0">
+														<span class="sr-only">답변을 이 곳에 놓으세요</span>
+													</div>
+
+													<div class="text_con" tabindex="0">
+														<span>
+															을(를)  거쳐
+															</span>
+													</div>
+
+													<div class="blank_con drop-zone" role="region" aria-label="아홉번째 답변 영역" data-position="9" tabindex="0">
+														<span class="sr-only">답변을 이 곳에 놓으세요</span>
+													</div>
+													
+
+													<div class="text_con" tabindex="0">
+														<span>
+															을(를) 제공하는 과정으로 이루어진다.
+															</span>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="answer_con">
+								<div class="title_con" tabindex="0">
+									<span>
+										빈칸에 알맞은 말을 옮겨 보자.
+									</span>
+								</div>
+
+								<div class="contents_con options-container" role="region" aria-label="사용 가능한 답변들">
+									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="1" tabindex="0">
+										사물 인터넷
+									</span>
+
+
+									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="2|3|4|5" tabindex="0">
+										네트워크
+									</span>
+
+									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="2|3|4|5" tabindex="0">
+										디바이스
+									</span>
+									<br/>
+
+									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="2|3|4|5" tabindex="0">
+										플랫폼
+									</span>
+
+									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="2|3|4|5|9" tabindex="0">
+										서비스
+									</span>
+
+									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="6" tabindex="0">
+										데이터 수집
+									</span>
+									<br/>
+									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="2|3|4|5|9" tabindex="0">
+										서비스
+									</span>
+
+									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="7" tabindex="0">
+										데이터 전달
+									</span>
+
+									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="8" tabindex="0">
+										데이터 처리 및 분석
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="btn_con">
+							<button  class="a_btn a_btn01 check-btn" type="button" aria-label="확인하기" tabindex="0">확인하기</button>
+							<button  class="a_btn a_btn02 retry-btn" type="button" aria-label="다시 하기" tabindex="0">다시 하기</button>
+						</div>
+					</div>
+
+					<div class="popup_con_bg popup01"></div>
+					<div class="popup_con popup01" role="alert"></div>
+
+					<div class="popup_con_bg popup02"></div>
+					<div class="popup_con popup02" role="alert"></div>
+
+					<div class="popup_con_bg popup03"></div>
+					<div class="popup_con popup03" role="alert"></div>
+
+					<div class="popup_con_bg popup04"></div>
+					<div class="popup_con popup04" role="alert"></div>
+				</div>
+			</div>
+		</main>
+
+	</div>
+	<script>
+		const contentId = 'H-121-08';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

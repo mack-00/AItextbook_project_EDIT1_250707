@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>개념 학습 - 지능 에이전트의 구현 과정</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_411_05_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h2>
+								지능 에이전트
+							</h2>
+
+							<h1>
+								지능 에이전트의 구현 과정
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp; <strong>지능 에이전트</strong>는 인공지능 기술을 이용하여 특정 환경에서 작업을 수행하고 문제를 해결한다. 효율적인 지능 에이전트를
+								구현하는 과정은 ‘인식(문제 이해) → 학습(목표 설정) → 추론(의사 결정) → 행동(실행 및 평가)’의 순서로 이루어진다.
+							</span>
+						</div>
+					</div>
+					<div class="info02_con">
+						<div class="title_con" tabindex="0">
+							<div class="dot" aria-hidden="true"></div>
+							<span>
+								지능 에이전트의 일반적인 구현 과정
+							</span>
+						</div>
+
+						<div class="contents_con">
+							<div class="contents_div">
+								<div class="img_con">
+									<div class="title_con" tabindex="0">
+										<span>
+											<span class="num_text text01">1</span> 인식
+										</span>
+									</div>
+									<div class="img img01">
+										<img src="./img/H_411_05_con_img01.png" alt="사람의 옆모습 실루엣 안에 느낌표가 있는 말풍선으로, 문제 이해를 상징하는 그림이다." />
+									</div>
+									<div class="text_con">
+										<div class="head_con" tabindex="0">
+											<span>
+												문제 이해
+											</span>
+										</div>
+										<div class="body_con" tabindex="0">
+											<span>
+												환경에서 정보를 수집하고
+												처리하여 이해하는 과정
+											</span>
+										</div>
+									</div>
+									<div class="cursor" role="button" tabindex="0" aria-expanded="false" aria-controls="tooltip01"></div>
+								</div>
+							</div>
+							<div class="contents_div">
+								<div class="img_con">
+									<div class="title_con" tabindex="0">
+										<span>
+											<span class="num_text text02">2</span> 학습
+										</span>
+									</div>
+									<div class="img img02">
+										<img src="./img/H_411_05_con_img02.png" alt="모니터 화면 안에 연필과 책이 있는 이미지로, 학습과 목표 설정을 상징하는 그림이다." />
+									</div>
+									<div class="text_con">
+										<div class="head_con" tabindex="0">
+											<span>
+												목표 설정
+											</span>
+										</div>
+										<div class="body_con" tabindex="0">
+											<span>
+												목표를 설정하고 목표에 따라
+												지능 에이전트 학습에 반영
+											</span>
+										</div>
+										<div class="cursor" role="button"  tabindex="0" aria-expanded="false" aria-controls="tooltip02"></div>
+									</div>
+								</div>
+							</div>
+							<div class="contents_div">
+								<div class="img_con">
+									<div class="title_con" tabindex="0">
+										<span>
+											<span class="num_text text03">3</span> 추론
+										</span>
+									</div>
+									<div class="img img03">
+										<img src="./img/H_411_05_con_img03.png" alt="노트북 화면 위에 두 개의 대화창이 떠 있는 모습으로, 추론과 판단을 통한 의사 결정을 상징한다." />
+									</div>
+									<div class="text_con">
+										<div class="head_con" tabindex="0">
+											<span>
+												의사 결정
+											</span>
+										</div>
+										<div class="body_con" tabindex="0">
+											<span>
+												문제 해결 전략을 도출하고
+												합리적인 의사 결정을 위한
+												판단
+											</span>
+										</div>
+									</div>
+									<div class="cursor" role="button"  tabindex="0" aria-expanded="false" aria-controls="tooltip03"></div>
+								</div>
+							</div>
+							<div class="contents_div">
+								<div class="img_con">
+									<div class="title_con" tabindex="0">
+										<span>
+											<span class="num_text text04">4</span> 행동
+										</span>
+									</div>
+									<div class="img img04">
+										<img src="./img/H_411_05_con_img04.png" alt="하늘로 발사되는 로켓 이미지로, 실행과 평가를 상징하는 그림이다." />
+									</div>
+									<div class="text_con">
+										<div class="head_con" tabindex="0">
+											<span>
+												실행 및 평가
+											</span>
+										</div>
+										<div class="body_con" tabindex="0">
+											<span>
+												결정 방법에 따라 문제를
+												해결하기 위해 행동하고,
+												평가는 목표 달성 여부에
+												따라 결정
+											</span>
+										</div>
+									</div>
+									<div class="cursor" role="button"  tabindex="0" aria-expanded="false" aria-controls="tooltip04"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- 팝업 -->
+				<div class="text_popup_con H_411_05_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>
+								<span class="num_text text01">1</span> 인식
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								지능 에이전트는 센서 정보, 외부 정보 및 배경 정보를 활용하여 주변 환경을 파악하고 이해한다.<br>
+								이러한 정보들은 지능 에이전트가 현재 상황과 문제를 해결하는 데 필요한 정보이다.
+							</span>
+						</div>
+
+						<div class="info_con02">
+							<div class="title_con" tabindex="0">
+								<span>지능 에이전트의 인식</span>
+							</div>
+							<div class="contents_con">
+								<div class="contents_div">
+									<div class="head_con" tabindex="0">
+										<span>센서 정보</span>
+									</div>
+									<div class="body_con" tabindex="0">
+										<span>
+											센서를 통해 환경의
+											현재 상태를 파악한 정보
+										</span>
+									</div>
+								</div>
+								<div class="contents_div">
+									<div class="head_con" tabindex="0">
+										<span>외부 정보</span>
+									</div>
+									<div class="body_con" tabindex="0">
+										<span>
+											인터넷이나 데이터베이스
+											등 외부로부터 얻은 정보
+										</span>
+									</div>
+								</div>
+								<div class="contents_div">
+									<div class="head_con" tabindex="0">
+										<span>배경 정보</span>
+									</div>
+									<div class="body_con" tabindex="0">
+										<span>
+											시간, 위치 등을 통해 상황을 이해하고 반응하는 데
+											필요한 맥락적 정보
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text_popup_con H_411_05_pop_02" id="tooltip02" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>
+								<span class="num_text text02">2</span> 학습
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								지능 에이전트의 학습은 에이전트가 목표를 이루기 위해 지식, 패턴, 방법 등을 배우고 개선하는 과정이다.<br>
+								또한 인간의 학습 능력을 모방하거나 자체적으로 일정한 작업을 수행하여 스스로 학습할 수 있다.<br>
+								예를 들어, 인터넷 사용자의 목표에 맞게 학습하여 맞춤형 정보를 제공해 줄 수 있다.
+							</span>
+						</div>
+
+						<div class="info_con02">
+							<div class="title_con" tabindex="0">
+								<span>지능 에이전트의 학습</span>
+							</div>
+							<div class="contents_con">
+								<div class="contents_div">
+									<div class="head_con">
+										<div class="dt_con" tabindex="0"><span>목표</span></div>
+										<div class="dd_con" tabindex="0"><span>사용자의 선호도를 찾아라.</span></div>
+									</div>
+									<div class="body_con">
+										<div class="dt_con" tabindex="0"><span>학습</span></div>
+										<div class="dd_con" tabindex="0"><span>인터넷에서는 어떤 주제를 검색하고 어떤 내용에서 오래 머물렀는지 학습하여 사용자의 선호도를 파악한다.</span></div>
+									</div>
+								</div>
+								<div class="contents_div">
+									<div class="head_con">
+										<div class="dt_con" tabindex="0"><span>목표</span></div>
+										<div class="dd_con" tabindex="0"><span>가격 대비 성능이 좋은 상품을 찾아라.</span></div>
+									</div>
+									<div class="body_con">
+										<div class="dt_con" tabindex="0"><span>학습</span></div>
+										<div class="dd_con" tabindex="0"><span>인터넷에 등록된 상품의 가격, 상품의 평을 지속적으로 비교 분석하여 최적의 상품이 무엇인지 파악한다.</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text_popup_con H_411_05_pop_03" id="tooltip03" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>
+								<span class="num_text text03">3</span> 추론
+							</span>
+						</div>
+
+						<div class="contents_con">
+							<div class="info_con" tabindex="0">
+								<span>
+									추론이란 이전에 학습한 지식을 기반으로 새로운
+									상황에 대한 판단과 결론을 도출하는 과정이다.
+									이전에 학습한 내용을 바탕으로 문제를 처리하거나 새로운 방법으로 결론을 도출하는 것을 의미한다. 논리적으로 정해진 규칙을 기반으로 추론하는 방법과 사전에 학습된 확률을 기반으로 추론하는 방법이 있다.
+								</span>
+							</div>
+
+							<div class="info_con02">
+								<div class="title_con" tabindex="0">
+									<span>지능 에이전트의 추론</span>
+								</div>
+								<div class="contents_con">
+									<table>
+										<caption>논리적 규칙 기반 추론 방법과 확률 기반 추론 방법의 비교</caption>
+										<colgroup>
+											<col style="width:12%">
+											<col style="width:44%">
+											<col style="width:44%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">
+													<span>구분</span>
+												</th>
+												<th scope="col">
+													<span>논리적 규칙 기반 추론 방법</span>
+												</th>
+												<th scope="col">
+													<span>확률 기반 추론 방법</span>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">
+													<span>주어진 지식</span>
+												</th>
+												<td>
+													<span>A&lt;B이고 B&lt;C이면 A&lt;C</span>
+												</td>
+												<td>
+													<span>
+														오렌지 주스를 마시다(80%)<br>
+														먹다(10%)<br>
+														타다(10%)
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<span>추론</span>
+												</th>
+												<td>
+													<span>D&lt;E이고 E&lt;F이면 D&lt;F</span>
+												</td>
+												<td>
+													<span>오렌지 주스를 마시다</span>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" rowspan="2">
+													<span>설명</span>
+												</th>
+												<td>
+													<span>정해진 규칙을 기반으로 추론</span>
+												</td>
+												<td>
+													<span>사전에 학습된 확률을 기반으로 추론</span>
+												</td>
+											</tr>
+											<tr>
+												<td class="fs15">
+													<span>
+														이전에 학습해서 주어진 규칙(지식)을 통해 정보를 해석하여 새로운 결론(D&lt;F)을 도출한다.
+													</span>
+												</td>
+												<td class="fs15">
+													<span>
+														‘오렌지 주스를’이라는 단어가 등장하면 다음에 ‘마시다’라는 단어가 나오는 확률(지식)이 높다는 점을 기반으로 추론한다.
+													</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text_popup_con H_411_05_pop_04" id="tooltip04" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>
+								<span class="num_text text04">4</span> 행동
+							</span>
+						</div>
+
+						<div class="contents_con">
+							<div class="info_con" tabindex="0">
+								<span>
+									행동은 인식, 학습, 추론의 결과가 나타나는 단계이다. 행동이 합리적인지 판단하기 위해 목표를 어느 정도 달성했는지를 분석하여 성능을 평가해야 한다.
+									성능을 평가할 때는 행동 결과와 목푯값의 차이를 측정하는 승률이나 평균 점수 같은 지표를 사용할 수 있다. 모든 상황에서 목표 달성 정도를 평가하기는 쉽지 않다. 목표가 명확하지 않거나 차이를 알아내기 어려울 수 있기 때문이다.
+								</span>
+							</div>
+							<div class="info_con02">
+								<div class="title_con">
+									<!-- <span>지능 에이전트의 학습</span> -->
+								</div>
+								<div class="contents_con">
+									<div class="img img01">
+										<img src="./img/H_411_05_popup_img04.png" alt="인공지능 모델의 예측 정확도를 색상으로 표시하여 성능 차이를 직관적으로 비교할 수 있도록 한 히트맵 차트의 그림이다." />
+									</div>
+									<div class="img_con">
+										<div class="head_con">
+											<span>히트맵 차트 </span>
+										</div>
+										<div class="body_con">
+											<span>
+												인공지능 모델의
+												예측 정확도를 색상으로
+												표시하여 성능 차이를
+												직관적으로 비교할 수 있다.
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</main>
+		
+	</div>
+	<script>
+		$(document).ready(function(){
+			// 팝업열기
+			$(".H_411_05_con .cursor").on("click", function(){
+				var popSelector = "#" + $(this).attr("aria-controls");
+				if($(popSelector).css("display") == "none") {
+					$(".H_411_05_con > .contents_con > .text_popup_con").not(popSelector).hide();
+					$(popSelector).show();
+				}else {
+					$(popSelector).hide();
+				}
+			});
+			// 팝업닫기
+			$(".H_411_05_con  > .contents_con > .text_popup_con .a_btn").on("click", function(){
+				$(this).parents(".text_popup_con").hide();
+			});
+		});
+	</script>	
+	<script>
+		const contentId = 'H-411-05';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

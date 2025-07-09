@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>모바일 운영체제에서 네트워크 설정</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_111_12_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h2>네트워크 환경 설정</h2>
+							<h1>
+								모바일 운영체제에서 네트워크 설정
+							</h1>
+							<button class="btn_active_popup" aria-label="활동자료" aria-controls="fullpopup01"></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text01">
+						스마트폰도 개인용 컴퓨터처럼 DHCP를 사용하여 자동으로 네트워크를 설정할 수 있다.
+					</div>
+
+					<!-- tab -->
+					<div class="tab_wrap H_111_12_tab_wrap">
+						<div class="tab_list" role="tablist">
+							<button class="tab_btn on" type="button" id="tab01" aria-controls="H_111_12_tab01" role="tab" aria-selected="true">안드로이드</button>
+							<button class="tab_btn" type="button" id="tab02" aria-controls="H_111_12_tab02" role="tab" aria-selected="false">iOS</button>
+						</div>
+						<div class="tab_contents">
+							<div id="H_111_12_tab01" tabindex="0" role="tabpanel" aria-labelledby="tab01" class="H_111_12_tab01 tab_inner on">
+								
+								<ul class="both_wrap main_wrap">
+									<li>
+										<img src="./img/H_111_12_tab01_img01.png" alt="Android에서 Wi-Fi가 사용 중인 상태. 현재 연결된 5G 네트워크 옆에 설정 아이콘이 강조되어 있음.">
+										<p>스마트폰에서 연결된 Wi-Fi 옆의 설정 버튼을 누른다.</p>
+									</li>
+									<li aria-hidden="true" class="arr"></li>
+									<li>
+										<img src="./img/H_111_12_tab01_img02.png" alt="Android Wi-Fi 상세 설정 화면. 자동으로 다시 연결 스위치가 켜져 있고, IP 설정이 DHCP로 되어 있는 항목이 강조됨.">
+										<p>IP 설정에서 ‘DHCP’를 클릭하여 설정할 수 있다.</p>
+									</li>
+								</ul>
+								
+							</div>
+							<div id="H_111_12_tab02" tabindex="0" role="tabpanel" aria-labelledby="tab02" class="H_111_12_tab02 tab_inner">
+								<ul class="both_wrap main_wrap">
+									<li>
+										<img src="./img/H_111_12_tab02_img01.png" alt="iPhone의 Wi-Fi 설정 화면. 현재 연결된 2.4G 네트워크 옆에 정보 아이콘이 강조되어 상세 설정으로 진입 가능함.">
+										<p>스마트폰에서 연결된 Wi-Fi 옆의 설정 버튼을 누른다.</p>
+									</li>
+									<li aria-hidden="true" class="arr"></li>
+									<li>
+										<img src="./img/H_111_12_tab02_img02.png" alt="iPhone의 Wi-Fi 상세 화면. IP 구성 및 DNS 구성 항목이 자동으로 설정되어 있으며, 해당 영역이 강조되어 있음.">
+										<p>&lt;IP 구성&gt;과 &lt;DNS 구성&gt;을 ‘자동’으로 선택하면 ‘DHCP’를 사용할 수 있다.</p>
+									</li>
+								</ul>
+							</div>
+							
+							
+						</div> 
+					</div>
+					<!-- //tab  -->
+
+				</div>
+
+
+				<!-- popup -->
+				<div class="full_popup_wrap H_111_12_full_popup" id="fullpopup01">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>모바일 운영체제에서 네트워크 설정</span>
+						</div>
+						<div class="full_popoup_content">
+
+							<!-- tab -->
+							<div class="tab_wrap H_111_12_tab_wrap2">
+								<div class="tab_list" role="tablist">
+									<button class="tab_btn on" type="button" id="tab03" aria-controls="H_111_12_tab02_01" role="tab" aria-selected="true">안드로이드 DHCP 설정</button>
+									<button class="tab_btn" type="button" id="tab04" aria-controls="H_111_12_tab02_02" role="tab" aria-selected="false">iOS DHCP 설정</button>
+								</div>
+								<div class="tab_contents">
+									<div id="H_111_12_tab02_01" tabindex="0" role="tabpanel" aria-labelledby="tab03" class="tab_inner on">
+										<div class="pop_main_box--wrap ver01">
+											<div class="pop_main_box box1 show">
+												<div class="both_wrap">
+													<div class="img H_111_12_tab02_01_img01"> 
+														<img src="./img/H_111_12_tab02_01_img01.png" alt="안드로이드 빠른 설정 패널. Wi-Fi와 블루투스가 켜져 있으며, 모바일 데이터와 위치 기능도 활성화됨. 다양한 연결 및 기능 아이콘이 표시됨.">
+														<button class="pointer" aria-label="와이파이"><span class="point-cursor"></span></button>
+													</div>
+												</div>
+											</div>
+											<div class="pop_main_box box2">
+												<div class="both_wrap">
+													<div class="img H_111_12_tab02_01_img02"> 
+														<img src="./img/H_111_12_tab02_01_img02.png" alt="Wi-Fi 설정 화면. 현재 5F 2.4G 네트워크에 연결되어 있고, 다른 사용 가능한 네트워크 목록도 표시됨. Wi-Fi 스위치가 켜져 있음.">
+
+														<button class="pointer" aria-label="상세설정"><span class="point-cursor"></span></button>
+													</div>
+												</div>
+											</div>
+											<div class="pop_main_box box3">
+												<div class="both_wrap">
+													<div class="img H_111_12_tab02_01_img03"> 
+													<img src="./img/H_111_12_tab02_01_img03.png" alt="Wi-Fi 설정 화면. 현재 연결된 네트워크가 상단에 표시되며, 사용 가능한 네트워크 목록이 아래에 나열되어 있음. Wi-Fi 스위치는 활성화됨.">
+
+														<button class="pointer" aria-label="전체크워크 설정"><span class="point-cursor"></span></button>
+													</div>
+												</div>
+											</div>
+											<div class="pop_main_box box4">
+												<div class="both_wrap">
+													<div class="img H_111_12_tab02_01_img04"> 
+														<img src="./img/H_111_12_tab02_01_img04.png" alt="연결된 Wi-Fi 네트워크의 설정 화면. 보안 정보, 비밀번호, 자동 연결, IP 설정이 DHCP로 되어 있음.">
+
+														<button class="pointer" aria-label="IP 설정"><span class="point-cursor"></span></button>
+													</div>
+												</div>
+											</div>
+											
+											<div class="pop_main_box box5">
+												<div class="both_wrap">
+													<div class="img H_111_12_tab02_01_img05"> 
+														<img src="./img/H_111_12_tab02_01_img05.png" alt="Wi-Fi 네트워크의 IP 설정 편집 화면. 현재 DHCP로 선택되어 있으며, 고정 옵션도 선택 가능함.">
+
+														<button class="pointer" aria-label="DHCP 설정"><span class="point-cursor"></span></button>
+													</div>
+												</div>
+											</div>
+											<div class="pop_main_box box6">
+												<strong class="H_111_11_tab02_01_last">DHCP 설정이 완료되었습니다.</strong>
+												<div class="btn_con">
+													<button id="btn_2" class="a_btn a_btn02 retry-btn" type="button" aria-label="다시 하기" tabindex="0">다시 하기</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="H_111_12_tab02_02" tabindex="0" role="tabpanel" aria-labelledby="tab04" class="tab_inner">
+												<div class="pop_main_box--wrap ver02">
+										<div class="pop_main_box box1 show">
+											<div class="both_wrap">
+												<div class="img H_111_12_tab02_02_img01"> 
+													<img src="./img/H_111_12_tab02_02_img01.png" alt="iOS 제어 센터. Wi-Fi, 블루투스, 에어플레인 모드 등이 켜져 있으며, 밝기와 소리 조절, 집중 모드, 손전등 등의 기능 아이콘이 표시됨.">
+													<button class="pointer" aria-label="와이파이"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+										</div>
+										<div class="pop_main_box box2">
+											<div class="both_wrap">
+												<div class="img H_111_12_tab02_02_img02">
+													<img src="./img/H_111_12_tab02_02_img02.png" alt="iPhone 제어 센터에서 Wi-Fi를 길게 눌렀을 때 표시되는 네트워크 목록. 현재 2.4G 네트워크에 연결되어 있으며, 여러 보안 설정된 네트워크가 나열됨.">
+													<button class="pointer" aria-label="와이파이 설정"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+										</div>
+										<div class="pop_main_box box3">
+											<div class="both_wrap">
+												<div class="img H_111_12_tab02_02_img03"> 
+													<img src="./img/H_111_12_tab02_02_img03.png" alt="iOS Wi-Fi 설정 화면. Wi-Fi가 켜져 있고 현재 2.4G 네트워크에 연결됨. 하단에는 5G 등 다른 네트워크 목록이 나열됨.">
+													<button class="pointer" aria-label="와이파이정보"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+										</div>
+										<div class="pop_main_box box4">
+											<div class="both_wrap">
+												<div class="img H_111_12_tab02_02_img04"> 
+													<img src="./img/H_111_12_tab02_02_img04.png" alt="연결된 Wi-Fi 네트워크 상세 화면. IP 주소, 서브넷 마스크, 라우터 정보가 표시되며 IP 주소 추적 제한 기능이 켜져 있음.">
+													<button class="pointer" aria-label="IP구성 설정"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+										</div>
+										
+										<div class="pop_main_box box5">
+											<div class="both_wrap">
+												<div class="img H_111_12_tab02_02_img05"> 
+													<img src="./img/H_111_12_tab02_02_img05.png" alt="IPv4 구성 설정 화면. 자동, 수동, BootP 중 자동이 선택된 상태이며, 클라이언트 ID 입력란이 있음.">
+													<button class="pointer" aria-label="IPv4 구성자동 선택"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+										</div>
+										<div class="pop_main_box box6">
+											<div class="both_wrap">
+												<div class="img H_111_12_tab02_02_img06"> 
+													<img src="./img/H_111_12_tab02_02_img06.png" alt="IPv4 구성 설정 화면이 반복 표시됨. 자동이 선택되어 있고, 수동 및 BootP 옵션도 표시됨.">
+													<button class="pointer" aria-label="뒤로가기"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+										</div>
+
+										<div class="pop_main_box box7">
+											<div class="both_wrap">
+												<div class="img H_111_12_tab02_02_img07"> 
+													<img src="./img/H_111_12_tab02_02_img07.png" alt="DNS 구성 설정 화면. 자동이 선택되어 있으며, DNS 서버로 61.41.153.2와 1.214.68.2가 표시됨.">
+													<button class="pointer" aria-label="DNS구성 설정"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+										</div>
+										<div class="pop_main_box box8">
+											<div class="both_wrap">
+												<div class="img H_111_12_tab02_02_img08"> 
+													<img src="./img/H_111_12_tab02_02_img08.png" alt="DNS 구성 설정 화면. 자동이 선택되어 있으며, DNS 서버로 61.41.153.2와 1.214.68.2가 표시됨.">
+													<button class="pointer" aria-label="DNS구성 자동선택"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+										</div>
+										<div class="pop_main_box box9">
+												<strong class="H_111_11_tab02_01_last">DHCP 설정이 완료되었습니다.</strong>
+												<div class="btn_con">
+													<button id="btn3" class="a_btn a_btn02 retry-btn" type="button" aria-label="다시 하기" tabindex="0">다시 하기</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									
+								</div>
+							</div>
+							<!-- //tab  -->
+
+
+						</div>
+					</div>
+				</div>
+				<!-- //popup -->
+			</div>
+		</main>
+
+	</div>
+
+
+	<script>
+		$(document).ready(function(){
+			// 활동자료
+			$(".H_111_12_con .btn_active_popup").on("click", function(){
+				$(".H_111_12_con .full_popup_wrap").show();
+			});
+			$(".full_popup_wrap .btn_close").on("click", function(){
+				$(this).parents(".full_popup_wrap").hide();
+			});
+
+			// 탭
+			$(".tab_list > .tab_btn").on("click", function(){
+				$(this).siblings().removeClass("on").end().addClass("on");
+				$(this).siblings().attr("aria-selected", "false").end().attr("aria-selected", "true");
+				$("#"+$(this).attr("aria-controls")).siblings().removeClass("on").end().addClass("on");
+			});
+
+			// 포인터 클릭 시 다음 박스 보여주기
+			$('.pointer').on('click', function () {
+				const $currentBox = $(this).closest('.pop_main_box');
+				const $wrap = $currentBox.closest('.pop_main_box--wrap'); // ver01 또는 ver02
+				const $nextBox = $currentBox.nextAll('.pop_main_box').first();
+
+				if ($nextBox.length) {
+					// 현재 그룹에서 show 클래스 제거
+					$wrap.find('.pop_main_box').removeClass('show');
+
+					// 다음 박스에 show 클래스 추가
+					$nextBox.addClass('show');
+				}
+			});
+
+			// 다시 하기 버튼 클릭 시 첫 박스로 리셋
+			$('.retry-btn').on('click', function () {
+				const $wrap = $(this).closest('.pop_main_box--wrap');
+				const $firstBox = $wrap.find('.pop_main_box').first();
+
+				// 전체 show 제거 후 첫 번째에만 추가
+				$wrap.find('.pop_main_box').removeClass('show');
+				$firstBox.addClass('show');
+			});
+
+
+			
+		});
+	</script>
+	<script>
+		const contentId = 'H-111-12';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

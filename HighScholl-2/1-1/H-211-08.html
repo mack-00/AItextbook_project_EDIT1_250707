@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>런 길이 부호화 방식</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/swiper.js"></script>
+
+	<script src="https://acv001.aiktbook.com/api/static/message-channel-iframe.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_211_08_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								런 길이 부호화
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					
+					<form id="frm1" onsubmit="return false">
+					<input type="hidden" name="aidt_pageTitle" value="런 길이 부호화 방식">
+						<div class="write_con">
+							<div class="slide_con">
+								<div class="swiper-container H_211_08_slide">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide H_211_08_slide_div">
+											<div class="contents_con">
+												<div class="contents_div">
+													<div class="title_con" tabindex="0">
+														<h2>
+															<span class="num_text text01 exam">1</span>문자열을 살펴보고 런 길이 부호화 방식에 따라 압축한 후, 원본 데이터 크기와 압축 데이터 크기, 압축률을 적어 보자.
+														</h2>
+													</div>
+
+													<div class="contents_con">
+														<ul class="both_wrap">
+															<li>
+																<div class="f_center tit">원본 데이터</div>
+																<div class="f_center con1">NOOOOOOOOOO</div>
+																<div class="f_center con2">11 bytes</div>
+																<svg xmlns="http://www.w3.org/2000/svg" width="83" height="30" viewBox="0 0 83 30" fill="none" role="img" aria-labelledby="arrowTitle">
+																	<title id="arrowTitle">오른쪽 방향 화살표 아이콘</title>
+																	<path d="M3 12.5C1.61929 12.5 0.5 13.6193 0.5 15C0.5 16.3807 1.61929 17.5 3 17.5V12.5ZM83 15L58 0.566243V29.4338L83 15ZM3 17.5H60.5V12.5H3V17.5Z" fill="#00A799"/>
+																</svg>
+															</li>
+															<li>
+																<div class="f_center tit">압축 후 데이터</div>
+																<div class="f_center con1">
+																	<input type="text" class="input01"  />
+																</div>
+																<div class="f_center con2">
+																	<input type="text" class="input02"  />bytes
+																</div>
+															</li>
+															<li class="result f_center">
+																압축률: 
+																<input type="text" value="2.2" disabled/> 
+																<div class="btn_con">
+																	<button type="button" class="a_btn btn_confirm confirm01" aria-label="확인하기">확인하기</button>
+																	<button  class="a_btn a_btn02 retry-btn" type="button" style="display: none;" aria-label="다시 하기" tabindex="0">다시 하기</button>
+																</div>
+															</li>
+														</ul>
+
+														<ul class="both_wrap">
+															<li>
+																<div class="f_center con1">YEEEEEAH</div>
+																<div class="f_center con2">
+																	<input type="text" class="input03"  />bytes
+																</div>
+																<svg xmlns="http://www.w3.org/2000/svg" width="83" height="30" viewBox="0 0 83 30" fill="none" role="img" aria-labelledby="arrowTitle2">
+																	<title id="arrowTitle2">오른쪽 방향 화살표 아이콘</title>
+																	<path d="M3 12.5C1.61929 12.5 0.5 13.6193 0.5 15C0.5 16.3807 1.61929 17.5 3 17.5V12.5ZM83 15L58 0.566243V29.4338L83 15ZM3 17.5H60.5V12.5H3V17.5Z" fill="#00A799"/>
+																</svg>
+															</li>
+															<li>
+																<div class="f_center con1">
+																	<input type="text" class="input04"  />
+																</div>
+																<div class="f_center con2">8 bytes</div>
+															</li>
+															<li class="result f_center">
+																압축률: 
+																<input type="text" class="input05"  /> 
+																<div class="btn_con">
+																	<button type="button" class="a_btn btn_confirm confirm02" aria-label="확인하기">확인하기</button>
+																	<button  class="a_btn a_btn02 retry-btn" type="button" style="display: none;" aria-label="다시 하기" tabindex="0">다시 하기</button>
+																</div>
+															</li>
+														</ul>
+
+														<ul class="both_wrap">
+															<li>
+																<div class="f_center con1">HURRAY</div>
+																<div class="f_center con2">
+																	<input type="text" class="input06" />bytes
+																</div>
+																<svg xmlns="http://www.w3.org/2000/svg" width="83" height="30" viewBox="0 0 83 30" fill="none" role="img" aria-labelledby="arrowTitle3">
+																	<title id="arrowTitle3">오른쪽 방향 화살표 아이콘</title>
+																	<path d="M3 12.5C1.61929 12.5 0.5 13.6193 0.5 15C0.5 16.3807 1.61929 17.5 3 17.5V12.5ZM83 15L58 0.566243V29.4338L83 15ZM3 17.5H60.5V12.5H3V17.5Z" fill="#00A799"/>
+																</svg>
+															</li>
+															<li>
+																<div class="f_center con1">
+																	<input type="text" class="input07"  />
+																</div>
+																<div class="f_center con2">10 bytes</div>
+															</li>
+															<li class="result f_center">
+																압축률: 
+																<input type="text" class="input08"  /> 
+																<div class="btn_con">
+																	<button type="button" class="a_btn btn_confirm confirm03" aria-label="확인하기">확인하기</button>
+																	<button  class="a_btn a_btn02 retry-btn" type="button" style="display: none;" aria-label="다시 하기" tabindex="0">다시 하기</button>
+																</div>
+															</li>
+														</ul>
+
+													
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide H_211_08_slide_div">
+											<div class="contents_con">
+												<div class="contents_div">
+													<div class="title_con">
+														<h2>
+															<span class="num_text text02 exam">2</span> ‘1’에서 압축률이 낮게 나온 값을 토대로 런 길이 부호화 방식의 한계를 적어 보자.
+														</h2>
+													</div>
+
+													<div class="contents_con">
+														<div class="txt_con">
+															<div class="input_con">
+																<input type="hidden" name="aidt_examId" value="1">
+																<input type="hidden" name="aidt_exam" value="‘1’에서 압축률이 낮게 나온 값을 토대로 런 길이 부호화 방식의 한계를 적어 보자.">
+																<input type="hidden" name="aidt_answer" value="">
+																<input type="hidden" name="aidt_mcqYn" value="N">
+																<input type="hidden" name="aidt_type" value="narrative">
+																<textarea name="aidt_input" placeholder="내용을 입력해 보자." class="textarea05"></textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-pagination H_211_08_slide_swiper-pagination"></div>
+
+								<div class="slide_btn prev H_211_08_slide_prev_btn swiper-button-prev" aria-label="슬라이드 이전 버튼" tabindex="0"></div>
+								<div class="slide_btn next H_211_08_slide_next_btn swiper-button-next" aria-label="슬라이드 다음 버튼" tabindex="0"></div>
+							</div>
+
+							<div class="btn_con">
+								<button id="btn1" class="a_btn a_btn01" type="button" aria-label="제출하기" tabindex="0">제출하기</button>
+								<button id="btn1_1" class="a_btn a_btn02" type="button" aria-label="다시 제출하기" style="display:none;" tabindex="0">다시 제출하기</button>
+							</div>
+
+							<div class="popup_con_bg popup01"></div>
+							<div class="popup_con popup01" role="alert"></div>
+
+							<div class="popup_con_bg popup02"></div>
+							<div class="popup_con popup02" role="alert"></div>
+
+							<div class="popup_con_bg popup03"></div>
+							<div class="popup_con popup03" role="alert"></div>
+
+							<div class="popup_con_bg popup04"></div>
+							<div class="popup_con popup04" role="alert"></div>
+
+							<div class="popup_con_bg popup05"></div>
+							<div class="popup_con popup05" role="alert"></div>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</main>
+
+		<script>
+			$(document).ready(function () {
+				const answers = {
+					".confirm01": ["N1O10", "5"],
+					".confirm02": ["8", "Y1E5A1H1", "1"],
+					".confirm03": ["6", "H1U1R2A1Y1", "0.6"],
+				};
+
+				const attempts = {
+					".confirm01": 0,
+					".confirm02": 0,
+					".confirm03": 0,
+				};
+
+				function showPopup($wrap, popupClass) {
+					$wrap.find(".popup_con_bg, .popup_con").hide();
+					$wrap.find(`.popup_con_bg${popupClass}, .popup_con${popupClass}`).fadeIn();
+					setTimeout(() => {
+						$wrap.find(`.popup_con_bg${popupClass}, .popup_con${popupClass}`).fadeOut();
+					}, 1000);
+				}
+
+				// 확인하기 버튼 클릭
+				$(".btn_confirm").on("click", function () {
+					const btnClass = "." + $(this).attr("class").split(" ").find(cls => cls.startsWith("confirm"));
+					const $wrap = $(this).closest(".write_con");
+					const $bothWrap = $(this).closest(".both_wrap");
+
+					const $inputs = $bothWrap.find("input[type='text']").filter(function () {
+						return !$(this).prop("disabled");
+					});
+
+					const userValues = [];
+					let hasEmpty = false;
+
+					$inputs.each(function () {
+						const val = $(this).val().trim();
+						if (val === "") hasEmpty = true;
+						userValues.push(val);
+					});
+
+					if (hasEmpty) {
+						showPopup($wrap, ".popup01");
+						return;
+					}
+
+					const correctAnswers = answers[btnClass];
+					const isCorrect = userValues.length === correctAnswers.length &&
+						userValues.every((val, i) => val === correctAnswers[i]);
+
+					if (isCorrect) {
+						showPopup($wrap, ".popup04");
+						$inputs.prop("disabled", true);
+						$bothWrap.find(".btn_confirm").hide();
+						$bothWrap.find(".retry-btn").show();
+					} else {
+						attempts[btnClass]++;
+						if (attempts[btnClass] === 1) {
+							showPopup($wrap, ".popup05");
+						} else {
+							showPopup($wrap, ".popup03");
+							$inputs.each(function (i) {
+								$(this).val(correctAnswers[i]).prop("disabled", true);
+							});
+							$bothWrap.find(".btn_confirm").hide();
+							$bothWrap.find(".retry-btn").show();
+						}
+					}
+				});
+
+				// 다시 하기 버튼 클릭
+				$(".retry-btn").on("click", function () {
+					const $bothWrap = $(this).closest(".both_wrap");
+					const btnClass = "." + $bothWrap.find(".btn_confirm").attr("class").split(" ").find(cls => cls.startsWith("confirm"));
+					const correctAnswers = answers[btnClass];
+
+					const $inputs = $bothWrap.find("input[type='text']");
+
+					$inputs.each(function (index) {
+						// 첫 번째 .both_wrap에 있는 마지막 input만 유지 (고정값 2.2)
+						const isFirstBothWrap = $(".both_wrap").index($bothWrap) === 0;
+						const isLastInput = index === $inputs.length - 1;
+
+						if (isFirstBothWrap && isLastInput) {
+							// 유지: 고정값 2.2 (disabled input)
+							$(this).val("2.2");
+						} else {
+							// 나머지 input은 비우고 다시 입력 가능하게
+							$(this).val("").prop("disabled", false);
+						}
+					});
+
+					// 오류 횟수 초기화
+					attempts[btnClass] = 0;
+
+					// 버튼 UI 전환
+					$bothWrap.find(".retry-btn").hide();
+					$bothWrap.find(".btn_confirm").show();
+				});
+			});
+		</script>
+
+		<script>
+
+			const child = new ClientAPI(); //본 코드는 데이터 전송 페이지마다 각각 별도로 들어있어야 하고, 내부 스크립트의 최상단에 위치해야함. 
+
+			//제출 여부 받아서 버튼 제어
+			child.receiveMessage((data)=>{
+				if(data.submitYn === 'Y'){
+					document.getElementById('btn1_1').style.display = ""; //수정하기 버튼 표시
+					document.getElementById('btn1').style.display = "none"; //제출 버튼 숨기기
+				}
+			});
+
+			// [제출하기]btn click 시 form#frm1 전송
+			const btn1 = document.getElementById('btn1'); //제출 버튼
+			btn1.addEventListener('click', () => {
+				sendFormData()
+			});
+
+			// [수정하기]btn click 시 form#frm1 전송
+			const btn1_1 = document.getElementById('btn1_1'); //수정 버튼 
+			btn1_1.addEventListener('click', () => {
+				sendFormData()
+			});
+
+			// H_211_08 슬라이드
+			H_211_08_slide = new Swiper ('.H_211_08_slide', {
+				slidesPerView: 'auto',
+				effect : 'fade', 
+					fadeEffect: { 
+					crossFade: true 
+				},
+				speed: 100,
+				loop: false,
+				pagination: {
+					el: ".H_211_08_slide_swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.H_211_08_slide_next_btn',
+					prevEl: '.H_211_08_slide_prev_btn',
+				},
+				observer: true,
+				observeParents: true,
+				simulateTouch: false,
+				allowTouchMove: false,
+				on: {
+					slideChange: function () {
+						if( this.activeIndex == "1" ){
+							$(".H_211_08_con > .contents_con > .contents_con .write_con > .btn_con").show();
+						}else{
+							$(".H_211_08_con > .contents_con > .contents_con .write_con > .btn_con").hide();
+						}
+					}
+				}
+			});
+
+			// 제출하기
+			function sendFormData(){
+				// 텍스트 영역이 모두 채워졌는지 확인
+				const textarea1Filled = $("textarea[name='aidt_input']").eq(0).val().trim() !== "";
+				
+				// 조건 확인 및 적절한 함수 호출
+				if (!textarea1Filled) {
+					btn_event01(); // 텍스트 영역이 하나라도 비어있는 경우
+				} else {
+					btn_event02(); // 모든 항목이 채워진 경우
+				}
+			}
+
+			// 제출하기 - 내용 없음
+			function btn_event01(){
+				$(".H_211_08_con > .contents_con > .contents_con .write_con > .btn_con .a_btn").blur();
+				$(".H_211_08_con > .contents_con > .contents_con .write_con .popup_con_bg.popup01").fadeIn();
+				$(".H_211_08_con > .contents_con > .contents_con .write_con .popup_con.popup01").fadeIn();
+
+				setTimeout(function(){
+					$(".H_211_08_con > .contents_con > .contents_con .write_con .popup_con_bg.popup01").fadeOut();
+					$(".H_211_08_con > .contents_con > .contents_con .write_con .popup_con.popup01").fadeOut();
+				}, 1000);
+			}
+
+			// 제출하기 - 내용 있음
+			function btn_event02(){
+				$(".H_211_08_con .btn_con .a_btn").blur();
+				$(".H_211_08_con .popup_con_bg.popup02").fadeIn();
+				$(".H_211_08_con .popup_con.popup02").fadeIn();
+
+				// 버튼 전환
+					$("#btn1").hide();
+				$("#btn1_1").show();
+
+				// 실제 데이터 전송
+				child.sendFormData('frm1');
+
+				setTimeout(function(){
+					$(".H_211_08_con .popup_con_bg.popup02").fadeOut();
+					$(".H_211_08_con .popup_con.popup02").fadeOut();
+				}, 1000);
+			}
+
+			// $(".confirm01").on("click", function() {
+			// 	$(".input01").val("N1O10");
+			// 	$(".input02").val("5");
+			// });
+			// $(".confirm02").on("click", function() {
+			// 	$(".input03").val("8");
+			// 	$(".input04").val("1E5A1H1");
+			// 	$(".input05").val("1");
+			// });
+			// $(".confirm03").on("click", function() {
+			// 	$(".input06").val("6");
+			// 	$(".input07").val("H1U1R2A1Y1");
+			// 	$(".input08").val("0.6");
+			// });
+		</script>
+
+	</div>
+	<script>
+		const contentId = 'H-211-08';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

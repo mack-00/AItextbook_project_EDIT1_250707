@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>분할 정복</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_311_09_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								분할 정복
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01">
+						&nbsp;&nbsp;<strong class="fw_700">분할 정복</strong>은 복잡한 문제를 작은 문제로 나눈 후 각각의 작은 문제를 해결하여 전체 문제를 해결하는 전략이다. <br>분할 정복 전략으로 복잡한 문제를 해결하는 과정을 살펴보자.
+						<button class="btn_data_popup" aria-label="보충자료" aria-controls="fullpopup01"></button>
+					</div>
+
+					<div class="sub_title_dot">분할 정복 전략을 적용한 예시</div>
+					<div class="video_con">
+						<div class="contents_con">
+							<div class="video-container">
+								<video id="player01" data-content-id="H-311-09" controls crossorigin></video>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- popup -->
+				<div class="full_popup_wrap H_311_09_full_popup" id="fullpopup01">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>분할 정복 전략의 유래</span>
+						</div>
+						<div class="full_popoup_content">
+							<div class="text01">
+								&nbsp;&nbsp;분할 정복 전략은 프랑스의 황제 나폴레옹의 전투 전략에서 유래한다. 1805년 12월 2일, 나폴레옹의 군대는 오스트리아-러시아 연합군과 아우스터리츠 전투를 벌였다. 당시 연합군은 나폴레옹의 군대보다 약 15,000명 정도 많았다. 연합군의 대규모 공격을 예상한 나폴레옹은 중앙 돌파를 시도하여, 연합군의 병력을 둘로 갈라놓았다. 분리된 각각의 병력은 나폴레옹 군대의 상대가 되지 못했기 때문에 결국 패하고 퇴각하였다.
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- //popup -->
+			</div>
+		</main>
+
+	</div>
+<script>
+
+	$(document).ready(function(){
+		// 보충자료
+		$(".H_311_09_con .btn_data_popup, .btn_active").on("click", function(){
+			var popSelector = "#" + $(this).attr("aria-controls");
+			$(popSelector).show();
+		});
+		$(".full_popup_wrap .btn_close").on("click", function(){
+			$(this).parents(".full_popup_wrap").hide();
+		});
+
+	
+	});
+
+		
+	</script>
+
+	<script>
+		const contentId = 'H-311-09';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+	<script>
+		const videoList = [
+			{ 
+				id: "H-311-09",
+				src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-311-09_4000k.mp4,H-311-09_2000k.mp4,H-311-09_1000k.mp4,lang/kor/H-311-09.vtt,.smil/master.m3u8" 
+			}
+		];
+	</script>
+	<script type="text/javascript" src="./js/xapi.video.js"></script>
+
+</body>
+</html>

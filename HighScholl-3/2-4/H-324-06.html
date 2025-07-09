@@ -1,0 +1,412 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>if~elif~else문</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+
+	<link rel="stylesheet" href="./css/swiper.css">
+	<script src="./js/swiper.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_324_06_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								if~elif~else문
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_con">
+						<span>if~elif~else문은 선택 구조의 하나로, 여러 경우의 조건을 확인하고 싶을 때 사용하며, 확인하고 싶은 조건의 수만큼 if 뒤에 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip01">elif</span>를 추가한다.</span>
+					</div>
+					<!-- 슬라이드 -->
+					<div class="slide_con">
+						<div class="swiper-container H_324_06_con_slide" role="region" aria-label="if~elif~else문의 작성법 설명 슬라이드">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide H_324_06_con_slide_div_01" data-swiper-autoplay="4000" role="group" aria-label="순서도 표현, 파이썬 코드 작성법">		
+									<div class="title_sub type01" tabindex="0">
+										<span>if~elif~else문의 작성법</span>
+									</div>
+									<div class="box_con">
+										<dl class="type01">
+											<dt tabindex="0"><span>순서도 표현</span></dt>
+											<dd>
+												<div class="condition">
+													<div class="shape diamond" tabindex="0">
+														<div class="inner">
+															<span>조건1</span>
+														</div>
+													</div>
+													<div class="text" tabindex="0">
+														<span>참</span>
+													</div>
+													<div class="shape rect">
+														<div class="inner" tabindex="0">
+															<span>명령1</span> 
+														</div>
+													</div>
+													<div class="text" tabindex="0">
+														<span>거짓</span>
+													</div>
+													<div class="shape diamond" tabindex="0">
+														<div class="inner">
+															<span>조건2</span>
+														</div>
+													</div>
+													<div class="text" tabindex="0">
+														<span>참</span>
+													</div>
+													<div class="shape rect">
+														<div class="inner" tabindex="0">
+															<span>명령2</span>
+														</div>
+													</div>
+													<div class="text" tabindex="0">
+														<span>거짓</span>
+													</div>
+													<div class="shape diamond" tabindex="0">
+														<div class="inner">
+															<span>조건3</span>
+														</div>
+													</div>
+													<div class="text" tabindex="0">
+														<span>참</span>
+													</div>
+													<div class="shape rect">
+														<div class="inner" tabindex="0">
+															<span>명령3</span>
+														</div>
+													</div>
+													<div class="text" tabindex="0">
+														<span>거짓</span>
+													</div>
+													<div class="shape rect">
+														<div class="inner" tabindex="0">
+															<span>명령4</span>
+														</div>
+													</div>
+												</div>
+											</dd>
+										</dl>
+										<dl class="type02">
+											<dt tabindex="0"><span>파이썬 코드 작성법</span></dt>
+											<dd>
+												<div class="condition">
+													<div class="write01">
+														<div class="code" tabindex="0">
+															<span>if 조건1:</span>
+														</div>
+														<div class="code" tabindex="0">
+															<span>명령1</span>
+														</div>
+														<div class="code" tabindex="0">
+															<span>elif 조건2:</span>
+														</div>
+														<div class="code" tabindex="0">
+															<span>명령2</span>
+														</div>
+														<button class="after_hand" aria-label="클릭하면 설명을 보여줍니다."></button>
+														<div class="comment">
+															<div class="inner">
+																<div class="text" tabindex="0">
+																	<span>elif는 if문 없이 사용할 수 없고, 조건1이 거짓일 때 elif의 조건2를 확인한다.</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="write02">
+														<div class="code" tabindex="0">
+															<span>elif 조건3:</span>
+														</div>
+														<div class="code" tabindex="0">
+															<span>명령3</span>
+														</div>
+														<button class="after_hand" aria-label="클릭하면 설명을 보여줍니다."></button>
+														<div class="comment">
+															<div class="inner">
+																<div class="text" tabindex="0">
+																	<span>elif는 필요한 조건만큼 추가하여 사용할 수 있다.</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="write03">
+														<div class="code" tabindex="0">
+															<span>else:</span>
+														</div>
+														<div class="code" tabindex="0">
+															<span>명령4</span>
+														</div>
+														<button class="after_hand" aria-label="클릭하면 설명을 보여줍니다."></button>
+														<div class="comment">
+															<div class="inner">
+																<div class="text" tabindex="0">
+																	<span>조건1, 2, 3이 모두 거짓일 때 명령4가 실행된다. 명령4에 해당하는 작업이 없다면, else문은 생략 가능하다.</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="swiper-slide H_324_06_con_slide_div_02" data-swiper-autoplay="4000" role="group" aria-label="if~elif~else문 프로그램 예시 영상">			
+									<div class="title_sub type02" tabindex="0">
+										<span>if~elif~else문 프로그램 예시</span>
+									</div>
+									<div class="video_con">
+										<div class="contents_con">
+											<div class="video-container">
+												<video id="player01" data-content-id="H-324-06" controls crossorigin></video>
+											</div>
+										</div>
+									</div>
+									<div class="btn_con">
+										<button class="btn_popup" aria-label="보충자료"></button>
+									</div>
+								</div>
+							</div>
+						</div> 
+						<div class="slide_btn prev H_324_06_con_slide_prev_btn swiper-button-prev" aria-label="슬라이드 이전 버튼" tabindex="0"></div>
+						<div class="slide_btn next H_324_06_con_slide_next_btn swiper-button-next" aria-label="슬라이드 다음 버튼" tabindex="0"></div>
+						<div class="swiper-pagination H_324_06_con_slide_swiper-pagination"></div>
+					</div>
+					<!-- // 슬라이드 -->
+				</div>
+				
+				<!-- 퉅팁 팝업 -->
+				<div class="text_popup_con H_321_04_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0" id="popup-title">
+							<span>
+								elif
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								elif는 else if의 약자이다.
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- //퉅팁 팝업 -->
+				<!-- 팝업 -->
+				<div class="full_popup_wrap H_324_06_full_popup" id="fullpopup01">
+					<div class="contents_con">
+						<div class="close_btn">
+							<button aria-label="팝업 닫기"></button>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>end 옵션</span>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp;&nbsp;동영상의 프로그램에서 print( ) 함수에 end 옵션을 사용하였다. end는 출력된 문자열 끝에 무엇이 올지를 결정하는 옵션으로, 특별히 작성하지 않으면 '\n'(줄 바꿈)을 기본값으로 사용한다. 만약 end 옵션을 ''으로 수정하면, 다음 출력이 줄 바꿈 없이 보이게 된다.
+							</span>
+						</div>
+
+						<div class="title_sub" tabindex="0">
+							<span>end 옵션 사용 예시</span>
+						</div>
+
+						<div class="list_con" tabindex="0">
+							<ul>
+								<li tabindex="0">
+									<div class="num_con" tabindex="0">
+										<span>1</span>
+									</div>
+									<div class="code_con">
+										<div class="left_con">
+											<span tabindex="0">1<code>print('수박', end='')</code></span>
+											<span tabindex="0">2<code>print('이 좋아.')</code></span>
+										</div>
+										<div class="right_con">
+											<span tabindex="0">수박이 좋아.</span>
+										</div>
+									</div>
+								</li>
+								<li tabindex="0">
+									<div class="num_con" tabindex="0">
+										<span>2</span>
+									</div>
+									<div class="code_con">
+										<div class="left_con">
+											<span tabindex="0">1<code>print('수박이', end = ' ')</code></span>
+											<span tabindex="0">2<code>print('좋아.')</code></span>
+										</div>
+										<div class="right_con">
+											<span tabindex="0">수박이 좋아.</span>
+										</div>
+									</div>
+								</li>
+								<li tabindex="0">
+									<div class="num_con" tabindex="0">
+										<span>3</span>
+									</div>
+									<div class="code_con">
+										<div class="left_con">
+											<span tabindex="0">1<code>print('수박이', end = ' 너무 ')</code></span>
+											<span tabindex="0">2<code>print('좋아.')</code></span>
+										</div>
+										<div class="right_con">
+											<span tabindex="0">수박이 너무 좋아.</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+				<!-- //팝업 -->
+			</div>
+		</main>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			// 파이썬 코드 작성법 
+			$(".H_324_06_con .condition .write01 .after_hand").on("click", function(){
+				$(this).hide();
+				$(this).siblings(".comment").addClass("on");
+				$(".H_324_06_con .condition .write02 .after_hand").show();
+			});
+
+			$(".H_324_06_con .condition .write02 .after_hand").on("click", function(){
+				$(this).hide();
+				$(this).siblings(".comment").addClass("on");
+				$(".H_324_06_con .condition .write03 .after_hand").show();
+			});
+
+			$(".H_324_06_con .condition .write03 .after_hand").on("click", function(){
+				$(this).hide();
+				$(this).siblings(".comment").addClass("on");
+			});
+			
+			// 툽팁 팝업열기
+			$(".H_324_06_con .link_tooltip").on("click", function(){
+				var popSelector = "#" + $(this).attr("aria-controls");
+				if($(popSelector).css("display") == "none") {
+					$(".H_324_06_con .text_popup_con").not(popSelector).hide();
+					$(popSelector).show();
+				}else {
+					$(popSelector).hide();
+				}
+			});
+			// 툽팁 팝업닫기
+			$(".H_324_06_con .text_popup_con .a_btn").on("click", function(){
+				$(this).parents(".text_popup_con").hide();
+			});
+
+			// 팝업
+			$(".H_324_06_con .btn_popup").on("click", function(){
+				$(".H_324_06_con .full_popup_wrap").show();
+			});
+			$(".H_324_06_con .full_popup_wrap .close_btn").on("click", function(){
+				$(this).parents(".full_popup_wrap").hide();
+			});
+
+			// while문 슬라이드
+			H_324_06_con_slide = new Swiper('.H_324_06_con_slide', {
+				slidesPerView: 'auto',
+				effect: 'fade',
+				fadeEffect: {
+					crossFade: true
+				},
+				speed: 100,
+				loop: false,
+				pagination: {
+					el: ".H_324_06_con_slide_swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.H_324_06_con_slide_next_btn',
+					prevEl: '.H_324_06_con_slide_prev_btn',
+				},
+				observer: true,
+				observeParents: true,
+				simulateTouch: false,
+				allowTouchMove: false,
+			});
+
+			// 영상 일시정지 로직
+			H_324_06_con_slide.on('slideChange', function () {
+				$('.H_324_06_con video').each(function () {
+					this.pause();
+				});
+			});
+
+		});
+	</script>
+	<script>
+		// 슬라이드가 바뀔 때 모든 비디오를 일시정지
+		H_324_06_con_slide.on('slideChange', function () {
+			$('video').each(function () {
+				this.pause();
+			});
+		});
+	</script>
+	<script>
+		const contentId = 'H-324-06';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+	<script>
+		const videoList = [
+			{ 
+				id: "H-324-06",
+				src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-324-06_4000k.mp4,H-324-06_2000k.mp4,H-324-06_1000k.mp4,lang/kor/H-324-06.vtt,.smil/master.m3u8" 
+			}
+		];
+	</script>
+	<script type="text/javascript" src="./js/xapi.video.js"></script>
+	
+</body>
+</html>

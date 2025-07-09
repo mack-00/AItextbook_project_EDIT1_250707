@@ -1,0 +1,257 @@
+body{
+    zoom: 97%;
+    background-color: #f5f8f9;
+    position: relative;
+}
+.menu_box_top{
+    background-color: #061b38;
+    height: 60px;
+    color: white;
+    padding: 10px 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    z-index: 10;
+    display: none;
+}
+.menu_box_top .menu{
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu_box_top .menu .menu_left{
+    display: flex; gap: 20px;
+}
+.menu_box_top .menu .menu_left .menu_left_text{
+    display: flex; gap: 20px;
+}
+.menu_box_top .menu .menu_left .menu_left_text p:nth-child(1){
+    color: #828d98;
+} 
+.menu_box_top .menu .menu_right{
+    display: flex;
+    gap: 20px;
+}
+.menu_box_top .menu .menu_right .menu_right_item{
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 5px;  
+}
+.menu_box_top .menu .menu_right .menu_right_insole{
+    gap: 2px;
+    border-radius: 20px;
+    background-color: #4b5a70;  
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+.menu_box_top .menu .menu_right .menu_right_insole_on,
+.menu_box_top .menu .menu_right .menu_right_insole_off{
+    display: none;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+.menu_box_top .menu .menu_right .menu_right_insole_off.active{
+    display: flex;
+	opacity: 1;
+    transform: translateX(0);
+	transition: all 1s ease;
+	background-color: #4b5a70;
+}
+.menu_box_top .menu .menu_right .menu_right_insole_on.active{
+    display: flex;
+	opacity: 1;
+    transform: translateX(0);
+	transition: all 1s ease;
+	background-color: #1967d2;
+}
+.menu_box_top .menu .menu_right .menu_right_exit{
+    gap: 10px;
+    background-color: #1e314c;
+}
+.menu_box_top .menu .menu_right .menu_right_connection{
+    background-color: #1e314c;
+}
+.circle{
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: white;
+    width: 28px; height: 28px;
+    margin-top: 3px; margin-bottom: 3px;
+}
+
+/* 메뉴 하단 */
+.menu_box_bottom{
+    max-width: 100%;
+    height: min(128px, 4.20vw);
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    background-color: white;
+    z-index: 10;
+    position: fixed; bottom: 0; left: 0;
+    width: 100%;
+    display: none;
+}
+.menu_box_bottom .menu{
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 0 0px 30px;
+}
+.menu_box_bottom .menu + div{
+    width: 33%;
+}
+.menu_box_bottom .menu .menu_left{
+    display: flex; gap: 30px;
+}
+.menu_box_bottom .menu .menu_left button{
+    border-radius: 50px;
+    border: 1px solid #999999;
+    width: 20px; height: 20px;
+}
+.menu_box_bottom .menu .menu_middle{
+    display: flex; align-items: center; justify-content: center;
+}
+.menu_box_bottom .menu .menu_middle .menu_middle_middle{
+    display: flex; gap: 10px;
+    background-color: #f4f4f4;
+    padding: 10px 50px;
+    border-radius: 40px;
+    margin: 0 20px;
+}
+.menu_box_bottom .menu .menu_middle .menu_middle_middle span{
+    color: #999999;
+}
+.menu_box_bottom .menu .menu_middle .menu_middle_left,
+.menu_box_bottom .menu .menu_middle .menu_middle_right{
+    cursor: pointer;
+}
+.menu_box_bottom .menu .menu_right{
+    position: relative;
+}
+.menu_box_bottom .menu .menu_right .menu_btn{
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 20px;
+    gap: 20px;
+    background-color: #0078b8;
+    color: white;
+    /* position: fixed; bottom: 0; right: 0; */
+    width:min(392px, 13.70vw);
+    height: min(128px, 4.20vw);
+    cursor: pointer;
+}
+.menu_box_bottom .menu .menu_right .menu_btn .toolbar_set{
+    display: flex; align-items: center; justify-content: center;
+}
+
+.menu_box_bottom .menu .menu_right .menu_list{
+    display: none;
+    background-color: white; 
+    width: 100%;
+    position: absolute; 
+    left: 0;
+    bottom: 100%;
+    border-radius: 10px 10px 0 0 ;
+}
+.menu_box_bottom .menu .menu_right .menu_list li{
+    display: flex; gap: 10px; align-items: center;
+    padding: 15px 30px;
+}
+.menu_box_bottom .menu .menu_right .menu_list li:hover{
+    background-color: #eeeeee;
+}
+.fa-x{
+    display: none;
+}
+i{
+    display: block;
+}
+
+/* 접속현황*/
+.menu_right_connection{
+    cursor: pointer;
+}
+.connection_status_bg.aa{display: none;}
+.connection_status.aa{display: none;}
+.connection_status_content.aa{display: none;}
+.connection_status_bg{
+    border: 10px solid red;
+    position: fixed;      
+    top: 0; left: 0;
+    width: 100%; height: 100vh; margin: 0 auto;
+    display: flex; align-items: center; justify-content: center;
+    background-color: #000000; opacity: 0.4;
+    z-index: 100; 
+}
+.connection_status{
+    border: 10px solid blue;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100vh; margin: 0 auto;
+    z-index: 101; 
+    cursor: pointer;
+    color: black;
+}
+.connection_status_content .x_button{
+    position: absolute; top: 20px; right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 200;
+    color: black;
+}
+.connection_status_content{
+    border: 10px solid pink;
+    width: 600px; height: 50vh;
+    position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    background-color: white; opacity: 1;
+    font-size: 12px;
+}
+.connection_status .connection_status_content .connection_status_top{
+    border: 1px solid black;
+    padding: 15px 0;
+    max-width: 90%; margin: 0 auto;
+}
+
+.not_connected{
+    color: #f28300;
+    background: #fdf7e1;
+    border-radius: 10px;
+    max-width: 30px;
+    height: 20px;
+}
+.connection_status .connection_status_content .connection_status_bottom{
+    overflow: scroll;
+    height: 70%;
+    max-width: 90%; margin: 0 auto;
+}
+.connection_status .connection_status_content .connection_status_bottom p{
+    background-color: #dddddd;
+    /* height: 130px; */
+}
+.connection_status .connection_status_content .connection_status_bottom .connection_status_bottom_list li{
+    font-size: 20px;
+    padding-top: 20px;
+}
+.connection_status .connection_status_content .connection_status_bottom .connection_status_bottom_list li:after{
+    content: ''; display: block; 
+    padding-top: 20px;
+    border-bottom: 1px solid #999999;
+}
+.connection_status .connection_status_content .connection_status_commit{
+    background-color: white;
+    position: fixed; left: 5%; bottom: 0; 
+    width: 90%; margin: 0 auto;
+}
+.connection_status .connection_status_content .connection_status_commit p{
+    background-color: #1967d2;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+
+}
+#wrap, #wrap > *{
+    height: 80vh;
+}

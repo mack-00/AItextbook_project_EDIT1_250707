@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>손실 압축 방법 > 소리 데이터 압축</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/swiper.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_211_14_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h2>손실 압축</h2>
+							<h1>소리 데이터 압축</h1>
+						</div>
+					</div>
+				</div>			
+
+				<div class="contents_con">	
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								아날로그 소리는 <span class="link_tooltip color_text01" role="button" aria-expanded="false" aria-controls="tooltip01">표본화,</span> <span class="link_tooltip color_text02" role="button" aria-expanded="false" aria-controls="tooltip02">양자화,</span> <span class="link_tooltip color_text03" role="button" aria-expanded="false" aria-controls="tooltip03">부호화</span>를 거쳐 디지털 신호로 기록된다.
+							</span>
+						</div>
+
+						<div class="text_popup_con H_211_14_pop_01" id="tooltip01" role="dialog" aria-modal="true">
+							<div class="contents_con">
+								<div class="close_btn">
+									<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+								</div>
+
+								<div class="title_con" tabindex="0">
+									<span>
+										표본화
+									</span>
+								</div>
+
+								<div class="info_con" tabindex="0">
+									<span>
+										아날로그 신호를 디지털로 변환하기 위해 일정한 시간 간격으로 진동을 측정한다.
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="text_popup_con H_211_14_pop_02" id="tooltip02" role="dialog" aria-modal="true">
+							<div class="contents_con">
+								<div class="close_btn">
+									<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+								</div>
+
+								<div class="title_con" tabindex="0">
+									<span>
+										양자화
+									</span>
+								</div>
+
+								<div class="info_con" tabindex="0">
+									<span>
+										표본값을 일정한 단계로 나누어 디지털값으로 변환한다.
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="text_popup_con H_211_14_pop_03" id="tooltip03" role="dialog" aria-modal="true">
+							<div class="contents_con">
+								<div class="close_btn">
+									<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+								</div>
+
+								<div class="title_con" tabindex="0">
+									<span>
+										부호화
+									</span>
+								</div>
+
+								<div class="info_con" tabindex="0">
+									<span>
+										변환된 디지털값을 비트(0과 1)로 표현한다.
+									</span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="info02_con">
+						<div class="title_con" tabindex="0">
+							<div class="dot" aria-hidden="true"></div>
+
+							<span>
+								소리 압축 방식의 예
+							</span>
+						</div>
+
+						<div class="contents_con">
+
+							<div class="both_wrap main_both">
+								<div>
+									<div class="img H_211_14_img01"></div>
+									<div class="txt01 f_center">
+										양자화 과정에서 소리의 표본값을 일정한 단계로 나누어 디지털값으로 
+										변환하므로 실젯값과 양자화된 값 사이에 차이가 생긴다. 그림에서 곡선은 아날로그값(실젯값),
+										빨간색 직선은 양자화된 값을 의미한다.
+										따라서 노란색 영역만큼 차이가 존재한다.	
+									</div>
+								</div>
+								<div>
+									<div class="both_wrap sub_both">
+										<div class="img H_211_14_img02"></div>
+										<div class="arr">손실 압축</div>
+										<div class="img H_211_14_img03"></div>
+									</div>
+									<div class="txt01 f_center">
+										소리를 더 효율적으로 압축하기 위해 사람이 잘 인식하지<br /> 못하는 부분의 정보는 손실시키고 압축한다.
+									</div>
+								</div>
+							</div>
+									
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- <script>
+			// 컴퓨팅 텍스트 팝업 열기/닫기
+			$(document).on("click",".H_211_14_con > .contents_con > .contents_con > .info01_con > .text_con span .color_text01",function(){
+				if( $(".H_211_14_con > .contents_con > .contents_con > .info01_con > .popup_con").css("display") == "none" ){
+					$(".H_211_14_con > .contents_con > .contents_con > .info01_con > .popup_con").show();
+				}else{
+					$(".H_211_14_con > .contents_con > .contents_con > .info01_con > .popup_con").hide();
+				}
+			});
+
+			// 컴퓨팅 팝업 버튼 열기/닫기
+			$(document).on("click",".H_211_14_con > .contents_con > .contents_con > .info01_con > .popup_con > .contents_con > .close_btn .a_btn",function(){
+				if( $(".H_211_14_con > .contents_con > .contents_con > .info01_con > .popup_con").css("display") == "none" ){
+					$(".H_211_14_con > .contents_con > .contents_con > .info01_con > .popup_con").show();
+				}else{
+					$(".H_211_14_con > .contents_con > .contents_con > .info01_con > .popup_con").hide();
+				}
+			});
+
+			
+		</script> -->
+
+		<script>
+		$(document).ready(function(){
+			// 팝업열기
+			$(".H_211_14_con .link_tooltip").on("click", function(){
+				var popSelector = "#" + $(this).attr("aria-controls");
+				if($(popSelector).css("display") == "none") {
+					$(".H_211_14_con .text_popup_con").not(popSelector).hide();
+					$(popSelector).show();
+				}else {
+					$(popSelector).hide();
+				}
+			});
+			// 팝업닫기
+			$(".H_211_14_con .text_popup_con .a_btn").on("click", function(){
+				$(this).parents(".text_popup_con").hide();
+			});			
+		});
+	</script>
+
+	</div>
+	<script>
+		const contentId = 'H-211-14';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

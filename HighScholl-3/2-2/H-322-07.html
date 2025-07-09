@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>파일입출력 함수</title>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+</head>
+
+<body>
+	<div id="wrap">
+
+		<main class="H_322_07_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								파일입출력 함수
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								파일입출력에 사용되는 함수를 살펴보자.
+							</span>
+						</div>
+					</div>
+
+					<div class="info02_con">
+						<div class="contents_con">
+							<div class="nav" role="navigation" aria-label="파일입출력 함수">
+								<ul role="tablist">
+									<li tabindex="0">
+										<span class="on" data-value="info01" role="tab" id="tab-info01"
+											aria-selected="true" aria-controls="panel-info01">
+											파일 열기
+										</span>
+									</li>
+									<li tabindex="0">
+										<span data-value="info02" role="tab" id="tab-info02" aria-selected="false"
+											aria-controls="panel-info02">
+											파일 처리
+										</span>
+									</li>
+									<li tabindex="0">
+										<span data-value="info03" role="tab" id="tab-info03" aria-selected="false"
+											aria-controls="panel-info03">
+											파일 닫기
+										</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="contents_con">
+								<div id="panel-info01" class="contents_div info01" role="tabpanel"
+									aria-labelledby="tab-info01">
+									<div class="title_con" tabindex="0">
+										<span>
+											파일의 데이터를 처리하기 위하여 우선 open( ) 함수를 사용해 파일을 연다.
+										</span>
+									</div>
+
+									<div class="contents_con">
+										<div class="text_con">
+											<span>
+												파일 변수 = open( 파일명 ,  파일입출력 모드 )
+											</span>
+
+											<div class="box_con text01">
+												<span>
+													작업할 파일명을 지정할 때는 <br />
+													다른 경로에 있는 파일이면 <br />
+													경로를 지정해야 한다.
+												</span>
+
+												<div class="line_con">
+													<div class="arrow"></div>
+												</div>
+											</div>
+
+											<div class="box_con text02">
+												<span>
+													작업 목적에 맞게 어떤 <br />
+													형식으로 할지 파일 <br />
+													입출력 모드를 정한다.
+												</span>
+
+												<div class="line_con">
+													<div class="arrow"></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="tab_con">
+											<table>
+												<caption>보충 자료</caption>
+												<colgroup>
+													<col style="width:160px;">
+													<col>
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">
+															파일입출력 모드
+														</th>
+														<th scope="col">
+															특징
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th class="title_td" scope="row">
+															r(읽기)
+														</th>
+														<td class="info_td">
+															파일의 데이터를 읽는다. <br />
+															(파일이 없으면 오류가 발생한다.)
+														</td>
+													</tr>
+													<tr>
+														<th class="title_td" scope="row">
+															w(쓰기)
+														</th>
+														<td class="info_td">
+															파일에 데이터를 쓴다. <br />
+															(파일이 있으면 기존 데이터는 삭제 <br />
+															되고, 파일이 없으면 생성된다.)
+														</td>
+													</tr>
+													<tr>
+														<th class="title_td" scope="row">
+															a(추가)
+														</th>
+														<td class="info_td">
+															파일에 데이터를 이어 쓴다. <br />
+															(파일에 있던 데이터는 유지된다.)
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+								<div id="panel-info02" class="contents_div info02" role="tabpanel"
+									aria-labelledby="tab-info02" hidden>
+									<div class="title_con" tabindex="0">
+										<span>
+											open( ) 함수의 파일입출력 모드에 따라 사용할 수 있는 파일 처리 함수가 정해진다.
+										</span>
+									</div>
+
+									<div class="contents_con">
+										<div class="tab_con">
+											<table>
+												<caption>보충 자료</caption>		
+												<colgroup>
+													<col style="width:160px;">
+													<col>
+													<col>
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">
+															파일입출력 모드
+														</th>
+														<th scope="col">
+															파일 처리 함수
+														</th>
+														<th scope="col">
+															특징
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th rowspan="3" class="title_td" scope="row">
+															r(읽기)
+														</th>
+														<td class="info_td info_td02">
+															파일 변수.read( )
+														</td>
+														<td class="info_td">
+															파일 전체 내용을 읽는다.
+														</td>
+													</tr>
+													<tr>
+														<td class="info_td info_td02">
+															파일 변수.readline( )
+														</td>
+														<td class="info_td">
+															<span class="link_tooltip" role="button"
+																aria-expanded="false" aria-controls="tooltip01">파일
+																포인터</span>
+															위치부터 한 줄을 읽고, <br />파일 포인터의 위치를 다음 줄로 이동한다.
+														</td>
+													</tr>
+													<tr>
+														<td class="info_td info_td02">
+															파일 변수.readlines( )
+														</td>
+														<td class="info_td">
+															파일 포인터 위치 이후의 모든 줄을 읽어서 <br />
+															각 줄을 요소로 갖는 리스트로 반환한다.
+														</td>
+													</tr>
+													<tr>
+														<th class="title_td" scope="row">
+															w(쓰기) <br />
+															a(추가)
+														</th>
+														<td class="info_td info_td02">
+															파일 변수.write( )
+														</td>
+														<td class="info_td">
+															파일 포인터의 현재 위치에 내용을 작성한다.
+														</td>
+													</tr>
+												</tbody>
+											</table>
+
+										</div>
+									</div>
+								</div>
+
+								<div id="panel-info03" class="contents_div info03" role="tabpanel"
+									aria-labelledby="tab-info03" hidden>
+									<div class="title_con" tabindex="0">
+										<span>
+											파일 처리가 끝난 후에는 close( ) 함수를 사용해 닫아 준다.
+										</span>
+									</div>
+
+									<div class="contents_con">
+										<div class="text_con">
+											<span>
+												파일 변수.close( )
+											</span>
+										</div>
+
+										<div class="video_con">
+											<div class="contents_con">
+												<div class="video-container">
+													<video id="player01" data-content-id="H-322-07" controls
+														crossorigin></video>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 팝업 -->
+				<div class="text_popup_con H_322_07_pop_01" id="tooltip01" role="dialog" aria-modal="true"
+					aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0" id="popup-title">
+							<span>
+								파일 포인터
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								파일 포인터는 파일에서 입출력 동작이 발생하는 위치(커서가 깜빡이는 위치)를 나타낸다.
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- //팝업 -->
+			</div>
+		</main>
+
+		<script>
+			$(document).ready(function () {
+				// 팝업열기
+				$(".H_322_07_con .link_tooltip").on("click", function () {
+					var popSelector = "#" + $(this).attr("aria-controls");
+					if ($(popSelector).css("display") == "none") {
+						$(".H_322_07_con .text_popup_con").not(popSelector).hide();
+						$(popSelector).show();
+					} else {
+						$(popSelector).hide();
+					}
+				});
+				// 팝업닫기
+				$(".H_322_07_con .text_popup_con .a_btn").on("click", function () {
+					$(this).parents(".text_popup_con").hide();
+				});
+
+			});
+		</script>
+		<script>
+			// 텝 항목 선택 시
+			$(document).on("click", ".H_322_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .nav > ul > li span", function () {
+				if (!$(this).hasClass("on")) {
+					// 모든 비디오 일시정지
+					$(".H_322_07_con video").each(function () {
+						this.pause();
+					});
+
+					// 탭 UI 처리
+					$(".H_322_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .nav > ul > li span").removeClass("on");
+					$(this).addClass("on");
+
+					$(".H_322_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div").hide();
+					$(".H_322_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div." + $(this).attr("data-value")).show();
+
+					$(".H_322_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div > .img_con .img_div .over_con").show();
+				}
+			});
+		</script>
+
+		<script>
+			const contentId = 'H-322-07';
+		</script>
+		<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+		<script>
+			const videoList = [
+				{
+					id: "H-322-07",
+					src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-322-07_4000k.mp4,H-322-07_2000k.mp4,H-322-07_1000k.mp4,lang/kor/H-322-07.vtt,.smil/master.m3u8"
+				}
+			];
+		</script>
+		<script type="text/javascript" src="./js/xapi.video.js"></script>
+
+
+	</div>
+</body>
+
+</html>

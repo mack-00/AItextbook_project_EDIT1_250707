@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>2 기계학습</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="format-detection" content="telephone=no">
+
+		<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="./js/jquery-ui.min.js"></script>
+
+		<!-- 브라우저 번역(다국어 관련) -->
+		<link rel="stylesheet" href="./css/GoogleTranslate.css">
+		<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+		<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+		<!-- Plyr 관련 스타일시트 -->
+		<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+		<link rel="stylesheet" href="./css/plyr.css">
+		<!-- Plyr 관련 필수 JS -->
+		<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+		<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+		<link rel="stylesheet" href="./css/jquery-ui.min.css">
+		<link rel="stylesheet" href="./css/fonts.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/common_all.css">
+		<script src="https://acv001.aiktbook.com/api/static/message-channel-iframe.js"></script>
+		<style>
+			.btn {
+				padding: 8px 16px;
+				background: #007bff;
+				color: white;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				font-size: 16px;
+			}
+
+			.btn:hover {
+				background: #0056b3;
+			}
+
+			.btn:focus {
+				outline: 3px solid #80bdff;
+				outline-offset: 2px;
+			}
+
+			.btn[aria-pressed="true"] {
+				background: #28a745;
+			}
+
+			.sr-only {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				border: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<main class="H_42_01_con">
+				<div class="contents_con">
+					<div class="title_con" tabindex="0">
+						<div class="no"></div>
+						<h1> 기계학습 </h1>
+					</div>
+					<div class="intro_con">
+						<div class="title_con" tabindex="0">
+							<span> 단원 목표 </span>
+						</div>
+						<div class="info_con" tabindex="0">
+							<span> 기계학습 기반의 인공지능을 구현하기 위해 문제 해결에 <br /> 적합한 데이터와 기계학습 모델을 활용할 수 있다. </span>
+						</div>
+					</div>
+					<div class="contents_con">
+						<div class="left_con">
+							<div class="video_con">
+								<div class="contents_con">
+									<div class="video-container">
+										<video id="player01" data-content-id="H-42-01" controls crossorigin></video>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="right_con">
+							<form id="frm1" onsubmit="return false">
+								<div class="question_con">
+									<div class="title_con">
+										<div class="icon_con"></div>
+										<div class="text_con" tabindex="0">
+											<h2> 나의 학습 계획 세우기 </h2>
+										</div>
+									</div>
+									<div class="write_con">
+										<div class="title_con">
+											<div class="icon_con" tabindex="0">
+												<span> 예시 </span>
+											</div>
+											<div class="text_con" tabindex="0">
+												<span> 인공지능은 어떤 방법으로 학습하는지 <br /> 알고 싶어요. </span>
+											</div>
+										</div>
+										<div class="input_con">
+											<div class="textarea_con">
+												<input type="hidden" name="aidt_pageTitle" value="나의 학습 계획 세우기">
+												<input type="hidden" name="aidt_examId" value="1">
+												<input type="hidden" name="aidt_exam" value="기계학습에서 알고 싶은 내용을 적어 보자.">
+												<input type="hidden" name="aidt_answer" value="">
+												<input type="hidden" name="aidt_mcqYn" value="N">
+												<input type="hidden" name="aidt_type" value="narrative">
+												<textarea name="aidt_input" placeholder="내용을 입력해 보자." class="textarea"></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="btn_con">
+										<button id="btn1" class="a_btn a_btn01" type="button" aria-label="제출하기" tabindex="0">제출하기</button>
+										<button id="btn1_1" class="a_btn a_btn02" type="button" aria-label="다시 제출하기" style="display:none;" tabindex="0">다시 제출하기</button>
+									</div>
+									<div class="popup_con_bg popup01"></div>
+									<div class="popup_con popup01" role="alert"></div>
+									<div class="popup_con_bg popup02"></div>
+									<div class="popup_con popup02" role="alert"></div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</main>
+			<script>
+				const child = new ClientAPI(); //본 코드는 데이터 전송 페이지마다 각각 별도로 들어있어야 하고, 내부 스크립트의 최상단에 위치해야함. 
+				//제출 여부 받아서 버튼 제어
+				child.receiveMessage((data) => {
+					if (data.submitYn === 'Y') {
+						document.getElementById('btn1_1').style.display = ""; //수정하기 버튼 표시
+						document.getElementById('btn1').style.display = "none"; //제출 버튼 숨기기
+					}
+				});
+				// [제출하기]btn click 시 form#frm1 전송
+				const btn1 = document.getElementById('btn1'); //제출 버튼
+				btn1.addEventListener('click', () => {
+					sendFormData()
+				});
+				// [수정하기]btn click 시 form#frm1 전송
+				const btn1_1 = document.getElementById('btn1_1'); //수정 버튼 
+				btn1_1.addEventListener('click', () => {
+					sendFormData()
+				});
+				
+				// 제출하기
+				function sendFormData() {
+					const textareaVal = $(".H_42_01_con .textarea").val();
+					const videoElement = document.getElementById('player01'); // ← 여기에서 바로 DOM 참조
+					if (textareaVal == "") {
+						btn_event01();
+					} else {
+						if (videoElement && !videoElement.paused) videoElement.pause(); // 영상 일시정지
+						btn_event02();
+					}
+				}
+				// 제출하기 - 내용 없음
+				function btn_event01() {
+					$(".H_42_01_con > .contents_con > .contents_con > .right_con .question_con > .btn_con .a_btn").blur();
+					$(".H_42_01_con > .contents_con > .contents_con > .right_con .question_con .popup_con_bg.popup01").fadeIn();
+					$(".H_42_01_con > .contents_con > .contents_con > .right_con .question_con .popup_con.popup01").fadeIn();
+					setTimeout(function() {
+						$(".H_42_01_con > .contents_con > .contents_con > .right_con .question_con .popup_con_bg.popup01").fadeOut();
+						$(".H_42_01_con > .contents_con > .contents_con > .right_con .question_con .popup_con.popup01").fadeOut();
+					}, 1000);
+				}
+				// 제출하기 - 내용 있음
+				function btn_event02() {
+					$(".H_42_01_con .btn_con .a_btn").blur();
+					$(".H_42_01_con .popup_con_bg.popup02").fadeIn();
+					$(".H_42_01_con .popup_con.popup02").fadeIn();
+					// 버튼 전환
+					$("#btn1").hide();
+					$("#btn1_1").show();
+					// 실제 데이터 전송
+					child.sendFormData('frm1');
+					setTimeout(function() {
+						$(".H_42_01_con > .contents_con > .contents_con > .right_con .question_con .popup_con_bg.popup02").fadeOut();
+						$(".H_42_01_con > .contents_con > .contents_con > .right_con .question_con .popup_con.popup02").fadeOut();
+					}, 1000);
+				}
+			</script>
+			<script>
+				const contentId = 'H-42-01';
+			</script>
+			<script type="text/javascript" src="./js/xapi.page.js"></script>
+			<script>
+				const videoList = [{
+					id: "H-42-01",
+					src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-42-01_4000k.mp4,H-42-01_2000k.mp4,H-42-01_1000k.mp4,lang/kor/H-42-01.vtt,.smil/master.m3u8"
+				}];
+			</script>
+			<script type="text/javascript" src="./js/xapi.video.js"></script>
+		</div>
+	</body>
+</html>

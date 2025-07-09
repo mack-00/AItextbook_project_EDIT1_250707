@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>대칭 암호화 방법</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/swiper.js"></script>
+
+	<script src="https://acv001.aiktbook.com/api/static/message-channel-iframe.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_212_15_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								대칭 암호화 방법
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					
+					<form id="frm1" onsubmit="return false">
+					<input type="hidden" name="aidt_pageTitle" value="대칭 암호화 방법">
+						<div class="slide_wrap_con">
+							<div class="slide_con">
+								<div class="swiper-container H_212_15_slide">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide H_212_15_slide_div">
+
+											<div class="num_title text_01">
+												<span class="number_icon">1</span>
+												문서 작성 프로그램을 이용해 권한이 있는 사용자만 문서를 확인할 수 있도록 암호를 설정해 보자.
+											</div>
+
+											<div class="video_con">
+												<video id="Video" controls autoplay muted aria-label="네트워크의 특성 설명 영상">
+													<source src="./video/H_5_01_video.mp4" type="video/mp4">
+													<track id="subtitleTrack" src="./subtitle/H_5_01_video.vtt" kind="subtitles" srclang="ko" label="Korean">
+												</video>
+											</div>
+											
+										</div>
+										<div class="swiper-slide H_212_15_slide_div">
+											<div class="num_title text_01">
+												<span class="number_icon">2</span>
+												대칭 암호화를 사용하는 이유와 그 중요성을 적어 보자.
+											</div>
+
+											<div class="exam_textarea">
+												<div class="exam_tit">
+													<span class="exam_icon">예시</span>
+													<p>대칭 암호화는 암호화 속도가 빠르다.</p>
+												</div>
+												<div class="exam_con">
+													<input type="hidden" name="aidt_examId" value="1">
+													<input type="hidden" name="aidt_exam" value="대칭 암호화를 사용하는 이유와 그 중요성을 적어 보자.">
+													<input type="hidden" name="aidt_answer" value="">
+													<input type="hidden" name="aidt_mcqYn" value="N">
+													<input type="hidden" name="aidt_type" value="narrative">
+													<textarea class="textarea01" placeholder="내용을 입력해 보자" name="aidt_input"></textarea>
+												</div>
+											</div>
+
+											<div class="btn_con">
+												<button id="btn1" class="a_btn a_btn01" type="submit" aria-label="제출하기" tabindex="0"></button>
+												<button id="btn1_1" class="a_btn a_btn02" type="submit" aria-label="수정하기" style="display:none;" tabindex="0"></button>
+											</div>
+											
+										</div>
+									</div>
+									<div class="swiper-pagination H_212_15_slide_swiper-pagination"></div>
+								</div>
+
+
+								<div class="slide_btn prev H_212_15_slide_prev_btn swiper-button-prev" aria-label="슬라이드 이전 버튼" tabindex="0"></div>
+								<div class="slide_btn next H_212_15_slide_next_btn swiper-button-next" aria-label="슬라이드 다음 버튼" tabindex="0"></div>
+							</div>
+
+							
+
+							
+
+						</div>
+					</form>
+
+				</div>
+				
+				<div class="popup_con_bg popup01"></div>
+				<div class="popup_con popup01" role="alert"></div>
+
+				<div class="popup_con_bg popup02"></div>
+				<div class="popup_con popup02" role="alert"></div>
+
+				<div class="popup_con_bg popup03"></div>
+				<div class="popup_con popup03" role="alert"></div>
+			</div>
+		</main>
+
+		<script>
+			const child = new ClientAPI(); //본 코드는 데이터 전송 페이지마다 각각 별도로 들어있어야 하고, 내부 스크립트의 최상단에 위치해야함. 
+
+			//제출 여부 받아서 버튼 제어
+			child.receiveMessage((data)=>{
+				if(data.submitYn === 'Y'){
+					document.getElementById('btn1_1').style.display = ""; //수정하기 버튼 표시
+					document.getElementById('btn1').style.display = "none"; //제출 버튼 숨기기
+				}
+			});
+
+			// [제출하기]btn click 시 form#frm1 전송
+			const btn1 = document.getElementById('btn1'); //제출 버튼
+			btn1.addEventListener('click', () => {
+				child.sendFormData('frm1')
+			});
+
+			// [수정하기]btn click 시 form#frm1 전송
+			const btn1_1 = document.getElementById('btn1_1'); //수정 버튼 
+			btn1_1.addEventListener('click', () => {
+				child.sendFormData('frm1')
+			});
+
+			// H_212_15 슬라이드
+			H_212_15_slide = new Swiper ('.H_212_15_slide', {
+				slidesPerView: 'auto',
+				effect : 'fade', 
+					fadeEffect: { 
+					crossFade: true 
+				},
+				speed: 1500,
+				loop: false,
+				pagination: {
+					el: ".H_212_15_slide_swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.H_212_15_slide_next_btn',
+					prevEl: '.H_212_15_slide_prev_btn',
+				},
+				observer: true,
+				observeParents: true,
+				simulateTouch: false,
+				allowTouchMove: false,
+				on: {
+					slideChange: function () {
+						if( this.activeIndex == "1" ){
+							$(".H_212_15_con > .contents_con > .contents_con .write_con > .btn_con").show();
+						}else{
+							$(".H_212_15_con > .contents_con > .contents_con .write_con > .btn_con").hide();
+						}
+					}
+				}
+			});
+
+			// 제출하기
+			function sendFormData(){
+				// 텍스트 영역이 모두 채워졌는지 확인
+				const textarea1Filled = $("textarea[name='aidt_input']").eq(0).val().trim() !== "";
+				
+				// 조건 확인 및 적절한 함수 호출
+				if (!textarea1Filled) {
+					btn_event01(); // 텍스트 영역이 하나라도 비어있는 경우
+				} else {
+					btn_event02(); // 모든 항목이 채워진 경우
+				}
+			}
+
+			// 제출하기 - 내용 없음
+			function btn_event01(){
+				$(".H_212_15_con .btn_con .a_btn").blur();
+				$(".H_212_15_con .popup_con_bg.popup01").fadeIn();
+				$(".H_212_15_con .popup_con.popup01").fadeIn();
+				
+				setTimeout(function(){
+					$(".H_212_15_con .popup_con_bg.popup01").fadeOut();
+					$(".H_212_15_con .popup_con.popup01").fadeOut();
+				}, 1000);
+			}
+
+			// 제출하기 - 내용 있음
+			function btn_event02(){
+				child.sendFormData('frm1');
+				$(".H_212_15_con .btn_con .a_btn").blur();
+				$(".H_212_15_con .popup_con_bg.popup02").fadeIn();
+				$(".H_212_15_con .popup_con.popup02").fadeIn();
+
+				setTimeout(function(){
+					$(".H_212_15_con .popup_con_bg.popup02").fadeOut();
+					$(".H_212_15_con .popup_con.popup02").fadeOut();
+				}, 1000);
+			}
+
+
+			
+		</script>
+
+	</div>
+</body>
+</html>

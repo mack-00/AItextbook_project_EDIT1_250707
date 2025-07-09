@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>1차원 데이터의 표현</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_323_04_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								1차원 데이터의 표현
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_con01" tabindex="0">
+						<span>&nbsp;&nbsp;1차원 데이터를 파이썬으로 구현할 때 여러 개의 값을 담는 컨테이너형을 사용해 표현한다. 순서가 있는 컨테이너형으로는 리스트가 있고, 순서가 없는 컨테이너형으로는 딕셔너리가 있다.</span>
+					</div>
+					<div class="contents_con">
+						<div class="nav" role="navigation" aria-label="1차원 파이썬 데이터 표현">
+							<ul role="tablist">
+								<li tabindex="0">
+									<span class="on" data-value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
+										리스트
+									</span>
+								</li>
+								<li tabindex="0">
+									<span data-value="info02" role="tab" id="tab-info02" aria-selected="false" aria-controls="panel-info02">
+										딕셔너리
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="contents_con">
+							<!-- 탭 컨텐츠1-->
+							<div id="panel-info01" class="contents_div info01" role="tabpanel" aria-labelledby="tab-info01">
+								<div class="text_con" tabindex="0">
+									<span>&nbsp;&nbsp;리스트는 [ ](대괄호) 안에 값을 ‘ , ’(콤마)로 구분해 저장한다. 리스트의 값에 0번부터 1씩 커지는 연속적인 숫자인<br > 인덱스를 부여한다. 
+										인덱스를 이용해서 인덱스 위치에 저장된 데이터를 참조하거나 수정할 수 있다.</span>
+								</div>
+								<div class="detail_con">
+									<div class="left_con">
+										<div class="list_con">
+											<ul role="tablist">
+												<li>
+													<div class="title_con" tabindex="0">
+														<span>리스트명 = [값1, 값2, 값3]</span>
+														<div class="cursor"></div>
+													</div>
+													<!-- 팝업: 리스트1-->
+													<div class="text_popup_con text_popup_con01" id="list-popup21" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+														<div class="contents_con">
+															<div class="close_btn">
+																<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+															</div>
+															<div class="title_con01" tabindex="0" id="popup-title">
+																<span>1차원 리스트의 생성</span>
+															</div>
+															<div class="text_con01" tabindex="0">
+																<span>1차원 리스트를 생성하는 방법이다. 기억 장소에 리스트의 값이 연달아 저장된다.</span>
+															</div>
+															<div class="title_con02" tabindex="0">
+																<span>저장된 구조</span>
+															</div>
+															<div class="list_con01">
+																<ul>
+																	<li tabindex="0">
+																		<span>값1</span>
+																	</li>
+																	<li tabindex="0">
+																		<span>값2</span>
+																	</li>
+																	<li tabindex="0">
+																		<span>값3</span>
+																	</li>
+																</ul>
+															</div>
+															<div class="list_con02">
+																<ul>
+																	<li tabindex="0">
+																		<span>0</span>
+																	</li>
+																	<li tabindex="0">
+																		<span>1</span>
+																	</li>
+																	<li tabindex="0">
+																		<span>2</span>
+																	</li>
+																</ul>
+															</div>
+															<div class="text_con02" tabindex="0">
+																<span>인덱스(index)</span>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="title_con" tabindex="0">
+														<span>변수 = 리스트명[인덱스]</span>
+														<div class="cursor"></div>
+													</div>
+													<!-- 팝업: 리스트2-->
+													<div class="text_popup_con text_popup_con02" id="list-popup2" role="dialog" aria-modal="true" aria-labelledby="popup-title2">
+														<div class="contents_con">
+															<div class="close_btn">
+																<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+															</div>
+															<div class="title_con01" tabindex="0" id="popup-title2">
+																<span>1차원 리스트의 참조</span>
+															</div>
+															<div class="text_con01" tabindex="0">
+																<span>1차원 리스트에 저장된 데이터를 참조하는 방법이다. 인덱스 위치에 저장된 값을 읽어온다.</span>
+															</div>
+															<div class="title_con02" tabindex="0">
+																<span>참조 예시</span>
+														 	</div>
+															<div class="text_con03" tabindex="0">
+																<span>x = 리스트명[0]</span>
+															</div>
+															<div class="text_con04" tabindex="0">
+																<span>인덱스 0 위치에 저장된 값1을 읽어 변수 x에 저장한다.</span>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="title_con" tabindex="0">
+														<span>리스트명[인덱스] = 값4</span>
+														<div class="cursor"></div>
+													</div>
+													<!-- 팝업: 리스트3-->
+													<div class="text_popup_con text_popup_con03" id="list-popup3" role="dialog" aria-modal="true" aria-labelledby="popup-title3">
+														<div class="contents_con">
+															<div class="close_btn">
+																<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+															</div>
+															<div class="title_con01" tabindex="0">
+																<span>1차원 리스트의 수정</span>
+															</div>
+															<div class="text_con01" tabindex="0">
+																<span>1차원 리스트에 저장된 데이터를 수정하는 방법이다. 인덱스 위치에 새로운 값을 저장한다.</span>
+															</div>
+															<div class="title_con02" tabindex="0">
+																<span>수정 예시</span>
+															</div>
+															<div class="text_con03" tabindex="0">
+																<span>리스트명[2] = 값4</span>
+															</div>
+															<div class="text_con04" tabindex="0">
+																<span>인덱스 2 위치에 값4를 저장한다.</span>
+															</div>
+															<div class="list_con01">
+																<ul>
+																	<li tabindex="0">
+																		<span>값1</span>
+																	</li>
+																	<li tabindex="0">
+																		<span>값2</span>
+																	</li>
+																	<li tabindex="0">
+																		<span>값4</span>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="title_con" tabindex="0" id="popup-title3">
+														<span>리스트명.append(값5)</span>
+														<div class="cursor"></div>
+													</div>
+													<!-- 팝업: 리스트4-->
+													<div class="text_popup_con text_popup_con04" id="list-popup4" role="dialog" aria-modal="true" aria-labelledby="popup-title4">
+														<div class="contents_con">
+															<div class="close_btn">
+																<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+															</div>
+															<div class="title_con01" tabindex="0"  id="popup-title4">
+																<span>1차원 리스트에 값 추가</span>
+															</div>
+															<div class="text_con01" tabindex="0">
+																<span>리스트에 새로운 값을 추가할 때는 append() 함수를 사용한다.</span>
+															</div>
+															<div class="title_con02" tabindex="0">
+																<span>추가 예시</span>
+															</div>
+															<div class="text_con03" tabindex="0">
+																<span>리스트명.append(값5)</span>
+															</div>
+															<div class="text_con04" tabindex="0">
+																<span>리스트의 마지막에 데이터가 추가된다.</span>
+															</div>
+															<div class="list_con01">
+																<ul>
+																	<li tabindex="0">
+																		<span>값1</span>
+																	</li>
+																	<li tabindex="0">
+																		<span>값2</span>
+																	</li>
+																	<li tabindex="0">
+																		<span>값4</span>
+																	</li>
+																	<li tabindex="0">
+																		<span>값5</span>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="right_con">
+										<div class="video_con">
+											<div class="contents_con">
+												<div class="video-container">
+													<video id="player01" data-content-id="H-323-04_1" controls crossorigin></video>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 탭 컨텐츠2-->
+							<div id="panel-info02" class="contents_div info02" role="tabpanel" aria-labelledby="tab-info02" style="display: none;">
+								<div class="text_con" tabindex="0">
+									<span>&nbsp;&nbsp;딕셔너리는 { }(중괄호) 안에 키(key):값(value) 쌍을 저장한다. 딕셔너리는 사전에서 단어를 찾듯이 키를 사용해 값을 가져올 수 있다. 단, 딕셔너리에 중복된 키는 사용할 수 없고, 중복된 키를 입력하면 기존 키의 값이 수정된다.</span>
+								</div>
+								<div class="detail_con">
+									<div class="left_con">
+										<div class="list_con">
+											<ul>
+												<li>
+													<div class="title_con" tabindex="0">
+														<span>딕셔너리명 = {키1:값1, 키2:값2}</span>
+														<div class="cursor"></div>
+													</div>
+													<!-- 팝업: 딕셔너리1-->
+													<div class="text_popup_con text_popup_con05" id="list-popup65" role="dialog" aria-modal="true" aria-labelledby="popup-title5">
+														<div class="contents_con">
+															<div class="close_btn">
+																<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+															</div>
+															<div class="title_con01" tabindex="0" id="popup-title5">
+																<span>1차원 딕셔너리의 생성</span>
+															</div>
+															<div class="text_con01" tabindex="0">
+																<span>1차원 딕셔너리를 생성하는 방법이다. 기억 장소에 딕셔너리의 키와 값이 연달아 저장된다.</span>
+															</div>
+															<div class="title_con02" tabindex="0">
+																<span>저장된 구조</span>
+															</div>
+															<div class="list_con03">
+																<ul>
+																	<li tabindex="0">
+																		<span>키1</span>
+																		<span>값1</span>
+																	</li>
+																	<li tabindex="0">
+																		<span>키1</span>
+																		<span>값2</span>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="title_con" tabindex="0">
+														<span>변수 = 딕셔너리명[키]</span>
+														<div class="cursor"></div>
+													</div>
+													<!-- 팝업: 딕셔너리2-->
+													<div class="text_popup_con text_popup_con06" id="list-popup6" role="dialog" aria-modal="true" aria-labelledby="popup-title6">
+														<div class="contents_con">
+															<div class="close_btn">
+																<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+															</div>
+															<div class="title_con01" tabindex="0" id="popup-title6">
+																<span>1차원 딕셔너리의 참조</span>
+															</div>
+															<div class="text_con01" tabindex="0">
+																<span>1차원 딕셔너리에 저장된 데이터를 <br>참조하는 방법이다. 키와 한 쌍인 값을 읽어온다.</span>
+															</div>
+															<div class="title_con02" tabindex="0">
+																<span>참조 예시</span>
+															</div>
+															<div class="text_con03" tabindex="0">
+																<span>x = 딕셔너리명[키1]</span>
+															</div>
+															<div class="text_con04" tabindex="0">
+																<span>키1과 한 쌍인 값1을 읽어 변수 x에 저장한다.</span>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="title_con" tabindex="0">
+														<span>딕셔너리명[키2] = 값3</span>
+														<div class="cursor"></div>
+													</div>
+													<!-- 팝업: 딕셔너리3-->
+													<div class="text_popup_con text_popup_con07" id="list-popup7" role="dialog" aria-modal="true" aria-labelledby="popup-title7">
+														<div class="contents_con">
+															<div class="close_btn">
+																<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+															</div>
+															<div class="title_con01" tabindex="0" id="popup-title7">
+																<span>1차원 딕셔너리의 수정</span>
+															</div>
+															<div class="text_con01" tabindex="0">
+																<span>1차원 딕셔너리에 저장된 데이터를 <br>수정하는 방법이다. 키와 한 쌍인 값 <br>대신 새로운 값을 저장한다.</span>
+															</div>
+															<div class="title_con02" tabindex="0">
+																<span>수정 예시</span>
+															</div>
+															<div class="text_con03" tabindex="0">
+																<span>딕셔너리[키2] = 값3</span>
+															</div>
+															<div class="text_con04" tabindex="0">
+																<span>키2와 한 쌍인 값2 대신 값3을<br>저장한다.</span>
+															</div>
+															<div class="list_con03">
+																<ul>
+																	<li tabindex="0">
+																		<span>키1</span>
+																		<span>값1</span>
+																	</li>
+																	<li tabindex="0">
+																		<span>키2</span>
+																		<span>값3</span>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="title_con" tabindex="0">
+														<span>딕셔너리명[키4] = 값4</span>
+														<div class="cursor"></div>
+													</div>
+													<!-- 팝업: 딕셔너리4-->
+													<div class="text_popup_con text_popup_con08" id="list-popup8" role="dialog" aria-modal="true" aria-labelledby="popup-title8">
+														<div class="contents_con">
+															<div class="close_btn">
+																<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+															</div>
+															<div class="title_con01" tabindex="0" id="popup-title8">
+																<span>1차원 딕셔너리에 데이터 추가</span>
+															</div>
+															<div class="text_con01" tabindex="0">
+																<span>1차원 딕셔너리에 새로운 데이터를 추가하는 방법이다. 딕셔너리에 없는 키와 값을 저장<br>한다.</span>
+															</div>
+															<div class="title_con02" tabindex="0">
+																<span>추가 예시</span>
+															</div>
+															<div class="text_con03" tabindex="0">
+																<span>딕셔너리[키4] = 값4</span>
+															</div>
+															<div class="text_con04" tabindex="0">
+																<span>키4와 값4를 추가로저장한다.</span>
+															</div>
+															<div class="list_con03">
+																<ul>
+																	<li tabindex="0">
+																		<span>키1</span>
+																		<span>값1</span>
+																	</li>
+																	<li tabindex="0">
+																		<span>키2</span>
+																		<span>값3</span>
+																	</li>
+																	<li tabindex="0">
+																		<span>키4</span>
+																		<span>값4</span>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="right_con">
+										<div class="video_con">
+											<div class="contents_con">
+												<div class="video-container">
+													<video id="player02" data-content-id="H-323-04_2" controls crossorigin></video>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script>
+			// 텝 항목 선택 시
+			$(document).on("click", ".H_323_04_con > .contents_con > .contents_con > .contents_con > .nav > ul > li span", function () {
+				if (!$(this).hasClass("on")) {
+					$(".H_323_04_con video").each(function () {
+						this.pause();
+					});
+
+					// 기존 탭 UI 처리
+					$(".H_323_04_con > .contents_con > .contents_con > .contents_con > .nav > ul > li span").removeClass("on");
+					$(this).addClass("on");
+
+					$(".H_323_04_con > .contents_con > .contents_con > .contents_con > .contents_con .contents_div").hide();
+					$(".H_323_04_con > .contents_con > .contents_con > .contents_con > .contents_con .contents_div." + $(this).attr("data-value")).show();
+
+					$(".H_323_04_con > .contents_con > .contents_con .detail_con .text_popup_con").hide();
+				}
+			});
+		
+			// 팝업 열기
+			$(document).on("click",".H_323_04_con > .contents_con > .contents_con .detail_con .list_con .cursor",function(){
+				if( $(this).parent().siblings(".text_popup_con").css("display") == "none" ){
+					$(".H_323_04_con > .contents_con > .contents_con .detail_con .text_popup_con").hide();
+					$(this).parent().siblings(".text_popup_con").show();				
+				}
+			});
+
+			// 팝업 닫기
+			$(document).on("click",".H_323_04_con > .contents_con > .contents_con .detail_con .text_popup_con .close_btn > .a_btn",function(){
+				$(this).parents(".text_popup_con").hide();
+			});
+			
+		</script>
+
+		<script>
+			const videoEl = document.querySelector('video[data-content-id]');
+			const contentId = videoEl?.dataset.contentId;
+		</script>
+		<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+		<script>
+		const videoList = [
+			{ 
+				id: "H-323-04_1",
+				src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-323-04_1_4000k.mp4,H-323-04_1_2000k.mp4,H-323-04_1_1000k.mp4,lang/kor/H-323-04_1.vtt,.smil/master.m3u8" 
+			},
+			{ 
+				id: "H-323-04_2",
+				src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-323-04_2_4000k.mp4,H-323-04_2_2000k.mp4,H-323-04_2_1000k.mp4,lang/kor/H-323-04_2.vtt,.smil/master.m3u8" 
+			}
+		];
+		</script>
+		<script type="text/javascript" src="./js/xapi.video.js"></script>
+
+
+
+	</div>
+</body>
+</html>

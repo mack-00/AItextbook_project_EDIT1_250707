@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>스스로 해결하기 - 불법 조업 의심 선박 군집화</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/swiper.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_424_13_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								불법 조업 의심 선박 군집화
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">				
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								<span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip01" tabindex="0">AIS</span> 기반 데이터로 불법 조업 문제를 해결하기 위한 인공지능을 만들어 보자.
+							</span>
+						</div>
+
+						<!-- 팝업 -->
+						<div class="text_popup_con H_424_13_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+							<div class="contents_con">
+								<div class="title_con" tabindex="0">
+									<p>
+										AIS 
+									</p>
+
+									<p>
+										(Automatic Identification System)
+									</p>
+								</div>
+
+								<div class="info_con" tabindex="0">
+									<span>
+										선박 간 위치 정보와 항로, 속도 등을 실시간으로 
+										교환하는 자동 식별 시스템이다.
+										어선의 내비게이션이라 불리는 AIS에는 선박의 
+										모든 정보가 표시된다. 따라서 조업 전에 AIS를 
+										끄고 조업을 마치면 다시 켜는 선박은 불법 조업 
+										선박이라고 의심할 수 있다.
+									</span>
+								</div>
+
+								<div class="close_btn">
+									<a href="javascript:void(0);" class="a_btn" tabindex="0" aria-label="팝업 닫기"></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="exam_con">
+							<div class="title_con">
+								<div class="text_con" tabindex="0">
+									<span>
+										해결할 문제
+									</span>
+								</div>
+
+								<div class="img_con" tabindex="0">
+									<img src="./img/H_424_13_info01_exam_title_img_con_img.png" alt="파란색 배경에 흰색 글씨로 ‘14 해양 생태계 보전’이라고 적혀 있고, 중앙에는 물결 세 줄과 그 아래에 위치한 물고기 아이콘이 표현되어 있다. UN 지속가능발전목표(SDGs) 중 목표 14를 나타낸다." />
+								</div>
+							</div>
+
+							<div class="info_con">
+								<div class="text_con" tabindex="0">
+									<p>
+										전 세계 곳곳에서 벌어지고 있는 불법 조업은 자원 고갈과 해양 생태계 파괴에 큰 영향을 미치고 있다. 해양 생태계 보존을 위해 세계 조업 관찰 웹 사이트인 Global Fishing Watch에서 제공하는 데이터로 불법 조업 문제를 해결하기 위한 인공지능 모델을 만든다.
+									</p>
+								</div>
+
+								<div class="img_con" tabindex="0">
+									<img src="./img/H_424_13_info01_exam_info_img_con_img.png" alt="바다에서 불법 조업으로 고래와 물고기가 그물로 남획되고 있는 장면을 나타낸 그림이다." />
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="info02_con">
+						
+						<div class="write_con">
+							<div class="title_con" tabindex="0">
+								<span>
+									이 문제를 해결하고자 할 때, 기계학습의 목적과 예측하고자 하는 값을 참고하여 기계학습의 유형을 선정해 보자.
+								</span>
+							</div>
+
+							<div class="contents_con">
+								<div class="text_con">
+									<ul>
+										<li>
+											<div class="text_div">
+												<div class="text01">
+													<span>
+														기계학습의 목적
+													</span>
+												</div>
+
+												<div class="text02">
+													<span>
+														선박 군집화
+													</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="text_div">
+												<div class="text01">
+													<span>
+														예측하고자 하는 값
+													</span>
+												</div>
+
+												<div class="text02">
+													<span>
+														불법 조업의 경향성
+													</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="input_con">
+									<div class="title_con">
+										<span>
+											기계학습 유형
+										</span>
+									</div>
+
+									<div class="check_con">
+										<ul>
+											<li>
+												<label class="radio_label" tabindex="0">
+													<input type="radio" name="aidt_input1" data-group-id="1" value="회귀" aria-label="회귀" tabindex="-1" />
+													<span class="check_icon"></span>
+													<span>
+														회귀
+													</span>
+												</label>
+											</li>
+											<li>
+												<label class="radio_label" tabindex="0">
+													<input type="radio" name="aidt_input1" data-group-id="1" value="분류" aria-label="분류" tabindex="-1" />
+													<span class="check_icon"></span>
+													<span>
+														분류
+													</span>
+												</label>   
+											</li>
+											<li>
+												<label class="radio_label" tabindex="0">
+													<input type="radio" name="aidt_input1" data-group-id="1" value="군집" aria-label="군집" tabindex="-1" />
+													<span class="check_icon"></span>
+													<span>
+														군집
+													</span>
+												</label>   
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="btn_con">
+									<button  class="a_btn" type="button" aria-label="확인하기" tabindex="0" onclick="javascript:btn_event();">확인하기</button>
+								</div>
+							</div>
+
+							<div class="popup_con_bg popup01"></div>
+							<div class="popup_con popup01" role="alert"></div>
+
+							<div class="popup_con_bg popup02"></div>
+							<div class="popup_con popup02" role="alert"></div>
+
+							<div class="popup_con_bg popup03"></div>
+							<div class="popup_con popup03" role="alert"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			// 팝업열기
+			$(".H_424_13_con .link_tooltip").on("click", function(){
+				var popSelector = "#" + $(this).attr("aria-controls");
+				if($(popSelector).css("display") == "none") {
+					$(".H_424_13_con .text_popup_con").not(popSelector).hide();
+					$(popSelector).show();
+				}else {
+					$(popSelector).hide();
+				}
+			});
+
+			// 팝업닫기
+			$(".H_424_13_con .text_popup_con .a_btn").on("click", function(){
+				$(this).parents(".text_popup_con").hide();
+			});
+
+			// 확인하기
+			function btn_event(){
+				console.log("확인 버튼 클릭됨");
+
+				// 선택된 라디오 버튼 값 가져오기
+				let selected = $("input[name='aidt_input1']:checked").val();
+
+				if (!selected) {
+					// 아무것도 선택하지 않았을 때
+					btn_event01();
+				} else if (selected === "군집") {
+					// 정답 선택했을 때
+					btn_event03();
+					
+					setTimeout(function(){
+						// 라디오 버튼 해제
+						$("input[name='aidt_input1']").prop("checked", false);
+					}, 1000);
+				} else {
+					// 오답 선택했을 때
+					btn_event02();
+
+					setTimeout(function(){
+						// 라디오 버튼 해제
+						$("input[name='aidt_input1']").prop("checked", false);
+					}, 1000);
+				}
+			};
+
+			// 확인하기 - 체크 안됨
+			function btn_event01(){
+				$(".H_424_13_con > .contents_con > .contents_con > .info02_con .write_con .popup_con_bg.popup01").fadeIn();
+				$(".H_424_13_con > .contents_con > .contents_con > .info02_con .write_con .popup_con.popup01").fadeIn();
+
+				setTimeout(function(){
+					$(".H_424_13_con > .contents_con > .contents_con > .info02_con .write_con .popup_con_bg.popup01").fadeOut();
+					$(".H_424_13_con > .contents_con > .contents_con > .info02_con .write_con .popup_con.popup01").fadeOut();
+				}, 1000);
+			}
+
+			// 확인하기 - 오답
+			function btn_event02(){
+				$(".H_424_13_con > .contents_con > .contents_con > .info02_con .write_con .popup_con_bg.popup02").fadeIn();
+				$(".H_424_13_con > .contents_con > .contents_con > .info02_con .write_con .popup_con.popup02").fadeIn();
+
+				setTimeout(function(){
+					$(".H_424_13_con > .contents_con > .contents_con > .info02_con .write_con .popup_con_bg.popup02").fadeOut();
+					$(".H_424_13_con > .contents_con > .contents_con > .info02_con .write_con .popup_con.popup02").fadeOut();
+				}, 1000);
+			}
+
+			// 확인하기 - 정답
+			function btn_event03(){
+				$(".H_424_13_con > .contents_con > .contents_con > .info02_con .write_con .popup_con_bg.popup03").fadeIn();
+				$(".H_424_13_con > .contents_con > .contents_con > .info02_con .write_con .popup_con.popup03").fadeIn();
+
+				setTimeout(function(){
+					$(".H_424_13_con > .contents_con > .contents_con > .info02_con .write_con .popup_con_bg.popup03").fadeOut();
+					$(".H_424_13_con > .contents_con > .contents_con > .info02_con .write_con .popup_con.popup03").fadeOut();
+				}, 1000);
+			}
+		</script>
+		<script>
+			const contentId = 'H-424-13';
+		</script>
+		<script type="text/javascript" src="./js/xapi.page.js"></script>
+	</div>
+</body>
+</html>

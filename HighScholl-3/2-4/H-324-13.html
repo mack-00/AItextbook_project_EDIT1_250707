@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>반복문 안에 선택문의 이해</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_324_13_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								반복문 안에 선택문
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_con01" tabindex="0">
+						<span>
+							for문이나 while문과 같은 반복 구조 내부에 if문과 같은 선택 구조가 중첩되어 있는 구조이다.
+						</span>
+					</div>
+					<div class="title_sub" tabindex="0">
+						<span>반복문 안에 선택문 프로그램 예시</span>
+					</div>
+					<div class="video_con">
+						<div class="contents_con">
+							<div class="video-container">
+								<video id="player01" data-content-id="H-324-13" controls crossorigin></video>
+							</div>
+						</div>
+					</div>
+					<div class="btn_con">
+						<button class="btn_popup" aria-label="보충자료"></button>
+					</div>
+				</div>
+
+				<!-- 팝업 -->
+				<div class="full_popup_wrap H_324_13_full_popup" id="fullpopup01">
+					<div class="contents_con">
+						<div class="close_btn">
+							<button aria-label="팝업 닫기"></button>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>random 모듈</span>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp;&nbsp;동영상의 프로그램에서 random 모듈을 사용하는데, 모듈이란 이미 정의된 변수나 함수의 집합을 말한다. random은 무작위로 생성한 숫자가 필요할 때 사용하는 외부 모듈이며, 외부 모듈을 사용하기 위해 예약어 import를 사용한다.
+							</span>
+						</div>
+
+						<div class="code_con">
+							<div class="text_con" tabindex="0">
+								<span>import random</span>
+							</div>
+							<div class="text_con" tabindex="0">
+								<span>
+									<code>number = random.randint(1, 100)</code>
+								</span>
+							</div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp;&nbsp;random 모듈에는 무작위 숫자인 난수를 생성하는 다양한 함수들이 정의되어 있다. 난수 생성 함수 중 일부를 사용하는 예시를 살펴보자.
+							</span>
+						</div>
+
+						<div class="tab_con">
+							<table>
+								<caption>난수 생성 함수 중 일부를 사용하는 예시</caption>
+								<thead>
+									<tr>
+										<th>사용 예시</th>
+										<th>난수의 범위</th>
+									</tr>
+								</thead>
+								<tbody>	
+									<tr>
+										<td>random.random()</td>
+										<td>0~1 사이의 실수</td>
+									</tr>
+									<tr>
+										<td>
+											random.randint(1, 100)
+										</td>
+										<td>
+											1~100 사이의 정수
+										</td>
+									</tr>
+									<tr>
+										<td>
+											random.sample(range(10), 3)
+										</td>
+										<td>
+											0~9 중 3개의 숫자
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //팝업 -->
+			</div>
+		</main>
+
+		<script>
+			$(document).ready(function(){
+				// 팝업
+				$(".H_324_13_con .btn_popup").on("click", function(){
+					$(".H_324_13_con .full_popup_wrap").show();
+				});
+				$(".H_324_13_con .full_popup_wrap .close_btn").on("click", function(){
+					$(this).parents(".full_popup_wrap").hide();
+				});
+			});
+		</script>
+		<script>
+		const contentId = 'H-324-13';
+		</script>
+		<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+		<script>
+			const videoList = [
+				{ 
+					id: "H-324-13",
+					src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-324-13_4000k.mp4,H-324-13_2000k.mp4,H-324-13_1000k.mp4,lang/kor/H-324-13.vtt,.smil/master.m3u8" 
+				}
+			];
+		</script>
+		<script type="text/javascript" src="./js/xapi.video.js"></script>
+
+	</div>
+</body>
+</html>

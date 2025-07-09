@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>빅데이터의 개념</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_221_03_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								빅데이터의 개념
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp;&nbsp;우리는 4차 산업혁명의 가속화와 디지털 전환 등 주변에서 규모를 가늠할 수 없을 정도로 많은 데이터가 생산되는 
+								빅데이터 사회에 살고 있다. <span class="bold_text">빅데이터</span>는 기존의 관리 방법이나 분석 체계로는 처리하기 어려운 막대한 양의 데이터셋 또는 그것을 처리하는 기술을 의미한다.
+							</span>
+						</div>
+					</div>
+
+					<div class="info02_con">
+						<div class="title_con">
+							<div class="dot" aria-hidden="true"></div>
+
+							<span>
+								빅데이터의 예
+							</span>
+						</div>
+
+						<div class="contents_con">
+							
+							<div class="img H_221_03_img01">
+								<button class="after_hand btn01" aria-label="말풍선" aria-controls="txtpop01"></button>
+								<div class="speech_box type2" id="txtpop01">
+									태양 에너지 생산량을 예측하여  온실 기체 감축 목표를 달성할 수 있다.
+								</div>
+
+								<button class="after_hand  btn02" aria-label="말풍선"  aria-controls="txtpop02"></button>
+								<div class="speech_box type2 revers" id="txtpop02">
+									지하철 한 칸에 승객이 얼마나 있는지 실시간 혼잡도를 파악하여 혼잡도가 낮은 열차 칸에 탑승할 수 있다.
+								</div>
+							</div>
+							
+							<div class="btn_con">
+								<button id="btn1" class="a_btn a_btn01" type="submit" aria-label="다시 하기" tabindex="0">다시 하기</button>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			$(document).ready(function(){
+				$(".after_hand").on("click", function(){
+					$('div.speech_box').removeClass('on');
+					var popSelector = "#" + $(this).attr("aria-controls");
+					$(popSelector).addClass("on");
+					$(this).hide();
+					$(".a_btn01").show();
+				});
+				//다시하기
+				$(".a_btn01").on("click", function(){
+					$(".after_hand").show();
+					$(".H_221_03_img01 .on").removeClass("on");
+					$(this).hide();
+				});
+			});
+		</script>
+
+	</div>
+	<script>
+		const contentId = 'H-221-03';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

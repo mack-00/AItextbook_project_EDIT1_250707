@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	<link rel="stylesheet" href="./css/menu.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<style>
+        .btn {
+            padding: 8px 16px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background: #0056b3;
+        }
+        
+        .btn:focus {
+            outline: 3px solid #80bdff;
+            outline-offset: 2px;
+        }
+        
+        .btn[aria-pressed="true"] {
+            background: #28a745;
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        body{
+    zoom: 97%;
+    background-color: #f5f8f9;
+}
+.menu_box_top{
+    background-color: #061b38;
+    height: 60px;
+    color: white;
+    padding: 10px 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    z-index: 10;
+}
+.menu_box_top .menu{
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu_box_top .menu .menu_left{
+    display: flex; gap: 20px;
+}
+.menu_box_top .menu .menu_left .menu_left_text{
+    display: flex; gap: 20px;
+}
+.menu_box_top .menu .menu_left .menu_left_text p:nth-child(1){
+    color: #828d98;
+} 
+.menu_box_top .menu .menu_right{
+    display: flex;
+    gap: 20px;
+}
+.menu_box_top .menu .menu_right .menu_right_item{
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 5px;  
+}
+.menu_box_top .menu .menu_right .menu_right_insole{
+    gap: 2px;
+    border-radius: 20px;
+    background-color: #4b5a70;  
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+.menu_box_top .menu .menu_right .menu_right_exit{
+    gap: 10px;
+    background-color: #1e314c;
+}
+.menu_box_top .menu .menu_right .menu_right_connection{
+    background-color: #1e314c;
+}
+.slide-fade {
+    opacity: 0;
+    transform: translateX(-30px); /* 시작 위치 */
+    transition: all 0.5s ease;
+}
+
+.slide-fade.show {
+    opacity: 1;
+    transform: translateX(0); /* 도착 위치 */
+    background-color: #1967d2;
+}
+
+  .menu_right_insole_on {
+    display: none; /* 초기 숨김 */
+  }
+    </style>
+
+</head>
+<body>
+	<div class="menu_box_top">
+		<div class="menu">
+			<div class="menu_left">
+				<i class="fa-solid fa-bars"></i>
+				<div class="menu_left_text">
+					<p>Ⅱ. 데이터 > </p>
+					<p>[대단원 학습] Ⅰ. 디지털 데이터의 압축과 암호화</p>
+				</div>
+			</div>
+			<div class="menu_right">
+				<div class="menu_right_insole menu_right_insole_off menu_right_item">
+					<div class="circle"></div>
+					<p>인솔모드 OFF</p>
+				</div>
+				<div class="menu_right_insole menu_right_insole_on menu_right_item">
+					<p>인솔모드 ON</p>
+					<div class="circle"></div>
+				</div>
+				<div class="menu_right_connection menu_right_item">접속 현황</div>
+				<div class="menu_right_exit menu_right_item">
+					<p>나가기</p>
+					<i class="fa-solid fa-right-from-bracket"></i>
+				</div>
+			</div>
+		</div>
+		<script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const onBtn = document.querySelector(".menu_right_insole_on");
+              const offBtn = document.querySelector(".menu_right_insole_off");
+          
+              // 초기 상태
+              onBtn.style.display = "none";
+          
+              // OFF → ON
+              offBtn.addEventListener("click", function () {
+                offBtn.style.display = "none";
+                onBtn.style.display = "flex";
+                onBtn.classList.add("slide-fade");
+                setTimeout(() => {
+                  onBtn.classList.add("show");
+                }, 10);
+              });
+          
+              // ON → OFF
+              onBtn.addEventListener("click", function () {
+                onBtn.classList.remove("show");
+                setTimeout(() => {
+                  onBtn.style.display = "none";
+                  offBtn.style.display = "flex";
+                }, 500); // 트랜지션 시간만큼 대기 후 전환
+              });
+            });
+          </script>
+	</div>
+</body>
+</html>

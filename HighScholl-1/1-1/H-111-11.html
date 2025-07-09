@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>개인용 컴퓨터 운영체제에서 네트워크 설정</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_111_11_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h2>네트워크 환경 설정</h2>
+							<h1>
+								개인용 컴퓨터 운영체제에서 네트워크 설정
+							</h1>
+							<button class="btn_active_popup" aria-label="활동자료" aria-controls="fullpopup01"></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">		
+					<div class="text01">
+						&nbsp;&nbsp;게이트웨이는 네트워크 간 통신을 중계하는 장치로, 다른 네트워크를 방문할 때 출입국 관리소와 같은 역할을 한다. 일반적으로 라우터가 게이트웨이 기능을 포함하고 있으며, 이때 게이트웨이의 주소는 라우터의 주소가 된다. DHCP를 사용하면 게이트웨이 주소를 자동으로 설정할 수 있다.
+					</div>
+
+					<!-- tab -->
+					<div class="tab_wrap H_111_11_tab_wrap">
+						<div class="tab_list" role="tablist">
+							<button class="tab_btn on" type="button" id="tab03" aria-controls="H_111_11_tab01" role="tab" aria-selected="true">윈도</button>
+							<button class="tab_btn" type="button" id="tab04" aria-controls="H_111_11_tab02" role="tab" aria-selected="false">맥 OS</button>
+						</div>
+						<div class="tab_contents">
+							<div id="H_111_11_tab01" tabindex="0" role="tabpanel" aria-labelledby="tab03" class="H_111_11_tab01 tab_inner on">
+								
+								<ul class="both_wrap main_wrap">
+									<li>
+										<img src="./img/H_111_11_tab01_img01.png" alt="네트워크 및 인터넷 설정에서 속성에 클릭을 유도하는 포인트 표기">
+										<p>윈도 설정 창에서 &lt;네트워크 및 인터넷&gt;을 선택한 후, 현재 연결된 네트워크의 ‘속성’ 창을 연다.</p>
+									</li>
+									<li aria-hidden="true" class="arr"></li>
+									<li>
+										<img src="./img/H_111_11_tab01_img02.png" alt="네트워크 및 인터넷 > 이더넷 설정중 iP 할당과 DNS 서버 할당을 편집하도록 유도하는 포인트 표기">
+										<p>&lt;IP&gt; 할당과 &lt;DNS 서버 할당&gt;을 ‘자동(DHCP)’으로 설정한다. 필요하면 편집 버튼을 눌러 수동으로 입력할 수도 있다.</p>
+									</li>
+								</ul>
+								
+							</div>
+							<div id="H_111_11_tab02" tabindex="0" role="tabpanel" aria-labelledby="tab04" class="H_111_11_tab02 tab_inner">
+								<ul class="both_wrap main_wrap">
+									<li>
+										<img src="./img/H_111_11_tab02_img01.png" alt="맥 OS 시스템 설정창에서 현재 연결된 네트워크 세부사항 버튼을 누르도록 유도하는 포인트 표기">
+										<p>시스템 설정 창에서 현재 연결된 네트워크를 선택한 후,<br /> &lt;세부 사항&gt; 버튼을 누른다.</p>
+									</li>
+									<li aria-hidden="true" class="arr"></li>
+									<li>
+										<img src="./img/H_111_11_tab02_img02.png" alt="TCP/IP 에서 IPv4 구성을 'DHCP 사용'으로 선택하도록 유도하는 포인트 표기">
+										<p>&lt;TCP/IP&gt; 항목의 IPv4 항목의 IPv4 구성을 'DHCP 사용' 으로 선택한다. 필요하면 수동 항목을 선택하여 직접 입력하여 사용할 수 있다.</p>
+									</li>
+								</ul>
+							</div>
+							
+							
+						</div> 
+					</div>
+					<!-- //tab  -->
+
+				</div>
+
+				<!-- popup -->
+				<div class="full_popup_wrap H_111_11_full_popup" id="fullpopup01">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>개인용 컴퓨터 운영체제에서 네트워크 설정</span>
+						</div>
+						<div class="full_popoup_content">
+
+							<!-- tab -->
+							<div class="tab_wrap H_111_11_tab_wrap2">
+								<div class="tab_list" role="tablist">
+									<button class="tab_btn on" type="button" id="tab01" aria-controls="H_111_11_tab02_01" role="tab" aria-selected="true">윈도 DHCP 설정</button>
+									<button class="tab_btn" type="button" id="tab02" aria-controls="H_111_11_tab02_02" role="tab" aria-selected="false">맥 OS DHCP 설정</button>
+								</div>
+								<div class="tab_contents">
+									<div id="H_111_11_tab02_01" tabindex="0" role="tabpanel" aria-labelledby="tab01" class="tab_inner on">
+										<div class="pop_main_box--wrap ver01">
+											<div class="pop_main_box box1 show">
+												<div class="img H_111_11_tab02_01_img01">
+													<img src="./img/H_111_11_tab02_01_img01.png" alt="Windows 설정의 '네트워크 및 인터넷' 섹션. 이더넷 2가 연결됨으로 표시되며, 속성 버튼은 '개인 네트워크'로 설정됨.">
+													<button class="pointer" aria-label="네트워크 및 인터넷"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+											<div class="pop_main_box box2">
+												<div class="img H_111_11_tab02_01_img02">
+													<img src="./img/H_111_11_tab02_01_img02.png" alt="네트워크 및 인터넷 설정의 전체 목록 화면. 이더넷 2 연결 정보, 속성 및 데이터 사용량 표시와 함께 이더넷, VPN, 프록시, 고급 설정 메뉴가 나열됨.">
+													<button class="pointer" aria-label="속성-개인네트워크"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+											<div class="pop_main_box box3  ">
+												<div class="img H_111_11_tab02_01_img03">
+													<img src="./img/H_111_11_tab02_01_img03.png" alt="이더넷 설정 세부 화면. 개인 네트워크로 선택되어 있으며, IP 및 DNS 서버 할당이 자동 DHCP로 설정됨. 데이터 통신 연결 토글도 포함됨.">
+													<button class="pointer" aria-label="IP 할당 > 편집"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+											<div class="pop_main_box box4">
+												<div class="img H_111_11_tab02_01_img04">
+													<img src="./img/H_111_11_tab02_01_img04.png" alt="IP 설정 편집 팝업창. IP 할당이 '자동(DHCP)'으로 선택되어 있으며, 하단에는 저장과 취소 버튼이 있음.">
+													<button class="pointer" aria-label="IP 설정 편집 > 자동(DHCP)"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+
+											<div class="pop_main_box box5  ">
+												<div class="img H_111_11_tab02_01_img05">
+													<img src="./img/H_111_11_tab02_01_img04.png" alt="IIP 설정 편집 팝업창. IP 할당이 '자동(DHCP)'으로 선택되어 있으며, 하단에는 저장과 취소 버튼이 있음.">
+													<button class="pointer" aria-label="DNS 설정 편집 > 자동(DHCP)"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+											
+											<div class="pop_main_box box6">
+												<div class="img H_111_11_tab02_01_img06">
+													<img src="./img/H_111_11_tab02_01_img03.png" alt="이더넷 설정 세부 화면. 개인 네트워크로 선택되어 있으며, IP 및 DNS 서버 할당이 자동 DHCP로 설정됨. 데이터 통신 연결 토글도 포함됨.">
+													<button class="pointer" aria-label="DNS 설정 저장"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+											<div class="pop_main_box box7">
+												<div class="img H_111_11_tab02_01_img07">
+													<img src="./img/H_111_11_tab02_01_img05.png" alt="DNS 설정 편집 팝업창. DNS 서버 할당이 '자동(DHCP)'으로 선택되어 있으며, 저장과 취소 버튼이 있음.">
+													<button class="pointer" aria-label="DNS 설정"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+											<div class="pop_main_box box8">
+												<div class="img H_111_11_tab02_01_img08">
+													<img src="./img/H_111_11_tab02_01_img05.png" alt="DNS 설정 편집 팝업창. DNS 서버 할당이 '자동(DHCP)'으로 선택되어 있으며, 저장과 취소 버튼이 있음.">
+													<button class="pointer" aria-label="DNS 설정 저장"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+											<div class="pop_main_box box9">
+												<strong class="H_111_11_tab02_01_last">DHCP 설정이 완료되었습니다.</strong>
+												<div class="btn_con">
+													<button id="btn_1" class="a_btn a_btn02 retry-btn" type="button" aria-label="다시 하기" tabindex="0">다시 하기</button>
+												</div>
+											</div>
+
+
+										</div>
+									</div>
+									<div id="H_111_11_tab02_02" tabindex="0" role="tabpanel" aria-labelledby="tab02" class="tab_inner">
+										<div class="pop_main_box--wrap ver02">
+											<div class="pop_main_box box2-1 show">
+												<div class="img img_111_11 H_111_11_tab02_02_img01">
+														<img src="./img/h_111_mac_01.png" alt="Mac 시스템 설정의 네트워크 화면. 이더넷이 연결됨으로 표시되며, 필터와 방화벽이 활성화된 상태. 다른 서비스 목록에는 USB LAN, Thunderbolt 브리지, Wi-Fi가 비활성화되어 있음.">
+													<button class="pointer" aria-label="네트워크 > 이더넷"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+											<div class="pop_main_box box2-2">
+												<div class="img img_111_11 H_111_11_tab02_02_img02">
+													<img src="./img/h_111_mac_02.png" alt="">
+													<button class="pointer" aria-label="이더넷 상세 정보 화면. DHCP 사용 중이며 IP 주소, 서브넷 마스크, 라우터, DNS 서버 정보가 표시됨."><span class="point-cursor"></span></button>
+												</div>
+											</div>
+											<div class="pop_main_box box2-3">
+												<div class="img img_111_11 H_111_11_tab02_02_img03">
+													<img src="./img/h_111_mac_03.png" alt="이더넷 설정의 이름 및 IP 주소 추적 제한 옵션 화면. IP 추적 제한이 활성화된 상태.">
+													<button class="pointer" aria-label="TCP/IP 클릭"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+											<div class="pop_main_box box2-4">
+												<div class="img img_111_11 H_111_11_tab02_02_img04">
+													<img src="./img/h_111_mac_04.png" alt="TCP/IP 설정 화면. IPv4 구성 방식으로 DHCP 사용이 선택되어 있으며, 현재 IP 주소 및 라우터 정보가 표시됨.">
+													<button class="pointer" aria-label="TCP/IP > IPv4 구성 선택"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+
+											<div class="pop_main_box box2-5">
+												<div class="img img_111_11 H_111_11_tab02_02_img05">
+													<img src="./img/h_111_mac_05.png" alt="TCP/IP 설정에서 IPv4 구성 드롭다운 메뉴가 열린 상태. DHCP 사용, 수동 주소로 DHCP 사용, 수동, 끔 옵션이 나열됨.">
+													<button class="pointer" aria-label="DHCP 사용 선택"><span class="point-cursor"></span></button>
+												</div>
+											</div>
+											<div class="pop_main_box box2-6">
+												<strong class="H_111_11_tab02_01_last">DHCP 설정이 완료되었습니다.</strong>
+												<div class="btn_con">
+													<button id="btn_2" class="a_btn a_btn02 retry-btn" type="button" aria-label="다시 하기" tabindex="0">다시 하기</button>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									
+									
+								</div>
+							</div>
+							<!-- //tab  -->
+
+
+						</div>
+					</div>
+				</div>
+				<!-- //popup -->
+
+			</div>
+		</main>
+
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			// 활동자료
+			$(".H_111_11_con .btn_active_popup").on("click", function(){
+				$(".H_111_11_con .full_popup_wrap").show();
+			});
+			$(".full_popup_wrap .btn_close").on("click", function(){
+				$(this).parents(".full_popup_wrap").hide();
+			});
+
+			// 탭
+			$(".tab_list > .tab_btn").on("click", function(){
+				$(this).siblings().removeClass("on").end().addClass("on");
+				$(this).siblings().attr("aria-selected", "false").end().attr("aria-selected", "true");
+				$("#"+$(this).attr("aria-controls")).siblings().removeClass("on").end().addClass("on");
+			});
+
+			
+
+			// 포인터 클릭 시 다음 박스 보여주기
+			$('.pointer').on('click', function () {
+				const $currentBox = $(this).closest('.pop_main_box');
+				const $wrap = $currentBox.closest('.pop_main_box--wrap'); // ver01 또는 ver02
+				const $nextBox = $currentBox.nextAll('.pop_main_box').first();
+
+				if ($nextBox.length) {
+					// 현재 그룹에서 show 클래스 제거
+					$wrap.find('.pop_main_box').removeClass('show');
+
+					// 다음 박스에 show 클래스 추가
+					$nextBox.addClass('show');
+				}
+			});
+
+			// 다시 하기 버튼 클릭 시 첫 박스로 리셋
+			$('.retry-btn').on('click', function () {
+				const $wrap = $(this).closest('.pop_main_box--wrap');
+				const $firstBox = $wrap.find('.pop_main_box').first();
+
+				// 전체 show 제거 후 첫 번째에만 추가
+				$wrap.find('.pop_main_box').removeClass('show');
+				$firstBox.addClass('show');
+			});
+
+
+		});
+	</script>
+	<script>
+		const contentId = 'H-111-11';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

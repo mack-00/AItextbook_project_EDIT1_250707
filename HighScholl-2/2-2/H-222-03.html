@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>데이터 전처리 개념과 작업 구분</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="GoogleTranslate.css">
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script type="text/javascript" src="GoogleTranslate.js"></script> 
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_222_03_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								데이터 전처리 개념과 작업 구분
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp;&nbsp;<span class="color_text">데이터 전처리</span>는 <span class="color_text01" role="button" aria-expanded="false" aria-controls="computing-popup">원시 데이터</span>를 원하는 형식으로 변환하는 작업을 의미하며, 여러 데이터 처리 작업에서 가장 기초가 되는 단계이다. 데이터 전처리 작업은 데이터 정리, 데이터 통합, 데이터 정규화로 구분한다.
+							</span>
+						</div>
+
+						<!-- 팝업 위치잡기 -->
+						<div class="popup_con" id="computing-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+							<div class="contents_con">
+								<div class="close_btn">
+									<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+								</div>
+
+								<div class="title_con" id="popup-title" tabindex="0">
+									<span>
+										원시 데이터
+									</span>
+								</div>
+
+								<div class="info_con" tabindex="0">
+									<span>
+										수집된 그대로의 가공되지 않은 데이터를 의미한다.
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="info02_con">
+						<div class="title_con" tabindex="0">
+							<div class="dot" aria-hidden="true"></div>
+
+							<span>
+								데이터 전처리 작업 구분
+							</span>
+						</div>
+
+						<div class="contents_con">
+							<div class="nav" role="navigation" aria-label="디지털 기술 탐색">
+							<ul role="tablist">
+									<li tabindex="0">
+										<span class="on" data-value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
+											데이터 정리
+										</span>
+									</li>
+									<li tabindex="0">
+										<span data-value="info02" role="tab" id="tab-info02" aria-selected="false" aria-controls="panel-info02">
+											데이터 통합
+										</span>
+									</li>
+									<li tabindex="0">
+										<span data-value="info03" role="tab" id="tab-info03" aria-selected="false" aria-controls="panel-info03">
+											데이터 정규화
+										</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="contents_con">
+								<div id="panel-info01" class="contents_div info01" role="tabpanel" aria-labelledby="tab-info01">
+									<div class="text_con" tabindex="0">
+										<span>
+											&nbsp;&nbsp;데이터에서 오류, 불일치 또는 누락된 데이터를 제거하거나 수정하는 작업이다. 예를 들어, 중복 항목 제거, 맞춤법 오류
+											수정 또는 누락된 값 채우기 등이 있다.
+										</span>
+									</div>
+
+									<div class="both_wrap">
+										<div class="img H_222_03_tab01_img01"><img src="./img/H_222_03_tab01_img01.png" alt="일부 누락되거나 오류가 있는 원시 데이터"></div>
+										<div class="arr">
+											<span>처리</span>
+											<button class="after_hand" aria-label="처리"></button>
+										</div>
+										<div class="img H_222_03_tab01_img02"><img src="./img/H_222_03_tab01_img02.png" alt="중복 항목 제거, 오류 수정, 누락값 채우기를 통해 정리된 데이터 예시"></div>
+									</div>
+								</div>
+
+								<div id="panel-info02" class="contents_div info02" role="tabpanel" aria-labelledby="tab-info02" hidden>
+									<div class="text_con" tabindex="0">
+										<span>
+											&nbsp;&nbsp;서로 유사하거나 동질성을 가진 데이터를 하나의 데이터로 합하는 작업이다. 예를 들어, 중복되는 데이터 속성값을 통합하여 효율성을 높일 수 있다.
+										</span>
+									</div>
+
+									<div class="both_wrap">
+										<div class="img H_222_03_tab02_img01"><img src="./img/H_222_03_tab02_img01.png" alt="중복된 고객 정보를 포함한 두 개의 고객 데이터 표. 각 표에는 고객 번호, 이름, 전화번호, 이메일이 포함되어 있으며 일부 항목이 두 표에 중복됨."></div>
+										<div class="arr">
+											<span>처리</span>
+											<button class="after_hand" aria-label="처리"></button>
+										</div>
+										<div class="img H_222_03_tab02_img02"><img src="./img/H_222_03_tab02_img02.png" alt="중복 항목이 제거되고 새로운 고객 정보가 추가된 통합된 고객 데이터 표. 고객 번호 101~104까지의 이름, 전화번호, 이메일이 정리되어 있음."></div>
+									</div>
+								</div>
+
+								<div id="panel-info03" class="contents_div info03" role="tabpanel" aria-labelledby="tab-info03" hidden>
+									<div class="text_con" tabindex="0">
+										<span>
+											&nbsp;&nbsp;데이터를 분석하기 쉽고 일관성을 유지할 수 있도록 공통 척도 또는 일정 범위로 변환하는 작업이다. 예를 들어, 데이터 
+											속성값을 일정한 범위에 속하도록 조정할 수 있다.
+										</span>
+									</div>
+
+									<div class="both_wrap">
+										<div class="img H_222_03_tab03_img01"><img src="./img/H_222_03_tab03_img01.png" alt="수험번호, 이름, TEPS 점수, 영어 듣기 점수, 영어 능력 수준이 포함된 학생 데이터 표. 일부 값은 결측 또는 문자형태로 구성되어 있어 분석에 어려움이 있음."></div>
+										<div class="arr">
+											<span>처리</span>
+											<button class="after_hand" aria-label="처리"></button>
+										</div>
+										<div class="img H_222_03_tab03_img02"><img src="./img/H_222_03_tab03_img02.png" alt="TEPS와 영어 듣기 점수가 0~1 사이 값으로 정규화되어 변환된 표. 수험번호, 이름, 영어 능력 수준은 유지되며 수치형 속성은 범위가 조정되어 일관된 형식으로 처리됨."></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			// 빅데이터 전처리 텍스트 팝업 열기/닫기
+			$(document).on("click",".H_222_03_con > .contents_con > .contents_con > .info01_con > .text_con span .color_text01",function(){
+				if( $(".H_222_03_con > .contents_con > .contents_con > .info01_con > .popup_con").css("display") == "none" ){
+					$(".H_222_03_con > .contents_con > .contents_con > .info01_con > .popup_con").show();
+				}else{
+					$(".H_222_03_con > .contents_con > .contents_con > .info01_con > .popup_con").hide();
+				}
+			});
+
+			// 빅데이터 전처리 팝업 버튼 열기/닫기
+			$(document).on("click",".H_222_03_con > .contents_con > .contents_con > .info01_con > .popup_con > .contents_con > .close_btn .a_btn",function(){
+				if( $(".H_222_03_con > .contents_con > .contents_con > .info01_con > .popup_con").css("display") == "none" ){
+					$(".H_222_03_con > .contents_con > .contents_con > .info01_con > .popup_con").show();
+				}else{
+					$(".H_222_03_con > .contents_con > .contents_con > .info01_con > .popup_con").hide();
+				}
+			});
+
+			// 텝 항목 선택 시
+			$(document).on("click",".H_222_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .nav > ul > li span",function(){
+				if( !$(this).hasClass("on") ){
+					$(".H_222_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .nav > ul > li span").each(function(){
+						$(this).removeClass("on");
+					});
+					$(this).addClass("on");
+					$(".H_222_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div").hide();
+					$(".H_222_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div."+$(this).attr("data-value")).show();
+					$(".H_222_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div > .img_con .img_div .over_con").show();
+				}
+			});
+
+			$(".after_hand").on("click", function(){
+				$(this).parent().next().addClass("on");
+				$(this).css('display','none');
+			});
+		</script>
+
+	</div>
+	<script>
+		const contentId = 'H-222-03';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

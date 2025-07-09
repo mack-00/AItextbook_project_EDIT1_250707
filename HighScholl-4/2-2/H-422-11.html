@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>스스로 해결하기 - 선형 회귀 모델</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/swiper.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_422_11_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								선형 회귀 모델
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp; 기온에 따른 공유 자전거 수요를 예측한 선형 회귀 모델이 있다. 그래프의 <i>①~③</i>번 직선 중 오차가 가장 작을 것으로 예상되는 직선은 무엇인지 골라 보자.
+							</span>
+						</div>
+					</div>
+
+					<div class="info02_con">
+						<div class="flex_con">
+							<div class="img_con">
+								<img src="./img/H_422_11_con_img01.png" alt="온도에 따른 자전거 수요를 나타낸 그래프로, 여러 개의 데이터 점이 흩어져 있는 가운데 세 개의 회귀 직선이 데이터에 맞춰 조정된 모습을 나타낸다.">
+								<span>(A) 회귀 직선</span>
+							</div>
+							<div class="img_con">
+								<img src="./img/H_422_11_con_img02.png" alt="회귀 분석에서 오차를 나타내는 그림으로, 세 개의 데이터 점이 표시되어 있다.">
+								<span>(B) 회귀의 오차</span>
+							</div>
+						</div>
+						<style>
+
+						</style>
+						<div class="a_con">
+							<input type="hidden" name="aidt_examId" value="1">
+							<input type="hidden" name="aidt_exam" value="">
+							<input type="hidden" name="aidt_answer" value="">
+							<input type="hidden" name="aidt_mcqYn" value="N">
+							<input type="hidden" name="aidt_type" value="radio">
+							<ul>
+								<li>
+									<label class="radio_label">
+										<input type="radio" name="aidt_input" data-group-id="1" value="1" />
+										<span class="check_icon"></span>
+										<span>
+											①
+										</span>
+									</label>   
+								</li>
+								<li>
+									<label class="radio_label">
+										<input type="radio" name="aidt_input" data-group-id="2" value="2" />
+										<span class="check_icon"></span>
+										<span>
+											②
+										</span>
+									</label>  
+								</li>
+								<li>
+									<label class="radio_label">
+										<input type="radio" name="aidt_input" data-group-id="3" value="3" />
+										<span class="check_icon"></span>
+										<span>
+											③
+										</span>
+									</label>  
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="btn_con">
+					<button class="a_btn a_btn01 check-btn" type="button" aria-label="확인하기">확인하기</button>
+					<button class="a_btn a_btn02 btn_reset" type="button" aria-label="다시 하기" style="display: none;">다시 하기</button>
+				</div>
+
+				<div class="popup_con_bg popup01"></div>
+				<div class="popup_con popup01" role="alert"></div>
+
+				<div class="popup_con_bg popup02"></div>
+				<div class="popup_con popup02" role="alert"></div>
+				<div class="popup_con_bg popup03"></div>
+				<div class="popup_con popup03" role="alert"></div>
+				<div class="popup_con_bg popup04"></div>
+				<div class="popup_con popup04" role="alert"></div>
+			</div>
+			
+		</main>
+
+	</div>
+	<script>
+		const correctValue = "3";
+		let attemptCount = 0;
+
+		$('.check-btn').on('click', function () {
+			const selected = $('input[name="aidt_input"]:checked').val();
+
+			// 모든 팝업 숨기기
+			$('.popup_con_bg, .popup_con').hide();
+
+			// 선택 안 했을 때
+			if (!selected) {
+				$(".H_422_11_con .popup_con_bg.popup03").fadeIn();
+				$(".H_422_11_con .popup_con.popup03").fadeIn();
+				setTimeout(function () {
+					$(".H_422_11_con .popup_con_bg.popup03").fadeOut();
+					$(".H_422_11_con .popup_con.popup03").fadeOut();
+				}, 1000);
+				return;
+			}
+
+			// 정답일 경우
+			if (selected === correctValue) {
+				$(".H_422_11_con .popup_con_bg.popup02").fadeIn();
+				$(".H_422_11_con .popup_con.popup02").fadeIn();
+				setTimeout(function () {
+					$(".H_422_11_con .popup_con_bg.popup02").fadeOut();
+					$(".H_422_11_con .popup_con.popup02").fadeOut();
+				}, 1000);
+				$('.check-btn').hide();
+				$('.btn_reset').show();
+				return;
+			}
+
+			// 오답 처리
+			attemptCount++;
+
+			if (attemptCount === 1) {
+				// 첫 번째 오답
+				$(".H_422_11_con .popup_con_bg.popup01").fadeIn();
+				$(".H_422_11_con .popup_con.popup01").fadeIn();
+				setTimeout(function () {
+					$(".H_422_11_con .popup_con_bg.popup01").fadeOut();
+					$(".H_422_11_con .popup_con.popup01").fadeOut();
+					$('input[name="aidt_input"]').prop('checked', false); // 팝업 닫힌 후 초기화
+				}, 1000);
+			} else {
+				// 두 번째 오답 - 정답 자동 선택
+				$(".H_422_11_con .popup_con_bg.popup04").fadeIn();
+				$(".H_422_11_con .popup_con.popup04").fadeIn();
+				setTimeout(function () {
+					$(".H_422_11_con .popup_con_bg.popup04").fadeOut();
+					$(".H_422_11_con .popup_con.popup04").fadeOut();
+					$('input[name="aidt_input"]').prop('checked', false);
+					$(`input[name="aidt_input"][value="${correctValue}"]`).prop('checked', true);
+				}, 1000);
+
+				$('.check-btn').hide();
+				$('.btn_reset').show();
+			}
+		});
+
+		$('.btn_reset').on('click', function () {
+			$('input[name="aidt_input"]').prop('checked', false);
+			attemptCount = 0;
+			$('.btn_reset').hide();
+			$('.check-btn').show();
+		});
+</script>
+<script>
+	const contentId = 'H-422-11';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

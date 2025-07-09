@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>중첩 제어 구조</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_324_12_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								중첩 제어 구조
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_con" tabindex="0">
+						<span>
+							&nbsp;&nbsp;다양한 상황이 발생하는 실생활 문제를 해결하기 위해서는 하나의 제어 구조가 아닌 여러 가지 제어 구조를 복합적으로 활용하여 프로그래밍해야 한다. 
+							그래서 조건문 안에 조건문이 포함되어 있거나 반복문 안에 조건문이 포함되는 등, 제어 구조 내부에 다른 제어 구조를 포함하여 작성하는데 이를 <strong>중첩 제어 구조</strong>라 한다.
+						</span>
+					</div>
+
+					<div class="box_con">
+						<dl class="type01"> 
+							<dt tabindex="0">
+								<span>반복문 안에 선택문<br>(또는 선택문 안에 반복문)</span>
+							</dt>
+							<dd>
+								<button class="after_hand" aria-label="클릭하면 조건을 하이라이팅 합니다."></button>
+								<div class="condition">
+									<img class="show"  src="./img/h_324_diagram01-01.jpg" alt="반복 조건을 먼저 검사한 후, 참일 경우 선택 조건으로 이동하여 조건이 참이면 명령 1을, 거짓이면 명령 2를 수행합니다. 실행된 후에는 반복 조건으로 되돌아가는 기본적인 분기 반복 구조입니다. 현재 반복 조건이 강조되어 있으며, 흐름이 시작되는 단계입니다.">
+									<img src="./img/h_324_diagram01-02.jpg" alt="반복 조건이 참이므로 선택 조건으로 진입한 상태입니다. 선택 조건 판단 단계가 강조되어 있으며, 조건 판단을 통해 분기될 준비 상태입니다.">
+									<img src="./img/h_324_diagram01-03.jpg" alt="선택 조건이 강조되어 있으며, 조건이 참인지 거짓인지 판단하여 다음 단계로 진행되기 전 상태를 보여줍니다.">
+									<img src="./img/h_324_diagram01-04.jpg" alt="선택 조건 결과가 '참'으로 판단되어 명령 1로 흐름이 진행되는 단계입니다. '참' 방향 화살표가 강조되어 선택 조건에서 명령 1로 흐름이 이어지는 것을 시각적으로 보여줍니다.">
+									<img src="./img/h_324_diagram01-05.jpg" alt="명령 1 실행 단계가 강조되어 있으며, 선택 조건의 결과가 참일 때 실행되는 작업을 나타냅니다.">
+									<img src="./img/h_324_diagram01-06.jpg" alt="다시 반복 조건으로 돌아가는 루프의 흐름을 보여주는 상태입니다. 명령 1 실행 이후 반복 조건으로 되돌아가는 구조임을 나타냅니다.">
+									<img src="./img/h_324_diagram01-07.jpg" alt="반복 조건이 참이므로 다시 선택 조건으로 진입한 상태이며, 전체 구조의 흐름이 반복되고 있는 것을 나타냅니다.">
+									<img src="./img/h_324_diagram01-08.jpg" alt="선택 조건이 강조되어 있으며, 이번에는 다른 조건 분기로 진행될 가능성을 보여주는 중간 판단 단계입니다.">
+									<img src="./img/h_324_diagram01-09.jpg" alt="선택 조건 결과가 '거짓'으로 판단되어 명령 2로 흐름이 진행되는 단계입니다. '거짓' 방향 화살표가 강조되어 선택 조건에서 명령 2로 이어지는 경로를 시각적으로 강조합니다.">
+									<img src="./img/h_324_diagram01-10.jpg" alt="명령 2 실행 단계가 강조되어 있으며, 선택 조건이 거짓일 때 수행되는 작업 흐름을 나타냅니다.">
+									<img src="./img/h_324_diagram01-11.jpg" alt="명령 2까지 실행된 후 반복 조건으로 되돌아가는 루프가 강조되어 있으며, 반복 구조의 순환 전체 흐름을 시각적으로 나타냅니다. 선택 조건 결과에 관계없이 이후 다시 반복 조건으로 되돌아가는 구조입니다.">
+									<img src="./img/h_324_diagram01-12.jpg" alt="반복 조건이 더 이상 참이 아니므로 전체 흐름이 종료되어 루프를 빠져나가는 과정이 강조된 상태입니다. 오른쪽에서 아래 방향으로 빠져나가는 종료 흐름선이 시각적으로 표현되어 있습니다.">
+								</div>
+							</dd>
+						</dl>
+						<dl class="type02"> 
+							<dt tabindex="0">
+								<span>반복문 안에 반복문</span>
+							</dt>
+							<dd>
+								<button class="after_hand" aria-label="클릭하면 조건을 하이라이팅 합니다."></button>
+								<div class="condition">
+									<img class="show" src="./img/h_324_diagram02-01.jpg" alt="반복 조건 1이 강조되어 있으며, 최상위 반복 조건을 먼저 검사하는 구조입니다. 반복 조건 1이 참이면 하위 반복 조건으로 진입합니다.">
+									<img src="./img/h_324_diagram02-03.jpg" alt="반복 조건 1이 참일 경우, 반복 조건 2로 진입하며 반복 조건 2 판단 단계가 강조되어 있습니다.">
+									<img src="./img/h_324_diagram02-04.jpg" alt="반복 조건 2가 참일 경우 명령 1을 실행하는 구조이며, 현재는 반복 조건 2의 조건 판단 결과가 참으로 진행 중입니다.">
+									<img src="./img/h_324_diagram02-05.jpg" alt="명령 1 실행 단계가 강조되어 있으며, 반복 조건 2가 참일 때 수행되는 동작입니다.">
+									<img src="./img/h_324_diagram02-06.jpg" alt="명령 1 실행 후 반복 조건 2로 다시 되돌아가는 루프 흐름이 강조되어 있습니다. 하위 반복 조건이 계속 반복되는 구조입니다.">
+									<img src="./img/h_324_diagram02-07.jpg" alt="반복 조건 2 검사 단계로 돌아온 상태가 강조되어 있으며, 루프의 반복 흐름을 보여줍니다.">
+									<img src="./img/h_324_diagram02-08.jpg" alt="반복 조건 2가 거짓이 되어 상위 반복 조건 1로 흐름이 되돌아가는 상태입니다. 하위 루프가 종료되며 상위 반복 조건 재검사 단계입니다.">
+									<img src="./img/h_324_diagram02-09.jpg" alt="반복 조건 1 검사로 돌아온 상태가 강조되어 있으며, 상위 반복 조건 루프 흐름을 계속 이어갈지 판단하는 단계입니다.">
+									<img src="./img/h_324_diagram02-10.jpg" alt="반복 조건 1이 거짓이 되어 전체 중첩 반복 구조가 종료되는 상태입니다. 흐름이 루프 밖으로 빠져나가는 방향으로 강조되어 있습니다.">
+								</div>
+							</dd> 
+						</dl>
+						<dl class="type03"> 
+							<dt tabindex="0">
+								<span>선택문 안에 선택문</span>
+							</dt>
+							<dd>
+								<button class="after_hand" aria-label="클릭하면 조건을 하이라이팅 합니다."></button>
+								<div class="condition">
+									<img class="show" src="./img/h_324_diagram03-01.jpg" alt="조건 1이 강조되어 있으며, 최상위 조건 판단 단계입니다. 조건 1이 참인지 거짓인지에 따라 다음 흐름으로 분기됩니다.">
+									<img src="./img/h_324_diagram03-02.jpg" alt="조건 1이 참이 되어 조건 2로 흐름이 이동하는 경로가 강조되어 있습니다. 중첩된 조건 판단 단계로 진입하는 과정입니다.">
+									<img src="./img/h_324_diagram03-03.jpg" alt="조건 2가 강조되어 있으며, 조건 1이 참일 때 하위 조건을 추가로 검사하는 분기 구조입니다. 조건 2가 참인지 거짓인지에 따라 명령 1 또는 명령 2가 실행됩니다.">
+									<img src="./img/h_324_diagram03-04.jpg" alt="조건 2의 판단 결과가 참이 되어 명령 1로 흐름이 이어지는 경로가 강조되어 있습니다.">
+									<img src="./img/h_324_diagram03-05.jpg" alt="명령 1 실행 단계가 강조되어 있으며, 조건 1과 조건 2가 모두 참일 경우 실행되는 작업입니다.">
+									<img src="./img/h_324_diagram03-06.jpg" alt="조건 2가 다시 강조되어 있으며, 다른 조건 흐름을 시각적으로 설명하기 위한 반복된 단계입니다.">
+									<img src="./img/h_324_diagram03-07.jpg" alt="조건 2가 거짓일 경우 명령 2로 분기되는 흐름이 강조되어 있습니다. 조건 1은 참이지만 조건 2가 거짓일 때의 경우입니다.">
+									<img src="./img/h_324_diagram03-08.jpg" alt="명령 2 실행 단계가 강조되어 있으며, 조건 1은 참이지만 조건 2가 거짓일 경우 수행되는 작업입니다.">
+									<img src="./img/h_324_diagram03-09.jpg" alt="조건 1이 다시 강조되어 있으며, 조건 판단을 반복하는 흐름을 시각적으로 표현한 이미지입니다.">
+									<img src="./img/h_324_diagram03-10.jpg" alt="조건 1이 거짓일 경우 바로 명령 3으로 분기되는 흐름이 강조되어 있습니다. 조건 2는 검사하지 않고 명령 3을 실행하는 구조입니다.">
+									<img src="./img/h_324_diagram03-11.jpg" alt="">
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</main>
+
+	</div>
+	<script>
+		$(document).ready(function(){
+			$(".after_hand").on("click", function(){
+				const $btn = $(this);
+				const $dl = $btn.closest("dl");
+				const $imgs = $dl.find(".condition > img");
+				let delay = 1000;
+
+				$btn.hide();
+				$imgs.removeClass("show");
+
+				$imgs.each(function(index){
+				setTimeout(() => {
+					$imgs.removeClass("show");
+					$(this).addClass("show");
+				}, delay * (index + 1));
+				});
+
+				setTimeout(() => {
+				$imgs.removeClass("show");
+				$imgs.eq(0).addClass("show");
+				$btn.show();
+				}, delay * ($imgs.length + 1));
+			});
+			});
+
+	</script>
+	<script>
+		const contentId = 'H-324-12';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

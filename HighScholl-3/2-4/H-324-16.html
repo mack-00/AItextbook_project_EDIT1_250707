@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>continue와 break</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+		<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_324_16_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								continue와 break
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_con01" tabindex="0">
+						<span>
+							&nbsp;&nbsp;반복문을 실행하다가 반복을 완전히 그만두거나 현재 반복문만 건너뛰어야 하는 경우가 있다. 이때 continue 또는
+							<br>break를 사용하여 반복문을 제어할 수 있다.
+						</span>
+					</div>
+
+					<div class="contents_con">
+						<div class="nav" role="navigation" aria-label="continue와 break">
+							<ul role="tablist">
+								<li tabindex="0">
+									<span class="on" data-value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
+										continue
+									</span>
+								</li>
+								<li tabindex="0">
+									<span data-value="info02" role="tab" id="tab-info02" aria-selected="false" aria-controls="panel-info02">
+										break
+									</span>
+								</li>
+							</ul>
+						</div>
+	
+						<div class="detail_con">
+							<div id="panel-info01" class="contents_div info01" role="tabpanel" aria-labelledby="tab-info01">
+								<div class="text_con" tabindex="0">
+									<span>
+										&nbsp;&nbsp;continue(컨티뉴)는 현재 실행만 중단하고 다시 반복문으로 돌아가 반복을 이어서 실행할 때 사용하며, 보통 if문과
+										함께 사용한다.
+									</span>
+								</div>
+								<div class="video_con">
+									<div class="contents_con">
+										<div class="video-container">
+											<video id="player01" data-content-id="H-324-16-01" controls crossorigin></video>
+										</div>
+									</div>
+								</div>
+							</div>
+	
+							<div id="panel-info02" class="contents_div info02" role="tabpanel" aria-labelledby="tab-info02" style="display: none;">
+								<div class="text_con" tabindex="0">
+									<span>
+										break(브레이크)는 반복문을 완전히 끝내고 다음 명령으로 이동한다.
+									</span>
+								</div>
+								<div class="video_con">
+									<div class="contents_con">
+										<div class="video-container">
+											<video id="player02" data-content-id="H-324-16-02" controls crossorigin></video>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			// 텝 항목 선택 시
+			$(document).on("click",".H_324_16_con > .contents_con > .contents_con .nav > ul > li span",function(){
+				if( !$(this).hasClass("on") ){
+					$(".H_324_16_con > .contents_con > .contents_con .nav > ul > li span").each(function(){
+						$(this).removeClass("on");
+					});
+					$(this).addClass("on");
+					$(".H_324_16_con > .contents_con > .contents_con .detail_con .contents_div").hide();
+					$(".H_324_16_con > .contents_con > .contents_con .detail_con .contents_div."+$(this).attr("data-value")).show();
+				}
+			});
+		</script>
+	</div>
+
+	<script>
+		const videoEl = document.querySelector('video[data-content-id]');
+		const contentId = videoEl?.dataset.contentId;
+   </script>
+   <script type="text/javascript" src="./js/xapi.page.js"></script>
+   
+   <script>
+	   const videoList = [
+		   { 
+			   id: "H-324-16-01",
+			   src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-324-16_1_4000k.mp4,H-324-16_1_2000k.mp4,H-324-16_1_1000k.mp4,lang/kor/H-324-16_1.vtt,.smil/master.m3u8" 
+		   },
+		   { 
+			   id: "H-324-16-02",
+			   src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-324-16_2_4000k.mp4,H-324-16_2_2000k.mp4,H-324-16_2_1000k.mp4,lang/kor/H-324-16_2.vtt,.smil/master.m3u8" 
+		   }
+	   ];
+   </script>
+   <script type="text/javascript" src="./js/xapi.video.js"></script>
+	
+</body>
+</html>

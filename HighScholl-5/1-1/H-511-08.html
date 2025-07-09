@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>개념 정리하기-1. 디지털 기술의 영향</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="format-detection" content="telephone=no">
+		<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="./js/jquery-ui.min.js"></script>
+		<!-- 브라우저 번역(다국어 관련) -->
+		<link rel="stylesheet" href="./css/GoogleTranslate.css">
+		<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+		<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+		<link rel="stylesheet" href="./css/jquery-ui.min.css">
+		<link rel="stylesheet" href="./css/fonts.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/common_all.css">
+		<script>
+			const originalOrder = []; // 처음 섞여 있는 순서 저장용
+			document.addEventListener('DOMContentLoaded', () => {
+				const draggables = document.querySelectorAll('.draggable');
+				const dropZones = document.querySelectorAll('.drop-zone');
+				const optionsContainer = document.querySelector('.options-container');
+				let draggedElement = null;
+				let isDragging = false;
+				let startX, startY, initialX, initialY, xOffset = 0,
+					yOffset = 0;
+				let adapt_answer = 0; // 적용한 답변 수
+				let correct_answer = 0; // 정답 수
+				let try_check = 0; // 확인하기 시도 수
+				draggables.forEach(item => {
+					originalOrder.push(item); // 처음 순서 저장
+				});
+				// 모든 항목을 원래 자리로 이동
+				const returnItemsToContainer = () => {
+					// 모든 drop-zone에서 draggable 회수
+					dropZones.forEach(zone => {
+						const draggable = zone.querySelector('.draggable');
+						if (draggable) {
+							optionsContainer.appendChild(draggable);
+							zone.classList.remove('occupied');
+						}
+					});
+					// 순서를 처음 섞였던 상태로 되돌림
+					originalOrder.forEach(item => {
+						optionsContainer.appendChild(item);
+					});
+					adapt_answer = 0;
+					correct_answer = 0;
+				};
+				// 모든 항목을 정답 자리로 이동
+				const placeItemsInCorrectPositions = () => {
+					returnItemsToContainer();
+					draggables.forEach(item => {
+						const correctZone = Array.from(dropZones).find(zone => zone.dataset.position === item.dataset.answer);
+						if (correctZone) {
+							correctZone.appendChild(item);
+							correctZone.classList.add('occupied');
+						}
+					});
+				};
+				// 터치 이벤트 처리 함수
+				function dragStart(e) {
+					if (e.type === "touchstart") {
+						initialX = e.touches[0].clientX;
+						initialY = e.touches[0].clientY;
+						draggedElement = e.target;
+					} else {
+						initialX = e.clientX;
+						initialY = e.clientY;
+						draggedElement = e.target;
+					}
+					if (draggedElement.classList.contains('draggable')) {
+						isDragging = true;
+						draggedElement.classList.add('dragging');
+						// 드래그 시작 위치 저장
+						const rect = draggedElement.getBoundingClientRect();
+						xOffset = initialX - rect.left;
+						yOffset = initialY - rect.top;
+					}
+				}
+
+				function dragEnd(e) {
+					if (isDragging && draggedElement) {
+						const dropX = e.type === "touchend" ? e.changedTouches[0].clientX : e.clientX;
+						const dropY = e.type === "touchend" ? e.changedTouches[0].clientY : e.clientY;
+						const dropTarget = document.elementFromPoint(dropX, dropY);
+						const dropZone = dropTarget?.closest('.drop-zone');
+						const sourceZone = draggedElement.parentElement;
+						if (dropZone) {
+							// 기존 버튼이 있으면 되돌리기
+							const existing = dropZone.querySelector('.draggable');
+							if (existing && existing !== draggedElement) {
+								optionsContainer.appendChild(existing);
+							}
+							// 드롭존에 새로 넣기
+							dropZone.innerHTML = '';
+							dropZone.appendChild(draggedElement);
+							dropZone.classList.add('occupied');
+							// 이전 위치가 drop-zone이면 occupied 제거
+							if (sourceZone.classList.contains('drop-zone')) {
+								sourceZone.classList.remove('occupied');
+							}
+						} else {
+							// drop-zone 이 아닌 곳에 드롭하면 옵션영역으로
+							optionsContainer.appendChild(draggedElement);
+							if (sourceZone.classList.contains('drop-zone')) {
+								sourceZone.classList.remove('occupied');
+							}
+						}
+						draggedElement.classList.remove('dragging');
+						draggedElement.style.transform = '';
+						draggedElement.style.position = '';
+						draggedElement.style.top = '';
+						draggedElement.style.left = '';
+						isDragging = false;
+						draggedElement = null;
+					}
+				}
+
+				function drag(e) {
+					if (isDragging && draggedElement) {
+						e.preventDefault();
+						let currentX, currentY;
+						if (e.type === "touchmove") {
+							currentX = e.touches[0].clientX;
+							currentY = e.touches[0].clientY;
+						} else {
+							currentX = e.clientX;
+							currentY = e.clientY;
+						}
+						const newX = currentX - xOffset;
+						const newY = currentY - yOffset;
+						draggedElement.style.position = 'fixed';
+						draggedElement.style.top = `${newY}px`;
+						draggedElement.style.left = `${newX}px`;
+						// 드롭존 하이라이트
+						const dropTarget = document.elementFromPoint(currentX, currentY);
+						if (dropTarget) {
+							const dropZone = dropTarget.closest('.drop-zone');
+							dropZones.forEach(zone => {
+								if (zone === dropZone && zone.children.length <= 1) {
+									zone.classList.add('dragover');
+								} else {
+									zone.classList.remove('dragover');
+								}
+							});
+						}
+					}
+				}
+				// 드래그 앤 드롭 이벤트 처리
+				draggables.forEach(draggable => {
+					draggable.addEventListener('dragstart', (e) => {
+						e.preventDefault(); // 기본 드래그 동작 방지
+						return false;
+					});
+					let mouseMoved = false; // 마우스 움직임 감지용
+					// 마우스 이벤트
+					draggable.addEventListener('mousedown', (e) => {
+						e.preventDefault();
+						mouseMoved = false;
+						initialX = e.clientX;
+						initialY = e.clientY;
+						draggedElement = e.target;
+						// dragStart(e);
+					});
+					// 터치 이벤트
+					draggable.addEventListener('touchstart', (e) => {
+						e.preventDefault();
+						dragStart(e);
+					}, {
+						passive: false
+					});
+					draggable.addEventListener('touchmove', drag, {
+						passive: false
+					});
+					draggable.addEventListener('touchend', dragEnd, {
+						passive: false
+					});
+				});
+				// 마우스 전역 이벤트
+				// mousemove: 실제 드래그 시작 판단
+				document.addEventListener('mousemove', (e) => {
+					if (!draggedElement) return;
+					const dx = Math.abs(e.clientX - initialX);
+					const dy = Math.abs(e.clientY - initialY);
+					if (!mouseMoved && (dx > 5 || dy > 5)) {
+						mouseMoved = true;
+						isDragging = true;
+						draggedElement.classList.add('dragging');
+						const rect = draggedElement.getBoundingClientRect();
+						xOffset = e.clientX - rect.left;
+						yOffset = e.clientY - rect.top;
+					}
+					if (isDragging) {
+						drag(e);
+					}
+				});
+				document.addEventListener('mouseup', (e) => {
+					if (isDragging) {
+						dragEnd(e);
+					}
+					// 초기화
+					draggedElement = null;
+					isDragging = false;
+					mouseMoved = false;
+				});
+				// 기본 드래그 방지
+				document.addEventListener('dragstart', (e) => {
+					e.preventDefault();
+					return false;
+				}, {
+					passive: false
+				});
+				// 정답 확인 이벤트 처리
+				const checkButton = document.querySelector('.check-btn');
+				checkButton.addEventListener('click', () => {
+					dropZones.forEach(zone => {
+						const answer = zone.querySelector('.draggable');
+						if (answer) {
+							adapt_answer++; // 답변 수
+							const isCorrect = answer.dataset.answer === zone.dataset.position;
+							if (isCorrect) correct_answer++; // 정답 수
+						}
+					});
+					// 단어를 하나라도 옮기지 않고 확인하기를 눌렀을 때
+					if (adapt_answer !== 2) {
+						//	alert('빈칸에 들어갈 말을 옮긴 후 확인하기를 눌러 주세요.');
+						$(".H_511_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn").blur();
+						$(".H_511_08_con > .contents_con > .contents_con .popup_con_bg.popup01").fadeIn();
+						$(".H_511_08_con > .contents_con > .contents_con .popup_con.popup01").fadeIn();
+						setTimeout(function() {
+							$(".H_511_08_con > .contents_con > .contents_con .popup_con_bg.popup01").fadeOut();
+							$(".H_511_08_con > .contents_con > .contents_con .popup_con.popup01").fadeOut();
+						}, 1000);
+						adapt_answer = 0;
+						correct_answer = 0;
+						// 닫기 버튼이 없는 팝업이 떴다가 사라짐
+						// 팝업 내용: 빈칸에 들어갈 말을 옮긴 후 확인하기를 눌러 주세요.
+					} else {
+						if (adapt_answer > 0) {
+							try_check++; // 시도 횟수 증가
+						}
+						// 정답을 맞췄을 때
+						if (correct_answer === 2) {
+							//	alert('잘 풀었어요!');
+							$(".H_511_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn").blur();
+							$(".H_511_08_con > .contents_con > .contents_con .popup_con_bg.popup04").fadeIn();
+							$(".H_511_08_con > .contents_con > .contents_con .popup_con.popup04").fadeIn();
+							setTimeout(function() {
+								$(".H_511_08_con > .contents_con > .contents_con .popup_con_bg.popup04").fadeOut();
+								$(".H_511_08_con > .contents_con > .contents_con .popup_con.popup04").fadeOut();
+								$(".H_511_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn01").css("display", "none");
+								$(".H_511_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn02").css("display", "inline-block");
+							}, 1000);
+							// 닫기 버튼이 없는 팝업이 자동으로 나왔다가 사라짐.
+							// 확인하기 버튼이 다시 풀기 버튼으로 변경됨.
+							// 팝업 내용: 잘 풀었어요!
+						}
+						// 1회 틀렸을 때
+						else if (try_check === 1) {
+							//	alert('다시 풀어 보세요.');
+							$(".H_511_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn").blur();
+							$(".H_511_08_con > .contents_con > .contents_con .popup_con_bg.popup02").fadeIn();
+							$(".H_511_08_con > .contents_con > .contents_con .popup_con.popup02").fadeIn();
+							setTimeout(function() {
+								$(".H_511_08_con > .contents_con > .contents_con .popup_con_bg.popup02").fadeOut();
+								$(".H_511_08_con > .contents_con > .contents_con .popup_con.popup02").fadeOut();
+							}, 1000);
+							setTimeout(() => {
+								returnItemsToContainer();
+							}, 500);
+							// 닫기 버튼이 없는 팝업이 자동으로 나왔다가 사라진 후 옮긴 단어가 원래의 자리로 돌아감.
+							// 팝업 내용: 다시 풀어 보세요.
+						}
+						// 2회 틀렸을 때
+						else if (try_check === 2) {
+							//	alert('답을 확인해 보세요.');
+							$(".H_511_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn").blur();
+							$(".H_511_08_con > .contents_con > .contents_con .popup_con_bg.popup03").fadeIn();
+							$(".H_511_08_con > .contents_con > .contents_con .popup_con.popup03").fadeIn();
+							setTimeout(function() {
+								$(".H_511_08_con > .contents_con > .contents_con .popup_con_bg.popup03").fadeOut();
+								$(".H_511_08_con > .contents_con > .contents_con .popup_con.popup03").fadeOut();
+								$(".H_511_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn01").css("display", "none");
+								$(".H_511_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn02").css("display", "inline-block");
+							}, 1000);
+							try_check = 0;
+							setTimeout(() => {
+								placeItemsInCorrectPositions();
+							}, 500);
+							// 닫기 버튼이 없는 팝업이 자동으로 나왔다가 사라진 후 모든 단어가 자동으로 정답이 맞춰짐.
+							// 팝업 내용: 답을 확인해 보세요.
+						}
+					}
+				});
+				// 다시 하기 이벤트 처리
+				const retryButton = document.querySelector('.retry-btn');
+				retryButton.addEventListener('click', () => {
+					try_check = 0;
+					returnItemsToContainer();
+					$(".H_511_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn01").css("display", "inline-block");
+					$(".H_511_08_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn02").css("display", "none");
+				});
+				// 드롭존 이벤트 처리
+				const dropTargets = [...dropZones, optionsContainer];
+				dropTargets.forEach(target => {
+					target.addEventListener('dragover', (e) => {
+						e.preventDefault();
+						target.classList.add('dragover');
+					});
+					target.addEventListener('dragleave', () => {
+						target.classList.remove('dragover');
+					});
+					target.addEventListener('drop', (e) => {
+						e.preventDefault();
+						target.classList.remove('dragover');
+						if (!draggedElement) return;
+						const sourceZone = draggedElement.parentElement;
+						const isSourceDropZone = sourceZone.classList.contains('drop-zone');
+						const isTargetDropZone = target.classList.contains('drop-zone');
+						// 드롭존 → 드롭존 (스왑)
+						if (isTargetDropZone && isSourceDropZone) {
+							const targetChild = target.querySelector('.draggable');
+							if (targetChild && targetChild !== draggedElement) {
+								// 기존 버튼은 원래 자리로 보내기
+								optionsContainer.appendChild(targetChild);
+							}
+							target.innerHTML = ''; // 드롭존 비우기
+							target.appendChild(draggedElement);
+							sourceZone.classList.remove('occupied');
+							target.classList.add('occupied');
+						}
+						// 옵션 → 드롭존
+						else if (isTargetDropZone && !isSourceDropZone) {
+							const existing = target.querySelector('.draggable');
+							if (existing && existing !== draggedElement) {
+								optionsContainer.appendChild(existing); // 기존 버튼 되돌리기
+							}
+							target.innerHTML = ''; // 드롭존 비우기
+							target.appendChild(draggedElement);
+							target.classList.add('occupied');
+						}
+						// 드롭존 → 옵션
+						else if (!isTargetDropZone && isSourceDropZone) {
+							sourceZone.classList.remove('occupied');
+							optionsContainer.appendChild(draggedElement);
+						}
+					});
+				});
+			});
+		</script>
+		<style>
+			.drop-zone {
+				transition: all 0.2s ease;
+			}
+
+			.drop-zone.dragover {
+				background-color: #e9ecef;
+				border-color: #007bff;
+			}
+
+			.drop-zone.occupied {
+				border-style: solid;
+			}
+
+			.draggable {
+				cursor: move;
+				cursor: -webkit-grab;
+				cursor: grab;
+				user-select: none;
+				touch-action: none;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-webkit-tap-highlight-color: transparent;
+				position: relative;
+				display: inline-block;
+				-webkit-user-drag: none;
+				-khtml-user-drag: none;
+				-moz-user-drag: none;
+				-o-user-drag: none;
+			}
+
+			.draggable.dragging {
+				opacity: 0.8;
+				cursor: -webkit-grabbing;
+				cursor: grabbing;
+				z-index: 1000;
+				pointer-events: none;
+			}
+
+			.sr-only {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				border: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<main class="H_511_08_con">
+				<div class="contents_con">
+					<div class="title_con">
+						<div class="contents_con">
+							<div class="text_bg">
+								<div class="text" tabindex="0">개념 정리하기</div>
+								<div class="bg"></div>
+							</div>
+							<div class="text_con">
+								<h1 tabindex="0">1-1 디지털 기술의 영향</h1>
+							</div>
+						</div>
+					</div>
+					<div class="contents_con">
+						<div class="blank_word_test_con">
+							<div class="contents_con">
+								<div class="question_con">
+									<div class="list_con">
+										<ul>
+											<li>
+												<div class="text_con" tabindex="0">
+													<span class="num_text text01">1</span>
+													<div class="text_div">
+														<div class="blank_con drop-zone" role="region" aria-label="첫번째 답변 영역" data-position="1">
+															<span class="sr-only">답변을 이 곳에 놓으세요</span>
+														</div>
+														<div class="text_con">
+															<span> (은)는 디지털 형태로 정보를 처리, 저장, 전송하는 장치를 연구하고 개발하는 것에 관련된 <span>
+														</div>
+														<div class="text_con">
+															<span> 기술 전반을 일컫는다. <span>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="text_con" tabindex="0">
+													<span class="num_text text02">2</span>
+													<div class="text_div">
+														<div class="text_con">
+															<span> 디지털 기술이 융합 · 발전하고 정보를 쉽게 공유할 수 있게 되었으며, 산업이 자동화 · 단순화되면서 개인의 삶뿐만 아니라 우리 사회의 다양한 분야에 영향을 미치고 있다. </span>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="text_con" tabindex="0">
+													<span class="num_text text03">3</span>
+													<div class="text_div">
+														<div class="blank_con drop-zone" role="region" aria-label="두번째 답변 영역" data-position="2">
+															<span class="sr-only">답변을 이 곳에 놓으세요</span>
+														</div>
+														<div class="text_con">
+															<span> 에서 안전하게 생활하기 위해서는 디지털 기술 발전이 가져올 긍정적인 변화와 디지털 기술로 <span>
+														</div>
+														<div class="text_con">
+															<span> 인한 여러 가지 문제도 함께 대비할 필요가 있다. <span>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="answer_con">
+									<div class="title_con" tabindex="0">
+										<span> 빈칸에 알맞은 말을 옮겨 보자. </span>
+									</div>
+									<div class="contents_con options-container" role="region" aria-label="사용 가능한 답변들">
+										<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="2" tabindex="0"> 디지털 사회 </span>
+										<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="1" tabindex="0"> 디지털 기술 </span>
+									</div>
+								</div>
+							</div>
+							<div class="btn_con">
+								<button  class="a_btn a_btn01 check-btn" type="button" aria-label="확인하기" tabindex="0">확인하기</button>
+								<button  class="a_btn a_btn02 retry-btn" type="button" aria-label="다시 하기" style="display: none;" tabindex="0">다시 하기</button>
+							</div>
+						</div>
+						<div class="popup_con_bg popup01"></div>
+						<div class="popup_con popup01" role="alert"></div>
+						<div class="popup_con_bg popup02"></div>
+						<div class="popup_con popup02" role="alert"></div>
+						<div class="popup_con_bg popup03"></div>
+						<div class="popup_con popup03" role="alert"></div>
+						<div class="popup_con_bg popup04"></div>
+						<div class="popup_con popup04" role="alert"></div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script>
+			const contentId = 'H-511-08';
+		</script>
+		<script type="text/javascript" src="./js/xapi.page.js"></script>
+	</body>
+</html>

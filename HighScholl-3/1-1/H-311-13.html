@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>다리 건너기 문제 > 문제 해결</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="GoogleTranslate.css">
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script type="text/javascript" src="GoogleTranslate.js"></script> 
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_311_13_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h2>
+								다리 건너기 문제
+							</h2>
+							<h1>
+								문제 해결
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+
+					<div class="text_01 fw_600" tabindex="0">
+						오일러의 한붓그리기 규칙을 적용하면 문제를 해결하는 데 도움이 된다. 규칙을 보며 질문에 대답해 보자.
+					</div>
+
+					<div class="both_wrap main_both">
+						<div class="left">
+							<div class="tit f_center rd_10" tabindex="0">오일러의 한붓그리기</div>
+							<div class="con rd_10" tabindex="0">
+
+								<div class="num_txt">
+									<span class="number_icon">1</span>
+									홀수점(선이 만나는 수가 홀수인 점)이 없는 경우에는 한붓그리기가 가능하고, 시작점과 끝점이 일치한다.
+								</div>
+
+								<div class="num_txt">
+									<span class="number_icon">2</span>
+									홀수점이 2개면 한붓그리기가 가능하고, 시작점과 끝점이 다르다.
+								</div>
+
+								<div class="num_txt last">
+									<span class="number_icon">3</span>
+									홀수점이 1개이거나 3개 이상이면 한붓그리기가 불가능하다.
+								</div>
+
+								<div class="exam_box rd_10">
+									<span class="exam_icon">예시</span>
+									<div class="both_wrap">
+										<div class="img H_311_13_img01">
+											<img src="./img/H_311_13_img01.png" alt="홀수점이 없으므로, 왼쪽 별은 한붓그리기가 가능하다.">
+										</div>
+										<p>홀수점이 없으므로, 왼쪽 별은 한붓그리기가 가능하다.</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="right">
+							<div class="img H_311_13_img02" tabindex="0">
+								<img src="./img/H_311_13_img02.png" alt="7개 다리들을 모두 한 번씩만 건너서 출발한 곳으로 돌아올 수 있는 문제">
+							</div>
+							<p class="txt" tabindex="0">7개 다리들을 모두 한 번씩만 건너서 출발한 곳으로 다시 돌아올 수 있을까?</p>
+							<!-- <div class="btns">
+								<button type="button" class="btn_o" aria-label="O"></button>
+								<button type="button" class="btn_x" aria-label="X"></button>
+							</div> -->
+							<span id="question" style="display: none;"></span>
+							<div class="btns" role="radiogroup" aria-labelledby="question">
+								<label tabindex="0">
+									<input type="radio" name="answer" class="btn_o" aria-label="O" hidden data-label="가능하다"/>
+								</label>
+								<label tabindex="0">
+									<input type="radio" name="answer" class="btn_x" aria-label="X" hidden  data-label="불가능하다"/>
+								</label>
+							</div>
+							<div class="btn_con">
+								<button type="button" class="btn_confirm" aria-label="확인하기" aria-controls="tooltip01">확인하기</button>
+								<button type="button" class="btn_reset" aria-label="다시 하기" aria-controls="tooltip01" style="display: none;">다시 하기</button>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+				<div class="popup_con_bg popup01"></div>
+				<div class="popup_con popup01" role="alert"></div>
+
+				<div class="popup_con_bg popup02"></div>
+				<div class="popup_con popup02" role="alert"></div>
+
+				<div class="popup_con_bg popup03"></div>
+				<div class="popup_con popup03" role="alert"></div>
+
+				<div class="popup_con_bg popup04"></div>
+				<div class="popup_con popup04" role="alert"></div>
+
+
+				<!-- 팝업 -->
+				<div class="text_popup_con H_311_13_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0" id="popup-title">
+							<span>
+								해설
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								그림은 구역 A~D를 점으로, 다리를 선으로 모델링하여 그린 그래프이다.<br />
+								그래프에서 A, B, C는 홀수점이고, 홀수점이 3개 이상이면 한붓그리기가 불가능하다.
+							</span>
+							<div class="img H_311_13_pop_01_img01">
+								<img src="./img/H_311_13_pop_01_img01.png" alt="그림은 구역 A~D를 점으로, 다리를 선으로 모델링하여 그린 그래프이다.">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //팝업 -->
+
+			</div>
+		</main>
+
+	</div>
+<script>
+$(document).ready(function () {
+	let tryCount = 0;
+
+	// 팝업 닫기
+	$(".H_311_13_con .text_popup_con .a_btn").on("click", function () {
+		$(this).parents(".text_popup_con").hide();
+	});
+
+	const labels = document.querySelectorAll('.btns > label > input'); // [250602] : 수정
+
+	// 확인하기 버튼
+	$(".H_311_13_con .btn_confirm").on("click", function () {
+		const selected = $(".btns input[type=radio]:checked");
+
+		if (selected.length === 0) {
+			$(".H_311_13_con .popup_con_bg.popup03").fadeIn();
+			$(".H_311_13_con .popup_con.popup03").fadeIn();
+			setTimeout(function(){
+				$(".H_311_13_con .popup_con_bg.popup03").fadeOut();
+				$(".H_311_13_con .popup_con.popup03").fadeOut();
+			}, 1000);
+			return;
+		}
+
+		const isCorrect = selected.hasClass("btn_x");
+
+		if (isCorrect) {
+			tryCount = 0;
+
+			// 정답 팝업 표시
+			$(".popup_con_bg.popup02, .popup02").fadeIn();
+
+			setTimeout(function () {
+				// 정답 팝업 숨기기
+				$(".popup_con_bg.popup02, .popup02").fadeOut();
+
+				// 해설 팝업 보여주기
+				$("#tooltip01").fadeIn();
+
+				// 버튼 상태 전환
+				$('.btn_confirm').hide();
+				$('.btn_reset').show();
+			}, 1000);
+		} else {
+			tryCount++;
+
+			$(".popup_con_bg.popup01, .popup01").fadeIn();
+			
+			setTimeout(function () {
+				$(".popup_con_bg.popup01, .popup01").fadeOut();
+
+				// 오답 2회일 경우에만 해설 팝업 노출
+				if (tryCount === 2) {
+					$("#tooltip01").fadeIn();
+					$('.btn_confirm').hide();
+					$('.btn_reset').show();
+					labels[1].checked=true; // [250602] : 수정
+				}
+			}, 1000);
+		}
+	});
+
+	$(".H_311_13_con .btn_reset").on("click", function () {
+		// 라디오 선택 해제
+		$(".btns input[type=radio]").prop("checked", false);
+
+		// 버튼 상태 초기화
+		$('.btn_confirm').show();
+		$('.btn_reset').hide();
+		$("#tooltip01").fadeOut();
+
+		// 다시 시도 카운트 초기화
+		tryCount = 0;
+	});
+});
+</script>
+
+<script>
+	const contentId = 'H-311-13';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

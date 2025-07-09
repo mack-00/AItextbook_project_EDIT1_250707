@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>알고리즘 설계</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_325_10_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h2>
+								숫자 야구 게임
+							</h2>
+
+							<h1>
+								알고리즘 설계
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_con" tabindex="0">
+						<span>숫자 야구 게임의 규칙을 생각하며 게임 프로그램의 알고리즘을 설계해 보자. </span>
+					</div>
+					<div class="title_sub" tabindex="0">
+						<span>숫자 야구 게임의 알고리즘</span>
+					</div>
+					<div class="list_con list-ver">
+						<ul>
+							<li tabindex="0" class="on">
+								<div class="contents_con">
+									<div class="num_con" tabindex="0">
+										<span>1</span>
+									</div>
+									<div class="text_con first" tabindex="0">
+										<span>게임을 시작하면 게임에 참여할 플레이어 인원수를 입력받는다.</span>
+									</div>
+								</div>
+								<button class="after_hand" aria-label="클릭하면 글씨가 보이고 다음 순서로 이동합니다."></button>
+							</li>
+							<li tabindex="0">
+								<div class="contents_con">
+									<div class="num_con" tabindex="0">
+										<span>2</span>
+									</div>
+									<div class="text_con" tabindex="0">
+										<span>0~9 사이의 랜덤한 숫자 3개가 중복 없이 배정된다.</span>
+									</div>
+									<div class="expl_con" tabindex="0">
+										<div class="title_con">
+											<span>예</span>
+										</div>
+										<span>4, 8, 6</span>
+									</div>
+								</div>
+								<button class="after_hand" aria-label="클릭하면 글씨가 보이고 다음 순서로 이동합니다."></button>
+							</li>
+							<li tabindex="0">
+								<div class="contents_con">
+									<div class="num_con" tabindex="0">
+										<span>3</span>
+									</div>
+									<div class="text_con" tabindex="0">
+										<span>각 플레이어는 자기 순서에 자신의 숫자를 추측하고 그에 대한 피드백을 받는다.</span>
+									</div>
+									<div class="expl_con">
+										<div class="title_con" tabindex="0">
+											<span>예</span>
+										</div>
+										<span>0 Strike, 2 Ball</span>
+									</div>
+								</div>
+								<button class="after_hand" aria-label="클릭하면 글씨가 보이고 다음 순서로 이동합니다."></button>
+							</li>
+							<li tabindex="0">
+								<div class="contents_con">
+									<div class="num_con" tabindex="0">
+										<span>4</span>
+									</div>
+									<div class="text_con" tabindex="0">
+										<span>모든 숫자를 정확하게 맞춘 플레이어가 있을 때까지 <span class="num_con"><span>3</span></span>을 반복한다.<br>
+											모든 숫자를 맞춘 플레이어가 있다면, 승리한 플레이어의 이름을 출력하고 게임을 종료한다.</span>
+									</div>
+								</div>
+								<button class="after_hand" aria-label="클릭하면 글씨가 보입니다."></button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
+
+	</div>
+
+	<script>
+		$(".H_325_10_con .list_con > ul > li .after_hand").on("click", function () {
+			const $li = $(this).closest("li");
+
+			// 해당 li 안의 .text_con에 .on 추가
+			$li.find(".text_con").addClass("on");
+
+			// 버튼 비활성화 처리
+			$(this).addClass("off");
+
+			// 다음 li에 .on 클래스 추가
+			$li.next("li").addClass("on");
+		});
+
+	</script>
+
+	<script>
+		const contentId = 'H-325-10';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

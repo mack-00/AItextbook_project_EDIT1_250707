@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	<link rel="stylesheet" href="./css/menu.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="menu_box_top">
+		<div class="menu">
+			<div class="menu_left">
+				<i class="fa-solid fa-bars"></i>
+				<div class="menu_left_text">
+					<p>Ⅱ. 데이터 > </p>
+					<p>[대단원 학습] Ⅰ. 디지털 데이터의 압축과 암호화</p>
+				</div>
+			</div>
+			<div class="menu_right">
+				<div class="menu_right_insole menu_right_insole_off menu_right_item active">
+					<div class="circle"></div>
+					<p>인솔모드 OFF</p>
+				</div>
+				<div class="menu_right_insole menu_right_insole_on menu_right_item">
+					<p>인솔모드 ON</p>
+					<div class="circle"></div>
+				</div>
+				<div class="menu_right_connection menu_right_item">접속 현황</div>
+				<div class="menu_right_exit menu_right_item">
+					<p>나가기</p>
+					<i class="fa-solid fa-right-from-bracket"></i>
+				</div>
+			</div>
+		</div>
+		<div class="connection_status_bg">
+		</div>
+		<div class="connection_status">
+			<div class="connection_status_content">
+				<div class="connection_status_top">
+					<div>
+						<p>접속현황</p>
+						<p><span>0</span>/5 명</p>
+					</div>
+					<div class="x_button">x</div>
+				</div>
+				<br>
+				<div class="connection_status_bottom">
+					<p><i class="fa-solid fa-exclamation"></i> 현재 수업에 참여한 (<span>접속중</span> 접속자)를 확인하고 접속한 학생들이 어떤 콘텐츠를 학습하고 있는지 (<i class="fa-solid fa-map"></i>학습위치)를 확인할 수 있어요.</p>
+					<ul class="connection_status_bottom_list">
+						<li><span class="not_connected">미접속</span> <span>56</span> 씨고학056</li>
+						<li><span class="not_connected">미접속</span> <span>57</span> 씨고학057</li>
+						<li><span class="not_connected">미접속</span> <span>58</span> 씨고학058</li>
+						<li><span class="not_connected">미접속</span> <span>59</span> 씨고학059</li>
+						<li><span class="not_connected">미접속</span> <span>60</span> 씨고학060</li>
+					</ul>
+				</div>
+				<div class="connection_status_commit">
+					<p>확인</p>
+				</div>
+			</div>
+		</div>
+		<script>
+			$('.menu_right_insole_off').click(function(){
+				$('.menu_right_insole_off').removeClass('active');
+				$('.menu_right_insole_on').addClass('active');
+			})
+			$('.menu_right_insole_on').click(function(){
+				$('.menu_right_insole_on').removeClass('active');
+				$('.menu_right_insole_off').addClass('active');
+			})
+			
+			function handleResize() {
+    		    if (window.innerWidth <= 1000) {
+    		        enableSwiper();
+    		    } else {
+    		        disableSwiper();
+    		    }
+    		}
+			window.addEventListener('load', handleResize);
+    		window.addEventListener('resize', handleResize);
+    		$(document).on("load",function(){
+    		    $(".connection_status_bg").addClass("aa")
+    		    $(".connection_status").addClass("aa")
+    		    $(".connection_status_content").addClass("aa")
+    		})
+    		$(document).on("click",".menu_right_connection",function(){
+    		    $(".connection_status_bg").removeClass("aa")
+    		    $(".connection_status").removeClass("aa")
+    		    $(".connection_status_content").removeClass("aa")
+    		})
+			$(document).on("click","connection_status",function(){
+    		    $(".connection_status_bg").addClass("aa")
+    		    $(".connection_status").addClass("aa")
+    		    $(".connection_status_content").addClass("aa")
+    		})
+    		$(document).on("click",".x_button",function(){
+    		    $(".connection_status_bg").addClass("aa")
+    		    $(".connection_status").addClass("aa")
+    		    $(".connection_status_content").addClass("aa")
+    		})
+			$('.x_button').click(function(){
+				$('.connection_status_bg').addClass("aa")
+			})
+		</script>
+	</div>
+
+    <div class="menu_box_bottom">
+		<div class="menu">
+			<div class="menu_left">
+				<button class="minus">-</button>
+				<p>화면 크기</p>
+				<button class="plus">+</button>
+			</div>
+			<div class="menu_middle">
+				<div class="menu_middle_left">< 이전 수업</div>
+				<div class="menu_middle_middle">
+					<p class="present_page">1</p>
+					<span>/</span>
+					<span>57</span>
+				</div>
+				<div class="menu_middle_right">다음 ></div>
+			</div>
+			<div class="menu_right">
+				<div class="menu_btn">
+					<div class="toolbar_set">
+						<img src="img/toolbar_set.svg" alt="">
+						<p>도구 모음</p>
+					</div>
+					<i class="fa-solid fa-chevron-down"></i>
+					<i class="fa-solid fa-x"></i>
+				</div>
+				<ul class="menu_list">
+					<li>
+						<img src="img/toolbar_set.svg" alt="">
+						<p>판서 모드</p>
+					</li>
+					<li>
+						<img src="img/toolbar_set.svg" alt="">
+						<p>펜툴</p>
+					</li>
+					<li>
+						<img src="img/toolbar_set.svg" alt="">
+						<p>타이머</p>
+					</li>
+					<li>
+						<img src="img/toolbar_set.svg" alt="">
+						<p>자료 추가</p>
+					</li>
+					<li>
+						<img src="img/toolbar_set.svg" alt="">
+						<p>채팅</p>
+					</li>
+					<li>
+						<img src="img/toolbar_set.svg" alt="">
+						<p>챗봇</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script>
+			
+			$(".menu_btn").click(function(){
+				$(".menu_list").stop().slideToggle()
+				$(".fa-chevron-down").stop().toggle()
+				$(".fa-x").stop().toggle()
+			})
+   			$('.menu_middle_right').on('click', function() {
+   			  window.location.href = 'H-2-02.html';
+   			});
+			$('.menu_right_exit').on('click', function() {
+				window.location.href = 'https://qalms001.aiktbook.com/teacher/home'; 
+   			});
+
+		</script>
+	</div>
+</body>
+</html>

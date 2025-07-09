@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>스스로 해결하기 - 은하의 종류 분류</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/swiper.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_424_12_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<div class="text" tabindex="2">스스로 해결하기</div>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con">
+							<h1 tabindex="2">
+								은하의 종류 분류 인공지능 모델 만들기
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="3">
+							<span>
+								세 가지 은하 이미지를 활용해 은하의 종류를 분류하는 인공지능을 만들어 보자.
+							</span>
+						</div>
+					</div>
+
+					<div class="info02_con">
+						<div class="title_con" tabindex="4">
+							<div class="dot" aria-hidden="true"></div>
+
+							<span>
+								은하의 종류 분류 인공지능 모델 만들기
+							</span>
+						</div>
+
+						<div class="contents_con">
+							<div class="nav">
+								<ul>
+									<li>
+										<button class="on" type="button" aria-controls="info01" role="tab" aria-selected="true" tabindex="5">
+											<span>
+												1. 데이터 수집 및 <br/>&nbsp;&nbsp;&nbsp;&nbsp;전처리하기
+											</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" aria-controls="info02" role="tab" aria-selected="false" tabindex="7">
+											<span>
+												2. 모델 학습하기
+											</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" aria-controls="info03" role="tab" aria-selected="false" tabindex="9">
+											<span>
+												3. 모델 평가하기
+											</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+
+							<div class="contents_con">
+								<div class="contents_div info01">
+									<div class="video_con">
+										<div class="contents_con">
+											<div class="video-container">
+												<video id="player01" data-content-id="H-424-12__01" controls crossorigin tabindex="6"></video>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="contents_div info02">
+									<div class="video_con">
+										<div class="contents_con">
+											<div class="video-container">
+												<video id="player02" data-content-id="H-424-12__02" controls crossorigin tabindex="8"></video>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="contents_div info03">
+									<div class="video_con">
+										<div class="contents_con">
+											<div class="video-container">
+												<video id="player03" data-content-id="H-424-12__03" controls crossorigin tabindex="10"></video>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script>
+				// 메뉴 클릭 시
+			$(document).on("click",".H_424_12_con > .contents_con > .contents_con > .info02_con > .contents_con > .nav > ul > li button",function(){
+				// 기존 탭 활성화 처리
+				$(".H_424_12_con > .contents_con > .contents_con > .info02_con > .contents_con > .nav > ul > li button").removeClass("on");
+				$(this).addClass("on");
+
+				// 모든 영상 일시정지
+				$("video").each(function() {
+					if (!this.paused && !this.ended) {
+						this.pause();
+					}
+				});
+
+				// 콘텐츠 전환
+				$(".H_424_12_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div").hide();
+				$(".H_424_12_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div."+$(this).attr("aria-controls")).show();
+			});
+			
+		</script>
+		<script>
+				const videoEl = document.querySelector('video[data-content-id]');
+				const contentId = videoEl?.dataset.contentId;
+		</script>
+		
+		<script>
+			const videoList = [
+				{ 
+					id: "H-424-12__01",
+					src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-424-12_01_4000k.mp4,H-424-12_01_2000k.mp4,H-424-12_01_1000k.mp4,lang/kor/H-424-12_01.vtt,.smil/master.m3u8" 
+				},
+				{ 
+					id: "H-424-12__02",
+					src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-424-12_02_4000k.mp4,H-424-12_02_2000k.mp4,H-424-12_02_1000k.mp4,lang/kor/H-424-12_02.vtt,.smil/master.m3u8" 
+				},
+				{ 
+					id: "H-424-12__03",
+					src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-424-12_03_4000k.mp4,H-424-12_03_2000k.mp4,H-424-12_03_1000k.mp4,lang/kor/H-424-12_03.vtt,.smil/master.m3u8" 
+				}
+			];
+		</script>
+		<script type="text/javascript" src="./js/xapi.video.js"></script>
+
+
+	</div>
+</body>
+</html>

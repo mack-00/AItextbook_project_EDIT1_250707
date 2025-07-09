@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>개념 학습 - 로지스틱 회귀</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_422_09_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" >
+							<h2 tabindex="0">
+								분류 알고리즘
+							</h2>
+
+							<h1 tabindex="0">
+								로지스틱 회귀
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp; <b>로지스틱 회귀</b>는 주어진 입력 데이터를 바탕으로 결과가 특정 클래스에 속할 확률을 예측하는 알고리즘이다. 로지스틱 회귀는 S자 모양의 곡선을 그린 결과를 이용해 예측한다. 
+								로지스틱 함수를 이용하면 새로운 입력값이 어느 범주에 속하는지 분류할 수 있다. 
+								로지스틱 함수는 주로 <span class="link_tooltip" tabindex="0" role="button" aria-expanded="false" aria-controls="tooltip01">이진 분류</span>에서 사용되며 입력값을 0과 1 사이의 출력값으로 변환하는 역할을 한다.
+							</span>
+						</div>
+					</div>
+					<div class="info02_con">
+						<div class="title_con" tabindex="0">
+							<div class="dot" aria-hidden="true"></div>
+							<span>
+								로지스틱 회귀
+								<button  class="a_btn" type="button" aria-label="보충 자료" tabindex="0" onclick="H_422_09_popup();"></button>
+							</span>
+						</div>
+					</div>
+					<div class="video_con">
+						<div class="contents_con">
+							<div class="video-container">
+								<video id="player01" data-content-id="H-422-09" controls crossorigin></video>
+							</div>
+						</div>
+					</div>
+					<div class="popup_con_bg"></div>
+					<div class="popup_con">
+						<div class="close_btn">
+							<a href="javascript:H_422_09_popup();" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="contents_con">
+							<div class="title_con">
+								<h2 tabindex="0">
+									앙상블
+								</h2>
+							</div>
+							<div class="con_wrap">
+								<div class="con_txt" tabindex="0">
+									<span>
+										&nbsp; 앙상블(ensemble)은 여러 모델을 결합하여 성능을 향상하는 방법이다. <br>
+										&nbsp; 앙상블은 단일 모델보다 더 높은 성능을 가지고 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip02">과적합</span>을 감소하여 다양한 문제에 적용할 수 있는 정확한 예측을 <br>수행한다. 앙상블의 샘플링 방식인 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip03">부트스트랩</span>의 각 샘플은 훈련 데이터에 여러 번 나타날 수 있으며 이로 인해 각 모델이 특정 훈련 데이터에 지나치게 의존하는 것을 방지하여 과적합을 줄여 준다. <br>
+										&nbsp; 앙상블 방법에 사용하는 기법 중 하나인 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip04">배깅</span>을 적용한 대표적 알고리즘은 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip05">랜덤 포레스트</span>이다. 그림과 같이 여러 개의 랜덤한 의사결정트리를 병렬로 연결해 마지막에 <br>다수결 투표를 하고 투표수가 가장 많은 클래스를 정해 <br>분류한다. 이는 여러 전문가의 의견을 모아 결정을 내리는 방식과 비슷하다.
+									</span>
+								</div>
+								<div class="con_img">
+									<img src="img/H_422_09_popup_img.png" alt="원본 데이터셋에서 랜덤 샘플링을 통해 여러 개의 의사결정 트리가 생성되고, 각 트리는 결과를 예측하고, 다수결 투표를 통해 최종 결정을 내리는 구조로, 랜덤 포레스트 분류 모델을 나타낸다.">
+									<span tabindex="0">랜덤 포레스트의 분류</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- 팝업 -->
+				<div class="text_popup_con H_422_09_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>
+								이진 분류<br>(binary classification)
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								두 개의 클래스 중 어느 클래스에 속하는지를 판별하는 분류 문제이다.
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="text_popup_con H_422_09_pop_02" id="tooltip02" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>
+								과적합(overfitting)
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								기계학습 모델이 훈련 데이터에 너무 과도하게 적합되어 새로운 데이터에 대한 성능이 저하되는 현상이다.
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="text_popup_con H_422_09_pop_03" id="tooltip03" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>
+								부트스트랩(bootstrap)
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								원본 데이터셋에서 중복을 허용하여 랜덤하게 샘플을 추출하는 방식이다.
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="text_popup_con H_422_09_pop_04" id="tooltip04" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>
+								배깅(bagging)
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								각각의 의사결정트리의 예측 결과를 종합하여 결과를 내는 방식이다.
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="text_popup_con H_422_09_pop_05" id="tooltip05" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>
+								랜덤 포레스트<br>(random forest)
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								앙상블의 대표적인 모델로 한 개의 데이터셋을 사용하여 여러 개의 트리를 만드는 방법이다. 의사결정트리가 한 개의 나무라면 랜덤 포레스트는 여러 개의 나무들이 모인 숲이라고 할 수 있다.
+							</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</main>
+
+	</div>
+	<script>
+		// 보충자료 팝업 열기/닫기
+		function H_422_09_popup(){
+			if( $(".H_422_09_con > .contents_con > .contents_con > .popup_con").css("display") == "none" ){
+				$(".H_422_09_con > .contents_con > .contents_con > .popup_con_bg").fadeIn();
+				$(".H_422_09_con > .contents_con > .contents_con > .popup_con").fadeIn();
+			}else{
+				$(".H_422_09_con > .contents_con > .contents_con > .popup_con_bg").fadeOut();
+				$(".H_422_09_con > .contents_con > .contents_con > .popup_con").fadeOut();
+			}
+		}
+		// 팝업열기
+		$(".H_422_09_con .link_tooltip").on("click", function(){
+			var popSelector = "#" + $(this).attr("aria-controls");
+			if($(popSelector).css("display") == "none") {
+				$(".H_422_09_con .text_popup_con").not(popSelector).hide();
+				$(popSelector).show();
+			}else {
+				$(popSelector).hide();
+			}
+		});
+		// 팝업닫기
+		$(".H_422_09_con .text_popup_con .a_btn").on("click", function(){
+			$(this).parents(".text_popup_con").hide();
+		});
+	</script>
+
+	<script>
+		const contentId = 'H-422-09';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+	<script>
+		const videoList = [
+			{ 
+				id: "H-422-09",
+				src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-422-09_4000k.mp4,H-422-09_2000k.mp4,H-422-09_1000k.mp4,lang/kor/H-422-09.vtt,.smil/master.m3u8" 
+			}
+		];
+	</script>
+	<script type="text/javascript" src="./js/xapi.video.js"></script>
+	
+</body>
+</html>

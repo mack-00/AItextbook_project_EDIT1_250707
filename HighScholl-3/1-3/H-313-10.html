@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>일상생활 속 탐색의 활용</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<link rel="stylesheet" href="GoogleTranslate.css"> 
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	<script type="text/javascript" src="GoogleTranslate.js"></script> 
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="https://acv001.aiktbook.com/api/static/message-channel-iframe.js"></script>
+
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_313_10_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								일상생활 속 탐색의 활용
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01 fw_600">
+						순차 탐색과 이진 탐색에 대한 일상생활 사례를 조사하여 적어 보자.
+					</div>
+
+					<form id="frm1" onsubmit="return false">
+						<input type="hidden" name="aidt_pageTitle" value="일상생활 속 탐색의 활용">
+
+						<div class="both_wrap">
+							<div class="form_wrap">
+								<div class="tit f_center">순차 탐색</div>
+								<div class="exam_textarea">
+									<div class="exam_tit">
+										<span class="exam_icon">예시</span>
+										<p>여러 장의 지폐가 뒤섞인 상황에서 5,000원 자리를 찾을 때, 한 장씩 넘겨가며 금액을 확인하다가 5,000원 지폐를 발견<br>하면 탐색을 멈춘다.</p>
+									</div>
+									<div class="exam_con">
+										<input type="hidden" name="aidt_examId" value="1">
+										<input type="hidden" name="aidt_exam" value="순차 탐색">
+										<input type="hidden" name="aidt_answer" value="">
+										<input type="hidden" name="aidt_mcqYn" value="N">
+										<input type="hidden" name="aidt_type" value="narrative">
+										<textarea class="textarea01" placeholder="내용을 입력해 보자." name="aidt_input"></textarea>
+									</div>
+								</div>
+							</div>
+
+							<div class="form_wrap">
+								<div class="tit f_center">이진 탐색</div>
+								<div class="exam_textarea">
+									<div class="exam_tit">
+										<span class="exam_icon">예시</span>
+										<p>교과서에서 특정 페이지를 빠르게 찾을 때, 절반 정도 펼쳐서 페이지 수를 확인하는 것을 반복하다가 원하는 페이지를 <br>찾으면 탐색을 멈춘다.</p>
+									</div>
+									<div class="exam_con">
+										<input type="hidden" name="aidt_examId" value="2">
+										<input type="hidden" name="aidt_exam" value="탐색">
+										<input type="hidden" name="aidt_answer" value="">
+										<input type="hidden" name="aidt_mcqYn" value="N">
+										<input type="hidden" name="aidt_type" value="narrative">
+										<textarea class="textarea01" placeholder="내용을 입력해 보자." name="aidt_input"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="btn_con">
+							<button id="btn1" class="a_btn a_btn01" type="button" aria-label="제출하기" tabindex="0">제출하기</button>
+							<button id="btn1_1" class="a_btn a_btn02" type="button" aria-label="다시 제출하기" style="display:none;" tabindex="0">다시 제출하기</button>
+						</div>
+						
+
+						<div class="popup_con_bg popup01"></div>
+						<div class="popup_con popup01" role="alert"></div>
+
+						<div class="popup_con_bg popup02"></div>
+						<div class="popup_con popup02" role="alert"></div>
+
+						<div class="popup_con_bg popup03"></div>
+						<div class="popup_con popup03" role="alert"></div>
+
+					</form>
+
+				</div>
+			</div>
+		</main>
+
+	</div>
+<script>
+	const child = new ClientAPI(); //본 코드는 데이터 전송 페이지마다 각각 별도로 들어있어야 하고, 내부 스크립트의 최상단에 위치해야함. 
+
+	//제출 여부 받아서 버튼 제어
+	child.receiveMessage((data)=>{
+		if(data.submitYn === 'Y'){
+			document.getElementById('btn1_1').style.display = ""; //수정하기 버튼 표시
+			document.getElementById('btn1').style.display = "none"; //제출 버튼 숨기기
+		}
+	});
+
+	// [제출하기]btn click 시 form#frm1 전송
+	const btn1 = document.getElementById('btn1'); //제출 버튼
+	btn1.addEventListener('click', () => {
+		sendFormData()
+	});
+
+	// [수정하기]btn click 시 form#frm1 전송
+	const btn1_1 = document.getElementById('btn1_1'); //수정 버튼 
+	btn1_1.addEventListener('click', () => {
+		sendFormData()
+	});
+
+	
+
+	// 제출하기
+	function sendFormData(){
+		// 텍스트 영역이 모두 채워졌는지 확인
+		const textarea1Filled = $("textarea[name='aidt_input']").eq(0).val().trim() !== "";
+		const textarea2Filled = $("textarea[name='aidt_input']").eq(1).val().trim() !== "";
+		
+		// 조건 확인 및 적절한 함수 호출
+		if (!textarea1Filled || !textarea2Filled) {
+			btn_event01(); // 텍스트 영역이 하나라도 비어있는 경우
+		} else {
+			btn_event02(); // 모든 항목이 채워진 경우
+		}
+	}
+
+	// 제출하기 - 내용 없음
+	function btn_event01(){
+		$(".H_313_10_con .btn_con .a_btn").blur();
+		$(".H_313_10_con .popup_con_bg.popup01").fadeIn();
+		$(".H_313_10_con .popup_con.popup01").fadeIn();
+		
+		setTimeout(function(){
+			$(".H_313_10_con .popup_con_bg.popup01").fadeOut();
+			$(".H_313_10_con .popup_con.popup01").fadeOut();
+		}, 1000);
+	}
+
+	// 제출하기 - 내용 있음
+	function btn_event02(){
+		$(".H_313_10_con .btn_con .a_btn").blur();
+		$(".H_313_10_con .popup_con_bg.popup02").fadeIn();
+		$(".H_313_10_con .popup_con.popup02").fadeIn();
+
+		// 버튼 전환
+			$("#btn1").hide();
+		$("#btn1_1").show();
+
+		// 실제 데이터 전송
+		child.sendFormData('frm1');
+
+		setTimeout(function(){
+			$(".H_313_10_con .popup_con_bg.popup02").fadeOut();
+			$(".H_313_10_con .popup_con.popup02").fadeOut();
+		}, 1000);
+	}
+
+
+	
+</script>	
+
+<script>
+	const contentId = 'H-313-10';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+</body>
+</html>

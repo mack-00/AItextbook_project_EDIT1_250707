@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>원격 제어가 가능한 스마트 조명 설계 및 구현하기</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<style>
+		.drop-zone {
+            transition: all 0.2s ease;
+        }
+
+        .drop-zone.dragover {
+            background-color: #e9ecef;
+            border-color: #007bff;
+        }
+
+        .drop-zone.occupied {
+            border-style: solid;
+        }
+		
+        .draggable {
+            cursor: move;
+            cursor: -webkit-grab;
+            cursor: grab;
+            user-select: none;
+			touch-action: none;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-webkit-tap-highlight-color: transparent;
+			position: relative;
+			display: inline-block;
+			-webkit-user-drag: none;
+			-khtml-user-drag: none;
+			-moz-user-drag: none;
+			-o-user-drag: none;
+        }
+
+        .draggable.dragging {
+			opacity: 0.8;
+			cursor: -webkit-grabbing;
+			cursor: grabbing;
+			z-index: 1000;
+			pointer-events: none;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_123_08_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h2>
+								원격 제어가 가능한 스마트 조명 설계 및 구현하기
+							</h2>
+
+							<h1>
+								문제 이해와 분석
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+
+					
+					<div class="num_title">
+						
+						<p>
+							<strong class="fw_700">[문제 이해와 분석]</strong> 제시된 문제 상황을 확인하고, 문제 해결을 위해 스마트 조명을 설계하는 과정에서 빈칸에 알맞은 말을 넣어 보자.
+						</p>
+					</div>
+
+					<!-- table -->
+					<div class="tab_con">
+						<table role="grid" aria-label="원격 제어가 가능한 스마트 조명 설계 및 구현하기">
+							<caption>원격 제어가 가능한 스마트 조명 설계 및 구현하기</caption>
+							<tbody>
+								<tr>
+									<th class="title_td th01" scope="row">
+										<span>
+											문제 상황
+										</span>
+									</th>
+									<td class="info_td">
+										<span>집 조명을 켜고 외출하는 경우가 종종 발생함.</span>
+									</td>
+								</tr>
+								<tr>
+									<th class="title_td" scope="row">
+										<span>
+											초기 상태
+										</span>
+									</th>
+									<td class="info_td">
+										<span>조명이 수동으로 제어되는 상태</span>
+									</td>
+								</tr>
+								<tr>
+									<th class="title_td" scope="row">
+										<span>
+											현재 상태
+										</span>
+									</th>
+									<td class="info_td">
+										<span>가끔 조명을 끄지 않고 나가는 상황이 발생함.</span>
+									</td>
+								</tr>
+								<tr>
+									<th class="title_td" scope="row">
+										<span>
+											목표 상태
+										</span>
+									</th>
+									<td class="info_td">
+										<div class="blank_con drop-zone" role="region" aria-label="첫번째 답변 영역" data-position="1" tabindex="0">
+											<span class="sr-only">답변을 이 곳에 놓으세요</span>
+										</div>
+									</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+					<!-- //table -->
+
+
+					<div class="answer_con">
+						<div class="title_con" tabindex="0">
+							<span>
+								빈칸에 알맞은 말을 옮겨 보자.
+							</span>
+						</div>
+
+						<div class="contents_con options-container" role="region" aria-label="사용 가능한 답변들">
+							<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="1" tabindex="0">
+								조명을 원격으로 제어할 수 있음.
+							</span>
+
+							<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="2" tabindex="0">
+								조명을 끄는 기능을 제거함.
+							</span>
+
+							<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="2" tabindex="0">
+								조명을 밤에만 자동으로 켜지도록 설정함.
+							</span>
+
+							<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="2" tabindex="0">
+								조명을 더 밝게 만듦.
+							</span>
+						</div>
+
+						<div class="btn_con">
+							<button  class="a_btn a_btn01 check-btn" type="button" aria-label="확인하기" tabindex="0">확인하기</button>
+							<button  class="a_btn a_btn02 retry-btn" type="button" aria-label="다시 하기" tabindex="0">다시 하기</button>
+						</div>
+					</div>
+
+					<div class="popup_con_bg popup01"></div>
+					<div class="popup_con popup01" role="alert"></div>
+
+					<div class="popup_con_bg popup02"></div>
+					<div class="popup_con popup02" role="alert"></div>
+
+					<div class="popup_con_bg popup03"></div>
+					<div class="popup_con popup03" role="alert"></div>
+
+					<div class="popup_con_bg popup04"></div>
+					<div class="popup_con popup04" role="alert"></div>
+					
+				</div> 
+			</div>
+		</main>
+
+	</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+		const draggables = document.querySelectorAll('.draggable');
+		const dropZones = document.querySelectorAll('.drop-zone');
+		const optionsContainer = document.querySelector('.options-container');
+
+		let draggedElement = null;
+		let isDragging = false;
+		let initialX = 0, initialY = 0;
+		let xOffset = 0, yOffset = 0;
+
+		let adapt_answer = 0;
+		let correct_answer = 0;
+		let try_check = 0;
+
+		// 요소 원위치
+		const returnItemsToContainer = () => {
+			dropZones.forEach(zone => {
+			const child = zone.querySelector('.draggable');
+			if (child) {
+				optionsContainer.appendChild(child);
+				zone.classList.remove('occupied');
+			}
+			});
+			adapt_answer = 0;
+			correct_answer = 0;
+		};
+
+		const placeItemsInCorrectPositions = () => {
+			returnItemsToContainer();
+			document.querySelectorAll('.draggable').forEach(item => {
+			const target = [...dropZones].find(z => z.dataset.position === item.dataset.answer);
+			if (target) {
+				target.appendChild(item);
+				target.classList.add('occupied');
+			}
+			});
+		};
+			let hasMoved = false;
+
+			// 수정된 dragStart
+			function dragStart(e) {
+				if (e.type === "touchstart") {
+					initialX = e.touches[0].clientX;
+					initialY = e.touches[0].clientY;
+					draggedElement = e.target;
+				} else {
+					initialX = e.clientX;
+					initialY = e.clientY;
+					draggedElement = e.target;
+				}
+
+				if (draggedElement.classList.contains('draggable')) {
+					hasMoved = false; // 움직였는지 여부 초기화
+					isDragging = true;
+					draggedElement.classList.add('dragging');
+					
+					const rect = draggedElement.getBoundingClientRect();
+					xOffset = initialX - rect.left;
+					yOffset = initialY - rect.top;
+				}
+			}
+
+			function drag(e) {
+				if (isDragging && draggedElement) {
+					e.preventDefault();
+
+					let currentX = (e.type === "touchmove") ? e.touches[0].clientX : e.clientX;
+					let currentY = (e.type === "touchmove") ? e.touches[0].clientY : e.clientY;
+
+					// 움직임이 발생했음을 체크
+					if (Math.abs(currentX - initialX) > 5 || Math.abs(currentY - initialY) > 5) {
+						hasMoved = true;
+					}
+
+					const newX = currentX - xOffset;
+					const newY = currentY - yOffset;
+
+					draggedElement.style.position = 'fixed';
+					draggedElement.style.top = `${newY}px`;
+					draggedElement.style.left = `${newX}px`;
+
+					// dropzone 강조 생략
+				}
+			}
+
+			function dragEnd(e) {
+				if (!isDragging || !draggedElement) return;
+
+				// ✅ 움직이지 않았으면 아무것도 안 하고 초기화만
+				if (!hasMoved) {
+					draggedElement.classList.remove('dragging');
+					draggedElement.style = '';
+					isDragging = false;
+					draggedElement = null;
+					return;
+				}
+
+				// 원래 drop 처리
+				const dropTarget = document.elementFromPoint(
+					e.type === "touchend" ? e.changedTouches[0].clientX : e.clientX,
+					e.type === "touchend" ? e.changedTouches[0].clientY : e.clientY
+				);
+
+				if (dropTarget) {
+					const dropZone = dropTarget.closest('.drop-zone');
+					if (dropZone) {
+						const existing = dropZone.querySelector('.draggable');
+						
+						// 기존 버튼이 있으면 원래 자리로
+						if (existing) {
+							optionsContainer.appendChild(existing);
+						}
+
+						dropZone.appendChild(draggedElement);
+						dropZone.classList.add('occupied');
+					} else {
+						optionsContainer.appendChild(draggedElement);
+					}
+				} else {
+					optionsContainer.appendChild(draggedElement);
+				}
+
+				draggedElement.classList.remove('dragging');
+				draggedElement.style = '';
+				isDragging = false;
+				draggedElement = null;
+			}
+
+		draggables.forEach(el => {
+			el.addEventListener('mousedown', dragStart);
+			el.addEventListener('touchstart', dragStart, { passive: false });
+			el.addEventListener('touchmove', drag, { passive: false });
+			el.addEventListener('touchend', dragEnd, { passive: false });
+		});
+
+		document.addEventListener('mousemove', drag);
+		document.addEventListener('mouseup', dragEnd);
+
+		const checkButton = document.querySelector('.check-btn');
+		checkButton.addEventListener('click', () => {
+			dropZones.forEach(zone => {
+			const answer = zone.querySelector('.draggable');
+			if (answer) {
+				adapt_answer++;
+				if (answer.dataset.answer === zone.dataset.position) correct_answer++;
+			}
+			});
+
+			if (adapt_answer !== 1) {
+			$('.popup01').fadeIn().delay(1000).fadeOut();
+			} else {
+			try_check++;
+			if (correct_answer === 1) {
+				$('.popup04').fadeIn().delay(1000).fadeOut();
+				$('.check-btn').hide();
+				$('.retry-btn').show();
+			} else if (try_check === 1) {
+				$('.popup02').fadeIn().delay(1000).fadeOut();
+				setTimeout(() => returnItemsToContainer(), 500);
+			} else if (try_check === 2) {
+				$('.popup03').fadeIn().delay(1000).fadeOut();
+				$('.check-btn').hide();
+				$('.retry-btn').show();
+				try_check = 0;
+				setTimeout(() => placeItemsInCorrectPositions(), 500);
+			}
+			}
+
+			adapt_answer = 0;
+			correct_answer = 0;
+		});
+
+		document.querySelector('.retry-btn').addEventListener('click', () => {
+			try_check = 0;
+			returnItemsToContainer();
+			$('.check-btn').show();
+			$('.retry-btn').hide();
+		});
+});
+</script>
+
+<script>
+	const contentId = 'H-123-08';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+</body>
+</html>

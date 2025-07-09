@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>탐색 알고리즘의 수행 시간 비교</title>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+
+<body>
+	<div id="wrap">
+
+		<main class="H_313_08_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con">
+							<h1>
+								탐색 알고리즘의 수행 시간 비교
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+
+					<div class="text_01 fw_600">
+						'이름' 리스트에서 순차 탐색과 이진 탐색을 이용하여 데이터를 탐색해 보고, 비교 횟수를 적어 보자.
+					</div>
+
+					<div class="both_wrap">
+						<!-- table -->
+						<div class="tab_con">
+							<table>
+								<caption>이름 목록</caption>
+								<colgroup>
+									<col class="w80">
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" colspan="2">이름</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row" class="title_td"><span>0</span></th>
+										<td class="info_td"><span>강수빈</span></td>
+									</tr>
+									<tr>
+										<th scope="row" class="title_td"><span>1</span></th>
+										<td class="info_td"><span>김서연</span></td>
+									</tr>
+									<tr>
+										<th scope="row" class="title_td"><span>2</span></th>
+										<td class="info_td"><span>김지우</span></td>
+									</tr>
+									<tr>
+										<th scope="row" class="title_td"><span>3</span></th>
+										<td class="info_td"><span>김하은</span></td>
+									</tr>
+									<tr>
+										<th scope="row" class="title_td"><span>4</span></th>
+										<td class="info_td"><span>박민서</span></td>
+									</tr>
+									<tr>
+										<th scope="row" class="title_td"><span>5</span></th>
+										<td class="info_td"><span>윤예은</span></td>
+									</tr>
+									<tr>
+										<th scope="row" class="title_td"><span>6</span></th>
+										<td class="info_td"><span>이서준</span></td>
+									</tr>
+									<tr>
+										<th scope="row" class="title_td"><span>7</span></th>
+										<td class="info_td"><span>이효주</span></td>
+									</tr>
+									<tr>
+										<th scope="row" class="title_td"><span>8</span></th>
+										<td class="info_td"><span>최지민</span></td>
+									</tr>
+									<tr>
+										<th scope="row" class="title_td"><span>9</span></th>
+										<td class="info_td"><span>한윤서</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table -->
+
+						<div class="round_box f_center">
+
+							<table class="tbl_simple">
+								<caption>순차 탐색과 이진 탐색을 이용하여 데이터를 탐색해 보고, 비교 횟수를 적어 보자.</caption>
+								<thead>
+									<tr>
+										<th>구분</th>
+										<th>순차 탐색</th>
+										<th>이진 탐색</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>'강수빈'을 탐색하는 경우</th>
+										<td><label><input type="text" data-answer="1" placeholder="입력" /></label></td>
+										<td><label><input type="text" data-answer="3" placeholder="입력" /></label></td>
+									</tr>
+									<tr>
+										<th>'박민서'를 탐색하는 경우</th>
+										<td><label><input type="text" data-answer="5" placeholder="입력" /></label></td>
+										<td><label><input type="text" data-answer="1" placeholder="입력" /></label></td>
+									</tr>
+									<tr>
+										<th>'이서준'을 탐색하는 경우</th>
+										<td><label><input type="text" data-answer="7" placeholder="입력" /></label></td>
+										<td><label><input type="text" data-answer="4" placeholder="입력" /></label></td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+					</div>
+
+					<div class="btn_con">
+						<button type="button" class="a_btn btn_confirm" aria-label="확인하기">확인하기</button>
+						<button type="button" class="a_btn btn_rebtn" style="display: none;" aria-label="다시 하기">다시 하기</button>
+					</div>
+
+				</div>
+
+				<!-- 오답이 었을때 -->
+				<div class="popup_con_bg popup01"></div>
+				<div class="popup_con popup01" role="alert"></div>
+
+
+				<!-- 오답이 었을때 -->
+				<div class="popup_con_bg popup04"></div>
+				<div class="popup_con popup04" role="alert"></div>
+
+				<!-- 정답 이었을때 -->
+				<div class="popup_con_bg popup02"></div>
+				<div class="popup_con popup02" role="alert"></div>
+
+				<!-- 입력이 안되었을때 -->
+				<div class="popup_con_bg popup03"></div>
+				<div class="popup_con popup03" role="alert"></div>
+
+				<!-- 정답  popup -->
+				<div class="full_popup_wrap H_313_08_full_popup" id="fullpopup01">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title_con">
+							<span>
+								해설
+							</span>
+						</div>
+						<div class="full_popoup_content">
+							<!-- table -->
+							<div class="tab_con">
+								<table role="grid">
+									<caption>정답 확인하기</caption>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">순차 탐색</th>
+											<th scope="col">이진 탐색</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th class="title_td">'강수빈'을<br /> 탐색하는 경우</th>
+											<td class="info_td">
+												<ol>
+													<li>
+														찾는 값과 '강수빈' 비교 → 탐색 종료
+													</li>
+												</ol>
+												<div class="fc_red">: 1회</div>
+											</td>
+											<td class="info_td">
+												<ol>
+													<li>
+														mid=(0+9)/2=4(소수점 이하 버림)<br />
+														→ 찾는 값과 '박민서' 비교 → 다음 진행
+													</li>
+													<li>
+														mid=(0+3)/2=1(소수점 이하 버림)<br />
+														→ 찾는 값과 '김서연' 비교 → 다음 진행
+													</li>
+													<li>
+														min=(0+0)/2=0(소수점 이하 버림)<br />
+														→ 찾는 값과 '강수빈' 비교 → 탐색 종료
+													</li>
+												</ol>
+												<div class="fc_red">: 3회</div>
+											</td>
+										</tr>
+										<tr>
+											<th class="title_td">'박민서'를<br /> 탐색하는 경우</th>
+											<td class="info_td">
+												<ol>
+													<li>
+														찾는 값과 '강수빈' 비교 → 다음 데이터로 이동
+													</li>
+													<li>
+														찾는 값과 '김서연' 비교 → 다음 데이터로 이동
+													</li>
+													<li>
+														찾는 값과 '김지우' 비교 → 다음 데이터로 이동
+													</li>
+													<li>
+														찾는 값과 '김하은' 비교 → 다음 데이터로 이동
+													</li>
+													<li>
+														찾는 값과 '박민서' 비교 → 탐색 종료
+													</li>
+												</ol>
+												<div class="fc_red">: 5회</div>
+											</td>
+											<td class="info_td">
+												<ol>
+													<li>
+														mid=(0+9)/2=4(소수점 이하 버림)<br />
+														→ 찾는 값과 '박민서' 비교 → 탐색 종료
+													</li>
+												</ol>
+												<div class="fc_red">: 1회</div>
+											</td>
+										</tr>
+										<tr>
+											<th class="title_td">'이서준'을<br /> 탐색하는 경우</th>
+											<td class="info_td">
+												<p>1. 찾는 값과 '강수빈' 비교 → 다음 데이터로 이동</p>
+												<p>2. 찾는 값과 '김서연' 비교 → 다음 데이터로 이동</p>
+												<p class="t_center">···</p>
+												<p>7. 찾는 값과 '이서준' 비교 → 탐색 종료</p>
+												<div class="fc_red">: 7회</div>
+											</td>
+											<td class="info_td">
+												<ol>
+													<li>
+														mid=(0+9)/2=4(소수점 이하 버림)<br />
+														→ 찾는 값과 '박민서' 비교 → 다음 진행
+													</li>
+													<li>
+														mid=(5+9)/2=7(소수점 이하 버림)<br />
+														→ 찾는 값과 '이효주' 비교 → 다음 진행
+													</li>
+													<li>
+														mid=(5+6)/2=5(소수점 이하 버림)<br />
+														→ 찾는 값과 '윤예은' 비교 → 다음 진행
+													</li>
+													<li>
+														mid=(6+6)/2=6(소수점 이하 버림)<br />
+														→ 찾는 값과 '이서준' 비교 → 탐색 종료
+													</li>
+												</ol>
+												<div class="fc_red">: 4회</div>
+											</td>
+										</tr>
+
+
+									</tbody>
+								</table>
+							</div>
+							<!-- //table -->
+
+						</div>
+					</div>
+				</div>
+
+				<!-- //popup -->
+
+			</div>
+		</main>
+
+	</div>
+	<script>
+	$(document).ready(function () {
+  let tryCount = 0;
+
+  // 정답 확인 함수
+  const checkAnswers = () => {
+    let isEmpty = false;
+    let isCorrect = true;
+
+    $("table.tbl_simple input[type='text']").each(function () {
+      const input = $(this).val().trim();
+      const answer = $(this).data("answer").toString();
+
+      if (input === "") {
+        isEmpty = true;
+        return false; // break
+      }
+
+      if (input !== answer) {
+        isCorrect = false;
+      }
+    });
+
+    return { isEmpty, isCorrect };
+  };
+
+  // 정답 자동 입력 함수 (원하면 추가 사용 가능)
+  const fillAnswers = () => {
+    $("table.tbl_simple input[type='text']").each(function () {
+      const answer = $(this).data("answer");
+      if (answer) $(this).val(answer);
+    });
+  };
+
+  // 확인하기 클릭
+  $(".btn_confirm").on("click", function () {
+    const result = checkAnswers();
+
+    if (result.isEmpty) {
+      $(".popup_con_bg.popup03, .popup03").fadeIn().delay(1000).fadeOut();
+      return;
+    }
+
+    tryCount++;
+
+    if (result.isCorrect) {
+      $(".popup_con_bg.popup02, .popup02").fadeIn().delay(1000).fadeOut();
+      $(".btn_confirm").hide();
+      $(".btn_rebtn").show();
+      tryCount = 0;
+    } else {
+      if (tryCount === 1) {
+        $(".popup_con_bg.popup01, .popup01").fadeIn().delay(1000).fadeOut();
+      } else if (tryCount >= 2) {
+
+		// 1. 오답 안내 팝업 먼저 표시
+		$(".popup_con_bg.popup04, .popup_con.popup04").fadeIn();
+		setTimeout(function () {
+			$(".popup_con_bg.popup04, .popup_con.popup04").fadeOut();
+
+			// 2. 정답 자동 입력
+			$("table.tbl_simple input[type='text']").each(function () {
+			const answer = $(this).data("answer");
+			$(this).val(answer); // 정답 입력
+			},1000);
+
+			// 3. 1초 뒤에 전체 정답 팝업 표시
+			setTimeout(function () {
+			$(".H_313_08_full_popup").show();
+			}, 2100);
+		}, 1000);
+
+		$(".btn_confirm").hide();
+		$(".btn_rebtn").show();
+		return;
+      }
+    }
+  });
+
+  // 다시하기 클릭
+  $(".btn_rebtn, .btn_close").on("click", function () {
+    $("table.tbl_simple input[type='text']").val("");
+    $(".btn_rebtn").hide();
+	$('.H_313_08_full_popup').hide();
+    $(".btn_confirm").show();
+    tryCount = 0;
+  });
+
+  // input 수정 시 버튼 복귀
+  $("table.tbl_simple input[type='text']").on("input", function () {
+    if ($(".btn_rebtn").is(":visible")) {
+      $(".btn_rebtn").hide();
+      $(".btn_confirm").show();
+    }
+  });
+});
+
+
+
+	</script>
+
+	<script>
+		const contentId = 'H-313-08';
+	</script>
+	
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>개념 학습 - 치환형 암호화</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<style>
+		.plyr--video {
+			max-height: max-content;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_212_05_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								치환형 암호화
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp;&nbsp;<span class="color_text">치환형 암호화</span>는 평문의 각 문자를 약속된 다른 문자로 <span class="color_text01" role="button" aria-expanded="false" aria-controls="computing-popup">치환</span>하는 암호화 방법이다. 복호화를 위해 암호문을 주고받는 발신<br>
+								자와 수신자는 각 문자를 어떤 문자로 치환할지 약속해야 한다. 치환형 암호화의 예로 로마 황제 ‘율리우스 카이사르’의 이름<br>
+								을 딴 카이사르 암호(caesar cipher)가 있다.
+							</span>
+						</div>
+
+						<!-- 팝업 위치잡기 -->
+						<div class="text_popup_con" id="computing-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+							<div class="contents_con">
+								<div class="close_btn">
+									<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+								</div>
+
+								<div class="title_con" id="popup-title" tabindex="0">
+									<span>
+										치환
+									</span>
+								</div>
+
+								<div class="info_con" tabindex="0">
+									<span>
+										특정 부분을 다른 문자로 바꾸는 것을 말한다.
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="info02_con">
+
+						<dl class="data_list">
+							<dt class="">카이사르 암호화</dt>
+							<dd>카이사르 암호는 평문의 각 알파벳을 약속한 거리만큼 밀어서 다른 알파벳으로 치환하는 방법이다. 반대로 복호화할 때는 암호문의 각 문자를 다시 원래 위치로 밀어서 평문을 구한다.</dd>
+						</dl>
+
+
+						<div class="title_con" tabindex="0">
+							<div class="dot" aria-hidden="true"></div>
+
+							<span>
+								키가 3일 때 카이사르 암호화
+								<button class="btn_video" aria-label="암호화 과정"></button>
+							</span>
+						</div>
+
+						<div class="img H_212_05_img01"></div>
+
+						
+
+						
+					</div>	
+				</div>
+
+
+				<!-- popup -->
+				<div class="full_popup_wrap H_212_05_full_popup" id="fullpopup01">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>암호화 과정</span>
+						</div>
+						<div class="full_popoup_content">
+
+							
+							<div class="video_con">
+								<div class="contents_con">
+									<div class="video-container">
+										<video id="player01" data-content-id="H-212-05" controls crossorigin></video>
+									</div>
+								</div>
+							</div>
+							
+
+						</div>
+					</div>
+				</div>
+				<!-- //popup -->
+
+
+			</div>
+		</main>
+
+		<script>
+			// 데이터의 암호화 텍스트 팝업 열기/닫기
+			$(document).on("click",".H_212_05_con > .contents_con > .contents_con > .info01_con > .text_con span .color_text01",function(){
+				if( $(".H_212_05_con > .contents_con > .contents_con > .info01_con > .text_popup_con").css("display") == "none" ){
+					$(".H_212_05_con > .contents_con > .contents_con > .info01_con > .text_popup_con").show();
+				}else{
+					$(".H_212_05_con > .contents_con > .contents_con > .info01_con > .text_popup_con").hide();
+				}
+			});
+
+			// 데이터의 암호화 팝업 버튼 열기/닫기
+			$(document).on("click",".H_212_05_con > .contents_con > .contents_con > .info01_con > .text_popup_con > .contents_con > .close_btn .a_btn",function(){
+				if( $(".H_212_05_con > .contents_con > .contents_con > .info01_con > .text_popup_con").css("display") == "none" ){
+					$(".H_212_05_con > .contents_con > .contents_con > .info01_con > .text_popup_con").show();
+				}else{
+					$(".H_212_05_con > .contents_con > .contents_con > .info01_con > .text_popup_con").hide();
+				}
+			});
+
+
+			// 영상버튼
+			$(".H_212_05_con .btn_video").on("click", function(){
+				$(".H_212_05_con .full_popup_wrap").show();
+			});
+			$(".full_popup_wrap .btn_close").on("click", function(){
+				$(this).parents(".full_popup_wrap").hide();
+			});
+		</script>
+		<script>
+			const contentId = 'H-212-05';
+		</script>
+		<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+		<script>
+			const videoList = [
+				{ 
+					id: "H-212-05",
+					src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-212-05_4000k.mp4,H-212-05_2000k.mp4,H-212-05_1000k.mp4,lang/kor/H-212-05.vtt,.smil/master.m3u8" 
+				}
+			];
+		</script>
+		<script type="text/javascript" src="./js/xapi.video.js"></script>
+
+		<script>
+			$(".full_popup_wrap .btn_close").on("click", function(){
+				const video = $(this).closest(".full_popup_wrap").find("video").get(0);
+				if (video && !video.paused) {
+					video.pause();
+				}
+				$(this).parents(".full_popup_wrap").hide();
+			});			
+		</script>
+		
+		
+
+	</div>
+</body>
+</html>

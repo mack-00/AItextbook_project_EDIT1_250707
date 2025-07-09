@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>알고리즘의 표현</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_3_03_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 알고 가기</h2>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								알고리즘의 표현
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_con text01">
+						<dl>
+							<dt tabindex="0">
+								<span class="num_text">1 </span>알고리즘
+							</dt>
+							<dd tabindex="0">문제를 해결하기 위한 논리적인 절차와 방법을 의미한다.</dd>
+							<dd tabindex="0">절차를 나열한 글이나 사전에 약속된 기호 및 도형을 이용하여 표현한다.</dd>
+						</dl>
+					</div>
+
+					<div class="text_con text02">
+						<dl>
+							<dt tabindex="0">
+								<span class="num_text">2 </span>알고리즘의 표현
+							</dt>
+							<dd tabindex="0">
+								<div class="box_con">
+									<div class="title_con" tabindex="0">
+										<span>자연어</span>
+									</div>
+									<div class="text_con" tabindex="0">
+										<span>일상적인 언어로 알고리즘을 표현</span>
+									</div>
+									<div class="desc_con">
+										<span class="type01" tabindex="0">
+											① 숫자를 입력받는다.<br>② 숫자가 2로 나누어 떨어지면 "짝수"를 출력하고, 
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;그렇지 않으면 "홀수"를 출력한다
+										</span>
+									</div>
+								</div>
+								<div class="box_con">
+									<div class="title_con" tabindex="0">
+										<span>의사 코드</span>
+									</div>
+									<div class="text_con" tabindex="0">
+										<span>프로그래밍 언어와 유사한 형식으로 표현</span>
+									</div>
+									<div class="algorithm_con">
+										<span class="type02" tabindex="0">
+											시작<br>
+											숫자 ← 사용자 입력<br>
+											if 숫자가 2로 나누어 떨어지는가?<br>
+											&nbsp;&nbsp;&nbsp;&nbsp;then "짝수"를 출력<br>
+											else "홀수"를 출력<br>
+											끝
+										</span>
+									</div>
+								</div>
+								<div class="box_con">
+									<div class="title_con" tabindex="0">
+										<span>순서도</span>
+									</div>
+									<div class="text_con" tabindex="0">
+										<span>약속된 기호를 사용하여 알고리즘을 표현</span>
+									</div>
+									<div class="img_con">
+										<button class="zoom_click" aria-label="이미지 확대 보기" type="button" tabindex="0">
+											<span class="blind">이미지 확대</span>
+										</button>
+
+										<div class="type03">
+											<table>
+											<caption>기호와 의미에 대한 표</caption>
+											<colgroup>
+												<col style="width: 35%;">
+												<col style="width: 65%;">
+											</colgroup>
+											<thead>
+												<tr>
+												<th scope="col">기호</th>
+												<th scope="col">의미</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><img src="./img/m_quiz_3-1-3_04-1.png" alt="타원형 기호" /></td>
+													<td>시작과 끝</td>
+												</tr>
+												<tr>
+													<td><img src="./img/m_quiz_3-1-3_04-5.png" alt="평행사변형 기호" /></td>
+													<td>입출력</td>
+												</tr>
+												<tr>
+													<td><img src="./img/m_quiz_3-1-3_04-3.png" alt="직사각형 기호" /></td>
+													<td>명령어 처리</td>
+												</tr>
+												<tr>
+													<td><img src="./img/m_quiz_3-1-3_04-4.png" alt="마름모 기호" /></td>
+													<td>비교/판단</td>
+												</tr>
+												<tr>
+													<td><img src="./img/m_quiz_3-1-3_04-2.png" alt="화살표 기호" /></td>
+													<td>흐름선</td>
+												</tr>
+											</tbody>
+											</table>
+
+											<!-- <img src="img/H_3_03_algorithm01.png" alt="타원, 평행사변형, 직사각형, 마름모, 화살표"> -->
+											<img src="img/H_3_03_algorithm02.png" alt="숫자를 입력받아 2로 나누어 떨어지면 짝수를, 그렇지 않으면 홀수를 출력하는 순서도이다.">
+										</div>
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+
+					<div class="txt_con" tabindex="0">
+						<span>
+							효율적으로 문제를 해결하기 위하여,<br>문제 해결 절차를 알고리즘으로 표현한다.
+						</span>
+					</div>
+				</div>
+
+				<!--이미지 popup -->
+				<div class="full_popup_wrap" id="fullpopup01" style="display: none;">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="popup-flex">
+							<table>
+								<caption>기호와 의미에 대한 표</caption>
+								<colgroup>
+									<col style="width: 35%;">
+									<col style="width: 65%;">
+								</colgroup>
+								<thead>
+									<tr>
+									<th scope="col">기호</th>
+									<th scope="col">의미</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="./img/m_quiz_3-1-3_04-1.png" alt="타원형 기호" /></td>
+										<td>시작과 끝</td>
+									</tr>
+									<tr>
+										<td><img src="./img/m_quiz_3-1-3_04-2.png" alt="평행사변형 기호" /></td>
+										<td>입출력</td>
+									</tr>
+									<tr>
+										<td><img src="./img/m_quiz_3-1-3_04-3.png" alt="직사각형 기호" /></td>
+										<td>명령어 처리</td>
+									</tr>
+									<tr>
+										<td><img src="./img/m_quiz_3-1-3_04-4.png" alt="마름모 기호" /></td>
+										<td>비교/판단</td>
+									</tr>
+									<tr>
+										<td><img src="./img/m_quiz_3-1-3_04-5.png" alt="화살표 기호" /></td>
+										<td>흐름선</td>
+									</tr>
+								</tbody>
+								</table>
+							<img src="./img/H_3_03_zoom.jpg" alt="왼쪽에는 오른쪽이미지의 순서도에 들어가는 도형의 의미를 설명합니다. 타원은 시작과 끝, 평행사변형은 입출력, 직사각형은 명령어 처리, 마름모는 비교/판단, 화살표는 흐름선을 의미합니다. 오른쪽 이미지는 숫자를 입력받아 2로 나누어 떨어지면 짝수를, 그렇지 않으면 홀수를 출력하는 순서도를 보여줍니다.">
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</main>
+
+	</div>
+
+	<script>
+	$(function () {
+	// 이미지 확대 버튼 클릭 시 팝업 열기
+	$(".zoom_click").on("click", function () {
+		$("#fullpopup01").fadeIn(300);
+	});
+
+	// 닫기 버튼 클릭 시 팝업 닫기
+	$(".btn_close").on("click", function () {
+		$("#fullpopup01").fadeOut(300);
+	});
+	});
+	</script>
+
+	<script>
+		const contentId = 'H-3-03';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+</body>
+</html>
+

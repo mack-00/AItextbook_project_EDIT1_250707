@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>while문</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/swiper.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_324_10_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								while문
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_con" tabindex="0">
+						<span>
+							&nbsp;&nbsp;while문은 반복 구조의 하나로, 특정 조건을 만족하는 동안 명령문을 반복하여 실행하는 제어 구조이다. 주로 반복 횟수가 미리 정해지지 않은 경우에 사용되며, 조건식을 잘못 작성하면 while문이 무한 루프에 빠질 수 있다.
+						</span>
+					</div>
+					<!-- 슬라이드 -->
+					<div class="slide_con">
+						<div class="swiper-container H_324_10_con_slide" role="region" aria-label="while문의 작성법 설명 슬라이드">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide H_324_10_con_slide_div_01" data-swiper-autoplay="4000" role="group" aria-label="순서도 표현, 파이썬 코드 작성법">		
+									<div class="title_sub type01" tabindex="0">
+										<span>while문의 작성법</span>
+									</div>
+									<div class="box_con">
+										<dl class="type01">
+											<dt tabindex="0"><span>순서도 표현</span></dt>
+											<dd>
+												<div class="condition">
+													<div class="shape diamond" tabindex="0">
+														<div class="inner">
+															<span>조건</span>
+														</div>
+													</div>
+													<div class="text" tabindex="0">
+														<span>참</span>
+													</div>
+													<div class="text" tabindex="0">
+														<span>거짓</span>
+													</div>
+													<div class="shape rect">
+														<div class="inner" tabindex="0">
+															<span>명령1</span>
+														</div>
+													</div>
+													<div class="shape rect">
+														<div class="inner" tabindex="0">
+															<span>명령2</span>
+														</div>
+													</div>
+												</div>
+											</dd>
+										</dl>
+										<dl class="type02">
+											<dt tabindex="0"><span>파이썬 코드 작성법</span></dt>
+											<dd>
+												<div class="condition">
+													<div class="write01">
+														<div class="code" tabindex="0">
+															<span>while 조건:</span>
+														</div>
+														<div class="code" tabindex="0">
+															<span>명령1</span>
+														</div>
+														<button class="after_hand" aria-label="클릭하면 설명을 보여줍니다."></button>
+														<div class="comment">
+															<div class="inner">
+																<div class="text" tabindex="0">
+																	<span>while 뒤에 조건을 작성하고, 그 뒤에<br>콜론(:)을 붙여 준다.</span>
+																</div>
+																<div class="text" tabindex="0">
+																	<span>while 뒤의 조건이 참이면 명령1이<br>실행된다.</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="write02">
+														<div class="code" tabindex="0">
+															<span>명령2</span>
+														</div>
+														<button class="after_hand" aria-label="클릭하면 설명을 보여줍니다."></button>
+														<div class="comment">
+															<div class="inner">
+																<div class="text" tabindex="0">
+																	<span>while 뒤의 조건이 거짓이면 while문<br>반복이 종료되고, 명령2가 실행된다.</span>
+																</div>
+															</div>
+														</div> 
+													</div>
+												</div>
+											</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="swiper-slide H_324_10_con_slide_div_02" data-swiper-autoplay="4000" role="group" aria-label="while문 프로그램 예시 영상">			
+									<div class="title_sub type02" tabindex="0">
+										<span>while문 프로그램 예시</span>
+									</div>
+									<div class="video_con">
+										<div class="contents_con">
+											<div class="video-container">
+												<video id="player01" data-content-id="H-324-10" controls crossorigin></video>
+											</div>
+										</div>
+									</div>
+									<div class="btn_con">
+										<button class="btn_popup" aria-label="보충자료"></button>
+									</div>
+								</div>
+							</div>
+						</div> 
+						<div class="slide_btn prev H_324_10_con_slide_prev_btn swiper-button-prev" aria-label="슬라이드 이전 버튼" tabindex="0"></div>
+						<div class="slide_btn next H_324_10_con_slide_next_btn swiper-button-next" aria-label="슬라이드 다음 버튼" tabindex="0"></div>
+						<div class="swiper-pagination H_324_10_con_slide_swiper-pagination"></div>
+					</div>
+					<!-- // 슬라이드 -->
+				</div>
+				<!-- 팝업 -->
+				<div class="full_popup_wrap H_324_10_full_popup" id="fullpopup01">
+					<div class="contents_con">
+						<div class="close_btn">
+							<button aria-label="팝업 닫기"></button>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>복합 대입 연산자</span>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp;&nbsp;동영상의 프로그램에서 다음과 같은 식을 작성하였다. +=와 같이 산술 연산자와 대입 연산자가 합쳐진 연산자를 복합 대입 연산자라 한다. 복합 대입 연산자는 코드를 간결하고 효율적으로 만드는 효과가 있다. 대입 연산자의 기능도 포함하므로 좌항에는 항상 변수를 적어야 한다.
+							</span>
+						</div>
+
+						<div class="code_con">
+							<div class="text_con" tabindex="0">
+								<span>i <span>+=</span> 1</span>
+							</div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<span>파이썬에서 사용하는 산술 연산자는 아래 표와 같다.</span>
+						</div>
+
+						<div class="tab_con">
+							<table role="grid" aria-label="복합 대입 연산자 종류">
+								<thead>
+									<tr>
+										<th scope="col" tabindex="0">
+											<span>산술 연산자</span>
+										</th>
+										<th scope="col" tabindex="0">
+											<span>설명</span>
+										</th>
+										<th scope="col" tabindex="0">
+											<span>예시 (a=25)</span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>	
+									<tr>
+										<td  tabindex="0">
+											<span>+=</span>
+										</td>
+										<td  tabindex="0">
+											<span>좌항과 우항을 더한 후 좌항에 대입</span>
+										</td>
+										<td  tabindex="0">
+											<span>a += 10 → 연산 결과는 35</span>
+										</td>
+									</tr>
+									<tr>
+										<td  tabindex="0">
+											<span>-=</span>
+										</td>
+										<td  tabindex="0">
+											<span>좌항에서 우항을 뺀 후 좌항에 대입</span>
+										</td>
+										<td  tabindex="0">
+											<span>a -= 10 → 연산 결과는 15</span>
+										</td>
+									</tr>
+									<tr>
+										<td  tabindex="0">
+											<span>*=</span>
+										</td>
+										<td  tabindex="0">
+											<span>좌항과 우항을 곱한 후 좌항에 대입</span>
+										</td>
+										<td  tabindex="0">
+											<span>a *= 10 → 연산 결과는 250</span>
+										</td>
+									</tr>
+									<tr>
+										<td  tabindex="0">
+											<span>/=</span>
+										</td>
+										<td  tabindex="0">
+											<span>좌항을 우항으로 나눈 후 좌항에 대입</span>
+										</td>
+										<td  tabindex="0">
+											<span>a /= 10 → 연산 결과는 2.5</span>
+										</td>
+									</tr>
+									<tr>
+										<td  tabindex="0">
+											<span>//=</span>
+										</td>
+										<td  tabindex="0">
+											<span>좌항을 우항으로 나눈 몫을 좌항에 대입</span>
+										</td>
+										<td  tabindex="0">
+											<span>a //= 10 → 연산 결과는 2</span>
+										</td>
+									</tr>
+									<tr>
+										<td  tabindex="0">
+											<span>%=</span>
+										</td>
+										<td  tabindex="0">
+											<span>좌항을 우항으로 나눈 나머지를 좌항에 대입</span>
+										</td>
+										<td  tabindex="0">
+											<span>a %= 10 → 연산 결과는 5</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //팝업 -->
+			</div>
+		</main>
+
+	</div>
+	<script>
+		$(document).ready(function(){
+			// 파이썬 코드 작성법 
+			$(".H_324_10_con .condition .write01 .after_hand").on("click", function(){
+				$(this).hide();
+				$(this).siblings(".comment").addClass("on");
+				$(".H_324_10_con .condition .write02 .after_hand").show();
+			});
+
+			$(".H_324_10_con .condition .write02 .after_hand").on("click", function(){
+				$(this).hide();
+				$(this).siblings(".comment").addClass("on");
+			});
+			
+			// 팝업
+			$(".H_324_10_con .btn_popup").on("click", function(){
+				$(".H_324_10_con .full_popup_wrap").show();
+			});
+			$(".H_324_10_con .full_popup_wrap .close_btn").on("click", function(){
+				$(this).parents(".full_popup_wrap").hide();
+			});
+
+			// while문 슬라이드
+			H_324_10_con_slide = new Swiper('.H_324_10_con_slide', {
+				slidesPerView: 'auto',
+				effect: 'fade',
+				fadeEffect: {
+					crossFade: true
+				},
+				speed: 100,
+				loop: false,
+				pagination: {
+					el: ".H_324_10_con_slide_swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.H_324_10_con_slide_next_btn',
+					prevEl: '.H_324_10_con_slide_prev_btn',
+				},
+				observer: true,
+				observeParents: true,
+				simulateTouch: false,
+				allowTouchMove: false,
+			});
+
+			// 영상 일시정지 로직
+			H_324_10_con_slide.on('slideChange', function () {
+				$('.H_324_10_con video').each(function () {
+					this.pause();
+				});
+			});
+
+		});
+	</script>
+	<script>
+		const contentId = 'H-324-10';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+	<script>
+		const videoList = [
+			{ 
+				id: "H-324-10",
+				src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-324-10_4000k.mp4,H-324-10_2000k.mp4,H-324-10_1000k.mp4,lang/kor/H-324-10.vtt,.smil/master.m3u8" 
+			}
+		];
+	</script>
+	<script type="text/javascript" src="./js/xapi.video.js"></script>
+	
+</body>
+</html>

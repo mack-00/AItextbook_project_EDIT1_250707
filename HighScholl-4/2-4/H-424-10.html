@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>스스로 해결하기 - 칼로리 소모량 예측</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/swiper.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_424_10_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<div class="text" tabindex="1">스스로 해결하기</div>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con">
+							<h1 tabindex="2">
+								칼로리 소모량 예측 인공지능 모델 만들기
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<button  class="a_btn" type="button" aria-label="보충 자료" tabindex="0" onclick="H_422_10_popup();">보충 자료</button>
+
+					<div class="info01_con">
+						<div class="text_con" tabindex="3">
+							<span>
+								개인의 운동 시간과 신체 정보를 활용해서 칼로리 소모량을 예측하는 인공지능 모델을 만들어 보자.
+							</span>
+						</div>
+					</div>
+
+					<div class="info02_con">
+						<div class="title_con" tabindex="4">
+							<div class="dot" aria-hidden="true"></div>
+
+							<span>
+								칼로리 소모량 예측 인공지능 모델 만들기
+							</span>
+						</div>
+
+						<div class="contents_con">
+							<div class="nav">
+								<ul>
+									<li>
+										<button class="on" type="button" aria-controls="info01" role="tab" aria-selected="true" tabindex="5">
+											<span>
+													1. 데이터 수집 및 <br/>&nbsp;&nbsp;&nbsp;&nbsp;전처리하기
+											</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" aria-controls="info02" role="tab" aria-selected="false" tabindex="7">
+											<span>
+												2. 모델 학습하기
+											</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" aria-controls="info03" role="tab" aria-selected="false" tabindex="9">
+											<span>
+												3. 모델 평가하기
+											</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+
+							<div class="contents_con">
+								<div class="contents_div info01">
+									<div class="video_con">
+										<div class="contents_con">
+											<div class="video-container">
+												<video id="player01" data-content-id="H-424-10__01" controls crossorigin tabindex="6"></video>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="contents_div info02">
+									<div class="video_con">
+										<div class="contents_con">
+											<div class="video-container">
+												<video id="player02" data-content-id="H-424-10__02" controls crossorigin tabindex="8"></video>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="contents_div info03">
+									<div class="video_con">
+										<div class="contents_con">
+											<div class="video-container">
+												<video id="player03" data-content-id="H-424-10__03" controls crossorigin tabindex="10"></video>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="popup_cont--wrap">
+					<div class="popup_con_bg"></div>
+					<div class="popup_con">
+						<div class="close_btn">
+							<a href="javascript:H_422_10_popup();" class="close_btn2" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="contents_con">
+							<div class="slide_con">
+								<div class="swiper-container H_424_10_slide" role="region">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide slide-01" data-swiper-autoplay="4000" role="group" aria-label="">
+											
+											<div class="title_con">
+												<h2 tabindex="0">
+													오렌지3 설치와 활용
+												</h2>
+												<p>오렌지3(Orange3)는 데이터 분석과 기계학습을 위한 오픈 소스 소프트웨어이다. 사용자 친화적인 그래픽 인터페이스를 제공하여, 프로그래밍 지식이 없는 사용자도 쉽게 데이터 시각화, 분석 및 모델링을 수행할 수 있도록 도와준다.</p>
+											</div>
+											<div class="slide_contents">
+												<img src="./img/h_424_10_popup01.png" alt="Orange 데이터 분석 툴의 시각적 워크플로우 화면입니다. File 위젯으로 데이터를 불러온 후, Select Rows를 통해 데이터를 조건별로 나누고, Geo Map 위젯을 통해 위치 기반 시각화를 수행하는 흐름이 시각적으로 연결되어 있습니다. 또한 다른 Select Rows, Select Columns, k-Means, Geo Map 위젯까지 포함된 분석 경로가 구성되어 있습니다.">
+												<div class="border-box">
+													<ul class="list-dot">
+														<li>드래그 앤 드롭 방식으로 다양한 데이터 처리 및 분석 모듈을 연결할 수 있어, 사용자가 직관적으로 작업을 진행할 수 있다.</li>
+														<li>데이터 전처리, 클러스터링, 분류, 회귀, 시각화 등 다양한 기계학습 알고리즘과 도구를 제공한다.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide slide-02" data-swiper-autoplay="4000" role="group" aria-label="">
+											
+											<div class="title_con">
+												<h2 tabindex="0">
+													오렌지3 설치와 활용
+												</h2>
+											</div>
+											
+											<div class="slide_contents">
+												<h3>오렌지 설치</h3>
+												<div class="">
+													<div class="left">
+														<img src="./img/h_424_10_popup02.png" alt="Orange 공식 홈페이지의 다운로드 페이지입니다. Windows와 macOS 운영체제별로 Orange 3.38.1 버전 설치 파일을 제공하며, Standalone installer, Portable Orange, Apple Silicon용과 Intel용 Mac 설치 파일을 선택할 수 있습니다. 우측에는 'Installing add-ons' 안내 창이 팝업되어 있습니다.">
+													</div>
+													<div class="right">
+														<div class="border-box">
+															<ul class="list-num">
+																<li><span class="num">01</span>오렌지3 공식 웹 사이트에 접속한다. (https://orangedatamining.com/download/)</li>
+																<li><span class="num">02</span>자신의 운영 체제에 맞는 설치 파일을 선택하여 다운로드한다.</li>
+																<li><span class="num">03</span>다운로드한 설치 파일을 실행한다. 설치 마법사의 지시에 따라 설치를 진행한다</li>
+															</ul>
+														</div>
+														<img src="./img/h_424_10_popup03.png" alt="Orange 3.38.1 설치 과정 중 라이선스 동의 화면입니다. Bioinformatics Laboratory, University of Ljubljana에서 제작한 오픈소스 소프트웨어임을 명시하고 있으며, 'I Agree' 버튼을 클릭하여 라이선스에 동의해야 설치가 진행됩니다.">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide slide-03" data-swiper-autoplay="4000" role="group" aria-label="">
+											
+											<div class="title_con">
+												<h2 tabindex="0">
+													오렌지3 설치와 활용
+												</h2>
+											</div>
+											<div class="slide_contents">
+												<h3>오렌지3 화면 구성</h3>
+												<div>
+													<div class="left">
+														<dl>
+															<dt>위젯(widget) 메뉴</dt>
+															<dd>
+																<p>다양한 기능을 수행하는 위젯이 분류되어 있음.</p>
+																<ul>
+																	<li>
+																		<em>Data:</em>
+																		<p>데이터 입출력 및 정보 관련 위젯</p>
+																	</li>
+																	<li>
+																		<em>Transform:</em>
+																		<p>데이터 처리 관련 위젯</p>
+																	</li>
+																	<li>
+																		<em>Visualize:</em>
+																		<p>데이터 시각화 관련 위젯</p>
+																	</li>
+																	<li>
+																		<em>Model:</em>
+																		<p>모델 위젯</p>
+																	</li>
+																	<li>
+																		<em>Evaluate:</em>
+																		<p>모델 성능 평가 관련 위젯</p>
+																	</li>
+																	<li>
+																		<em>Unsupervised:</em>
+																		<p>비지도 학습 관련 위젯</p>
+																	</li>
+																</ul>
+															</dd>
+														</dl>
+													</div>
+													<div class="right">
+														<i>
+															<svg xmlns="http://www.w3.org/2000/svg" width="21" height="16" viewBox="0 0 21 16" fill="none">
+																<path d="M20 9C20.5523 9 21 8.55228 21 8C21 7.44772 20.5523 7 20 7V9ZM0.292892 7.29289C-0.0976315 7.68342 -0.0976315 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM20 8V7L1 7V8V9L20 9V8Z" fill="#00A799"/>
+															</svg>
+														</i>
+														<img src="./img/h_424_10_popup04.png" alt="Orange 데이터 분석 툴의 시각적 워크플로우 화면입니다. File 위젯으로 데이터를 불러온 후, Select Rows를 통해 데이터를 조건별로 나누고, Geo Map 위젯을 통해 위치 기반 시각화를 수행하는 흐름이 시각적으로 연결되어 있습니다. 또한 다른 Select Rows, Select Columns, k-Means, Geo Map 위젯까지 포함된 분석 경로가 구성되어 있습니다.">
+
+														<dl class="v1">
+															<dt>중앙 작업 공간</dt>
+															<dd>선택한 위젯을 드래그하여 작업 흐름을 설계하는 공간. 각 위젯은 선으로 연결되어 데이터 흐름을 시각적으로 구성</dd>
+														</dl>
+
+														<dl class="v2">
+															<svg xmlns="http://www.w3.org/2000/svg" width="35" height="16" viewBox="0 0 35 16" fill="none">
+																<path d="M1.00004 7.08354C0.447757 7.08354 4.13512e-05 7.53125 4.04342e-05 8.08354C3.95172e-05 8.63582 0.447754 9.08354 1.00004 9.08354L1.00004 7.08354ZM34.5702 8.7907C34.9607 8.40018 34.9607 7.76701 34.5702 7.37649L28.2062 1.01252C27.8157 0.621993 27.1826 0.621992 26.792 1.01252C26.4015 1.40304 26.4015 2.0362 26.792 2.42673L32.4489 8.08359L26.792 13.7404C26.4015 14.131 26.4015 14.7641 26.792 15.1547C27.1825 15.5452 27.8157 15.5452 28.2062 15.1547L34.5702 8.7907ZM1.00004 8.08354L1.00004 9.08354L33.8631 9.08359L33.8631 8.08359L33.8631 7.08359L1.00004 7.08354L1.00004 8.08354Z" fill="#00A799"/>
+															</svg>
+															<dt>위젯 연결선</dt>
+															<dd>데이터 흐름을 나타내며, 위젯 간 입력-출력 관계를 표현</dd>
+														</dl>
+														<div class="border-box" >
+															<svg xmlns="http://www.w3.org/2000/svg" width="46" height="16" viewBox="0 0 46 16" fill="none">
+																<path d="M1.0245 6.80373C0.508173 6.80373 0.0786342 7.27868 0.0651019 7.86456C0.0515697 8.45044 0.459168 8.92539 0.975498 8.92539L1.0245 6.80373ZM45.6469 8.61468C46.0216 8.2004 46.0371 7.52872 45.6816 7.11444L39.8878 0.363346C39.5323 -0.0509342 38.9403 -0.0509342 38.5657 0.363346C38.191 0.777627 38.1755 1.44931 38.531 1.86359L43.681 7.86456L38.2538 13.8655C37.8791 14.2798 37.8636 14.9515 38.2192 15.3658C38.5747 15.7801 39.1666 15.7801 39.5413 15.3658L45.6469 8.61468ZM1 7.86456L0.975498 8.92539L44.9787 8.92539L45.0032 7.86456L45.0277 6.80373L1.0245 6.80373L1 7.86456Z" fill="#00A799"/>
+															</svg>
+															<p>선택한 위젯에 대한 간략한 설명 표시</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide slide-04" data-swiper-autoplay="4000" role="group" aria-label="">
+											
+											<div class="title_con">
+												<h2 tabindex="0">
+													오렌지3 설치와 활용
+												</h2>
+											</div>
+											<div class="slide_contents">
+												<h3>오렌지3 화면 구성</h3>
+												<div>
+													<ul>
+														<li>
+															<span class="num">01</span>
+															<div class="slide-img first">
+																<img src="./img/h_424_10_popup05.png" alt="데이터 가져오기 메뉴에는 File, CSV File Import, Datasets, SQL Table 네 가지 옵션이 있습니다.">
+
+															</div>
+															<div class="slide-conts">
+																<span class="num">01</span>
+																<div>
+																	<em>파일 불러오기</em>
+																	<p>File 위젯을 이용해 CSV, Excel 등 데이터를 불러온다.</p>
+																</div>
+															</div>
+														</li>
+														<li>
+															<span class="num">02</span>
+															<div class="slide-img second">
+																<img src="./img/h_424_10_popup06.png" alt="Orange의 Data Table 위젯 화면으로, CSV 파일 형식의 데이터가 테이블 형태로 불러와진 상태입니다. 항목에는 데이터 ID, 국적 코드, 플래그, 출항 및 입항 시간 정보가 포함되어 있으며, 총 11984개의 행이 로드되어 있음을 보여줍니다.">
+															</div>
+															<div class="slide-conts">
+																<span class="num">02</span>
+																
+																<div>
+																	<em>데이터 전처리</em>
+																	<p>Select Rows, Select Columns, Edit Domain 등의 위젯으로 필요한 
+																	데이터만 필터링하거나 열을 선택한다.</p>
+																</div>
+															</div>
+														</li>
+														<li>
+															<span class="num">03</span>
+															<div class="slide-img third">
+																<img src="./img/h_424_10_popup07.png" alt="Orange의 Geo Map 위젯에서 데이터가 세계지도에 시각화된 화면입니다. 색상으로 클러스터링된 점들이 대륙별로 위치하고 있으며, 왼쪽 패널에서는 시각화 속성, 클러스터 설정, 범례 옵션 등을 조정할 수 있습니다. 지도 위에 색상별 데이터 그룹이 명확히 표시되어 있습니다.">
+															</div>
+															<div class="slide-conts">
+																<span class="num">03</span>
+																<div>
+																	<em>분석 방법 선택</em>
+																	<p>k-평균, 로지스틱 회귀 등 분석 방법(모델) 위젯을 사용한다.</p>
+																</div>
+															</div>
+														</li>
+														<li>
+															<span class="num">04</span>
+															<div class="slide-img fourth">
+																<img src="./img/h_424_10_popup08.png" alt="Orange의 Geo Map 위젯에서 데이터가 세계지도에 시각화된 화면입니다. 색상으로 클러스터링된 점들이 대륙별로 위치하고 있으며, 왼쪽 패널에서는 시각화 속성, 클러스터 설정, 범례 옵션 등을 조정할 수 있습니다. 지도 위에 색상별 데이터 그룹이 명확히 표시되어 있습니다.">
+
+															</div>
+															<div class="slide-conts">
+																<span class="num">04</span>
+																<div>
+																	<em>시각화</em>
+																	<p>Geo Map, Scatter Plot, Box Plot 등 시각화 위젯으로 데이터를 확인하고 결과를 해석한다.</p>
+																</div>
+															</div>
+														</li>
+													</ul>
+													<div class="border-box">
+														<img src="./img/h_424_10_popup09.png" alt="File 아이콘과 Data Table 아이콘이 선으로 연결되어 있으며, 파일 데이터를 테이블 형식으로 불러오는 흐름을 나타냅니다.">
+														<ul class="list-dot">
+															<li>각 위젯을 드래그해서 연결하고, 결과를 확인하려면 해당 위젯을 더블 클릭하면 된다.</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide_btn next _next_btn swiper-button-next" aria-label="슬라이드 다음 버튼" tabindex="0"></div>
+
+								<div class="slide_btn prev _prev_btn swiper-button-prev" aria-label="슬라이드 이전 버튼" tabindex="0"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script>
+				function H_422_10_popup() {
+					const $popup = $(".popup_cont--wrap");
+					if (!$popup.is(":visible")) {
+						$popup
+							.css({ display: "flex", opacity: 0 })
+							.animate({ opacity: 1 }, 300); // 0.3초 fadeIn 효과
+					} else {
+						$popup.animate({ opacity: 0 }, 300, function () {
+							$popup.css("display", "none");
+						});
+					}
+				}
+
+			// H_512_04_info02 슬라이드
+			H_512_04_info02_slide = new Swiper ('.H_424_10_con .H_424_10_slide', {
+				slidesPerView: 'auto',
+				effect : 'fade', 
+					fadeEffect: { 
+					crossFade: true 
+				},
+				speed: 100,
+				loop: false,
+				// pagination: {
+				// 	el: ".H_512_04_info02_slide_swiper-pagination",
+				// 	clickable: true,
+				// },
+				navigation: {
+					nextEl: '.H_424_10_con .slide_btn.next',
+					prevEl: '.H_424_10_con .slide_btn.prev',
+				},
+				observer: true,
+				observeParents: true,
+				simulateTouch: false,
+				allowTouchMove: false,
+			});
+
+			// 메뉴 클릭 시
+			$(document).on("click",".H_424_10_con > .contents_con > .contents_con > .info02_con > .contents_con > .nav > ul > li button",function(){
+				// 기존 탭 활성화 처리
+				$(".H_424_10_con > .contents_con > .contents_con > .info02_con > .contents_con > .nav > ul > li button").removeClass("on");
+				$(this).addClass("on");
+
+				// 모든 영상 일시정지
+				$("video").each(function() {
+					if (!this.paused && !this.ended) {
+						this.pause();
+					}
+				});
+
+				// 콘텐츠 전환
+				$(".H_424_10_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div").hide();
+				$(".H_424_10_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div."+$(this).attr("aria-controls")).show();
+			});
+
+			
+		</script>
+		<script>
+				const videoEl = document.querySelector('video[data-content-id]');
+				const contentId = videoEl?.dataset.contentId;
+		</script>
+		
+		<script>
+			const videoList = [
+				{ 
+					id: "H-424-10__01",
+					src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-424-10_01_4000k.mp4,H-424-10_01_2000k.mp4,H-424-10_01_1000k.mp4,lang/kor/H-424-10_01.vtt,.smil/master.m3u8" 
+				},
+				{ 
+					id: "H-424-10__02",
+					src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-424-10_02_4000k.mp4,H-424-10_02_2000k.mp4,H-424-10_02_1000k.mp4,lang/kor/H-424-10_02.vtt,.smil/master.m3u8" 
+				},
+				{ 
+					id: "H-424-10__03",
+					src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-424-10_03_4000k.mp4,H-424-10_03_2000k.mp4,H-424-10_03_1000k.mp4,lang/kor/H-424-10_03.vtt,.smil/master.m3u8" 
+				}
+			];
+		</script>
+		<script type="text/javascript" src="./js/xapi.video.js"></script>
+
+	</div>
+</body>
+</html>

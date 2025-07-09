@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>네트워크 환경 설정</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_111_10_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								네트워크 환경 설정
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text01" tabindex="0">
+						&nbsp;&nbsp;유선 또는 무선으로 연결된 네트워크 환경에서는 IP 주소와 DNS 서버 주소를 설정해야 한다.
+						사용자는 
+						<span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip01">DHCP</span> (동적 호스트 구성 프로토콜)를 통해 IP 주소와 DNS 서버 주소를 자동으로 할당받을 수 있다.
+					</div>
+
+					<div class="sub_title_dot" tabindex="0">
+						네트워크 환경 설정에 사용하는 주요 용어
+					</div>
+
+					<!-- table -->
+					<div class="tab_con">
+						<table tabindex="0">
+							<caption>네트워크 환경 설정에 사용하는 주요 용어</caption>
+							<thead>
+								<tr>
+								<th scope="col">
+									<span>용어</span>
+								</th>
+								<th scope="col">
+									<span>설명</span>
+								</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<th scope="row" class="title_td">
+									<span>서브넷 마스크</span>
+								</th>
+								<td class="info_td">
+									<div class="both_wrap">
+									<span class="txt">
+										호스트 컴퓨터로부터 IP 주소에 따른 네트워크 영역을 구분하는 주소로, 
+										IP 주소에서 네트워크 주소와 호스트 주소를 분리하는 값을 의미한다.
+									</span>
+									<div class="exam_wrap">
+										<em class="exam_icon">예시</em>
+										<ul>
+										<li class="item01">
+											<div class="addr_box">
+											192.168.1<br />255.255.255.
+											</div>
+											<div class="txt">네트워크 주소</div>
+										</li>
+										<li class="item02">
+											<div class="addr_box">
+											130<br />0
+											</div>
+											<div class="txt">호스트 주소</div>
+										</li>
+										</ul>
+									</div>
+									</div>
+								</td>
+								</tr>
+								<tr>
+								<th scope="row" class="title_td">
+									<span>게이트웨이</span>
+								</th>
+								<td class="info_td">
+									<span>
+									서로 다른 통신망을 사용하는 네트워크 간의 통신을 가능하게 하는 컴퓨터나 소프트웨어를 두루 일컫는 용어로, 다른 네트워크로 들어가는 입구 역할을 한다.
+									</span>
+								</td>
+								</tr>
+								<tr>
+								<th scope="row" class="title_td">
+									<span>DNS 서버</span>
+								</th>
+								<td class="info_td">
+									<span>
+									도메인 주소를 IP 주소로 변환하는 서버 컴퓨터이다.
+									</span>
+								</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+					<!-- //table -->
+				</div>
+
+				<!-- 팝업 -->
+				<div class="text_popup_con H_111_10_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<span id="popup-title"></span>
+					<div class="contents_con">
+						<div class="close_btn">
+							<button class="a_btn" aria-label="팝업 닫기"></button>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>
+								DHCP<br />(동적 호스트 구성 프로토콜)
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								DHCP(Dynamic Host Configuration Protocol)는 네트워크에 연결된 기기에 IP 주소, 서브넷 마스크, 게이트웨이, DNS 서버 등의 네트워크 설정을 자동으로 할당하고 관리하는 프로토콜이다. 이를 통해 사용자는 복잡한 설정 없이 쉽게 인터넷에 접속할 수 있다. 
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- 팝업 끝 -->
+
+			</div>
+		</main>
+
+	</div>
+
+	<script>
+	// 팝업열기
+		$(".H_111_10_con .link_tooltip").on("click", function(){
+			var popSelector = "#" + $(this).attr("aria-controls");
+
+			// 다른 팝업 닫고 해당 팝업 열기
+			if($(popSelector).css("display") == "none") {
+				$(".H_111_10_con .text_popup_con").not(popSelector).hide();
+				$(popSelector).show();
+			}
+		});
+
+		// 팝업닫기
+		$(".H_111_10_con .close_btn .a_btn").on("click", function(){
+			$(this).parents(".text_popup_con").hide();
+		});
+
+	</script>
+	<script>
+		const contentId = 'H-111-10';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>피지컬 컴퓨팅 시스템의 구성 요소</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_123_04_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								피지컬 컴퓨팅 시스템의 구성 요소
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+
+					<div class="text_01">
+						&nbsp;&nbsp;<strong class="fw_700">피지컬 컴퓨팅 시스템</strong>은 하드웨어와 소프트웨어를 이용하여 우리가 사는 세상과 상호 작용한다. 피지컬 컴퓨팅 시스템은 환경의 변화를 감지하는 <strong class="fw_700">입력 장치</strong>, 입력 받은 데이터를 처리하는 <strong class="fw_700">처리 장치</strong>, 처리 결과를 표현하는 <strong class="fw_700">출력 장치</strong>로 구분된다.
+					</div>
+
+					<!-- tab -->
+					<div class="tab_wrap H_123_04_tab_wrap">
+						<div class="tab_list" role="tablist">
+							<button class="tab_btn on" type="button" id="tab01" aria-controls="H_123_04_tab01" role="tab" aria-selected="true">입력 장치</button>
+							<button class="tab_btn" type="button" id="tab02" aria-controls="H_123_04_tab02" role="tab" aria-selected="false">처리 장치</button>
+							<button class="tab_btn" type="button" id="tab03" aria-controls="H_123_04_tab03" role="tab" aria-selected="false">출력 장치</button>
+						</div>
+						<div class="tab_contents">
+							
+							<div id="H_123_04_tab01" tabindex="0" role="tabpanel" aria-labelledby="tab01" class="tab_inner on">
+								
+								<div class="both_wrap">
+									<div class="card_item">
+										<div class="img">
+											<img src="./img/H_123_04_tab01_img01.png" alt="자동차 엔진 냉각수 온도를 측정하는 냉각수 온도 센서를 나타낸 그림이다.">
+											<button class="after_hand" aria-label="설명 보기"></button>
+										</div>
+								
+										<div class="back">
+											<div class="tit">
+												온도 센서
+											</div>
+											<p>
+												주변 온도를 측정하는 센서로 자동차 냉각수, 에어컨 등에 사용된다.
+											</p>
+										</div>
+									</div>
+
+									<div class="card_item">
+										<div class="img">
+											<img src="./img/H_123_04_tab01_img02.png" alt="세 개의 동그란 모양의 빛 센서가 나란히 놓여 있는 그림이다.">
+											<button class="after_hand" aria-label="설명 보기"></button>
+										</div>
+										<div class="back">
+											<div class="tit">
+												빛 센서
+											</div>
+											<p>
+												빛의 밝기를 감지하는 센서로 자동으로 불을 켜고 끄는 가로등에 사용된다.
+											</p>
+										</div>
+									</div>
+
+									<div class="card_item">
+										<div class="img">
+											<img src="./img/H_123_04_tab01_img03.png" alt="검은색 가속도 센서 그림이다.">
+											<button class="after_hand" aria-label="설명 보기"></button>
+										</div>
+										<div class="back">
+											<div class="tit">
+												가속도 센서
+											</div>
+											<p>
+												움직이는 속도를 감지하는 센서로, 스마트폰 흔들기 기능이나 자동차 에어백 작동에 사용된다.
+											</p>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div id="H_123_04_tab02" tabindex="0" role="tabpanel" aria-labelledby="tab02" class="tab_inner">
+								
+								<div class="both_wrap">
+									<div class="card_item">
+										<div class="img">
+											<img src="./img/H_123_04_tab02_img01.png" alt="파란색 아두이노 보드이다.">
+											<button class="after_hand" aria-label="설명 보기"></button>
+										</div>
+										<div class="back">
+											<div class="tit">
+												마이크로컨트롤러
+											</div>
+											<p>
+												입력 장치로부터 받은 데이터를 처리하고, 출력 장치를 제어하는 장치이다. 자동차, 가전제품 등 다양한 전자 기기에 사용된다.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								
+							</div>
+							<div id="H_123_04_tab03" tabindex="0" role="tabpanel" aria-labelledby="tab03" class="tab_inner">
+								
+								<div class="both_wrap">
+									<div class="card_item">
+										<div class="img">
+											<img src="./img/H_123_04_tab03_img01.png" alt="빨강·노랑·초록·파랑·투명 5가지 색상의 둥근 LED가 나란히 놓여 있는 사진이다.">
+											<button class="after_hand" aria-label="설명 보기"></button>
+										</div>
+										<div class="back">
+											<div class="tit">
+												LED
+											</div>
+											<p>
+												처리한 데이터를 <br>빛으로 표현하는 장치이다.
+											</p>
+										</div>
+									</div>
+
+									<div class="card_item">
+										<div class="img">
+											<img src="./img/H_123_04_tab03_img02.png" alt="검은색 금속 재질의 모터 사진이다.">
+											<button class="after_hand" aria-label="설명 보기"></button>
+										</div>
+										<div class="back">
+											<div class="tit">
+												모터
+											</div>
+											<p>
+												처리한 데이터를 <br>움직임으로 표현하는 장치이다.
+											</p>
+										</div>
+									</div>
+
+									<div class="card_item">
+										<div class="img">
+											<img src="./img/H_123_04_tab03_img03.png" alt="둥근 형태의 스피커 사진이다.">
+											<button class="after_hand" aria-label="설명 보기"></button>
+										</div>
+										<div class="back">
+											<div class="tit">
+												스피커
+											</div>
+											<p>
+												처리한 데이터를 <br>소리로 표현하는 장치이다.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								
+							</div>
+							<div class="btn_con">
+								<button class="a_btn a_btn01 btn_reset" style="opacity: 0; visibility: hidden" aria-label="다시 하기">다시 하기</button>
+							</div>
+						</div>
+					</div>
+					<!-- //tab  -->
+
+				</div>
+			</div>
+		</main>
+
+	</div>
+
+	<script>
+
+	$(document).ready(function(){
+		// 탭
+		$(".tab_list > .tab_btn").on("click", function(){
+			$(this).siblings().removeClass("on").end().addClass("on");
+			$(this).siblings().attr("aria-selected", "false").end().attr("aria-selected", "true");
+			$("#"+$(this).attr("aria-controls")).siblings().removeClass("on").end().addClass("on");
+			$(".card_item").removeClass("on"); //
+		});
+		
+
+			// 개별 카드 클릭 시
+		$(".card_item button.after_hand").on("click", function () {
+			$(this).closest(".card_item").addClass("on");
+			$(".btn_reset").css({opacity: "1",visibility: "visible"});
+
+		});
+
+		// 다시 하기 버튼 클릭 시
+			$(".btn_reset").on("click", function () {
+			$(".card_item").removeClass("on"); // .on 클래스 제거
+
+			// 만약 버튼이 클릭 후 hide 됐다면 다시 show 처리
+			$(".card_item button.after_hand").show(); 
+			$(".btn_reset").css({opacity: "0",visibility: "hidden"}); 
+		});
+
+	});
+
+		
+	</script>
+	<script>
+		const contentId = 'H-123-04';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

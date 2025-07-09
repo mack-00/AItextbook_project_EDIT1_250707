@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>파일입출력</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_322_06_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								파일입출력
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+
+					<div class="text_01">
+						&nbsp;&nbsp;프로그램을 작성할 때 파일로 저장된 대량의 데이터를 읽어 오거나 다음에 다시 사용하기 위해 결괏값을 파일로 저장해야 하는 경우가 있다. 
+						이처럼 파일에 데이터를 읽고 쓰는 것을 <strong class="fw_700">파일입출력</strong>이라 한다.<br />
+						파일입출력은 다음과 같은 순서로 진행된다.
+					</div>
+					<div class="sub_title_dot">파일 처리 과정</div>
+
+					<div class="both_wrap">
+						<div class="item">
+							<div class="tit f_center rd_20">파일 열기</div>
+							<button type="button" class="after_hand on" aria-label="다음 순서 보기"></button>
+							<ul>
+								<li>
+									<strong class="f_center">설명</strong>
+									<p>파일의 데이터를 읽거나 쓰기 위해 파일을 연다.</p>
+								</li>
+								<li>
+									<strong class="f_center">사용<br/>하는<br/>함수</strong>
+									<p class="f_center">open()</p>
+								</li>
+							</ul>
+						</div>
+						<div class="arr"  aria-hidden="true"></div>
+
+						<div class="item item2">
+							<div class="tit f_center rd_20">파일 처리</div>
+							<button type="button" class="after_hand" aria-label="다음 순서 보기"></button>
+							<ul>
+								<li>
+									<strong class="f_center">설명</strong>
+									<p>파일의 데이터를 읽거나<br /> 파일에 데이터를 쓴다.</p>
+								</li>
+								<li>
+									<strong class="f_center">사용<br/>하는<br/>함수</strong>
+									<ul>
+										<li>
+											<span class="f_center">읽기</span>
+											<p>read( )<br /> readline( )<br /> readlines( )</p>
+										</li>
+										<li>
+											<span class="f_center">쓰기</span>
+												<p>write( )</p>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="arr"  aria-hidden="true"></div>
+
+						<div class="item">
+							<div class="tit f_center rd_20">파일 닫기</div>
+							<button type="button" class="after_hand" aria-label="다음 순서 보기"></button>
+							<ul>
+								<li>
+									<strong class="f_center">설명</strong>
+									<p class="f_center">파일 처리를 완료하고 파일을 닫는다.</p>
+								</li>
+								<li>
+									<strong class="f_center">사용<br/>하는<br/>함수</strong>
+									<p class="f_center">close()</p>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					
+				</div>
+			</div>
+		</main>
+
+	</div>
+<script>
+	$(document).ready(function(){
+		$(".after_hand").on("click", function(){
+			$(this).next().addClass("on");
+			$(this).parent().next().next().find(".after_hand").addClass("on");
+			$(this).removeClass("on");
+		});
+	});
+</script>
+
+<script>
+	const contentId = 'H-322-06';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>제어구조</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_324_03_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								제어구조
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_con">
+						<span>
+							&nbsp;&nbsp;<strong>제어 구조</strong>란 프로그램의 실행 흐름을 바꾸는 방법으로, 작업의 순서를 정하는 역할을 한다. 
+							제어 구조에는 순차, 선택, 반복의 세 가지 구조가 있으며, 어떤 문제이든 이 세 가지 제어 구조를 조합하여 해결할 수 있다.
+						</span>
+					</div>
+					<div class="box_con">
+						<dl class="type01"> 
+							<dt tabindex="0">
+								<span>순차 구조</span>
+							</dt>
+							<dd>
+								<button class="after_hand" aria-label="클릭하면 조건을 하이라이팅 합니다."></button>
+								<div class="condition">
+									<img class="show" src="./img/H-324-03-00.png" alt="순차 구조의 반복 흐름도입니다. '명령 1', '명령 2', '명령 3'이 위에서 아래로 연결되어 있으며, 기본 상태입니다.">
+									<img src="./img/H-324-03-01.png" alt="순차 구조에서 '명령 1' 블록이 강조되어 현재 실행 중임을 나타냅니다.">
+									<img src="./img/H-324-03-02.png" alt="순차 구조에서 '명령 1' 실행 후 '명령 2'로 흐름이 이동하는 중입니다.">
+									<img src="./img/H-324-03-03.png" alt="순차 구조에서 '명령 2' 블록이 강조되어 현재 실행 중임을 나타냅니다.">
+									<img src="./img/H-324-03-04.png" alt="순차 구조에서 '명령 2' 실행 후 '명령 3'으로 흐름이 이동하는 중입니다.">
+									<img src="./img/H-324-03-05.png" alt="순차 구조에서 '명령 3' 블록이 강조되어 현재 실행 중임을 나타냅니다.">
+									<img src="./img/H-324-03-06.png" alt="순차 구조에서 '명령 3' 실행 후 다시 반복으로 흐름이 연결됨을 나타냅니다.">
+								</div>
+								<div class="text_con">
+									<span>
+										명령이 순서대로 실행되는 구조로, 프로그램 실행 과정의 가장 기본적인 구조이다.
+									</span>
+								</div>
+							</dd>
+						</dl>
+						<dl class="type02"> 
+							<dt tabindex="0">
+								<span>선택 구조</span>
+							</dt>
+							<dd>
+								<button class="after_hand" aria-label="클릭하면 조건을 하이라이팅 합니다."></button>
+								<div class="condition">
+									<img  class="show" src="./img/H-324-03-0101.png" alt="조건에 따라 '명령 1' 또는 '명령 2'로 분기되는 선택 구조 흐름도입니다. 기본 상태입니다.">
+									<img src="./img/H-324-03-0107.png" alt="'명령 1'과 '명령 2'가 조건에 따라 나뉘는 구조임을 강조한 흐름도입니다. 두 명령이 중괄호 형태로 함께 묶여 표현되어 있습니다.">
+									<img src="./img/H-324-03-0106.png" alt="'조건' 판단 후 '명령 2' 경로로 분기되어 실행되는 흐름을 강조한 구조도입니다. '명령 2' 블록이 강조되어 있습니다.">
+									<img src="./img/H-324-03-0105.png" alt="'조건' 판단 지점에서 '명령 2'로 향하는 흐름이 강조되어 이동 방향을 시각적으로 보여주는 구조도입니다.">
+									<img src="./img/H-324-03-0104.png" alt="'조건' 판단 후 '명령 1' 경로로 분기되어 실행되는 흐름을 강조한 구조도입니다. '명령 1' 블록이 강조되어 있습니다.">
+									<img src="./img/H-324-03-0103.png" alt="'조건' 판단 지점에서 '명령 1'로 향하는 흐름이 강조되어 이동 방향을 시각적으로 보여주는 구조도입니다.">
+									<img src="./img/H-324-03-0102.png" alt="'조건' 블록이 강조되어 있으며, 판단 지점에서 좌우로 흐름이 나뉘는 분기 구조임을 나타냅니다.">
+								</div>
+								<div class="text_con">
+									<span>
+										조건이 참인지 거짓인지에 따라 명령을 선택하여 실행하는 구조이다. 선택 구조에는 if문, if~else문, if~elif~else문 등이 있다.
+									</span>
+								</div>
+							</dd> 
+						</dl>
+						<dl class="type03"> 
+							<dt tabindex="0">
+								<span>반복 구조</span>
+							</dt>
+							<dd>
+								<button class="after_hand" aria-label="클릭하면 조건을 하이라이팅 합니다."></button>
+								<div class="condition">
+									<img class="show"  src="./img/H-324-03-010101.png" alt="조건 판단에 따라 반복이 이루어지는 구조 흐름도입니다. '조건' → '명령 1' → '명령 2'로 순차 진행되며, '조건'이 거짓이면 반복하지 않고 종료됩니다.">
+									<img src="./img/H-324-03-010102.png" alt="조건 판단 흐름도에서 '조건' 블록이 진한 파란색으로 강조되어, 현재 조건을 판단 중임을 나타냅니다.">
+									<img src="./img/H-324-03-010108.png" alt="조건 판단 후 '명령 1'이 실행 중임을 나타냅니다. '명령 1' 블록이 강조되어 있으며, 이후 '명령 2'로 흐름이 이어집니다.">
+									<img src="./img/H-324-03-010103.png" alt="'명령 2' 실행 후 조건으로 되돌아가는 반복 흐름이 강조되어 있습니다. 흐름선이 '조건' 블록으로 되돌아가는 구조를 보여줍니다.">
+									<img src="./img/H-324-03-010107.png" alt="'명령 2' 블록이 강조되어 현재 실행 중임을 나타내며, 반복 구조의 끝 단계임을 시각적으로 보여줍니다.">
+									<img src="./img/H-324-03-010106.png" alt="'조건' 블록이 다시 강조되어 반복 조건을 다시 확인 중인 상태입니다. 반복 구조의 루프 흐름을 시각화합니다.">
+									<img src="./img/H-324-03-010104.png" alt="조건이 거짓일 때 반복을 종료하는 흐름이 강조되어 있습니다. '조건'에서 왼쪽으로 빠져나가는 흐름선이 시각적으로 표현됩니다.">
+									<img src="./img/H-324-03-010105.png" alt="조건이 참일 때 반복을 위해 '명령 1'로 흐름이 이어지는 구조입니다. '조건'에서 아래로 향하는 화살표가 강조되어 있습니다.">
+								</div>
+								<div class="text_con">
+									<span>
+										조건을 만족하는 동안 명령을 반복하여 실행하는 구조이다. 반복 구조에는 for문, while문 등이 있다.
+									</span>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</main>
+
+	</div>
+	<script>
+		$(document).ready(function(){
+			$(".after_hand").on("click", function(){
+				const $btn = $(this);
+				const $dl = $btn.closest("dl");
+				const $imgs = $dl.find(".condition > img");
+				let delay = 1000;
+
+				$btn.hide();
+				$imgs.removeClass("show");
+
+				$imgs.each(function(index){
+				setTimeout(() => {
+					$imgs.removeClass("show");
+					$(this).addClass("show");
+				}, delay * (index + 1));
+				});
+
+				setTimeout(() => {
+				$imgs.removeClass("show");
+				$imgs.eq(0).addClass("show");
+				$btn.show();
+				}, delay * ($imgs.length + 1));
+			});
+			});
+
+	</script>
+
+	<script>
+		const contentId = 'H-324-03';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

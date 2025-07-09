@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>정형 데이터의 시각화</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_223_06_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								정형 데이터의 시각화
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp;&nbsp;정형 데이터는 일정한 형식을 갖춘 데이터로 수치, 문자, 날짜, 지리 정보 등을 포함한다. 정보의 특성에 맞게 시각화하는 
+								것도 데이터 분석의 중요한 부분이다. '전국 초중등학교 위치' 표준 데이터를 산점도로 시각화하는 방법을 알아보자.
+							</span>
+						</div>
+					</div>
+
+					<div class="info02_con">
+						<div class="title_con" tabindex="0">
+							<div class="dot" aria-hidden="true"></div>
+
+							<span>
+								'전국 초중등학교 위치' 데이터 시각화
+								<button class="btn_link_popup" type="button" aria-expanded="false" aria-controls="tooltip01" aria-label="링크 팝업" ></button>
+							</span>
+						</div>
+
+						<div class="video_con">
+							<div class="contents_con">
+								<div class="video-container">
+									<video id="player01" data-content-id="H-223-06" controls crossorigin></video>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="popup_con text_popup_con" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" id="popup-title" tabindex="0">
+							<span>
+								전국 초중등학교 위치 데이터 
+								</span>
+
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<ul class="list_disc">
+								<li>전국 초중등학교 위치 표준 데이터는 공공 데이터 포털에서 받을 수 있다.</li>
+								<li>웹 사이트: &nbsp;<a href="https://www.data.go.kr" target="_blank">https://www.data.go.kr</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</main>
+
+
+	</div>
+
+<script>
+$(document).ready(function(){
+	// 팝업열기
+	$(".H_223_06_con .btn_link_popup").on("click", function(){
+		var popSelector = "#" + $(this).attr("aria-controls");
+		if($(popSelector).css("display") == "none") {
+			$(".H_223_06_con .text_popup_con").not(popSelector).hide();
+			$(popSelector).show();
+		}else {
+			$(popSelector).hide();
+		}
+	});
+	// 팝업닫기
+	$(".H_223_06_con .text_popup_con .a_btn").on("click", function(){
+		$(this).parents(".text_popup_con").hide();
+	});
+
+
+	
+});
+</script>	
+<script>
+	const contentId = 'H-223-06';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+<script>
+	const videoList = [
+		{ 
+			id: "H-223-06",
+			src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-223-06_4000k.mp4,H-223-06_2000k.mp4,H-223-06_1000k.mp4,lang/kor/H-223-06.vtt,.smil/master.m3u8" 
+		}
+	];
+</script>
+<script type="text/javascript" src="./js/xapi.video.js"></script>
+
+</body>
+</html>

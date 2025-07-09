@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <title>개념 학습 - 회귀</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="format-detection" content="telephone=no"/>
+
+        <link rel="stylesheet" href="./css/jquery-ui.min.css"/>
+        <link rel="stylesheet" href="./css/fonts.css"/>
+        <link rel="stylesheet" href="./css/style.css"/>
+        <link rel="stylesheet" href="./css/common_all.css"/>
+
+        <script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+        <!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="./js/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <main class="H_422_05_con">
+                <div class="contents_con">
+                    <div class="title_con">
+                        <div class="contents_con">
+                            <div class="text_bg">
+                                <h2 class="text" tabindex="0">개념 학습</h2>
+                                <div class="bg"></div>
+                            </div>
+
+                            <div class="text_con">
+                                <h2 tabindex="0">지도학습의 유형</h2>
+
+                                <h1 tabindex="0">회귀</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contents_con">
+                        <div class="flex_con">
+                            <div class="text_con">
+                                <span tabindex="0">
+                                    &nbsp;
+                                    <b>회귀</b>(regression)는 입력 데이터를 바탕으로 연속적인 숫자 값을 예측하는 것이다. 회귀는 종속변수가
+                                    <span
+                                        tabindex="0"
+                                        class="link_tooltip"
+                                        role="button"
+                                        aria-expanded="false"
+                                        aria-controls="tooltip01">연속적인 값</span >이다. 예를 들어, 오른쪽 표의 종속변수인 ‘최고 기온’은 실수형의 연속적인 수칫값을 가진다.
+                                    <br/>
+                                    &nbsp; 회귀의 목적은 한 개 또는 여러 개의 독립 변수들을 기반으로 종속변수의 값을 예측하거나 설명하는 것이다. 회귀 알고리즘에서 가장
+                                    많이 사용되는 간단한 모델로
+                                    <span
+                                        tabindex="0"
+                                        class="link_tooltip"
+                                        role="button"
+                                        aria-expanded="false"
+                                        aria-controls="tooltip02">선형 회귀</span >가 있다.
+                                </span>
+                            </div>
+                            <div class="table_con">
+                                <table tabindex="0">
+                                    <caption>회귀(종속변수가 연속적인 값인 경우)</caption>
+                                    <colgroup>
+                                        <col width="16%"/>
+                                        <col width="16%"/>
+                                        <col width="16%"/>
+                                        <col width="16%"/>
+                                        <col/>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="4" scope="col">
+                                                <span
+                                                    class="link_tooltip"
+                                                    role="button"
+                                                    aria-expanded="false"
+                                                    aria-controls="tooltip03">독립 변수</span >
+                                            </th>
+                                            <th scope="col">
+                                                <span
+                                                    class="link_tooltip"
+                                                    role="button"
+                                                    aria-expanded="false"
+                                                    aria-controls="tooltip04">종속변수</span >
+                                                (레이블)
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">현재 온도 (℃)</th>
+                                            <th scope="col">습도<br/>(%)</th>
+                                            <th scope="col">풍속 (m/s)</th>
+                                            <th scope="col">강수량 (mm)</th>
+                                            <th scope="col">최고 기온</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>60</td>
+                                            <td>5</td>
+                                            <td>0</td>
+                                            <td>22.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td>75</td>
+                                            <td>2</td>
+                                            <td>10</td>
+                                            <td>27.6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15</td>
+                                            <td>40</td>
+                                            <td>8</td>
+                                            <td>0</td>
+                                            <td>18.3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>17</td>
+                                            <td>90</td>
+                                            <td>1</td>
+                                            <td>18</td>
+                                            <td>18.5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="box_con">
+                            <div class="head_con" tabindex="0">
+                                <span>회귀 모델을 이용한 문제 해결의 예시</span>
+                            </div>
+                            <div class="body_con">
+                                <div class="flex_con02">
+                                    <div class="img_con">
+                                        <img
+                                            tabindex="0"
+                                            src="./img/H_422_05_con_img01.png"
+                                            alt="회전하는 레코드판 모습으로, 음악의 특성에 따라 클래식, 록, 팝, 재즈 등의 장르로 나누어 주는 분류 모델을 설명하는 그림"/>
+                                        <span tabindex="0">관람객 수와 팝콘 판매량을 학습하면, 특정 날의 관람객 수를
+                                            <br/>입력했을 때 예상되는 팝콘 판매량을 예측할 수 있음.</span >
+                                    </div>
+                                    <div class="img_con">
+                                        <img
+                                            tabindex="0"
+                                            src="./img/H_422_05_con_img02.png"
+                                            alt="농구 경기에서 슛을 시도하는 선수의 얼굴에는 기쁨, 수비하는 상대 선수 얼굴에는 놀람으로 감정 분석되어 표시되는 장면"/>
+                                        <span tabindex="0">과거 선수들의 성적과 연봉 데이터를 바탕으로,
+                                            <br/>새로운 선수의 성적을 입력했을 때 예상 연봉을 예측할 수 있음.</span >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 팝업 -->
+                <div
+                    class="text_popup_con H_422_05_pop_01"
+                    id="tooltip01"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="popup-title">
+                    <div class="contents_con">
+                        <div class="close_btn">
+                            <a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+                        </div>
+
+                        <div class="title_con" tabindex="0">
+                            <span>
+                                연속적인 값<br/>(continuous value)
+                            </span>
+                        </div>
+
+                        <div class="info_con" tabindex="0">
+                            <span>
+                                일정 범위 내에서 어떤 값이든 취할 수 있는 수칫값이다. 예) 온도, 길이, 무게
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="text_popup_con H_422_05_pop_02"
+                    id="tooltip02"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="popup-title">
+                    <div class="contents_con">
+                        <div class="close_btn">
+                            <a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+                        </div>
+
+                        <div class="title_con" tabindex="0">
+                            <span>
+                                선형 회귀
+                            </span>
+                        </div>
+
+                        <div class="info_con" tabindex="0">
+                            <ul>
+                                <li>
+                                    <strong>단순 선형 회귀</strong>: 1개의 독립 변수만 사용하여 종속변수의 값을 예측하거나 설명한다.
+                                </li>
+                                <li>
+                                    <strong>다중 선형 회귀</strong>: 2개 이상의 독립 변수를 사용하여 종속변수의 값을 예측하거나 설명한다.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="text_popup_con H_422_05_pop_03"
+                    id="tooltip03"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="popup-title">
+                    <div class="contents_con">
+                        <div class="close_btn">
+                            <a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+                        </div>
+
+                        <div class="title_con" tabindex="0">
+                            <span>
+                                독립 변수
+                            </span>
+                        </div>
+
+                        <div class="info_con" tabindex="0">
+                            <span>
+                                종속변수에 영향을 주는 변수로 예측에 사용되는 입력 변수이다.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="text_popup_con H_422_05_pop_04"
+                    id="tooltip04"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="popup-title">
+                    <div class="contents_con">
+                        <div class="close_btn">
+                            <a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+                        </div>
+
+                        <div class="title_con" tabindex="0">
+                            <span>
+                                종속변수
+                            </span>
+                        </div>
+
+                        <div class="info_con" tabindex="0">
+                            <span>
+                                예측하려는 변수로 결과 변수, 출력 변수라고도 한다.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+            // 팝업열기
+            $(".H_422_05_con .link_tooltip").on("click", function () {
+                var popSelector = "#" + $(this).attr("aria-controls");
+                if ($(popSelector).css("display") == "none") {
+                    $(".H_422_05_con .text_popup_con")
+                        .not(popSelector)
+                        .hide();
+                    $(popSelector).show();
+                } else {
+                    $(popSelector).hide();
+                }
+            });
+            // 팝업닫기
+            $(".H_422_05_con .text_popup_con .a_btn").on("click", function () {
+                $(this)
+                    .parents(".text_popup_con")
+                    .hide();
+            });
+        </script>
+        <script>
+			const contentId = 'H-422-05';
+		</script>
+		<script type="text/javascript" src="./js/xapi.page.js"></script>
+    </body>
+</html>

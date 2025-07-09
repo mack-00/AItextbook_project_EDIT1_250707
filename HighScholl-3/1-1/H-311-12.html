@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>다리 건너기 문제 > 모델링</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="GoogleTranslate.css">
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script type="text/javascript" src="GoogleTranslate.js"></script> 
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_311_12_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h2>
+								다리 건너기 문제
+							</h2>
+							<h1>
+								모델링
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+
+					<div class="text_01 fw_600" tabindex="0">
+						다음 글을 읽고 펜툴로 그래프를 그려 지도의 핵심 요소를 모델링해 보자.
+					</div>
+
+					<div class="both_wrap">
+						<div class="left">
+							<div class="rd_20 txt" tabindex="0">
+								&nbsp;&nbsp;프로이센의 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip01" tabindex="0">쾨니히스베르크</span>에는 프레겔강과 강으로 둘러싸인 섬이 2개가 있고 섬을 잇는 다리는 총 7개이다. 어느 한 곳에서 출발하여 7개의 다리들을 모두 한 번씩만 건너서 출발한 곳으로 다시 돌아오는 것이 가능할까?
+							</div>
+							<div class="img H_311_12_img01" tabindex="0">
+								<img src="./img/H_311_12_img01.png" alt="보충자료">
+							</div>
+							<span class="btn_data_popup" aria-label="보충자료" role="button" aria-expanded="false" aria-controls="tooltip02" tabindex="0"></span>
+						</div>
+						<div class="round_box">
+
+						</div>
+					</div>
+					
+				</div>
+				<!-- 팝업 -->
+				<div class="text_popup_con H_311_12_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0" id="popup-title">
+							<span>
+								쾨니히스베르크
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								고대 프로이센 왕국의 수도로, 오늘날 러시아 칼리닌그라드이다.
+							</span>
+						</div>
+					</div>
+					
+				</div>
+				<div class="text_popup_con H_311_12_pop_02" id="tooltip02" role="dialog" aria-modal="true" aria-labelledby="popup-title2">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0" id="popup-title2">
+							<span>
+								모델링 팁!
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								지도의 구역을 A~D로 정하고 각 지역을 잇는 다리를 선으로 연결해서 그래프를 그릴 수 있다.
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- //팝업 -->
+				<!-- popup -->
+				<!-- <div class="full_popup_wrap H_311_12_full_popup" id="fullpopup01">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>모델링 팁! </span>
+						</div>
+						<div class="full_popoup_content">
+							<div class="text01">
+								지도의 구역을 A~D로 정하고 각 지역을 잇는 다리를 선으로 연결해서 그래프를 그릴 수 있다.
+							</div>
+
+						</div>
+					</div>
+				</div> -->
+
+				<!-- //popup -->
+			</div>
+		</main>
+
+	</div>
+<script>
+
+$(document).ready(function(){
+	// 팝업열기
+	$(".H_311_12_con .link_tooltip").on("click", function(){
+			var popSelector = "#" + $(this).attr("aria-controls");
+			if($(popSelector).css("display") == "none") {
+				$(".H_311_12_con .text_popup_con").not(popSelector).hide();
+				$(popSelector).show();
+			}else {
+				$(popSelector).hide();
+			}
+		});
+		// 팝업닫기
+		$(".H_311_12_con .text_popup_con .a_btn").on("click", function(){
+			$(this).parents(".text_popup_con").hide();
+		});
+	// 보충자료
+	$(".H_311_12_con .btn_data_popup, .btn_active").on("click", function(){
+		var popSelector = "#" + $(this).attr("aria-controls");
+		$(popSelector).show();
+	});
+	$(".full_popup_wrap .btn_close").on("click", function(){
+		$(this).parents(".full_popup_wrap").hide();
+	});
+
+
+});
+
+	
+</script>
+<script>
+	const contentId = 'H-311-12';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

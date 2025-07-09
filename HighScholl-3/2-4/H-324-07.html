@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>선택 구조 형식</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<style>
+		.H_324_07_con > .contents_con > .contents_con > .answer_con > ul > li:nth-child(1)::after {
+			left: calc(25% + 10px)	!important;
+		}
+		.H_324_07_con > .contents_con > .contents_con > .answer_con > ul > li:nth-child(2)::after {
+			left: calc(54% + 10px)	!important;
+		}
+		.H_324_07_con > .contents_con > .contents_con > .answer_con > ul > li:nth-child(3)::after {
+			left: calc(64% + 10px)	!important;
+		}
+		/* @media screen and (max-width: 1600px) {
+			.H_324_07_con > .contents_con > .contents_con > .answer_con > ul > li:nth-child(1)::after {
+				left: 6.1vw !important;
+			}
+
+
+		} */
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_324_07_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								선택 구조 형식
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_con" tabindex="0">
+						<span>여러 가지 선택 구조에서 문법에 맞게 작성한 것을 모두 골라 보자.</span>
+					</div>
+					<div class="list_con">
+						<ul>
+							<li tabindex="0">
+								<div class="code_con">
+									<span>
+										if 조건:<br>명령1<br>명령2
+									</span>
+								</div>
+								<div class="chk_con">
+									<label class="chk_label">
+										<input type="checkbox"  value="1번" />
+										<span class="check_icon"></span>
+									</label>
+								</div>
+							</li>
+							<li tabindex="0">
+								<div class="code_con">
+									<span>
+										if 조건:<br>
+										<span class="indent">명령1</span><br>
+										명령2
+									</span>
+								</div>
+								<div class="chk_con">
+									<label class="chk_label"> 
+										<input type="checkbox"  value="2번" data-answer="true" />
+										<span class="check_icon"></span>
+									</label>
+								</div>
+							</li>
+							<li tabindex="0">
+								<div class="code_con">
+									<span>
+										if 조건:<br>
+										<span class="indent">명령1</span><br>
+										<span class="indent">else:</span><br>
+										명령2
+									</span>
+								</div>
+								<div class="chk_con">
+									<label class="chk_label">
+										<input type="checkbox"  value="3번" />
+										<span class="check_icon"></span>
+									</label>
+								</div>
+							</li>
+							<li tabindex="0">
+								<div class="code_con">
+									<span>
+										if 조건1:<br>
+										<span class="indent">명령1</span><br>
+										elif 조건2:<br>
+										<span class="indent">명령2</span><br>
+										else:<br>
+										<span class="indent">명령3</span>
+									</span>
+								</div>
+								<div class="chk_con">
+									<label class="chk_label">
+										<input type="checkbox"  value="4번" data-answer="true"  />
+										<span class="check_icon"></span>
+									</label>
+								</div>
+							</li>
+							<li tabindex="0">
+								<div class="code_con">
+									<span>
+										if 조건1:<br>
+										<span class="indent">명령1</span><br>
+										else 조건2:<br>
+										<span class="indent">명령2</span>
+									</span>
+								</div>
+								<div class="chk_con">
+									<label class="chk_label">
+										<input type="checkbox"  value="5번" />
+										<span class="check_icon"></span>
+									</label>
+								</div>
+							</li>
+							<li tabindex="0">
+								<div class="code_con">
+									<span>
+										if 조건1:<br>
+										<span class="indent">명령1</span><br>
+										elif 조건2:<br>
+										<span class="indent">명령2</span><br>
+										elif 조건3:<br>
+										<span class="indent">명령3</span>
+									</span>
+								</div>
+								<div class="chk_con">
+									<label class="chk_label">
+										<input type="checkbox"  value="6번" data-answer="true"  />
+										<span class="check_icon"></span>
+									</label>
+								</div>
+							</li>
+						</ul>
+					</div> 
+					<div class="answer_con">
+						<ul>
+							<li tabindex="0">
+								<div class="text_con">
+									<span>if 조건 다음의<br>명령은 들여쓰기해야 한다.</span>
+								</div>
+								<div class="code_con">
+									<span>
+										<strong>[정답]</strong><br>
+										if 조건:<br>
+										<span class="indent">명령1</span><br>
+										<span class="indent">명령2</span>
+									</span>
+								</div>
+							</li>
+							<li tabindex="0">
+								<div class="text_con">
+									<span>else는 들여쓰기 할 필요가 없다.</span>
+								</div>
+								<div class="code_con">
+									<span>
+										<strong>[정답]</strong><br>
+										if 조건:<br>
+										<span class="indent">명령1</span><br>
+										else:<br>
+										<span class="indent">명령2</span>
+									</span>
+								</div>
+							</li>
+							<li tabindex="0">
+								<div class="text_con">
+									<span>else 뒤에는 조건을 작성할 필요가 없다.</span>
+								</div>
+								<div class="code_con">
+									<span>
+										<strong>[정답]</strong><br>
+										if 조건:<br>
+										<span class="indent">명령1</span><br>
+										else:<br>
+										<span class="indent">명령2</span>
+									</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="btn_con">
+						<button type="button" class="a_btn btn_confirm" aria-label="확인하기">확인하기</button>
+					</div>
+				</div>
+				<div class="popup_con_bg popup01"></div>
+				<div class="popup_con popup01" role="alert"></div>
+
+				<div class="popup_con_bg popup02"></div>
+				<div class="popup_con popup02" role="alert"></div>
+
+				<div class="popup_con_bg popup03"></div>
+				<div class="popup_con popup03" role="alert"></div>
+
+				<div class="popup_con_bg popup04"></div>
+				<div class="popup_con popup04" role="alert"></div>
+			</div>
+		</main>
+
+		<script>
+		$(document).ready(function(){
+			let tryCount = 0;
+
+			// 체크 여부 확인
+			function isChecked() {
+				return $(".H_324_07_con input[type=checkbox]:checked").length > 0;
+			}
+
+			// 정답 판별
+			function answerCheck() {
+				let result = true;
+				$(".H_324_07_con input[type=checkbox]").each(function(){
+					const isChecked = $(this).is(":checked");
+					const isAnswer = $(this).attr("data-answer") === "true";
+					if (isChecked !== isAnswer) {
+						result = false;
+						return false;
+					}
+				});
+				return result;
+			}
+
+			// 정답 자동 선택
+			function selectCorrectAnswers() {
+				$(".H_324_07_con input[type=checkbox]").each(function(){
+					const isAnswer = $(this).attr("data-answer") === "true";
+					$(this).prop("checked", isAnswer);
+				});
+			}
+
+			// 확인하기 클릭
+			$(".btn_confirm").on("click", function(){
+				if (!isChecked()) {
+					// 미체크 시
+					$(".H_324_07_con .popup_con_bg.popup03").fadeIn();
+					$(".H_324_07_con .popup_con.popup03").fadeIn();
+					setTimeout(function(){
+						$(".H_324_07_con .popup_con_bg.popup03").fadeOut();
+						$(".H_324_07_con .popup_con.popup03").fadeOut();
+					}, 1000);
+				} else if (answerCheck()) {
+					// 정답일 때
+					$(".H_324_07_con .popup_con_bg.popup02").fadeIn();
+					$(".H_324_07_con .popup_con.popup02").fadeIn();
+					$(".H_324_07_con .answer_con").addClass("on");
+					tryCount = 0;
+
+					setTimeout(function(){
+						$(".H_324_07_con .popup_con_bg.popup02").fadeOut();
+						$(".H_324_07_con .popup_con.popup02").fadeOut();
+					}, 1000);
+				} else {
+					// 오답일 때
+					tryCount++;
+
+					if (tryCount === 1) {
+						$(".H_324_07_con .popup_con_bg.popup01").fadeIn();
+						$(".H_324_07_con .popup_con.popup01").fadeIn();
+						setTimeout(function(){
+							$(".H_324_07_con .popup_con_bg.popup01").fadeOut();
+							$(".H_324_07_con .popup_con.popup01").fadeOut();
+						}, 1000);
+					} else if (tryCount === 2) {
+						// 2회 오답 시 정답 자동 체크 + popup04 + 버튼 전환
+						selectCorrectAnswers();
+						$(".H_324_07_con .answer_con").addClass("on");
+
+						$(".H_324_07_con .popup_con_bg.popup04").fadeIn();
+						$(".H_324_07_con .popup_con.popup04").fadeIn();
+						setTimeout(function(){
+							$(".H_324_07_con .popup_con_bg.popup04").fadeOut();
+							$(".H_324_07_con .popup_con.popup04").fadeOut();
+						}, 1000);
+
+						$(".btn_confirm").hide();
+						if ($(".btn_retry").length === 0) {
+							$(".btn_con").append(`<button type="button" class="a_btn btn_retry" aria-label="다시 하기">다시 하기</button>`);
+						} else {
+							$(".btn_retry").show();
+						}
+					}
+				}
+			});
+
+			// 다시 하기 버튼
+			$(document).on("click", ".btn_retry", function(){
+				tryCount = 0;
+				$(".H_324_07_con input[type=checkbox]").prop("checked", false);
+				$(".btn_confirm").show();
+				$(this).hide();
+				$(".H_324_07_con .answer_con").hide();
+				$(".H_324_07_con .answer_con").removeClass("on");
+			});
+		});
+		</script>
+
+		<script>
+			const contentId = 'H-324-07';
+		</script>
+		<script type="text/javascript" src="./js/xapi.page.js"></script>
+		
+
+	</div>
+</body>
+</html>

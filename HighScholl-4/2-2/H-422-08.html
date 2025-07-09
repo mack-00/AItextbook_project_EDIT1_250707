@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>개념 학습 - 의사결정트리</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_422_08_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" >
+							<h2 tabindex="0">
+								분류 알고리즘
+							</h2>
+
+							<h1 tabindex="0">
+								의사결정트리
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp; <b>의사결정트리</b>(decision tree)는 트리 구조를 이용하여 분류하는 방법이다. 각 노드에는 서로 다른 클래스가 섞여 있으며, 의사결정트리의 목표는 속성을 통해 질문하고 한 개의 클래스만 남을 때까지 나누는 것이다. 이 과정에서 각 노드에 얼마나 많은 클래스가 섞여 있는지 살펴보고, 
+								어떤 속성이 클래스를 가장 잘 나눌 수 있는지 결정한다.
+							</span>
+						</div>
+					</div>
+					<div class="info02_con">
+						<div class="title_con" tabindex="0">
+							<div class="dot" aria-hidden="true"></div>
+							<span>
+								의사결정트리의 분류
+								<button  class="a_btn" type="button" aria-label="보충 자료" tabindex="0" onclick="H_422_08_popup();"></button>
+							</span>
+						</div>
+					</div>
+					<div class="video_con">
+						<div class="contents_con">
+							<div class="video-container">
+								<video id="player01" data-content-id="H-422-08" controls crossorigin></video>
+							</div>
+						</div>
+					</div>
+					<div class="popup_con_bg"></div>
+					<div class="popup_con">
+						<div class="close_btn">
+							<a href="javascript:H_422_08_popup();" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="contents_con">
+							<div class="title_con">
+								<h2 tabindex="0">
+									의사결정트리의 학습
+								</h2>
+								<div class="txt_con" tabindex="0">
+									<span>
+										&nbsp; 의사결정트리에서 한 개의 클래스만 있는 노드는 더 이상 나눌 필요가 없다. 하지만 여러 클래스가 섞여 있는 노드는 특정 속성으로 질문하여 더 세분화해야 한다. 이렇게 노드를 나누는 과정을 통해 트리가 학습되고, 이 트리를 이용해서 새로운 데이터가 어떤 클래스에 속할지 예측할 수 있다.
+									</span>
+								</div>
+								<div class="img_con">
+									<div class="txt_con01" tabindex="0">
+										<span>서로 다른 클래스가 섞여 있는 노드</span>
+									</div>
+									<div class="img_con01">
+										<img src="img/H_422_08_popup_img01.png" alt="개, 개, 기린, 개 순서로 서로 다른 클래스가 섞여 있는 그림">
+									</div>
+									<div class="txt_con02" tabindex="0">
+										<span>분할 필요</span>
+									</div>
+									<div class="img_con02">
+										<img src="img/H_422_08_popup_img02.png" alt="개, 개, 개, 기린 순서로 서로 다른 클래스가 섞여 있는 그림">
+									</div>
+									<div class="txt_con03" tabindex="0">
+										<span>목이 긴가요?</span>
+									</div>
+									<div class="txt_con04" tabindex="0">
+										<span>분할 필요</span>
+									</div>
+									<div class="txt_con05" tabindex="0">
+										<span>1개의 클래스만 있는 노드</span>
+									</div>
+									<div class="img_con03">
+										<img src="img/H_422_08_popup_img03.png" alt="한 개의 클래스만 있는 노드로, 세 마리의 개만 표시되어 있다.">
+									</div>
+									<div class="txt_con06" tabindex="0">
+										<span>학습의 과정</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+	</div>
+	<script>
+		// 보충자료 팝업 열기/닫기
+		function H_422_08_popup(){
+			if( $(".H_422_08_con > .contents_con > .contents_con > .popup_con").css("display") == "none" ){
+				$(".H_422_08_con > .contents_con > .contents_con > .popup_con_bg").fadeIn();
+				$(".H_422_08_con > .contents_con > .contents_con > .popup_con").fadeIn();
+			}else{
+				$(".H_422_08_con > .contents_con > .contents_con > .popup_con_bg").fadeOut();
+				$(".H_422_08_con > .contents_con > .contents_con > .popup_con").fadeOut();
+			}
+		}
+	</script>
+	<script>
+		const contentId = 'H-422-08';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+	<script>
+		const videoList = [
+			{ 
+				id: "H-422-08",
+				src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-422-08_4000k.mp4,H-422-08_2000k.mp4,H-422-08_1000k.mp4,lang/kor/H-422-08.vtt,.smil/master.m3u8",
+			}
+		];
+	</script>
+	<script type="text/javascript" src="./js/xapi.video.js"></script>
+</body>
+</html>

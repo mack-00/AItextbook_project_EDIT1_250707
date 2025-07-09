@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>손실 압축 > 이미지 데이터 압축</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_211_11_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+						<div class="text_con" tabindex="0">
+							<h2>손실 압축</h2>
+							<h1>이미지 데이터 압축</h1>
+						</div>
+					</div>
+				</div>			
+
+				<div class="contents_con">	
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+							    &nbsp;&nbsp;<span class="bold_text">JPEG</span>는 대표적인 손실 압축 방법이다. JPEG 압축 방식은 사람의 눈이 색의 차이보다 밝기 차이를 더 잘 인식한다는 점과 사진을 이루는 개별 픽셀의 색은 주변에 있는 픽셀의 색과 비슷하다는 성질에 기반을 둔다.
+							</span>
+						</div>						
+					</div>
+
+					<div class="info02_con">
+						<div class="title_con" tabindex="0">
+							<div class="dot" aria-hidden="true"></div>
+
+							<span>
+								이미지 압축 방법의 예
+							</span>
+						</div>
+
+						<div class="contents_con">
+
+							<div class="both_wrap main_wrap">
+								<div>
+									<ul class="both_wrap sub_wrap">
+										<li>
+											<div class="tit f_center">원본</div>
+											<div class="img H_211_11_sub_img01"></div>
+										</li>
+										<li>
+											<div class="tit f_center">색 변화</div>
+											<div class="img H_211_11_sub_img02"></div>
+										</li>
+										<li>
+											<div class="tit f_center">밝기 변화</div>
+											<div class="img H_211_11_sub_img03"></div>
+										</li>
+									</ul>
+
+									<div class="txt01">사람의 눈은 색보다 밝기 차이를 더 잘 인식한다.</div>
+									<div class="arr_bottom" aria-hidden="true"></div>
+									<div class="txt02">
+										<div>
+											각 픽셀의 R(빨강), G(초록), B(파랑) 값을 모두 저장하지 않고, 픽셀의 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip01">휘도</span>,<br />
+											파란색 차이, 빨간색 차이 정보를 바탕으로 압축한다.
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="img H_211_11_sub_img04"></div>
+									<div class="txt01 ">개별 픽셀의 색은 주변에 <br/>있는 픽셀의 색과 비슷하다.</div>
+									<div class="arr_bottom" aria-hidden="true"></div>
+									<div class="txt02 ">
+										이미지를 8×8 픽셀 블록으로 나누어 압축한다.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 팝업 -->
+				<div class="text_popup_con H_211_11_pop_01" id="tooltip01" role="dialog" aria-modal="true" >
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>
+								휘도
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								빛의 정도(밝기)를 의미한다.
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- //팝업 -->
+
+			</div>
+		</main>
+
+
+	</div>
+
+	<script>
+	$(document).ready(function(){
+			// 팝업열기
+			$(".H_211_11_con .link_tooltip").on("click", function(){
+				var popSelector = "#" + $(this).attr("aria-controls");
+				if($(popSelector).css("display") == "none") {
+					$(".H_211_11_con .text_popup_con").not(popSelector).hide();
+					$(popSelector).show();
+				}else {
+					$(popSelector).hide();
+				}
+			});
+			// 팝업닫기
+			$(".H_211_11_con .text_popup_con .a_btn").on("click", function(){
+				$(this).parents(".text_popup_con").hide();
+			});
+
+			
+		});
+	</script>	
+	<script>
+		const contentId = 'H-211-11';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

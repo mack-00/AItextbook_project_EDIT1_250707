@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>문제 해결 과정</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="GoogleTranslate.css"> 
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script type="text/javascript" src="GoogleTranslate.js"></script> 
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_311_03_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+							문제 해결 과정
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+
+					<div class="text_01">
+						&nbsp;&nbsp;문제는 해답을 요구하는 물음 또는 해결해야 하는 일이나 상황 등을 의미하며, 답을 찾았거나 문제 상황이 종료되었을 때 문제를 해결했다고 한다. 컴퓨팅 시스템을 활용하여 문제를 해결하는 과정을 알아보자.
+					</div>
+
+					<div class="sub_title_dot">
+						컴퓨팅 시스템을 활용한 문제 해결 과정
+					</div>
+
+					<div class="both_wrap">
+						<div class="item">
+							<div class="tit f_center rd_20">문제 이해 </div>
+							<button class="after_hand" aria-label="상세보기"></button>
+							<div class="con rd_20">
+								문제를 해결하기 위해 문제를 정확하게 이해하고, 문제 해결의 목표를 명확하게 정의하는 단계이다.
+							</div>
+						</div>
+						<div class="arr" aria-hidden="true"></div>
+						<div class="item">
+							<div class="tit f_center rd_20">핵심 요소 추출</div>
+							<button class="after_hand" aria-label="상세보기"></button>
+							<div class="con rd_20">
+								문제와 관련 있는 여러 요소 중 문제  해결에 필요한 핵심 요소를 찾는 단계이다. 
+							</div>
+						</div>
+						<div class="arr" aria-hidden="true"></div>
+						<div class="item">
+							<div class="tit f_center rd_20">문제 분해 및 모델링</div>
+							<button class="after_hand" aria-label="상세보기"></button>
+							<div class="con rd_20">
+								복잡한 문제를 해결 가능한 작은 문제로 분해하고, 단순한 형태의 모델을 만드는 단계이다.
+							</div>
+						</div>
+						<div class="arr" aria-hidden="true"></div>
+						<div class="item">
+							<div class="tit f_center rd_20">알고리즘 설계</div>
+							<button class="after_hand" aria-label="상세보기"></button>
+							<div class="con rd_20">
+								효율적인 해결 전략을 고민하고, 문제 해결 과정을 논리적으로 나열하는 단계이다.
+							</div>
+						</div>
+						<div class="arr" aria-hidden="true"></div>
+						<div class="item">
+							<div class="tit f_center rd_20">프로그래밍</div>
+							<button class="after_hand" aria-label="상세보기"></button>
+							<div class="con rd_20">
+								설계한 알고리즘을 프로그래밍 언어로 구현하는 단계이다.
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</main>
+
+	</div>
+
+	<script>
+	$(document).ready(function(){
+		// 첫번째 손가락 보이기
+		$(".both_wrap .item:first-child .after_hand").show();
+
+		//손 가락 클릭
+		$(".after_hand").on("click", function(){
+			$(this).parent().addClass("on");
+		});
+		
+		//다시하기 
+		$(".btn_reset").on("click", function(){
+			$(".both_wrap .item.on").removeClass("on");
+			$(".both_wrap .item:first-child .after_hand").show();
+		});
+	});
+
+	</script>
+	<script>
+		const contentId = 'H-311-03';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>변수</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script type="text/javascript" src="GoogleTranslate.js"></script> 
+	<link rel="stylesheet" href="GoogleTranslate.css"> 
+	
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_321_03_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								변수
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01">
+						&nbsp;&nbsp;<strong class="fw_700">변수</strong>는 어떤 값을 저장하고 나중에 참조하기 위한 기억 장소로, 데이터를 수정하거나 검색, 조작하는 데 필수적이다. 
+						변수를 사용하기 위해서는 기억 장소에 연결된 변수명을 붙여 주고 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip01">대입 연산자</span>(=)를 사용해서 값을 저장한다.
+					</div>
+					<div class="sub_title_dot">변수와 기억 장소</div>
+					<div class="both_wrap">
+						<div class="img H_321_03_img01">
+							<img src="./img/H_321_03_img01.png" alt="우변에 있는 값이 좌변에 있는 변수에 저장된다.">
+						</div>
+
+						<div class="arr">
+							<button class="after_hand" aria-label="상세보기"></button>
+						</div>
+
+						<div class="tbl_wrap">
+							<!-- table -->
+							<div class="tab_con">
+								<table role="grid" aria-label="변수와 기억 장소">
+									<caption>변수와 기억 장소</caption>
+									<thead>
+										<tr>
+											<td  tabindex="0">
+												<span>
+													변수명
+												</span>
+											</td>
+											<td  tabindex="0">
+												<span>
+													기억 장소 (컴퓨터 메모리)
+												</span>
+											</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="title_td"></td>
+											<td class="info_td">
+												<span>...</span>
+											</td>
+										</tr>
+										<tr>
+											<th class="title_td" scope="row">
+												<span>num</span>
+											</th>
+											<td class="info_td">
+												<span>15</span>
+											</td>
+										</tr>
+										<tr>
+											<th class="title_td" scope="row">
+												<span>x</span>
+											</th>
+											<td class="info_td">
+												<span>사과</span>
+											</td>
+										</tr>
+										<tr>
+											<th class="title_td" scope="row">
+												<span>y</span>
+											</th>
+											<td class="info_td">
+												<span>오렌지</span>
+											</td>
+										</tr>
+										<tr>
+											<td class="title_td"></td>
+											<td class="info_td">
+												<span>...</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //table -->
+
+							<div class="rd_10">
+								변수를 위한 기억 장소가 컴퓨터 메모리에
+								마련되고, 기억 장소에 변수명이 연결된다.
+								그리고 기억 장소 내에 데이터가 저장된다.
+							</div>
+
+						</div>
+					</div>
+
+					<!-- 팝업 -->
+					<div class="text_popup_con H_321_03_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+						<div class="contents_con">
+							<div class="close_btn">
+								<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+							</div>
+
+							<div class="title_con" tabindex="0" id="popup-title">
+								<span>
+									대입 연산자
+								</span>
+							</div>
+
+							<div class="info_con" tabindex="0">
+								<span>
+									프로그래밍 언어에서 등호는 ‘대입 연산자’라 부르며, ‘같다’란 의미가 아니라 ‘우변의 데이터를 좌변의 변수에 저장’하라는 의미이다.<br />
+									예를 들어, x = x + 1은 변수 x에 있는 값에 1을 더한 후 다시 변수 x에 저장하라는 의미이다.
+								</span>
+							</div>
+						</div>
+					</div>
+					<!-- //팝업 -->
+					
+				</div>
+			</div>
+		</main>
+
+	</div>
+<script>
+	$(document).ready(function(){
+		$(".after_hand").on("click", function() {
+			$(".tbl_wrap").addClass("on");
+		});
+
+		// 팝업열기
+		$(".H_321_03_con .link_tooltip").on("click", function(){
+			var popSelector = "#" + $(this).attr("aria-controls");
+			if($(popSelector).css("display") == "none") {
+				$(".H_321_03_con .text_popup_con").not(popSelector).hide();
+				$(popSelector).show();
+			}else {
+				$(popSelector).hide();
+			}
+		});
+		// 팝업닫기
+		$(".H_321_03_con .text_popup_con .a_btn").on("click", function(){
+			$(this).parents(".text_popup_con").hide();
+		});
+	});
+</script>
+<script>
+	const contentId = 'H-321-03';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

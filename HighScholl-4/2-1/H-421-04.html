@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>개념 학습 - 전통적인 프로그래밍과 기계학습의 차이</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_421_04_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h2>
+								기계학습
+							</h2>
+
+							<h1>
+								전통적인 프로그래밍과 기계학습의 차이
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								&nbsp; 전통적인 프로그래밍에서는 사람이 직접 규칙과 조건을 설정하지만, 기계학습에서는 컴퓨터가 충분한 데이터를 학습하여 스스로 규칙을 배운다. 따라서 새로운 문제가 생겨도 규칙을 새로 만들 필요가 없고, 성능을 향상하기 위해 더 많은 데이터를 학습하거나 모델을 개선할 수 있어 사람이 규칙을 만들기 어려운 복잡한 문제를 효율적으로 해결할 수 있다.
+							</span>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<div class="dot" aria-hidden="true"></div>
+							<span>전통적인 프로그래밍과 기계학습의 차이</span>
+						</div>
+					</div>
+
+					<div class="info02_con">
+						<div class="nav" role="navigation" aria-label="올바른 정보 보호 방법 탐색">
+							<ul>
+								<li tabindex="0">
+									<span class="on" value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
+										전통적인 프로그래밍
+									</span>
+								</li>
+								<li tabindex="0">
+									<span value="info02" role="tab" id="tab-info02" aria-selected="false" aria-controls="panel-info02">
+										기계학습
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="contents_con">
+							<div id="panel-info01" class="contents_div info01" role="tabpanel" aria-labelledby="tab-info01">
+								<div class="contents_con">
+									<div class="flex_con">
+										<div class="text_con" tabindex="0">
+											<span>
+												&nbsp; Python, C, Java 등과 같은 프로그래밍 언어를 사용하여 명확한 규칙(또는 
+												알고리즘)에 따라 작성하는 일반적인 
+												방법을 뜻한다. <br><br>
+
+												&nbsp; “만약 이메일 제목에 ‘이벤트’, ‘우승’이라는 단어가 있으면 이메일을 스팸으로 분류한다.”와 같은 규칙을 구현하려면 
+												코드를 직접 작성해야 한다. <br>
+												새로운 상황이 생기면 규칙을 바꾸거나 추가해야 한다.
+											</span>
+										</div>
+										<div class="box_con" tabindex="0">
+											<div class="process_con">
+												<ul>
+													<li>
+														입력<br>(규칙)
+													</li>
+													<li>
+														<span class="arrow" aria-hidden="true"></span><br>
+														<span class="arrow" aria-hidden="true"></span>
+													</li>
+													<li><span class="box">프로그래밍</span></li>
+													<li>
+														<span class="arrow" aria-hidden="true"></span>
+													</li>
+													<li>
+														정답<br>(출력 결과)
+													</li>
+												</ul>
+											</div>
+											<div class="dl_con">
+												<dl>
+													<dt><span>입력</span></dt>
+													<dd>이메일의 제목, 내용, 발신자 정보 등</dd>
+													<dt><span>규칙</span></dt>
+													<dd>
+														<ul>
+															<li>사람이 미리 정의한 특정한 단어에 따라 분류</li>
+															<li>만약 제목에 ‘이벤트’, ‘우승’의 단어가 있으면 스팸으로 분류</li>
+														</ul>
+													</dd>
+													<dt><span>정답</span></dt>
+													<dd>스팸 또는 정상 이메일</dd>												
+													
+												</dl>
+											</div>
+
+										</div>
+									</div>
+									
+
+
+								</div>
+							</div>
+							<div id="panel-info02" class="contents_div info02" role="tabpanel" aria-labelledby="tab-info02">
+								<div class="contents_con">
+									<div class="flex_con">
+										<div class="text_con" tabindex="0">
+											<span>
+												&nbsp; 명확한 규칙(또는 알고리즘)을 사람이 
+												작성하는 것이 어려운 경우 데이터를 
+												통해 컴퓨터가 패턴을 학습하고 규칙을 도출해 낼 수 있다.<br><br>
+
+												&nbsp; 기계학습은 많은 이메일을 분석하여 스팸 메일과 정상 메일의 규칙을 스스로 
+												알아낸다. 이후 새로운 이메일에 이 
+												규칙을 적용하여 스팸 여부를 스스로 
+												판단할 수 있다.
+											</span>
+										</div>
+										<div class="box_con" tabindex="0">
+											<div class="process_con">
+												<ul>
+													<li>
+														입력<br>(정답)
+													</li>
+													<li>
+														<span class="arrow" aria-hidden="true"></span><br>
+														<span class="arrow" aria-hidden="true"></span>
+													</li>
+													<li><span class="box">기계학습</span></li>
+													<li>
+														<span class="arrow" aria-hidden="true"></span>
+													</li>
+													<li>
+														규칙<br>(학습된 규칙)
+													</li>
+												</ul>
+											</div>
+											<div class="dl_con">
+												<dl>
+													<dt><span>입력</span></dt>
+													<dd>이메일의 제목, 내용, 발신자 정보 등</dd>
+													<dt><span>정답</span></dt>
+													<dd>입력되는 이메일에 대해 스팸인지 아닌지에 대한 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip01">레이블</span></dd>													
+													<dt><span>규칙</span></dt>
+													<dd>‘당첨’, ‘무료’, ‘이벤트’, ‘우승’ 등의 단어가 스팸에 자주 나타나는 현상을 파악하여 해당 단어가 등장하면 스팸으로 처리</dd>
+												</dl>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						
+
+
+				</div>
+
+				<div class="text_popup_con H_421_04_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0">
+							<span>
+								레이블
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								각 입력 데이터에 대해 원하는 출력값(정답) 또는 목푯값을 의미한다.
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+	</div>
+	
+	<script>
+		// 텝 항목 선택 시
+		$(document).on("click",".H_421_04_con .info02_con > .nav > ul > li span",function(){
+			if( !$(this).hasClass("on") ){
+				$(".H_421_04_con .info02_con > .nav > ul > li span").each(function(){
+					$(this).removeClass("on");
+				});
+				$(this).addClass("on");
+				$(".H_421_04_con .info02_con > .contents_con .contents_div").hide();
+				$(".H_421_04_con .info02_con > .contents_con .contents_div."+$(this).attr("value")).show();
+			} 
+		});
+
+		$(document).ready(function(){
+			// 팝업열기
+			$(".H_421_04_con .link_tooltip").on("click", function(){
+				var popSelector = "#" + $(this).attr("aria-controls");
+				if($(popSelector).css("display") == "none") {
+					$(".H_421_04_con > .contents_con > .text_popup_con").not(popSelector).hide();
+					$(popSelector).show();
+				}else {
+					$(popSelector).hide();
+				}
+			});
+			// 팝업닫기
+			$(".H_421_04_con  .text_popup_con .a_btn").on("click", function(){
+				$(this).parents(".text_popup_con").hide();
+			});
+		});
+	</script>
+	<script>
+		const contentId = 'H-421-04';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

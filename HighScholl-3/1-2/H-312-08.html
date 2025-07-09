@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>정렬 알고리즘의 수행 과정 비교</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="GoogleTranslate.css"> 
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script type="text/javascript" src="GoogleTranslate.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/swiper.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_312_08_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								정렬 알고리즘의 수행 과정 비교
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01 fw_600">다음 숫자 데이터에 대해 버블 정렬, 삽입 정렬, 퀵 정렬을 수행하는 과정을 표 안에 적어 보자.</div>
+					
+					<div class="number_list">
+						<span class="f_center">7</span>
+						<span class="f_center">9</span>
+						<span class="f_center">6</span>
+						<span class="f_center">2</span>
+						<span class="f_center">1</span>
+						<span class="f_center">3</span>
+					</div>
+
+					<!-- slider -->
+					<div class="slide_wrap_con">
+						<div class="slide_con">
+							<div class="swiper-container H_312_08_slide">
+								<div class="swiper-wrapper"  role="region" aria-label="정렬 알고리즘의 수행 과정 비교 슬라이드">
+									
+									<div class="swiper-slide H_312_08_slide_01" data-swiper-autoplay="4000" role="group" aria-label="">
+										
+										<div class="both_wrap">
+											<div class="item">
+												<div class="tit f_center rd_10">버블 정렬</div>
+												<div class="con rd_10">
+													<div class="img H_312_08_slide_01_img01">
+														<img src="./img/H_312_08_slide_01_img01.png" alt="7 비교 6 교환 2 교환 1 교환 3 교환 9 정렬된 영역(1단계)">
+													</div>
+													
+													<table class="tbl_simple">
+														<caption>버블 정렬 결과</caption>
+														<thead>
+															<tr>
+																<th>단계</th>
+																<th colspan="6">정렬 결과</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th>2</th>
+																<td><label><input type="text" data-answer="6" placeholder="입력"/></label></td>
+																<td><label><input type="text" data-answer="2" placeholder="입력"/></label></td>
+																<td><label><input type="text" data-answer="1" placeholder="입력"/></label></td>
+																<td><label><input type="text" data-answer="3" placeholder="입력"/></label></td>
+																<td>7</td>
+																<td>9</td>
+															</tr>
+															<tr>
+																<th>3</th>
+																<td><label><input type="text" data-answer="2" placeholder="입력"/></label></td>
+																<td><label><input type="text" data-answer="1" placeholder="입력"/></label></td>
+																<td><label><input type="text" data-answer="3" placeholder="입력"/></label></td>
+																<td>6</td>
+																<td>7</td>
+																<td>9</td>
+															</tr>
+															<tr>
+																<th>4</th>
+																<td><label><input type="text" data-answer="1" placeholder="입력"/></label></td>
+																<td><label><input type="text" data-answer="2" placeholder="입력"/></label></td>
+																<td>3</td>
+																<td>6</td>
+																<td>7</td>
+																<td>9</td>
+															</tr>
+															<tr>
+																<th>5</th>
+																<td>1</td>
+																<td>2</td>
+																<td>3</td>
+																<td>6</td>
+																<td>7</td>
+																<td>9</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+					
+											<div class="item">
+												<div class="tit f_center rd_10">삽입 정렬</div>
+												<div class="con rd_10">
+													<div class="img H_312_08_slide_01_img02">
+														<img src="./img/H_312_08_slide_01_img02.png" alt="7 비교 9 정렬된 역역(1단계), 6, 2, 1, 3">
+													</div>
+													<table class="tbl_simple">
+														<caption>삽입 정렬 결과</caption>
+														<thead>
+															<tr>
+																<th>단계</th>
+																<th colspan="6">정렬 결과</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th>2</th>
+																<td>6</td>
+																<td>7</td>
+																<td>9</td>
+																<td><label><input type="text" data-answer="2" placeholder="입력"/></label></td>
+																<td><label><input type="text" data-answer="1" placeholder="입력"/></label></td>
+																<td><label><input type="text" data-answer="3" placeholder="입력"/></label></td>
+															</tr>
+															<tr>
+																<th>3</th>
+																<td><label><input type="text" data-answer="2" placeholder="입력"/></label></td>
+																<td>6</td>
+																<td>7</td>
+																<td>9</td>
+																<td><label><input type="text" data-answer="1" placeholder="입력"/></label></td>
+																<td><label><input type="text" data-answer="3" placeholder="입력"/></label></td>
+															</tr>
+															<tr>
+																<th>4</th>
+																<td><label><input type="text" data-answer="1" placeholder="입력"/></label></td>
+																<td><label><input type="text" data-answer="2" placeholder="입력"/></label></td>
+																<td>6</td>
+																<td>7</td>
+																<td>9</td>
+																<td><label><input type="text" data-answer="3" placeholder="입력"/></label></td>
+															</tr>
+															<tr>
+																<th>5</th>
+																<td>1</td>
+																<td>2</td>
+																<td>3</td>
+																<td>6</td>
+																<td>7</td>
+																<td>9</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+
+									<div class="swiper-slide H_312_08_slide_02" data-swiper-autoplay="4000" role="group" aria-label="">
+										<div class="both_wrap">
+											<div class="item">
+												<div class="tit f_center rd_10">퀵 정렬</div>
+												<div class="con rd_10">
+													<div class="img">
+														<img src="./img/H_312_08_slide_02_img01.png" alt="7 비교 6 교환 2 교환 1 교환 3 교환 9 정렬된 영역(1단계)">
+													</div>
+													
+													<table class="tbl_simple">
+														<caption>퀵 정렬 결과</caption>
+														<thead>
+															<tr>
+																<th>단계</th>
+																<th colspan="6">정렬 결과</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th>2</th>
+																<td>1</td>
+																<td><label><input type="text" data-answer="3" placeholder="입력"/></label></td>
+																<td><label><input type="text" data-answer="6" placeholder="입력"/></label></td>
+																<td><label><input type="text" data-answer="2" placeholder="입력"/></label></td>
+																<td>7</td>
+																<td>9</td>
+															</tr>
+															<tr>
+																<th>3</th>
+																<td>1</td>
+																<td>2</td>
+																<td>3</td>
+																<td>6</td>
+																<td>7</td>
+																<td>9</td>
+															</tr>
+															
+														</tbody>
+													</table>
+												</div>
+											</div>
+										
+										</div>
+									</div>
+
+									
+
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+						<div class="slide_btn prev swiper-button-prev H_312_08_slide_prev_btn" aria-label="슬라이드 이전 버튼" tabindex="0"></div>
+						<div class="slide_btn next swiper-button-next H_312_08_slide_next_btn" aria-label="슬라이드 다음 버튼" tabindex="0"></div>
+					</div>
+					<!-- //slider -->
+
+					<div class="btn_con">
+						<button type="button" class="btn_confirm" aria-label="확인하기" style="display: none;">확인하기</button>
+						<button type="button" class="btn_reset" aria-label="다시 하기" style="display: none;">다시 하기</button>
+					</div>
+					
+				</div>
+
+				<div class="popup_con_bg popup01"></div>
+				<div class="popup_con popup01" role="alert"></div>
+
+				<div class="popup_con_bg popup02"></div>
+				<div class="popup_con popup02" role="alert"></div>
+
+				<div class="popup_con_bg popup03"></div>
+				<div class="popup_con popup03" role="alert"></div>
+
+				<div class="popup_con_bg popup04"></div>
+				<div class="popup_con popup04" role="alert"></div>
+
+			</div>
+		</main>
+
+	</div>
+	<script>
+	$(document).ready(function(){
+		let tryCount = 0;
+
+		const $confirmBtn = $(".btn_confirm");
+		const $resetBtn = $(".btn_reset");
+
+		// 초기 버튼 숨김
+		$confirmBtn.hide();
+		$resetBtn.hide();
+
+		// 입력값 빈칸 여부
+		const isNull = function(){
+			let result = false;
+			$(".H_312_08_con input[type=text]").each(function(){
+				if($(this).val().trim() === "") {
+					result = true;
+					return false;
+				}
+			});
+			return result;
+		};
+
+		// 정답 여부
+		const isCorrect = function() {
+			let result = true;
+			$(".H_312_08_con input[type=text]").each(function(){
+				if($(this).val().trim() !== $(this).attr("data-answer")) {
+					result = false;
+					return false;
+				}
+			});
+			return result;
+		};
+
+		// 정답 자동입력
+		const showAnswers = function(){
+			$(".H_312_08_con input[type=text]").each(function(){
+				const answer = $(this).attr("data-answer");
+				if(answer) $(this).val(answer);
+			});
+		};
+
+		// 버튼 상태 갱신 함수
+		const updateButtons = function() {
+			const swiper = H_312_08_slide;
+			const isLastSlide = swiper.activeIndex === swiper.slides.length - 1;
+			if (isLastSlide) {
+				if (tryCount >= 2) {
+					$confirmBtn.hide();
+					$resetBtn.show();
+				} else {
+					$confirmBtn.show();
+					$resetBtn.hide();
+				}
+			} else {
+				$confirmBtn.hide();
+				$resetBtn.hide();
+			}
+		};
+
+		// 확인하기 버튼 클릭
+		$confirmBtn.on("click", function(){
+			if (isNull()) {
+				$(".popup_con_bg.popup03, .popup03").fadeIn().delay(1000).fadeOut();
+				return;
+			}
+
+			if (isCorrect()) {
+				$(".popup_con_bg.popup02, .popup02").fadeIn().delay(1000).fadeOut();
+				tryCount = 0;
+				updateButtons();
+				return;
+			}
+
+			tryCount++;
+
+			if (tryCount === 1) {
+				$(".popup_con_bg.popup01, .popup01").fadeIn().delay(1000).fadeOut();
+			} else if (tryCount === 2) {
+				$(".popup_con_bg.popup04, .popup04").fadeIn().delay(1000).fadeOut();
+				showAnswers();
+			}
+			updateButtons();
+		});
+
+		// 다시 하기 버튼
+		$resetBtn.on("click", function(){
+			tryCount = 0;
+			$(".H_312_08_con input[type=text]").val("");
+			updateButtons();
+		});
+
+		// 슬라이드
+		H_312_08_slide = new Swiper ('.H_312_08_slide', {
+			slidesPerView: 'auto',
+			effect : 'fade', 
+			fadeEffect: { crossFade: true },
+			speed: 100,
+			loop: false,
+			navigation: {
+				nextEl: '.H_312_08_slide_next_btn',
+				prevEl: '.H_312_08_slide_prev_btn',
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			observer: true,
+			observeParents: true,
+			simulateTouch: false,
+			allowTouchMove: false,
+			on: {
+				slideChange: function () {
+					updateButtons();
+				}
+			}
+		});
+
+		// 로딩 시 최초 버튼 상태 설정
+		setTimeout(updateButtons, 0);
+	});
+
+	</script>
+
+	<script>
+		const contentId = 'H-312-08';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

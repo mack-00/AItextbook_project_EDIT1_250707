@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>치환형 암호화</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_212_06_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								치환형 암호화
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01 fw_600">
+						다음은 카이사르 암호 방법으로 암호문을 만든 것이다. 암호화의 키가 3일 때 암호문을 해독해 보자.
+					</div>
+
+					<dl class="data_list">
+						<dt>암호문</dt>
+						<dd>KHOOR</dd>
+					</dl>
+
+					<div class="pwd_wrap">
+
+						<div>
+							<button type="button" class="btn_prev" aria-label="이전 알파벳"></button>
+							<strong class="txt">K</strong>
+							<button type="button" class="btn_next" aria-label="다음 알파벳"></button>
+						</div>
+
+						<div>
+							<button type="button" class="btn_prev" aria-label="이전 알파벳"></button>
+							<strong class="txt">H</strong>
+							<button type="button" class="btn_next" aria-label="다음 알파벳"></button>
+						</div>
+
+						<div>
+							<button type="button" class="btn_prev" aria-label="이전 알파벳"></button>
+							<strong class="txt">O</strong>
+							<button type="button" class="btn_next" aria-label="다음 알파벳"></button>
+						</div>
+
+						<div>
+							<button type="button" class="btn_prev" aria-label="이전 알파벳"></button>
+							<strong class="txt">O</strong>
+							<button type="button" class="btn_next" aria-label="다음 알파벳"></button>
+							
+						</div>
+
+						<div>
+							<button type="button" class="btn_prev" aria-label="이전 알파벳"></button>
+							<strong class="txt">R</strong>
+							<button type="button" class="btn_next" aria-label="다음 알파벳"></button>
+						</div>
+
+					</div>
+
+					<div class="btn_con btn_con2">
+						<button class="a_btn btn_confirm" type="button" aria-label="확인하기" tabindex="0">확인하기</button>
+						<button class="a_btn btn_reset" type="button" aria-label="다시 하기" style="display:none;" tabindex="0">다시 하기</button>
+					</div>
+
+					<!-- 확인하기 팝업 -->
+
+					<div class="popup_con_bg popup02"></div>
+					<div class="popup_con popup02" role="alert"></div>
+
+					<div class="popup_con_bg popup03"></div>
+					<div class="popup_con popup03" role="alert"></div>
+
+					<div class="popup_con_bg popup04"></div>
+					<div class="popup_con popup04" role="alert"></div>
+
+				</div>
+
+				
+
+
+			</div>
+		</main>
+
+	</div>
+
+<script>
+
+const txtList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+const answer = "HELLO";
+
+
+$(".pwd_wrap button").on("click", function(){
+	const $txt = $(this).siblings("strong");
+	const currentText = $txt.text();
+	const index = txtList.indexOf(currentText);
+
+	if($(this).hasClass("btn_prev")){ 
+		$txt.text(txtList[index == 0 ? txtList.length-1 : index-1]);
+	}else {
+		$txt.text(txtList[index == txtList.length-1 ? 0 : index+1]);
+	}
+});
+
+
+// 확인 - 내용 있음
+function btn_event02(){
+	$(".H_212_06_con > .contents_con .btn_con2 button").blur();
+	$(".H_212_06_con > .contents_con .popup_con_bg.popup02").fadeIn();
+	$(".H_212_06_con > .contents_con .popup_con.popup02").fadeIn();
+
+	setTimeout(function(){
+		$(".H_212_06_con > .contents_con .popup_con_bg.popup02").fadeOut();
+		$(".H_212_06_con > .contents_con .popup_con.popup02").fadeOut();
+	}, 1000);
+}
+
+
+function	btn_event03(){
+	$(".H_212_06_con > .contents_con .btn_con3 button").blur();
+	$(".H_212_06_con > .contents_con .popup_con_bg.popup03").fadeIn();
+	$(".H_212_06_con > .contents_con .popup_con.popup03").fadeIn();
+
+	$(".btn_confirm").hide();
+	$(".btn_reset").show();
+
+	setTimeout(function(){
+		$(".H_212_06_con > .contents_con .popup_con_bg.popup03").fadeOut();
+		$(".H_212_06_con > .contents_con .popup_con.popup03").fadeOut();
+	}, 1000);
+}
+
+// 확인 - 정답
+function btn_event04(){
+	//$(".H_212_06_con > .contents_con > .contents_con .btn_con .a_btn").blur();
+	$(".H_212_06_con > .contents_con .popup_con_bg.popup04").fadeIn();
+	$(".H_212_06_con > .contents_con .popup_con.popup04").fadeIn();
+
+	setTimeout(function(){
+		$(".H_212_06_con > .contents_con .popup_con_bg.popup04").fadeOut();
+		$(".H_212_06_con > .contents_con .popup_con.popup04").fadeOut();
+		$(".H_212_06_con > .contents_con .btn_con2 .btn_confirm").css("display","none");
+		$(".H_212_06_con > .contents_con .btn_con2 .btn_reset").css("display","inline-block");
+
+	}, 1000);
+}
+
+	//확인버튼
+		let answerCnt	= 0;
+	$(".btn_confirm").on("click", function(){
+		let result = "";
+		$(".pwd_wrap strong").each(function(){
+			result = result + $(this).text();
+		});
+		
+		if(answer === result) {
+			// 정답
+			btn_event04();
+			setTimeout(function(){
+				$(".pwd_wrap").addClass("on");
+			}, 1700);
+		}else {
+			if(answerCnt === 1){
+				btn_event03();
+				answerCnt = 0;
+				$(".pwd_wrap > div:nth-child(1) strong").text("H");
+				$(".pwd_wrap > div:nth-child(2) strong").text("E");
+				$(".pwd_wrap > div:nth-child(3) strong").text("L");
+				$(".pwd_wrap > div:nth-child(4) strong").text("L");
+				$(".pwd_wrap > div:nth-child(5) strong").text("O");
+			}else {
+				btn_event02();
+				answerCnt++;
+			}
+		}
+	});
+
+	//다시풀기
+	$(".btn_reset").on("click", function(){
+		let text = "KHOOR";
+		$(".pwd_wrap strong").each(function(i){
+			$(this).text(text[i]);
+		});
+		$(this).hide();
+		$(".btn_confirm").show();
+		$(".pwd_wrap").removeClass("on");
+});
+
+
+
+
+</script>
+<script>
+	const contentId = 'H-212-06';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

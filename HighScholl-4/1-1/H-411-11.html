@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>개념 다지기 - 1. 지능 에이전트의 개념과 특성</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="./css/jquery-ui.min.css">
+		<link rel="stylesheet" href="./css/swiper.css">
+		<link rel="stylesheet" href="./css/fonts.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/common_all.css">
+		<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+		<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="./js/jquery-ui.min.js"></script>
+		<script src="./js/swiper.js"></script>
+		<style>
+			.drop-zone {
+				transition: all 0.2s ease;
+			}
+
+			.drop-zone.dragover {
+				background-color: #e9ecef;
+				border-color: #007bff;
+			}
+
+			.drop-zone.occupied {
+				border-style: solid;
+			}
+
+			.draggable {
+				cursor: move;
+				cursor: -webkit-grab;
+				cursor: grab;
+				user-select: none;
+				touch-action: none;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-webkit-tap-highlight-color: transparent;
+				position: relative;
+				display: inline-block;
+				-webkit-user-drag: none;
+				-khtml-user-drag: none;
+				-moz-user-drag: none;
+				-o-user-drag: none;
+			}
+
+			.draggable.dragging {
+				opacity: 0.8;
+				cursor: -webkit-grabbing;
+				cursor: grabbing;
+				z-index: 1000;
+				pointer-events: none;
+			}
+
+			.sr-only {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				border: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<main class="H_411_11_con">
+				<div class="contents_con">
+					<div class="title_con">
+						<div class="contents_con">
+							<div class="text_bg">
+								<h3 class="text01" tabindex="0">반복</h3>
+								<h2 class="text02" tabindex="0">개념 다지기</h2>
+								<div class="bg"></div>
+							</div>
+							<div class="text_con" tabindex="0">
+								<h1> 1-1. 지능 에이전트의 개념과 특성 </h1>
+							</div>
+						</div>
+					</div>
+					<div class="contents_con">
+						<div class="blank_word_test_con">
+							<div class="contents_con">
+								<div class="question_con">
+									<div class="slide_con">
+										<div class="swiper-container H_411_11_slide" role="region" aria-label="1. 디지털 기술의 영향 슬라이드">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide H_411_11_slide_div_01" data-swiper-autoplay="4000" role="group" aria-label="">
+													<div class="contents_con">
+														<div class="contents_div">
+															<div class="title_con" tabindex="0">
+																<span class="num_text">1</span>
+																<h2>
+																	<div class="blank_con drop-zone" role="region" aria-label="첫번째 답변 영역" data-position="1" tabindex="0">
+																		<span class="sr-only">답변을 이 곳에 놓으세요</span>
+																	</div>
+																</h2>
+															</div>
+															<div class="contents_con">
+																<div class="text_list_con">
+																	<ul>
+																		<li>
+																			<div class="text_con">
+																				<div class="text_div">
+																					<div class="text_con" tabindex="0">
+																						<div class="dot" aria-hidden="true"></div>
+																						<span> 인공지능을 이용하여 스스로 환경을 인식하고 목표를 설정하며 문제를 해결하는 능력을 갖춘 시스템 </span>
+																					</div>
+																				</div>
+																			</div>
+																		</li>
+																		<li>
+																			<div class="text_con">
+																				<div class="text_div">
+																					<div class="text_con" tabindex="0">
+																						<div class="dot" aria-hidden="true"></div>
+																						<span> 스스로 학습하고 판단하며 환경 변화에 적응하며 목표를 향해 행동 </span>
+																					</div>
+																				</div>
+																			</div>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<div class="contents_div">
+															<div class="title_con" tabindex="0">
+																<span class="num_text">2</span>
+																<h2> 지능 에이전트의 구현 과정 </h2>
+															</div>
+															<div class="contents_con">
+																<div class="list_con">
+																	<ul>
+																		<li>
+																			<div class="head_con" tabindex="0">
+																				<span>인식</span>
+																			</div>
+																			<div class="body_con" tabindex="0">
+																				<span>환경에서 정보를 수집하고 처리하여 이해하는 과정</span>
+																			</div>
+																		</li>
+																		<li>
+																			<div class="head_con">
+																				<div class="blank_con drop-zone" role="region" aria-label="두번째 답변 영역" data-position="2" tabindex="0">
+																					<span class="sr-only">답변을 이 곳에 놓으세요</span>
+																				</div>
+																			</div>
+																			<div class="body_con" tabindex="0">
+																				<span>목표를 설정하고 목표에 따라 지능 에이전트 학습에 반영하는 과정</span>
+																			</div>
+																		</li>
+																		<li>
+																			<div class="head_con">
+																				<div class="blank_con drop-zone" role="region" aria-label="세번째 답변 영역" data-position="3" tabindex="0">
+																					<span class="sr-only">답변을 이 곳에 놓으세요</span>
+																				</div>
+																			</div>
+																			<div class="body_con" tabindex="0">
+																				<span>문제 해결 전략을 도출하고 합리적인 ‘의사 결정’을 위한 판단을 하는 과정</span>
+																			</div>
+																		</li>
+																		<li>
+																			<div class="head_con" tabindex="0">
+																				<span>행동</span>
+																			</div>
+																			<div class="body_con" tabindex="0">
+																				<span>결정 방법에 따라 문제를 해결하기 위해 행동하고, 평가는 목표 달성 여부에 따라 결정</span>
+																			</div>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-slide H_411_11_slide_div_02" data-swiper-autoplay="4000" role="group" aria-label="">
+													<div class="contents_con">
+														<div class="contents_div">
+															<div class="title_con" tabindex="0">
+																<span class="num_text">3</span>
+																<h2> 지능 에이전트의 특성 </h2>
+															</div>
+															<div class="contents_con">
+																<div class="list_con02">
+																	<ul>
+																		<li>
+																			<div class="head_con">
+																				<div class="blank_con drop-zone" role="region" aria-label="네번째 답변 영역" data-position="4" tabindex="0">
+																					<span class="sr-only">답변을 이 곳에 놓으세요</span>
+																				</div>
+																			</div>
+																			<div class="body_con">
+																				<span>일부 또는 모든 작업을 자동화하여 인간의 개입 없이 독립적으로 수행하는 특성</span>
+																			</div>
+																			<div class="img_con">
+																				<img src="img/H_411_11_con_img01.png" alt="전방 차량과 속도 제한 표지판이 증강 현실 방식으로 표시되고 있는 자율주행 자동차의 모습이다.">
+																			</div>
+																		</li>
+																		<li>
+																			<div class="head_con">
+																				<span>협력성</span>
+																			</div>
+																			<div class="body_con">
+																				<span>환경에서 정보를 수집하고 처리하여 이해하는 과정</span>
+																			</div>
+																			<div class="img_con">
+																				<img src="img/H_411_11_con_img02.png" alt="야간 하늘에서 여러 대의 군집 드론이 협력하여 형형색색의 빛으로 한글 문구를 형성하고 있는 모습이다.">
+																			</div>
+																		</li>
+																		<li>
+																			<div class="head_con">
+																				<div class="blank_con drop-zone" role="region" aria-label="다섯번째 답변 영역" data-position="5" tabindex="0">
+																					<span class="sr-only">답변을 이 곳에 놓으세요</span>
+																				</div>
+																			</div>
+																			<div class="body_con">
+																				<span>지능 에이전트가 행동하고 결정하는 데 방향과 의미를 부여하는 특성</span>
+																			</div>
+																			<div class="img_con">
+																				<img src="img/H_411_11_con_img03.png" alt="인공지능이 자동으로 척추의 만곡을 분석하고, 특정 지점에 측정값과 진단 정보를 시각적으로 표시해 주고 있는 화면이다.">
+																			</div>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="answer_con">
+									<div class="title_con" tabindex="0">
+										<span> 빈칸에 알맞은 말을 옮겨 보자. </span>
+									</div>
+									<div class="contents_con options-container" role="region" aria-label="사용 가능한 답변들">
+										<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="2" tabindex="0"> 학습 </span>
+										<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="1" tabindex="0"> 지능 에이전트 </span>
+										<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="4" tabindex="0"> 자율성 </span>
+										<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="5" tabindex="0"> 목표 지향성 </span>
+										<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="3" tabindex="0"> 추론 </span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination H_411_11_slide_swiper-pagination"></div>
+							<div class="slide_btn prev H_411_11_slide_prev_btn swiper-button-prev" aria-label="슬라이드 이전 버튼" tabindex="0"></div>
+							<div class="slide_btn next H_411_11_slide_next_btn swiper-button-next" aria-label="슬라이드 다음 버튼" tabindex="0"></div>
+							<div class="btn_con">
+								<button  class="a_btn a_btn01 check-btn" type="button" aria-label="확인하기" tabindex="0" style="display: none;">확인하기</button>
+								<button  class="a_btn a_btn02 retry-btn" type="button" aria-label="다시 하기" tabindex="0">다시 하기</button>
+							</div>
+						</div>
+						<div class="popup_con_bg popup01"></div>
+						<div class="popup_con popup01" role="alert"></div>
+						<div class="popup_con_bg popup02"></div>
+						<div class="popup_con popup02" role="alert"></div>
+						<div class="popup_con_bg popup03"></div>
+						<div class="popup_con popup03" role="alert"></div>
+						<div class="popup_con_bg popup04"></div>
+						<div class="popup_con popup04" role="alert"></div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const initialOrder = [];
+				let try_check = 0;
+				let isAnswered = false;
+				const checkButton = document.querySelector('.check-btn');
+				const retryButton = document.querySelector('.retry-btn');
+				let dropZones = document.querySelectorAll('.drop-zone');
+				const swiperInstance = new Swiper('.H_411_11_slide', {
+					slidesPerView: 'auto',
+					effect: 'fade',
+					fadeEffect: {
+						crossFade: true
+					},
+					speed: 100,
+					loop: false,
+					navigation: {
+						nextEl: '.H_411_11_slide_next_btn',
+						prevEl: '.H_411_11_slide_prev_btn',
+					},
+					observer: true,
+					observeParents: true,
+					simulateTouch: false,
+					allowTouchMove: false,
+					on: {
+						slideChange: function() {
+							const isLast = this.activeIndex === this.slides.length - 1;
+							checkButton.style.display = 'none';
+							retryButton.style.display = 'none';
+							if (isLast) {
+								if (isAnswered || try_check >= 2) {
+									retryButton.style.display = 'inline-block';
+								} else {
+									checkButton.style.display = 'inline-block';
+								}
+							}
+						}
+					}
+				});
+				swiperInstance.emit('slideChange');
+				const draggables = document.querySelectorAll('.draggable');
+				const optionsContainer = document.querySelector('.options-container');
+				let draggedElement = null;
+				let isDragging = false;
+				let startX, startY, initialX, initialY, xOffset = 0,
+					yOffset = 0;
+				let adapt_answer = 0; // 적용한 답변 수
+				let correct_answer = 0; // 정답 수
+				// 각 요소의 초기 위치와 순서를 저장할 객체
+				const originalPositions = {};
+				// 초기 위치 저장
+				const originalOrder = [...optionsContainer.children].map(child => child.dataset.answer);
+				// 모든 항목을 원래 자리로 이동
+				const returnItemsToContainer = () => {
+					// 모든 드래그 요소를 일단 임시 배열에 모으기
+					const items = [];
+					dropZones.forEach(zone => {
+						const draggable = zone.querySelector('.draggable');
+						if (draggable) {
+							items.push(draggable);
+							zone.classList.remove('occupied');
+						}
+					});
+					// 현재 options-container에 있는 요소들
+					const currentItems = [...optionsContainer.querySelectorAll('.draggable')];
+					// 모든 요소를 합치기
+					const allItems = [...items, ...currentItems];
+					// 원래 순서대로 정렬
+					allItems.sort((a, b) => {
+						const indexA = originalOrder.indexOf(a.dataset.answer);
+						const indexB = originalOrder.indexOf(b.dataset.answer);
+						return indexA - indexB;
+					});
+					// options-container의 모든 draggable 요소 제거
+					currentItems.forEach(item => item.remove());
+					// 정렬된 순서대로 options-container에 추가
+					allItems.forEach(item => {
+						optionsContainer.appendChild(item);
+					});
+					adapt_answer = 0;
+					correct_answer = 0;
+				};
+				// 모든 항목을 정답 자리로 이동
+				const placeItemsInCorrectPositions = () => {
+					returnItemsToContainer();
+					draggables.forEach(item => {
+						const correctZone = Array.from(dropZones).find(zone => zone.dataset.position === item.dataset.answer);
+						if (correctZone) {
+							correctZone.appendChild(item);
+							correctZone.classList.add('occupied');
+						}
+					});
+				};
+				// 터치 이벤트 처리 함수
+				function dragStart(e) {
+					if (e.type === "touchstart") {
+						initialX = e.touches[0].clientX;
+						initialY = e.touches[0].clientY;
+						draggedElement = e.target;
+					} else {
+						initialX = e.clientX;
+						initialY = e.clientY;
+						draggedElement = e.target;
+					}
+					if (draggedElement.classList.contains('draggable')) {
+						isDragging = true;
+						// 원본 요소의 스타일과 위치 정보를 저장
+						const rect = draggedElement.getBoundingClientRect();
+						const width = rect.width;
+						const height = rect.height;
+						xOffset = initialX - rect.left;
+						yOffset = initialY - rect.top;
+						// 먼저 클론을 생성해서 원본 요소 위에 위치시키기
+						const clone = draggedElement.cloneNode(true);
+						clone.id = 'dragging-clone';
+						clone.style.position = 'fixed';
+						clone.style.width = width + 'px';
+						clone.style.height = height + 'px';
+						clone.style.left = rect.left + 'px';
+						clone.style.top = rect.top + 'px';
+						clone.style.zIndex = '1000';
+						clone.style.opacity = '0.8';
+						clone.style.pointerEvents = 'none';
+						// 원본 스타일 복사
+						const originalStyle = window.getComputedStyle(draggedElement);
+						clone.style.backgroundColor = originalStyle.backgroundColor;
+						clone.style.border = originalStyle.border;
+						clone.style.borderRadius = originalStyle.borderRadius;
+						clone.style.borderColor = originalStyle.borderColor;
+						clone.style.color = originalStyle.color;
+						clone.style.fontFamily = originalStyle.fontFamily;
+						clone.style.fontSize = originalStyle.fontSize;
+						clone.style.fontWeight = originalStyle.fontWeight;
+						clone.style.padding = originalStyle.padding;
+						clone.style.boxShadow = '2px 2px 5px rgba(0,0,0,0.2)';
+						clone.style.cursor = 'grabbing';
+						clone.style.lineHeight = originalStyle.lineHeight;
+						clone.style.textAlign = originalStyle.textAlign;
+						document.body.appendChild(clone);
+						// 원본 요소는 보이지 않게 설정
+						draggedElement.style.visibility = 'hidden';
+						// 클론 요소를 draggedElement의 속성으로 저장
+						draggedElement.cloneElement = clone;
+						// 드래깅 클래스는 더이상 사용하지 않음
+						// clone.classList.add('dragging');
+					}
+				}
+
+				function dragEnd(e) {
+					if (isDragging && draggedElement) {
+						// 클론 요소 가져오기
+						const clone = draggedElement.cloneElement;
+						const dropTarget = document.elementFromPoint(e.type === "touchend" ? e.changedTouches[0].clientX : e.clientX, e.type === "touchend" ? e.changedTouches[0].clientY : e.clientY);
+						if (dropTarget) {
+							const dropZone = dropTarget.closest('.drop-zone');
+							if (dropZone) {
+								// 이미 드롭존에 항목이 있는 경우
+								const existingDraggable = dropZone.querySelector('.draggable');
+								if (existingDraggable && existingDraggable !== draggedElement) {
+									// 기존 항목을 options-container에 원래 위치로 이동
+									const optionsItems = [...optionsContainer.querySelectorAll('.draggable')];
+									const index = originalOrder.indexOf(existingDraggable.dataset.answer);
+									let inserted = false;
+									// 원래 순서에 맞게 삽입
+									for (let i = 0; i < optionsItems.length; i++) {
+										const currentIndex = originalOrder.indexOf(optionsItems[i].dataset.answer);
+										if (currentIndex > index) {
+											optionsContainer.insertBefore(existingDraggable, optionsItems[i]);
+											inserted = true;
+											break;
+										}
+									}
+									// 마지막 위치에 삽입
+									if (!inserted) {
+										optionsContainer.appendChild(existingDraggable);
+									}
+								}
+								// 새 항목을 드롭존에 추가
+								dropZone.appendChild(draggedElement);
+								dropZone.classList.add('occupied');
+							} else {
+								// options-container로 이동할 때 원래 순서 유지
+								const optionsItems = [...optionsContainer.querySelectorAll('.draggable')];
+								const index = originalOrder.indexOf(draggedElement.dataset.answer);
+								let inserted = false;
+								// 원래 순서에 맞게 삽입
+								for (let i = 0; i < optionsItems.length; i++) {
+									const currentIndex = originalOrder.indexOf(optionsItems[i].dataset.answer);
+									if (currentIndex > index) {
+										optionsContainer.insertBefore(draggedElement, optionsItems[i]);
+										inserted = true;
+										break;
+									}
+								}
+								// 마지막 위치에 삽입
+								if (!inserted) {
+									optionsContainer.appendChild(draggedElement);
+								}
+							}
+						} else {
+							// options-container로 이동할 때 원래 순서 유지
+							const optionsItems = [...optionsContainer.querySelectorAll('.draggable')];
+							const index = originalOrder.indexOf(draggedElement.dataset.answer);
+							let inserted = false;
+							// 원래 순서에 맞게 삽입
+							for (let i = 0; i < optionsItems.length; i++) {
+								const currentIndex = originalOrder.indexOf(optionsItems[i].dataset.answer);
+								if (currentIndex > index) {
+									optionsContainer.insertBefore(draggedElement, optionsItems[i]);
+									inserted = true;
+									break;
+								}
+							}
+							// 마지막 위치에 삽입
+							if (!inserted) {
+								optionsContainer.appendChild(draggedElement);
+							}
+						}
+						// 클론 요소 제거
+						if (clone) {
+							document.body.removeChild(clone);
+							draggedElement.cloneElement = null;
+						}
+						// 원본 요소 복원
+						draggedElement.style.visibility = 'visible';
+						isDragging = false;
+						draggedElement = null;
+					}
+				}
+
+				function drag(e) {
+					if (isDragging && draggedElement) {
+						e.preventDefault();
+						let currentX, currentY;
+						if (e.type === "touchmove") {
+							currentX = e.touches[0].clientX;
+							currentY = e.touches[0].clientY;
+						} else {
+							currentX = e.clientX;
+							currentY = e.clientY;
+						}
+						// 클론 요소 이동
+						const clone = draggedElement.cloneElement;
+						if (clone) {
+							const newX = currentX - xOffset;
+							const newY = currentY - yOffset;
+							clone.style.left = `${newX}px`;
+							clone.style.top = `${newY}px`;
+						}
+						// 드롭존 하이라이트
+						const dropTarget = document.elementFromPoint(currentX, currentY);
+						if (dropTarget) {
+							const dropZone = dropTarget.closest('.drop-zone');
+							dropZones.forEach(zone => {
+								if (zone === dropZone && zone.children.length <= 1) {
+									zone.classList.add('dragover');
+								} else {
+									zone.classList.remove('dragover');
+								}
+							});
+						}
+					}
+				}
+				// 드래그 앤 드롭 이벤트 처리
+				draggables.forEach(draggable => {
+					draggable.addEventListener('dragstart', (e) => {
+						e.preventDefault(); // 기본 드래그 동작 방지
+						return false;
+					});
+					// 마우스 이벤트
+					draggable.addEventListener('mousedown', (e) => {
+						e.preventDefault();
+						dragStart(e);
+					});
+					// 터치 이벤트
+					draggable.addEventListener('touchstart', (e) => {
+						e.preventDefault();
+						dragStart(e);
+					}, {
+						passive: false
+					});
+					draggable.addEventListener('touchmove', drag, {
+						passive: false
+					});
+					draggable.addEventListener('touchend', dragEnd, {
+						passive: false
+					});
+					// 클릭 이벤트 - drop-zone에 있는 요소를 클릭하면 원래 위치로 이동
+					draggable.addEventListener('click', (e) => {
+						// 드래그 중이 아닐 때만 클릭 처리
+						if (!isDragging) {
+							const parentElement = draggable.parentElement;
+							if (parentElement && parentElement.classList.contains('drop-zone')) {
+								// drop-zone에 있는 경우에만 옮기기
+								parentElement.classList.remove('occupied');
+								// options-container로 이동할 때 원래 순서 유지
+								const optionsItems = [...optionsContainer.querySelectorAll('.draggable')];
+								const index = originalOrder.indexOf(draggable.dataset.answer);
+								let inserted = false;
+								// 원래 순서에 맞게 삽입
+								for (let i = 0; i < optionsItems.length; i++) {
+									const currentIndex = originalOrder.indexOf(optionsItems[i].dataset.answer);
+									if (currentIndex > index) {
+										optionsContainer.insertBefore(draggable, optionsItems[i]);
+										inserted = true;
+										break;
+									}
+								}
+								// 마지막 위치에 삽입
+								if (!inserted) {
+									optionsContainer.appendChild(draggable);
+								}
+							}
+						}
+					});
+				});
+				// 마우스 전역 이벤트
+				document.addEventListener('mousemove', (e) => {
+					if (isDragging) {
+						drag(e);
+					}
+				});
+				document.addEventListener('mouseup', (e) => {
+					if (isDragging) {
+						dragEnd(e);
+					}
+				});
+				// 기본 드래그 방지
+				document.addEventListener('dragstart', (e) => {
+					e.preventDefault();
+					return false;
+				}, {
+					passive: false
+				});
+				// 정답 확인 이벤트 처리
+				checkButton.addEventListener('click', () => {
+					dropZones.forEach(zone => {
+						const answer = zone.querySelector('.draggable');
+						if (answer) {
+							adapt_answer++; // 답변 수
+							const isCorrect = answer.dataset.answer === zone.dataset.position;
+							if (isCorrect) correct_answer++; // 정답 수
+						}
+					});
+					if (adapt_answer !== 5) {
+						$(".popup01, .popup_con_bg.popup01").fadeIn();
+						setTimeout(() => $(".popup01, .popup_con_bg.popup01").fadeOut(), 1000);
+					} else {
+						try_check++;
+						if (correct_answer === 5) {
+							checkButton.style.display = 'none';
+							retryButton.style.display = 'inline-block';
+							isAnswered = true;
+							$(".popup04, .popup_con_bg.popup04").fadeIn();
+							setTimeout(() => {
+								$(".popup04, .popup_con_bg.popup04").fadeOut();
+							}, 1000);
+							swiperInstance.emit('slideChange');
+						} else if (try_check === 1) {
+							$(".popup02, .popup_con_bg.popup02").fadeIn();
+							setTimeout(() => {
+								$(".popup02, .popup_con_bg.popup02").fadeOut();
+								returnItemsToContainer();
+							}, 1000);
+						} else if (try_check === 2) {
+							checkButton.style.display = 'none';
+							retryButton.style.display = 'inline-block';
+							$(".popup03, .popup_con_bg.popup03").fadeIn();
+							setTimeout(() => {
+								$(".popup03, .popup_con_bg.popup03").fadeOut();
+								swiperInstance.emit('slideChange');
+							}, 1000);
+							setTimeout(() => placeItemsInCorrectPositions(), 500);
+						}
+					}
+				});
+				retryButton.addEventListener('click', () => {
+					checkButton.style.display = 'inline-block';
+					retryButton.style.display = 'none';
+					try_check = 0;
+					isAnswered = false;
+					returnItemsToContainer();
+					swiperInstance.emit('slideChange');
+				});
+				// 드롭존 이벤트 처리
+				const dropTargets = [...dropZones, optionsContainer];
+				dropTargets.forEach(target => {
+					target.addEventListener('dragover', (e) => {
+						e.preventDefault();
+						if (target.classList.contains('drop-zone') && target.children.length > 1) {
+							return; // 이미 답변이 있는 경우 드롭 불가
+						}
+						target.classList.add('dragover');
+					});
+					target.addEventListener('dragleave', () => {
+						target.classList.remove('dragover');
+					});
+					target.addEventListener('drop', (e) => {
+						e.preventDefault();
+						target.classList.remove('dragover');
+						if (!draggedElement) return;
+						// 드롭존인 경우 검증
+						if (target.classList.contains('drop-zone')) {
+							if (target.children.length > 1) return; // 이미 답변이 있으면 무시
+							target.classList.add('occupied');
+						} else {
+							// 옵션 컨테이너로 돌아가는 경우
+							draggedElement.parentElement.classList.remove('occupied');
+						}
+						target.appendChild(draggedElement);
+					});
+				});
+			});
+		</script>
+		<script>
+			const contentId = 'H-411-11';
+		</script>
+		<script type="text/javascript" src="./js/xapi.page.js"></script>
+	</body>
+</html>

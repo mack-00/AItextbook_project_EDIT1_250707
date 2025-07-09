@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>전치형 암호화</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_212_07_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								전치형 암호화
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span> 
+								&nbsp;&nbsp;<span class="color_text">전치형 암호화</span>는 문자의 순서를 바꾸어 암호화하는 방법이다. 암호문을 주고받는 발신자와 수신자는 평문의 문자를 재배치할 순서를 키로 나누어 갖는다. 전치형 암호화는 규칙이나 해독 방법이 알려지면 쉽게 풀 수 있어 보안에 취약하다는 한계가 있다. 특히 컴퓨팅 기술이 발전하면서 별도의 안전한 암호화 방법이 필요하게 되었다.
+								<button class="btn_data_popup" aria-label="보충자료" aria-controls="fullpopup01"></button>
+							</span>
+						</div>
+					</div>
+
+					<div class="info02_con">
+						<div class="title_con" tabindex="0">
+							<div class="dot" aria-hidden="true"></div>
+
+							<span>
+								전치형 암호화의 예
+							</span>
+						</div>
+
+						<dl class="data_list">
+							<dt>단순 전치 암호</dt>
+							<dd>평문을 키의 재배열 순서에 따라 재배치한다. 평문이 길다면 키의 길이만큼 일정 간격으로 나눈 후,<br/>
+								나눈 문자를 키의 재배열 순서에 따라 재배치하는 방법도 있다.</dd>
+						</dl>
+
+						<div class="both_wrap">
+							<dl>
+								<dt>평문</dt>
+								<dd>COMPUTER</dd>
+							</dl>
+							
+							<div class="arr">
+								<button class="btn_video" aria-label="암호화 과정" aria-controls="fullpopup02"></button>
+								<div class="txt">35164827(키)</div>
+							</div>
+
+							<dl>
+								<dt>암호문</dt>
+								<dd>MUCTPROE</dd>
+							</dl>
+						</div>
+
+						
+
+						
+					</div>
+				</div>
+
+				<!-- popup -->
+				<div class="full_popup_wrap H_212_07_full_popup" id="fullpopup01">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>스키테일</span>
+						</div>
+						<div class="full_popoup_content">
+
+							<div class="text01">
+								&nbsp;&nbsp;고대 전쟁에서 그리스 군사들이 사용한 전치형 암호화의 대표적인 방법에는 ‘스키테일’ 암호문이 있다. 스키테일은 양피지를 특정 지름의 나무 막대에 말아 일렬로 암호 메시지를 작성하여 같은 지름의 막대를 가진 사람만 암호를 해석할 수 있다. 같은 지름의 막대에 감긴 텍스트는 일렬로 읽히지만, 양피지를 펼치거나 지름이 다른 막대에 종이를 감으면 메시지를 해석할 수 없다. 이런 방법으로 그리스인들이 전쟁 중 군령이나 중요한 임무를 안전하게 전달할 수 있었다.
+							</div>
+
+							<div class="img H_212_07_full_popup_img01"></div>
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="full_popup_wrap H_212_07_full_popup02" id="fullpopup02">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>전치형 암호화 과정</span>
+						</div>
+						<div class="full_popoup_content">
+
+							
+							<div class="video_con">
+								<div class="contents_con">
+									<div class="video-container">
+										<video id="player01" data-content-id="H-212-07" controls crossorigin></video>
+									</div>
+								</div>
+							</div>
+							
+
+						</div>
+					</div>
+				</div>
+				<!-- //popup -->
+
+			</div>
+		</main>
+
+	</div>
+
+	<script>
+
+		$(document).ready(function(){
+			// 보충자료
+			$(".H_212_07_con .btn_data_popup, .H_212_07_con .btn_video").on("click", function(){
+				var popSelector = "#" + $(this).attr("aria-controls");
+				$(popSelector).show();
+			});
+			$(".full_popup_wrap .btn_close").on("click", function(){
+				$(this).parents(".full_popup_wrap").hide();
+			});
+			
+		});
+	
+			
+		</script>
+
+		<script>
+			$(".full_popup_wrap .btn_close").on("click", function(){
+				const video = $(this).closest(".full_popup_wrap").find("video").get(0);
+				if (video && !video.paused) {
+					video.pause();
+				}
+				$(this).parents(".full_popup_wrap").hide();
+			});			
+		</script>
+
+		<script>
+			const contentId = 'H-212-07';
+		</script>
+		<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+		<script>
+			const videoList = [
+				{ 
+					id: "H-212-07",
+					src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-212-07_4000k.mp4,H-212-07_2000k.mp4,H-212-07_1000k.mp4,lang/kor/H-212-07.vtt,.smil/master.m3u8" 
+				}
+			];
+		</script>
+		<script type="text/javascript" src="./js/xapi.video.js"></script>
+			
+</body>
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>문제 해결을 위한 사물 인터넷 시스템 설계 2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+<body>
+	<div id="wrap">
+		
+		<main class="H_123_06_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								문제 해결을 위한 사물 인터넷 시스템 설계(2)
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					
+					<div class="text_01">
+						&nbsp;&nbsp;사물 인터넷 시스템은 피지컬 컴퓨팅 시스템이 수집한 데이터를 네트워크를 통해 서로 주고받으며 작동한다. 그러므로 사물 인터넷 시스템을 설계하기 위해서는 가장 먼저 문제 해결에 적합한 피지컬 컴퓨팅 시스템을 선택하는 것이 중요하다. 문제 해결에 적합한 사물 인터넷 시스템을 설계해 보자.
+						
+					</div>
+
+					<!-- tab -->
+					<div class="tab_wrap H_123_06_tab_wrap">
+						<div class="tab_list" role="tablist">
+							<button class="tab_btn on" type="button" id="tab01" aria-controls="H_123_06_tab01" role="tab" aria-selected="true">장치 선택</button>
+							<button class="tab_btn" type="button" id="tab02" aria-controls="H_123_06_tab02" role="tab" aria-selected="false">장치 연결</button>
+							<button class="tab_btn" type="button" id="tab03" aria-controls="H_123_06_tab03" role="tab" aria-selected="false">프로그램 작성</button>
+						</div>
+						<div class="tab_contents">
+							<div id="H_123_06_tab01" tabindex="0" role="tabpanel"  class="tab_inner on">
+								
+								<p class="tit01">
+									&nbsp;&nbsp;문제 해결에 적합한 하드웨어를 선택한다. 
+									<button class="btn_data_popup" aria-label="보충자료" aria-controls="fullpopup01"></button>
+								</p>
+								
+								<!-- table -->
+								<div class="tab_con table01">
+									<table>
+										<caption>문제 해결에 적합한 하드웨어 선택</caption>
+										<tbody>
+											<tr>
+											<th class="title_td" scope="row">
+												<span>입력 장치</span>
+											</th>
+											<td class="info_td">
+												<label for="input_device" class="sr-only">입력 장치 선택</label>
+												<span>
+												사람의 움직임을 감지하는
+												<select class="input_select" id="input_device" aria-label="입력 장치 선택">
+													<option>압력 센서</option>
+													<option>온도 센서</option>
+													<option>자기 센서</option>
+													<option data-answer="yes">인체 감지 센서</option>
+												</select>
+												</span>
+											</td>
+											</tr>
+											<tr>
+											<th class="title_td" scope="row">
+												<span>출력 장치</span>
+											</th>
+											<td class="info_td">
+												<label for="output_device" class="sr-only">출력 장치 선택</label>
+												<span>
+												전등을 켜고 끄는
+												<select class="input_select" id="output_device" aria-label="출력 장치 선택">
+													<option data-answer="yes">LED</option>
+													<option>스피커</option>
+													<option>모터</option>
+												</select>
+												</span>
+											</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+								<!-- //table -->
+
+								<div class="btn_con">
+									<button  class="a_btn a_btn01 check-btn" type="button" aria-label="확인하기" tabindex="0">확인하기</button>
+									<button  class="a_btn a_btn02 retry-btn" type="button" aria-label="다시하기" tabindex="0">다시하기</button>
+								</div>
+							
+
+							</div>
+							<div id="H_123_06_tab02" tabindex="0" role="tabpanel" class="H_123_06_tab02 tab_inner">
+								
+								<div class="both_wrap">
+									<div class="txt tit01">
+										&nbsp;&nbsp;입출력 장치는 마이크로컨트롤러에 연결하여 제어할 수 있다. 
+										<span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip02">ESP32 보드</span>에 인체 감지 센서와 저항이 내장된 LED를 연결하여 회로를 구성해 보자.
+									</div>
+									<img src="./img/H_123_06_tab02_img01.png" alt="ESP32 보드에 PIR 모션 센서와 I2C 센서가 연결된 회로도. GND는 파란색, VCC는 빨간색, SIG는 초록색 선으로 연결됨.">
+
+									<!-- <div class="img H_123_06_tab02_img01"></div> -->
+								</div>
+
+								<button class="btn_active" aria-label="활동" aria-controls="fullpopup02"></button>
+								
+								<!-- 팝업 -->
+								<div class="text_popup_con H_123_06_pop_02" id="tooltip02" role="dialog" aria-modal="true" >
+									<div class="contents_con">
+										<div class="close_btn">
+											<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+										</div>
+
+										<div class="title_con" tabindex="0">
+											<span>
+												ESP32 보드
+											</span>
+										</div>
+
+										<div class="info_con" tabindex="0">
+											<span>
+												Wi-Fi와 블루투스 모튤이 포함된 마이크로컨트롤러로 사물 인터넷 시스템 구성에 적합하다. ESP32에는 34개의 범용 입출력(GPIO)핀이 있어 여러 개의 센서와 액추에이터 연결이 가능하다.
+											</span>
+											<!-- <div class="img H_123_06_pop_02_img"></div> -->
+											<img src="./img/H_123_06_pop_02_img.png" alt="ESP32 개발 보드 사진. 왼쪽에는 마이크로 USB 포트가 있으며, 보드 중앙에는 다양한 칩셋과 전자 부품들이 배치되어 있다. 오른쪽 상단에는 은색 금속 실드로 덮인 Wi-Fi 및 Bluetooth 모듈이 탑재되어 있다. 보드 양쪽에는 핀 헤더가 나열되어 있다.">
+										</div>
+									</div>
+								</div>
+								<!-- //팝업 -->
+								
+							</div>
+
+							<div id="H_123_06_tab03" tabindex="0" role="tabpanel" aria-labelledby="tab03" class="H_123_06_tab03 tab_inner">
+								
+								<p class="tit01">
+									&nbsp;&nbsp;인체 감지 센서를 사용하여 사람의 움직임을 감지하면 LED가 켜지고, 사람의 움직임이 없으면 LED가 꺼지는 프로그램은 다음과 같다.
+								</p>
+
+								<div class="both_wrap">
+									<div class="table_box">
+										<table>
+											<caption>프로그램 작성</caption>
+										<colgroup>
+											<col style="width: 7%;">
+										  <col style="width: 40%;">
+											<col>
+										</colgroup>
+											<tbody>
+											<tr>
+												<th scope="row">1</th>
+												<th scope="row">from machine import Pin</th>
+												<td class="point"># 하드웨어 작동을 위한 machine 모듈 준비</td>
+											</tr>
+											<tr>
+												<th scope="row">2</th>
+												<th scope="row">import time</th>
+												<td class="point"># 시간 지연을 위한 time 모듈 준비</td>
+											</tr>
+											<tr>
+												<th scope="row">3</th>
+												<th scope="row">LED = Pin(2, Pin.OUT)</th>
+												<td class="point"># 2번 핀을 LED의 출력으로 지정하여 변수 할당</td>
+											</tr>
+											<tr>
+												<th scope="row">4</th>
+												<th scope="row">PIR = Pin(13, Pin.IN)</th>
+												<td class="point"># 13번 핀을 인체 감지 센서의 입력으로 변수 할당</td>
+											</tr>
+											<tr>
+												<th scope="row">5</th>
+												<th scope="row">while True:</th>
+												<td class="point"># 무한 반복 시작</td>
+											</tr>
+											<tr>
+												<th scope="row">6</th>
+												<th scope="row" style="text-indent: .5em;">if PIR.value() == 1:</th>
+												<td class="point"># 인체 감지 센서의 값이 1이면(움직임을 감지)</td>
+											</tr>
+											<tr>
+												<th scope="row">7</th>
+												<th scope="row" style="text-indent: 1em;">LED.value(1)</th>
+												<td class="point"># 값을 1(HIGH)로 설정하여 LED 켜기</td>
+											</tr>
+											<tr>
+												<th scope="row">8</th>
+												<th scope="row" style="text-indent: .5em;">else:</th>
+												<td class="point"># 인체의 움직임이 감지되지 않으면</td>
+											</tr>
+											<tr>
+												<th scope="row">9</th>
+												<th scope="row" style="text-indent: 1em;">LED.value(0)</th>
+												<td class="point"># 값을 0(LOW)으로 설정하여 LED 끄기</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="h_123_change">
+										<img class="" src="./img/36_1.png" alt="ESP32-WROOM-32 개발 보드와 빨간색 LED 모듈이 연결된 모습. ESP32 보드는 USB 케이블을 통해 전원이 공급되고 있으며, 보드 위에 붉은색 상태 LED가 꺼져있다. 오른쪽에는 'LED RED'라고 적힌 파란색 모듈이 있으며, G, V, S 핀을 통해 각각 검정(GND), 빨강(VCC), 노랑(Signal) 점퍼 케이블로 ESP32 보드와 연결되어 있다.">
+										<img class="" src="./img/36_2.png" alt="ESP32-WROOM-32 개발 보드와 빨간색 LED 모듈이 연결된 모습. ESP32 보드는 USB 케이블을 통해 전원이 공급되고 있으며, 보드 위에 붉은색 상태 LED가 빨갛게 점등되어 있다. 오른쪽에는 'LED RED'라고 적힌 파란색 모듈이 있으며, G, V, S 핀을 통해 각각 검정(GND), 빨강(VCC), 노랑(Signal) 점퍼 케이블로 ESP32 보드와 연결되어 있다.">
+									</div>
+									
+								</div>
+
+								<p class="bull">파이썬으로 ESP 32 보드와 같은 마이크로컨트롤러를 제어하려면 하드웨어를 제어하기 위한 기능을 제공하는 마이크로파이썬 보드를 설치해야 한다.</p>
+
+							</div>
+							
+						</div>
+					</div>
+					<!-- //tab  -->
+
+				</div>
+
+				<div class="popup_con_bg popup02"></div>
+				<div class="popup_con popup02" role="alert"></div>
+
+				<div class="popup_con_bg popup04"></div>
+				<div class="popup_con popup04" role="alert"></div>
+
+				<!-- popup -->
+				<div class="full_popup_wrap H_123_06_full_popup" id="fullpopup01">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>인체 감지 센서와 LED</span>
+						</div>
+						<div class="full_popoup_content">
+
+							<!-- tab -->
+							<div class="tab_wrap H_123_06_tab02_wrap">
+								<div class="tab_list" role="tablist">
+									<button class="tab_btn on" type="button" id="tab02_01" aria-controls="H_123_06_tab02_01" role="tab" aria-selected="true">인체 감지 센서</button>
+									<button class="tab_btn" type="button" id="tab02_02" aria-controls="H_123_06_tab02_02" role="tab" aria-selected="false">LED</button>
+								</div>
+								<div class="tab_contents">
+									<div id="H_123_06_tab02_01" tabindex="0" role="tabpanel" aria-labelledby="tab02_01" class="tab_inner on">
+										<!-- table -->
+										<div class="tab_con table02">
+											<table role="grid" aria-label="인체 감지 센서">
+												<caption>인체 감지 센서</caption>
+												<tbody>
+													<tr>
+														<th class="title_td" scope="row">
+															<span>
+																개념
+															</span>
+														</th>
+														<td class="info_td">
+															<span>
+																인체 감지 센서는 적외선을 통해 사람의 움직임을 감지하는 입력 센서이다.
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<th class="title_td" scope="row">
+															<span>
+																특징
+															</span>
+														</th>
+														<td class="info_td p0">
+															<div class="both_wrap">
+																<ul class="list_disc">
+																	<li>인체의 표면 온도인 20℃~35℃ 정도에서 방출되는   적외선 파장을 통해 사람의 움직임을 알 수 있다.</li>
+																	<li>인체 감지 센서에는 두 개의 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip01">가변 저항</span>이 포함되어 있으며, 두 개의 가변 저항을 조절하여 감도와 시간을 적절하게   조절할 수 있다.</li>
+																</ul>
+																<div class="img H_123_06_tab02_01_img01"></div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<th class="title_td" scope="row">
+															<span>
+																활용
+															</span>
+														</th>
+														<td class="info_td">
+															<span>
+															사람의 움직임이 감지되면 바람이 나와 손의 물기를 제거해 주는 화장실의 핸드 드라이어에 활용된다.
+															</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<!-- //table -->
+
+										<!-- 팝업 -->
+										<div class="text_popup_con H_123_06_pop_01" id="tooltip01" role="dialog" aria-modal="true">
+											<div class="contents_con">
+												<div class="close_btn">
+													<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+												</div>
+
+												<div class="title_con" tabindex="0">
+													<span>
+														가변 저항
+													</span>
+												</div>
+
+												<div class="info_con" tabindex="0">
+													<span>
+														가변 저항은 전기의 흐름을 조절할 수 있는 저항기이다.
+													</span>
+												</div>
+											</div>
+										</div>
+										<!-- //팝업 -->
+									</div>
+									<div id="H_123_06_tab02_02" tabindex="0" role="tabpanel" aria-labelledby="tab02_02" class="tab_inner">
+										<!-- table -->
+										<div class="tab_con table03">
+											<table role="grid" aria-label="LED">
+												<caption>LED</caption>
+												<tbody>
+													<tr>
+														<th class="title_td" scope="row">
+															<span>
+																개념
+															</span>
+														</th>
+														<td class="info_td">
+															<span>
+																LED는 전원을 연결하여 전류가 흐를 때 빛을 발산하는 장치이다.
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<th class="title_td" scope="row">
+															<span>
+																특징
+															</span>
+														</th>
+														<td class="info_td p0">
+															<div class="both_wrap">
+																<ul class="list_disc">
+																	<li>극성이 있는 부품이다.</li>
+																	<li>과도한 전류가 흐르면 쉽게 파손되므로 LED에 흐르는 전류를 제한하기 위해 저항을 같이 사용한다.</li>
+																	<li>저항이 내장된 LED는 저항을 따로 연결해 줄 필요 없이 간편하게 연결할 수 있다.</li>
+																</ul>
+																<div class="img H_123_06_tab02_02_img01">
+																	<p>긴 쪽이 +극이고 짧은 쪽이  -극을 나타낸다. 따라서 VCC에 긴 쪽을 연결하고, GND에는 짧은 쪽을 연결한다.</p>
+																</div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<th class="title_td" scope="row">
+															<span>
+																활용
+															</span>
+														</th>
+														<td class="info_td">
+															<span>
+															신호등, 자동차 헤드라이트, 스마트 가로등, 각종 사인을 표시하는 전광판 등에 사용된다.
+															</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<!-- //table -->
+									</div>
+								</div>
+							</div>
+							<!-- //tab  -->
+
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="full_popup_wrap H_123_06_full_popup2" id="fullpopup02">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>ESP32 보드에 LED와 인체 감지 센서 연결하기</span>
+						</div>
+						<div class="full_popoup_content">
+
+							<div class="both_wrap">
+								<dl>
+									<dt>인체 감지 센서 연결(입력)</dt>
+									<dd>
+										<span class="number_icon type_blue">1</span>
+										보드의 GND에 인체 감지 센서의 GND를 연결한다.
+										<button class="after_hand" aria-label="보드의 GND에 인체 감지 센서의 GND를 연결한다."></button>
+									</dd>
+									<dd>
+										<span class="number_icon type_blue">2</span>
+										보드의 VIN에 인체 감지 센서의 VCC를 연결한다.
+										<button class="after_hand" aria-label="보드의 VIN에 인체 감지 센서의 VCC를 연결한다."></button>
+									</dd>
+									<dd>
+										<span class="number_icon type_blue">3</span>
+										보드의 D13번 핀에 인체 감지 센서의 SIG를 연결한다.
+										<button class="after_hand" aria-label="보드의 D13번 핀에 인체 감지 센서의 SIG를 연결한다."></button>
+									</dd>
+								</dl>
+	
+								<dl class="type_red">
+									<dt>LED 연결(출력)</dt>
+									<dd>
+										<span class="number_icon type_red">1</span>
+										보드의 GND에 LED의 GND를 연결한다.
+										<button class="after_hand" aria-label="보드의 GND에 LED의 GND를 연결한다."></button>
+									</dd>
+									<dd>
+										<span class="number_icon type_red">2</span>
+										보드의 3V3에 LED의 VCC를 연결한다.
+										<button class="after_hand" aria-label="보드의 3V3에 LED의 VCC를 연결한다."></button>
+									</dd>
+									<dd>
+										<span class="number_icon type_red">3</span>
+										보드의 D2번 핀에 LED의 SIG를 연결한다.
+										<button class="after_hand" aria-label="보드의 D2번 핀에 LED의 SIG를 연결한다."></button>
+									</dd>
+								</dl>
+							</div>
+							
+							
+							<div class="board_box">
+								<div class="img esp32"></div>
+								<div class="img item01"><strong>인체 감지 센서</strong></div>
+								<div class="img item02"><strong>LED</strong></div>
+								<div class="img caption01"></div>
+
+								<div class="img line01"></div>
+								<div class="img line02"></div>
+								<div class="img line03"></div>
+								<div class="img line04"></div>
+								<div class="img line05"></div>
+								<div class="img line06"></div>
+
+								<div class="btn_con">
+									<button  class="a_btn a_btn02 btn_reset" type="button" aria-label="다시 하기" tabindex="0">다시 하기</button>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<!-- //popup -->
+
+
+			</div>
+		</main>
+
+	</div>
+
+	<script>
+
+	$(document).ready(function(){
+		// 팝업열기
+		$(".H_123_06_con .link_tooltip").on("click", function(){
+			var popSelector = "#" + $(this).attr("aria-controls");
+			if($(popSelector).css("display") == "none") {
+				$(".H_123_06_con .text_popup_con").not(popSelector).hide();
+				$(popSelector).show();
+			}else {
+				$(popSelector).hide();
+			}
+		});
+		// 팝업닫기
+		$(".H_123_06_con .text_popup_con .a_btn").on("click", function(){
+			$(this).parents(".text_popup_con").hide();
+		});
+
+		// 보충자료
+		$(".H_123_06_con .btn_data_popup, .btn_active").on("click", function(){
+			var popSelector = "#" + $(this).attr("aria-controls");
+			$(popSelector).show();
+		});
+		$(".full_popup_wrap .btn_close").on("click", function(){
+			$(this).parents(".full_popup_wrap").hide();
+		});
+
+		// 탭
+		$(".tab_list > .tab_btn").on("click", function(){
+			$(this).siblings().removeClass("on").end().addClass("on");
+			$(this).siblings().attr("aria-selected", "false").end().attr("aria-selected", "true");
+			$("#"+$(this).attr("aria-controls")).siblings().removeClass("on").end().addClass("on");
+		});
+
+		// 선연결
+		$(".both_wrap .after_hand").on("click", function() {
+			var number = $(this).parent().index();
+			$(this).hide();
+			$(".btn_reset").show();
+			if($(this).parents(".type_red").length > 0) {
+				number = number+3;
+			}
+			$(".board_box .line0" + number).addClass("show");
+
+		});
+
+
+		$(".check-btn").on("click", function () {
+			const selects = $(".input_select");
+			let isCorrect = true;
+
+			selects.each(function () {
+				const selected = $(this).find("option:selected");
+				if (selected.data("answer") !== "yes") {
+				isCorrect = false;
+				return false;
+				}
+			});
+
+			// 모든 팝업 초기화
+			$(".popup_con_bg, .popup_con").hide();
+
+			// 조건에 따라 대상 팝업 선택
+			const targetPopup = isCorrect
+				? ".popup_con_bg.popup04, .popup_con.popup04"
+				: ".popup_con_bg.popup02, .popup_con.popup02";
+
+			// 표시 후 자동 숨김
+			$(targetPopup).fadeIn(function () {
+				setTimeout(function () {
+				$(targetPopup).fadeOut();
+				}, 1000);
+			});
+			});
+
+
+		//다시하기
+		$(".btn_reset").on("click", function() {
+			$(".board_box .show").removeClass("show");
+			$(".both_wrap .after_hand").show();
+		});
+
+		
+		
+	});
+
+		
+	</script>
+
+
+
+	<script>
+		const contentId = 'H-123-06';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+</body>
+</html>

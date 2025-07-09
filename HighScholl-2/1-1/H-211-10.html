@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>개념 학습 - 허프만 부호화</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+ 
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_211_10_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								허프만 부호화
+							</h1>
+						</div>
+					</div>
+				</div>			
+
+				<div class="contents_con">	
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+							    &nbsp;&nbsp;<span class="bold_text">허프만 부호화(Huffman coding)</span>는 사전 압축 방식을 개선한 방식으로 전체 데이터에서 자주 등장하는 값별로 사용  <br/>빈도를 계산하여 사용빈도가 높을수록 비트값을 적게 차지하는 짧은 이진수를 부여하는 방법이다.
+							</span>
+						</div>						
+					</div>
+
+					<div class="info02_con">
+						<div class="title_con" tabindex="0">
+							<div class="dot" aria-hidden="true"></div>
+
+							<span>
+								허프만 부호화로 압축한 예
+							</span>
+						</div>
+
+						<div class="contents_con">
+							<div class="both_wrap">
+								<dl>
+									<dt>원본 데이터</dt>
+									<dd>AAADDBOOOO</dd>
+									<dd>10bytes(= 80bits)</dd>
+								</dl>
+								
+								<div class="arr">
+									<button class="btn_video" aria-label="압축 과정"></button>
+									<div class="txt">사용 빈도를 계산하여 압축</div>
+
+									<!-- table -->
+									<div class="tab_con">
+										<table role="grid" aria-label="압축코드">
+											<caption>압축코드</caption>
+											<thead>
+												<tr>
+													<td  tabindex="0">
+														<span>
+															빈도
+														</span>
+													</td>
+													<td  tabindex="0">
+														<span>
+															데이터
+														</span>
+													</td>
+													<td  tabindex="0">
+														<span>
+															코드
+														</span>
+													</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="info_td">
+														<span>4</span>
+													</td>
+													<td class="info_td">
+														<span>O</span>
+													</td>
+													<td class="info_td">
+														<span>1</span>
+													</td>
+												</tr>
+												<tr>
+													<td class="info_td">
+														<span>3</span>
+													</td>
+													<td class="info_td">
+														<span>A</span>
+													</td>
+													<td class="info_td">
+														<span>00</span>
+													</td>
+												</tr>
+												<tr>
+													<td class="info_td">
+														<span>2</span>
+													</td>
+													<td class="info_td">
+														<span>D</span>
+													</td>
+													<td class="info_td">
+														<span>010</span>
+													</td>
+												</tr>
+												<tr>
+													<td class="info_td">
+														<span>1</span>
+													</td>
+													<td class="info_td">
+														<span>B</span>
+													</td>
+													<td class="info_td">
+														<span>011</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //table -->
+								</div>
+
+								<dl>
+									<dt>압축한 데이터</dt>
+									<dd>
+										00 00 00 010 <br />
+										010 011 <br />
+										1 1 1 1
+									</dd>
+									<dd>19bits</dd>
+									<dd class="result">
+										· 80비트가 19비트가 되었다.<br />
+										· 압축률: 80 / 19≒4.21
+									</dd>
+								</dl>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+
+				<!-- popup -->
+				<div class="full_popup_wrap H_211_10_full_popup" id="fullpopup01">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>허프만 부호화 과정</span>
+						</div>
+						<div class="full_popoup_content">
+
+							<div class="video_con">
+								<div class="contents_con">
+									<div class="video-container">
+										<video id="player01" data-content-id="H-211-10" controls crossorigin></video>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- //popup -->
+
+			</div>
+		</main>
+
+		<script>
+			$(document).ready(function(){
+				// 영상버튼
+				$(".H_211_10_con .btn_video").on("click", function(){
+					$(".H_211_10_con .full_popup_wrap").show();
+				});
+				$(".full_popup_wrap .btn_close").on("click", function(){
+					$(this).parents(".full_popup_wrap").hide();
+				});
+
+			});
+			
+		</script>
+
+		<script>
+			$(".full_popup_wrap .btn_close").on("click", function(){
+				const video = $(this).closest(".full_popup_wrap").find("video").get(0);
+				if (video && !video.paused) {
+					video.pause();
+				}
+				$(this).parents(".full_popup_wrap").hide();
+			});			
+		</script>
+
+		<script>
+			const contentId = 'H-211-10';
+		</script>
+		<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+		<script>
+			const videoList = [
+				{ 
+					id: "H-211-10",
+					src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-211-10_4000k.mp4,H-211-10_2000k.mp4,H-211-10_1000k.mp4,lang/kor/H-211-10.vtt,.smil/master.m3u8" 
+				}
+			];
+		</script>
+		<script type="text/javascript" src="./js/xapi.video.js"></script>
+	</div>
+</body>
+</html>

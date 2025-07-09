@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>스스로 해결하기 - 칼로리 소모량 예측</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/swiper.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_424_09_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<div class="text" tabindex="0">스스로 해결하기</div>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con">
+							<h1 tabindex="0">
+								칼로리 소모량 예측
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">				
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								개인의 운동 시간과 신체 정보를 활용해서 칼로리 소모량을 예측하는 인공지능 모델을 만들어 보자.
+							</span>
+						</div>
+
+						<div class="exam_con">
+							<div class="title_con">
+								<div class="text_con" tabindex="0">
+									<span>
+										해결할 문제
+									</span>
+								</div>
+
+								<div class="img_con" tabindex="0">
+									<img src="./img/H_424_09_info01_exam_title_img_con_img.png" alt="녹색 배경에 흰색 글씨로 3 건강하고 행복한 삶이라고 적혀 있고, 아래에는 심장박동선을 형상화한 그래픽과 하트 모양 아이콘이 함께 배치되어 있다. UN 지속가능발전목표(SDGs) 중 목표 3을 나타낸다." />
+								</div>
+							</div>
+
+							<div class="info_con">
+								<div class="text_con" tabindex="0">
+									<p>
+										많은 사람들이 건강을 위해 운동을 하고 스마트폰과 스마트워치 등으로 신체 활동 정보를 기록하고 있다. 
+									</p>
+									
+									<p>
+										개인의 운동 시간, 체온, 키, 몸무게 등의 신체 정보를 활용하여 칼로리 소모량을 예측하는 인공지능 모델을 만든다.
+									</p>
+								</div>
+
+								<div class="img_con" tabindex="0">
+									<img src="./img/H_424_09_info01_exam_info_img_con_img.png" alt="스마트폰 화면에 '정민님의 운동을 분석했어요!'라는 문구와 함께 원형 그래프 및 운동 항목별 횟수가 표시됨. 배경에는 스마트워치를 착용하고 달리는 여성, 웨어러블 기기를 착용하고 자전거를 타는 남성이 보인다." />
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="info02_con">
+						
+						<div class="write_con">
+							<div class="title_con" tabindex="0">
+								<span>
+									이 문제를 해결하고자 할 때, 기계학습의 목적과 예측하고자 하는 값을 참고하여 기계학습의 유형을 선정해 보자.
+								</span>
+							</div>
+
+							<div class="contents_con">
+								<div class="text_con">
+									<ul>
+										<li>
+											<div class="text_div">
+												<div class="text01">
+													<span>
+														기계학습의 목적
+													</span>
+												</div>
+
+												<div class="text02">
+													<span>
+														칼로리 소모량 예측
+													</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="text_div">
+												<div class="text01">
+													<span>
+														예측하고자 하는 값
+													</span>
+												</div>
+
+												<div class="text02">
+													<span>
+														연속형 실수
+													</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="input_con">
+									<div class="title_con">
+										<span>
+											기계학습 유형
+										</span>
+									</div>
+
+									<div class="check_con">
+										<ul>
+											<li>
+												<label class="radio_label" tabindex="0">
+													<input type="radio" name="aidt_input1" data-group-id="1" value="회귀" aria-label="회귀" tabindex="-1" />
+													<span class="check_icon"></span>
+													<span>
+														회귀
+													</span>
+												</label>
+											</li>
+											<li>
+												<label class="radio_label" tabindex="0">
+													<input type="radio" name="aidt_input1" data-group-id="1" value="분류" aria-label="분류" tabindex="-1" />
+													<span class="check_icon"></span>
+													<span>
+														분류
+													</span>
+												</label>   
+											</li>
+											<li>
+												<label class="radio_label" tabindex="0">
+													<input type="radio" name="aidt_input1" data-group-id="1" value="군집" aria-label="군집" tabindex="-1" />
+													<span class="check_icon"></span>
+													<span>
+														군집
+													</span>
+												</label>   
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="btn_con">
+									<button  class="a_btn" type="button" aria-label="확인하기" tabindex="0" onclick="javascript:btn_event();">확인하기</button>
+								</div>
+							</div>
+
+							<div class="popup_con_bg popup01"></div>
+							<div class="popup_con popup01" role="alert"></div>
+
+							<div class="popup_con_bg popup02"></div>
+							<div class="popup_con popup02" role="alert"></div>
+
+							<div class="popup_con_bg popup03"></div>
+							<div class="popup_con popup03" role="alert"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			// 확인하기
+			function btn_event(){
+				console.log("확인 버튼 클릭됨");
+
+				// 선택된 라디오 버튼 값 가져오기
+				let selected = $("input[name='aidt_input1']:checked").val();
+
+				if (!selected) {
+					// 아무것도 선택하지 않았을 때
+					btn_event01();
+				} else if (selected === "회귀") {
+					// 정답 선택했을 때
+					btn_event03();
+					
+					setTimeout(function(){
+						// 라디오 버튼 해제
+						$("input[name='aidt_input1']").prop("checked", false);
+					}, 1000);
+				} else {
+					// 오답 선택했을 때
+					btn_event02();
+
+					setTimeout(function(){
+						// 라디오 버튼 해제
+						$("input[name='aidt_input1']").prop("checked", false);
+					}, 1000);
+				}
+			};
+
+			// 확인하기 - 체크 안됨
+			function btn_event01(){
+				$(".H_424_09_con > .contents_con > .contents_con > .info02_con .write_con .popup_con_bg.popup01").fadeIn();
+				$(".H_424_09_con > .contents_con > .contents_con > .info02_con .write_con .popup_con.popup01").fadeIn();
+
+				setTimeout(function(){
+					$(".H_424_09_con > .contents_con > .contents_con > .info02_con .write_con .popup_con_bg.popup01").fadeOut();
+					$(".H_424_09_con > .contents_con > .contents_con > .info02_con .write_con .popup_con.popup01").fadeOut();
+				}, 1000);
+			}
+
+			// 확인하기 - 오답
+			function btn_event02(){
+				$(".H_424_09_con > .contents_con > .contents_con > .info02_con .write_con .popup_con_bg.popup02").fadeIn();
+				$(".H_424_09_con > .contents_con > .contents_con > .info02_con .write_con .popup_con.popup02").fadeIn();
+
+				setTimeout(function(){
+					$(".H_424_09_con > .contents_con > .contents_con > .info02_con .write_con .popup_con_bg.popup02").fadeOut();
+					$(".H_424_09_con > .contents_con > .contents_con > .info02_con .write_con .popup_con.popup02").fadeOut();
+				}, 1000);
+			}
+
+			// 확인하기 - 정답
+			function btn_event03(){
+				$(".H_424_09_con > .contents_con > .contents_con > .info02_con .write_con .popup_con_bg.popup03").fadeIn();
+				$(".H_424_09_con > .contents_con > .contents_con > .info02_con .write_con .popup_con.popup03").fadeIn();
+
+				setTimeout(function(){
+					$(".H_424_09_con > .contents_con > .contents_con > .info02_con .write_con .popup_con_bg.popup03").fadeOut();
+					$(".H_424_09_con > .contents_con > .contents_con > .info02_con .write_con .popup_con.popup03").fadeOut();
+				}, 1000);
+			}
+		</script>
+
+		<script>
+			const contentId = 'H-424-09';
+		</script>
+		<script type="text/javascript" src="./js/xapi.page.js"></script>
+	</div>
+</body>
+</html>

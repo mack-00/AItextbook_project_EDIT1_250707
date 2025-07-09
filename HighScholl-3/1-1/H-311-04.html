@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>문제 이해</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<!-- Plyr 관련 스타일시트 -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+	<link rel="stylesheet" href="./css/plyr.css">
+	
+	<!-- Plyr 관련 필수 JS -->
+	<script src=https://cdn.jsdelivr.net/npm/hls.js@latest></script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_311_04_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								문제 이해
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01">
+						&nbsp;&nbsp;<strong>문제 이해</strong>는 해결하고자 하는 문제를 이해하고, 컴퓨팅 시스템으로 문제를 해결할 수 있는지 판단하는 단계이다. 
+						컴퓨팅 시스템으로 문제를 해결할 수 있는지 판단하기 위해서는 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip01">문제 상태</span>와 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip02">수행 과정</span>을 명확하게 설명할 수 있어야 한다.
+					</div>
+
+					<div class="sub_title_dot">문제 상태와 수행 과정 예시</div>
+					<div class="video_con">
+						<div class="contents_con">
+							<div class="video-container">
+								<video id="player01" data-content-id="H-311-04" controls crossorigin></video>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- 팝업 -->
+				<div class="text_popup_con H_311_04_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0" id="popup-title">
+							<span>
+								문제 상태
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								문제 상태는 문제의 초기 상태, 현재 상태, 목표 상태를 말한다. 
+							</span> 
+							<ul>
+								<li>
+									<strong class="rd_10 f_center">초기 상태</strong>
+									<span class="rd_10">문제가 발생한 최초의 상태</span>
+								</li>
+								<li>
+									<strong class="rd_10 f_center">현재 상태</strong>
+									<span class="rd_10">문제가 해결되면서 변화되고 있는 상태</span>
+								</li>
+								<li>
+									<strong class="rd_10 f_center">목표 상태</strong>
+									<span class="rd_10">문제가 해결된 상태</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="text_popup_con H_311_04_pop_02" id="tooltip02" role="dialog" aria-modal="true" aria-labelledby="popup-title2">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0" id="popup-title2">
+							<span>
+								수행 과정
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								수행 과정은 초기 상태에서 목표 상태에 도달하기 위해 수행해야 할 작업들을 말한다.
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- //팝업 -->
+
+			</div>
+		</main>
+
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			// 팝업열기
+			$(".H_311_04_con .link_tooltip").on("click", function(){
+				var popSelector = "#" + $(this).attr("aria-controls");
+				if($(popSelector).css("display") == "none") {
+					$(".H_311_04_con .text_popup_con").not(popSelector).hide();
+					$(popSelector).show();
+				}else {
+					$(popSelector).hide();
+				}
+			});
+			// 팝업닫기
+			$(".H_311_04_con .text_popup_con .a_btn").on("click", function(){
+				$(this).parents(".text_popup_con").hide();
+			});			
+		});
+	</script>	
+
+	<script>
+		const contentId = 'H-311-04';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+	<script>
+		const videoList = [
+			{ 
+				id: "H-311-04",
+				src: "https://rrfbbauyioor3693084.cdn.gov-ntruss.com/hls/D-j4~g~odaqF-0pvzfgyzw__/001-high-01-out/,H-311-04_4000k.mp4,H-311-04_2000k.mp4,H-311-04_1000k.mp4,lang/kor/H-311-04.vtt,.smil/master.m3u8" 
+			}
+		];
+	</script>
+	<script type="text/javascript" src="./js/xapi.video.js"></script>
+
+	
+</body>
+</html>

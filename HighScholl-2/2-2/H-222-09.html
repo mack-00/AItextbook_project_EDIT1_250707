@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>빅데이터 전처리</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/swiper.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_222_09_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h3 class="text01" tabindex="0">심화</h3>
+							<h2 class="text02" tabindex="0">사고 다지기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								 2-2. 빅데이터 전처리
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								다음 글을 읽고 물음에 답해 보자.
+							</span>
+						</div>			
+					
+						<div class="slide_wrap_con">
+							<div class="slide_con">
+								<div class="swiper-container H_222_09_info01_tab_slide" role="region" aria-label="빅데이터 전처리 슬라이드">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide H_222_09_info01_tab_slide_div_01" data-swiper-autoplay="4000" role="group" aria-label="">
+											<div class="contents_con">
+												<div class="title_con">
+													<div class="text01_con" tabindex="0">
+														<h2>
+															배달 앱의 음식 데이터 정리
+														</h2>
+													</div>
+													<div class="text02_con" tabindex="0">
+														<p>
+															&nbsp;&nbsp;배달 앱을 사용하면 다양한 음식점에서 원하는 메뉴를 쉽게 찾을 수 있다. 
+															하지만 같은 메뉴라도 가게마다 이름이 조금씩 다르게 표기될 수 있다. 
+															예를 들어, 어떤 가게는 "치즈 버거"라고 쓰고, 다른 가게는 cheese burger라고 
+															쓰거나 cheeseburger와 같은 변형된 표기를 사용할 수도 있다. 이런 데이터들이 
+															정리되지 않으면, 사용자가 특정 메뉴를 검색했을 때 원하는 결과를 정확하게 찾기가 어려워진다.<br />
+
+															&nbsp;&nbsp;배달 앱에서는 이러한 문제를 해결하기 위해 데이터 전처리 작업을 수행한다. 먼저, 
+															같은 음식이라도 표기법이 다를 경우 하나의 기준에 맞춰 정리한다. 또한 불필요한 공백이나 특수문자를 제거하고,
+															중복된 데이터를 걸러낸다. <br />
+															
+															&nbsp;&nbsp;이러한 정리 과정을 거치면 사용자는 더 정확한 검색 결과를 얻을 수 있으며, 
+															배달 앱도 더 효율적으로 데이터를 관리할 수 있다.
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>		
+										<div class="swiper-slide H_222_09_info01_tab_slide_div_02" data-swiper-autoplay="4000" role="group" aria-label="">
+											<div class="contents_con">
+												<div class="contents_con_div">
+													<form id="frm1" onsubmit="return false">  
+														<div class="title_con" tabindex="0">
+															<h2>
+																이 글로 알 수 있는 데이터 전처리 과정의 중요성을 적어 보자.
+															</h2>														
+														</div>
+
+														<div class="input_con">									
+															<textarea name="aidt_input"></textarea> 
+
+															<div class="placeholder_con">
+																<span>내용을 입력해 보자.</span>
+															</div>
+														</div>														
+													</form>
+												</div>
+
+												<div class="btn_con">
+													<button  class="a_btn a_btn01" type="button" aria-label="예시 답 보기" tabindex="0" aria-expanded="false">예시 답 보기</button>
+													<button  class="a_btn a_btn01_1" type="button" aria-label="다시 하기" tabindex="0" aria-expanded="false" style="display: none;">다시 하기</button>
+												</div>
+
+												<div class="round_box type2" style="display: none;">
+													<div class="sub_title">
+														<strong class="exam_icon2">예시</strong>
+													</div>
+													<div class="exam_text">
+														데이터 전처리가 없다면 잘못된 정보 제공, 부정확한 분석, 사용자 경험 저하 등의 문제가 발생할 수 있다. 반면, 데이터를 올바르게 정리하면 정확한 결과 도출, 효율적인 분석, 편리한 서비스 제공이 가능하다. 따라서 빅데이터 분석에서 전처리는 가장 중요한 과정 중 하나라고 할 수 있다. 				
+													</div>
+												</div>
+
+											</div>
+										</div>		
+									</div> 
+
+									<div class="swiper-pagination H_222_09_info01_tab_slide_swiper-pagination"></div>
+								</div>
+
+								<div class="slide_btn prev H_222_09_info01_tab_slide_prev_btn swiper-button-prev" aria-label="슬라이드 이전 버튼" tabindex="0"></div>
+								<div class="slide_btn next H_222_09_info01_tab_slide_next_btn swiper-button-next" aria-label="슬라이드 다음 버튼" tabindex="0"></div>
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			// 데이터의 암호화 텍스트 팝업 열기/닫기
+			$(document).on("click",".H_222_09_con > .contents_con > .contents_con > .info01_con > .slide_wrap_con > .slide_con .swiper-container .swiper-wrapper .swiper-slide.H_222_09_info01_tab_slide_div_01 > .contents_con > .title_con > .text02_con > p .color_text01",function(){
+				if( $(".H_222_09_con > .contents_con > .contents_con > .info01_con > .slide_wrap_con > .slide_con .swiper-container .swiper-wrapper .swiper-slide.H_222_09_info01_tab_slide_div_01 > .contents_con > .title_con > .popup_con").css("display") == "none" ){
+					$(".H_222_09_con > .contents_con > .contents_con > .info01_con > .slide_wrap_con > .slide_con .swiper-container .swiper-wrapper .swiper-slide.H_222_09_info01_tab_slide_div_01 > .contents_con > .title_con > .popup_con").show();
+				}else{
+					$(".H_222_09_con > .contents_con > .contents_con > .info01_con > .slide_wrap_con > .slide_con .swiper-container .swiper-wrapper .swiper-slide.H_222_09_info01_tab_slide_div_01 > .contents_con > .title_con > .popup_con").hide();
+				}
+			});
+
+			// 데이터의 암호화 팝업 버튼 열기/닫기
+			$(document).on("click",".H_222_09_con > .contents_con > .contents_con > .info01_con > .slide_wrap_con > .slide_con .swiper-container .swiper-wrapper .swiper-slide.H_222_09_info01_tab_slide_div_01 > .contents_con > .title_con > .popup_con > .contents_con > .close_btn .a_btn",function(){
+				if( $(".H_222_09_con > .contents_con > .contents_con > .info01_con > .slide_wrap_con > .slide_con .swiper-container .swiper-wrapper .swiper-slide.H_222_09_info01_tab_slide_div_01 > .contents_con > .title_con > .popup_con").css("display") == "none" ){
+					$(".H_222_09_con > .contents_con > .contents_con > .info01_con > .slide_wrap_con > .slide_con .swiper-container .swiper-wrapper .swiper-slide.H_222_09_info01_tab_slide_div_01 > .contents_con > .title_con > .popup_con").show();
+				}else{
+					$(".H_222_09_con > .contents_con > .contents_con > .info01_con > .slide_wrap_con > .slide_con .swiper-container .swiper-wrapper .swiper-slide.H_222_09_info01_tab_slide_div_01 > .contents_con > .title_con > .popup_con").hide();
+				}
+			});
+
+			// 데이터의 암호화 슬라이드
+			H_222_09_info01_tab_slide = new Swiper ('.H_222_09_info01_tab_slide', {
+				slidesPerView: 'auto',
+				effect : 'fade', 
+					fadeEffect: { 
+					crossFade: true 
+				},
+				speed: 100,
+				loop: false,
+				pagination: {
+					el: ".H_222_09_info01_tab_slide_swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.H_222_09_info01_tab_slide_next_btn',
+					prevEl: '.H_222_09_info01_tab_slide_prev_btn',
+				},
+				observer: true,
+				observeParents: true,
+				simulateTouch: false,
+				allowTouchMove: false,
+			});
+			
+			// placeholder_con 예외처리
+			document.querySelector(".H_222_09_con > .contents_con > .contents_con > .info01_con > .slide_wrap_con > .slide_con .swiper-container .swiper-wrapper .swiper-slide.H_222_09_info01_tab_slide_div_02 > .contents_con > .contents_con_div .input_con").addEventListener("click", function () {
+				 const placeholder = this.querySelector(".placeholder_con");
+				 if (placeholder) {
+					  placeholder.style.transition = "opacity 0.3s";
+					  placeholder.style.opacity = "0";
+					  setTimeout(() => (placeholder.style.display = "none"), 300);
+				 }
+			});
+
+			// 예시 답 보기
+			$(document).ready(function () {
+				const $btnExample = $(".H_222_09_con .a_btn01");  
+				const $btnReset = $(".H_222_09_con .a_btn01_1"); 
+				const $exampleBox = $(".H_222_09_con .round_box.type2"); 
+				const $subtitle = $exampleBox.find(".sub_title");
+				const $text = $exampleBox.find(".exam_text");
+				const $textarea = $(".H_222_09_con textarea");
+
+				// 초기 상태 숨김 처리
+				$exampleBox.hide();
+				$btnReset.hide();
+
+				// 예시 답 보기 클릭
+				$btnExample.on("click", function () {
+					$btnExample.hide();    
+					$btnReset.show();    
+					$exampleBox.show();    
+					$subtitle.show();   
+					$text.show();       
+				});
+
+				// 다시 하기 클릭
+				$btnReset.on("click", function () {
+					$btnReset.hide();        
+					$btnExample.show();      
+					$exampleBox.hide();      
+					$subtitle.hide();        
+					$text.hide();            
+					$textarea.val("");       
+				});
+			});
+		</script>
+
+	</div>
+	<script>
+		const contentId = 'H-222-09';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

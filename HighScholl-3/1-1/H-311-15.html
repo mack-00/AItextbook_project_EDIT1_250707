@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>하노이 탑 문제 > 모델링</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<!--250708 중복제거 <link rel="stylesheet" href="GoogleTranslate.css">-->
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+	<!--250708 중복제거 <script type="text/javascript" src="GoogleTranslate.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_311_15_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">스스로 해결하기</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h2>하노이 탑 문제</h2>
+							<h1>모델링</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+
+					<div class="text_01 fw_600">
+						원반을 직접 이동하며 이동하는 과정을 단순화해 보자.
+					</div>
+
+					<div class="both_wrap main_both">
+						<div class="hanoi" tabindex="0">
+							<div id="tower1" class="tower"></div>
+							<div id="tower2" class="tower"></div>
+							<div id="tower3" class="tower"></div>
+						</div>
+						<div class="button-hanoi">
+							<button id="resetButton" class="btn_reset" type="button" aria-label="다시 하기">다시 해 보기</button>
+						</div>
+					</div>
+
+					<div class="both_wrap sub_both">
+						<div class="left">
+							<div class="tit">
+								<strong class="rd_10">모델링</strong>
+								원반의 개수가 1개 일 때와 1개가 아닐 때 해결 방법을 완성해 보자.
+							</div>
+
+							<!-- table -->
+							<div class="tab_con">
+								<table>
+									<caption>O 표기법의 종류</caption>
+									<colgroup>
+										<col style="width: 40%;">
+										<col style="width: 60%;">
+									</colgroup>
+									<thead>
+										<tr>
+										<th scope="col">원반의 개수가 1개일 때</th>
+										<th scope="col">원반의 개수가 1개가 아닐 때</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+										<td class="info_td center">
+											<span>원반을 A에서 C로 이동한다.</span>
+										</td>
+										<td class="info_td">
+											<div class="select_wrap">
+											<div>
+												<label>n-1번까지의 원반을</label>
+												<select class="select01">
+												<option value="" disabled selected>선택</option>
+												<option value="A">A</option>
+												<option value="B">B</option>
+												<option value="C">C</option>
+												</select>
+												로 이동한다.
+											</div>
+											</div>
+											<div class="select_wrap">
+											<div>
+											   <label>n번 원반을</label>
+												<select class="select02">
+												<option value="" disabled selected>선택</option>
+												<option value="A">A</option>
+												<option value="B">B</option>
+												<option value="C">C</option>
+												</select>
+												로 이동한다.
+											</div>
+											</div>
+											<div class="select_wrap">
+											<div>
+											 <label>n-1번 원반을</label>
+												<select class="select03">
+												<option value="" disabled selected>선택</option>
+												<option value="A">A</option>
+												<option value="B">B</option>
+												<option value="C">C</option>
+												</select>
+												에서
+												<select class="select04">
+												<option value="" disabled selected>선택</option>
+												<option value="A">A</option>
+												<option value="B">B</option>
+												<option value="C">C</option>
+												</select>
+												로 이동한다.
+											</div>
+											</div>
+										</td>
+										</tr>
+									</tbody>
+									</table>
+							</div>
+							<!-- //table -->
+						</div>
+
+						<button type="button" class="btn_confirm" aria-label="확인하기">확인하기</button>
+						<button type="button" class="btn_reset" aria-label="다시 하기" style="display: none;">다시 하기</button>
+					</div>
+					
+				</div>
+
+				<div class="popup_con_bg popup01"></div>
+				<div class="popup_con popup01" role="alert"></div>
+
+				<div class="popup_con_bg popup02"></div>
+				<div class="popup_con popup02" role="alert"></div>
+
+				<div class="popup_con_bg popup03"></div>
+				<div class="popup_con popup03" role="alert"></div>
+
+				<div class="popup_con_bg popup04"></div>
+				<div class="popup_con popup04" role="alert"></div>
+
+			</div>
+		</main>
+
+	</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const towers = [document.getElementById('tower1'), document.getElementById('tower2'), document.getElementById('tower3')];
+		const resetButton = document.getElementById('resetButton');
+		let draggedDisc = null;
+		let touchOffsetX = 0;
+		let touchOffsetY = 0;
+
+		function initializeGame() {
+			towers.forEach(tower => tower.innerHTML = '');
+			const discs = [
+				createDisc('large'),
+				createDisc('medium'),
+				createDisc('small')
+			];
+			discs.forEach(disc => towers[0].appendChild(disc));
+			updateDiscPositions();
+		}
+
+		function createDisc(size) {
+			const disc = document.createElement('div');
+			disc.className = `disc ${size}`;
+			disc.draggable = true;
+			disc.addEventListener('dragstart', dragStart);
+			disc.addEventListener('dragend', dragEnd);
+			disc.addEventListener('touchstart', touchStart);
+			disc.addEventListener('touchmove', touchMove);
+			disc.addEventListener('touchend', touchEnd);
+			return disc;
+		}
+
+		function dragStart(event) {
+			const tower = event.target.parentNode;
+			const topDisc = tower.querySelector('.disc:last-child');
+			if (event.target !== topDisc) {
+				event.preventDefault();
+				return;
+			}
+			draggedDisc = event.target;
+			draggedDisc.style.zIndex = '10'; // 블럭을 가장 앞으로 보이게 설정
+			event.dataTransfer.setData('text', event.target.className);
+			setTimeout(() => event.target.style.opacity = '0.5', 0);
+		}
+
+		function dragEnd(event) {
+			event.target.style.opacity = '1';
+			event.target.style.zIndex = '1'; // 드래그 끝나면 원래 z-index로 설정
+			draggedDisc = null;
+			towers.forEach(tower => tower.classList.remove('over'));
+		}
+
+		function touchStart(event) {
+			const tower = event.target.parentNode;
+			const topDisc = tower.querySelector('.disc:last-child');
+			if (event.target !== topDisc) {
+				return;
+			}
+			draggedDisc = event.target;
+			draggedDisc.style.zIndex = '10'; // 블럭을 가장 앞으로 보이게 설정
+			touchOffsetX = event.target.offsetLeft - event.touches[0].clientX;
+			touchOffsetY = event.target.offsetTop - event.touches[0].clientY;
+			setTimeout(() => event.target.style.opacity = '0.5', 0);
+		}
+
+		function touchMove(event) {
+			event.preventDefault();
+			const touch = event.touches[0];
+			draggedDisc.style.left = `${touch.clientX + touchOffsetX}px`;
+			draggedDisc.style.top = `${touch.clientY + touchOffsetY}px`;
+		}
+
+		function touchEnd(event) {
+			draggedDisc.style.opacity = '1';
+			draggedDisc.style.zIndex = '1'; // 드래그 끝나면 원래 z-index로 설정
+			draggedDisc.style.left = '50%';
+			draggedDisc.style.top = 'auto';
+			const tower = document.elementFromPoint(event.changedTouches[0].clientX, event.changedTouches[0].clientY).closest('.tower');
+			if (tower) {
+				const topDisc = tower.querySelector('.disc:last-child');
+				if (!topDisc || (draggedDisc && draggedDisc.clientWidth < topDisc.clientWidth)) {
+					tower.appendChild(draggedDisc);
+					updateDiscPositions();
+				}
+			}
+			draggedDisc = null;
+		}
+
+		towers.forEach(tower => {
+			tower.addEventListener('dragover', dragOver);
+			tower.addEventListener('drop', drop);
+		});
+
+		function dragOver(event) {
+			event.preventDefault();
+			const tower = event.target.closest('.tower');
+			const topDisc = tower.querySelector('.disc:last-child');
+			if (!topDisc || (draggedDisc && draggedDisc.clientWidth < topDisc.clientWidth)) {
+				tower.classList.add('over');
+			}
+		}
+
+		function drop(event) {
+			event.preventDefault();
+			const tower = event.target.closest('.tower');
+			tower.classList.remove('over');
+			const topDisc = tower.querySelector('.disc:last-child');
+			if (!topDisc || (draggedDisc && draggedDisc.clientWidth < topDisc.clientWidth)) {
+				tower.appendChild(draggedDisc);
+				updateDiscPositions();
+			}
+		}
+
+		function updateDiscPositions() {
+			towers.forEach(tower => {
+				const discs = Array.from(tower.children).filter(child => child.classList.contains('disc'));
+				discs.forEach((disc, index) => {
+					disc.style.bottom = `${index * 20}px`;
+				});
+			});
+		}
+
+		resetButton.addEventListener('click', initializeGame);
+
+		initializeGame();
+	});
+</script>
+<script>
+	$(document).ready(function(){
+
+		let attemptCount = 0; // 오답 횟수 카운트
+
+		// 정답 확인
+		$(".btn_confirm").on("click", function(){
+			const val1 = $(".select01").val();
+			const val2 = $(".select02").val();
+			const val3 = $(".select03").val();
+			const val4 = $(".select04").val();
+
+			if(val1 === null || val2 === null || val3 === null || val4 === null){
+				// 널 체크
+				$(".H_311_15_con .popup_con_bg.popup03").fadeIn();
+				$(".H_311_15_con .popup_con.popup03").fadeIn();
+				setTimeout(function(){
+					$(".H_311_15_con .popup_con_bg.popup03").fadeOut();
+					$(".H_311_15_con .popup_con.popup03").fadeOut();
+				}, 1000);
+				return;
+			}
+
+			if(val1 == "B" && val2 == "C" && val3 == "B" && val4 == "C"){
+				// 정답
+				$(".H_311_15_con .popup_con_bg.popup02").fadeIn();
+				$(".H_311_15_con .popup_con.popup02").fadeIn();
+				setTimeout(function(){
+					$(".H_311_15_con .popup_con_bg.popup02").fadeOut();
+					$(".H_311_15_con .popup_con.popup02").fadeOut();
+				}, 1000);
+				attemptCount = 0; // 정답 시 초기화
+				$(".btn_confirm").hide();
+				$(".btn_reset").show();
+			} else {
+				attemptCount++;
+
+				if(attemptCount === 1){
+					// 첫 번째 오답
+					$(".H_311_15_con .popup_con_bg.popup01").fadeIn();
+					$(".H_311_15_con .popup_con.popup01").fadeIn();
+					setTimeout(function(){
+						$(".H_311_15_con .popup_con_bg.popup01").fadeOut();
+						$(".H_311_15_con .popup_con.popup01").fadeOut();
+					}, 1000);
+				} else {
+					// 두 번째 오답부터 정답 공개
+					$(".H_311_15_con .popup_con_bg.popup04").fadeIn();
+					$(".H_311_15_con .popup_con.popup04").fadeIn();
+					setTimeout(function(){
+						$(".H_311_15_con .popup_con_bg.popup04").fadeOut();
+						$(".H_311_15_con .popup_con.popup04").fadeOut();
+					}, 1000);
+
+					// 정답 자동 입력
+					$(".select01").val("B");
+					$(".select02").val("C");
+					$(".select03").val("B");
+					$(".select04").val("C");
+
+					// 버튼 전환
+					$(".sub_both .btn_confirm").hide();
+					$(".sub_both .btn_reset").show();
+				}
+			}
+		});
+
+		// 다시하기
+		$(".sub_both .btn_reset").on("click", function() {
+			$(".H_311_15_con select").each(function(){
+				$(this).val(null);
+			});
+			$(".sub_both .btn_reset").hide();
+			$(".sub_both .btn_confirm").show();
+			attemptCount = 0;
+		});
+
+	});
+</script>
+
+<script>
+	const contentId = 'H-311-15';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+
+</body>
+</html>

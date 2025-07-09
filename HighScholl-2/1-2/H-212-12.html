@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>단방향 암호화 적용한 사례</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/swiper.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_212_12_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								단방향 암호화의 적용 사례
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="info01_con">
+						<div class="text_con" tabindex="0">
+							<span>
+								단방향 암호화를 적용한 대표적인 사례를 살펴보자.
+							</span>
+						</div>
+					</div>
+
+					<!-- slide -->
+					<div class="slide_wrap_con">
+						<div class="slide_con">
+							<div class="swiper-container H_212_12_slide">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide H_212_12_slide_div">
+										<div class="sub_title_dot">
+											단방향 암호화로 비밀번호를 관리하는 사례
+											<button class="btn_data_popup" aria-label="보충자료" aria-controls="fullpopup01"></button>
+										</div>
+										<div class="round_box f_center">
+											웹 사이트에서는 사용자의 비밀번호를 저장할 때 단방향 암호화 방식인 해시 함수를 적용한다. 사용자가 입력한 비밀번호는 해시 함수를 통해 고정된 길이의 암호값으로 변환되며, 이 값은 다시 복원할 수 없도록 설계되어 서버에는 변환된 암호값만 저장된다.
+										</div>
+
+										<div class="main_box type1 f_center">
+											<div class="img H_212_12_slide_img01"></div>
+										</div>
+
+										<!-- <div class="btns">
+											<button class="btn_video" aria-label="보충 영상" aria-controls="fullpopup02"></button>
+										</div> -->
+										
+									</div>
+									<div class="swiper-slide H_212_12_slide_div">
+
+										<div class="sub_title_dot">QR 코드를 적용한 전염병 경로 파악</div>
+					
+										<div class="round_box">
+											단방향 암호화를 적용한 사례로 사용자의 신원을 확인하여 전염병의 경로를 파악하는 QR 코드가 있다.
+										</div>
+					
+										<div class="main_box">
+											<div class="both_wrap">
+												<div class="txt">
+													&nbsp;&nbsp;COVID-19 때 전염 경로를 파악하고, 확산을 방지하기 위해 QR 코드로 신원을 인증하는 전자 출입 명부를 시행하였다. 사용자가 서버에 QR 코드 생성을 요청하면 서버에서 사용자의 정보를 포함한 암호문으로 QR 코드를 생성한다. 인증 제한 시간 안에 QR 코드를 찍으면 인증이 완료된다.
+												</div>
+												<div class="img H_212_12_img01"></div>
+											</div>
+										</div>
+										
+										
+									</div>
+								</div>
+								<div class="swiper-pagination H_212_12_slide_swiper-pagination"></div>
+							</div>
+
+
+							<div class="slide_btn prev H_212_12_slide_prev_btn swiper-button-prev" aria-label="슬라이드 이전 버튼" tabindex="0"></div>
+							<div class="slide_btn next H_212_12_slide_next_btn swiper-button-next" aria-label="슬라이드 다음 버튼" tabindex="0"></div>
+						</div>
+					</div>
+					<!-- //slide -->
+
+					
+
+				</div>
+
+				<!-- popup -->
+				<div class="full_popup_wrap H_212_12_full_popup" id="fullpopup01">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>해시 함수와 해시값</span>
+						</div>
+						<div class="full_popoup_content">
+
+							<div class="text01">
+								&nbsp;&nbsp;해시 함수는 다양한 길이의 입력 데이터를 고정된 길이의 해시값으로 변환하는 단방향 함수이다. 
+								이로 인해 비밀번호와 같은 중요한 정보를 안전하게 저장할 수 있으며, 입력값이 조금만 변경되어도 완전히 다른 해시값이 생성된다. 
+								예를 들어, SHA-256은 블록체인에서 거래 정보를 보호하는 데 사용된다. 
+								해시값은 입력값이 조금만 바뀌어도 완전히 다른 결괏값이 나오기 때문에 해시값으로는 원래의 입력값을 예측할 수 없다.
+							</div>
+							
+							<div class="item_image_box">
+								<!-- <div class="item">
+									<div class="img"></div>
+									<div class="tit f_center">평문</div>
+								</div>
+								<div class="arr" aria-hidden="true"></div>
+								<div class="item">
+									<div class="img"></div>
+									<div class="tit f_center">해시 함수</div>
+								</div>
+								<div class="arr" aria-hidden="true"></div>
+								<div class="item">
+									<div class="img"></div>
+									<div class="tit f_center">해시 값</div>
+								</div> -->
+								<img src="./img/H_212_12-popup.png" alt="">
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="full_popup_wrap H_212_12_full_popup02" id="fullpopup02">
+					<div class="full_popup">
+						<button class="btn_close" aria-label="닫기"></button>
+						<div class="title" tabindex="0">
+							<span>보충 영상</span>
+						</div>
+						<div class="full_popoup_content">
+
+							
+							<div class="video_con">
+								<video id="Video" controls autoplay muted aria-label="네트워크의 특성 설명 영상">
+									<source src="./video/H_5_01_video.mp4" type="video/mp4">
+									<track id="subtitleTrack" src="./subtitle/H_5_01_video.vtt" kind="subtitles" srclang="ko" label="Korean">
+								</video>
+							</div>
+							
+
+						</div>
+					</div>
+				</div>
+				<!-- //popup -->
+
+
+			</div>
+		</main>
+
+	</div>
+<script>
+
+$(document).ready(function(){
+	// 보충자료
+	$(".H_212_12_con .btn_data_popup, .H_212_12_con .btn_video").on("click", function(){
+		var popSelector = "#" + $(this).attr("aria-controls");
+		$(popSelector).show();
+	});
+	$(".full_popup_wrap .btn_close").on("click", function(){
+		$(this).parents(".full_popup_wrap").hide();
+	});
+
+	//손버튼
+	$(".after_hand").on("click", function(){
+		$(this).parent().addClass("on");
+	});
+	
+});
+
+
+// H_212_12 슬라이드
+H_212_12_slide = new Swiper ('.H_212_12_slide', {
+	slidesPerView: 'auto',
+	effect : 'fade', 
+		fadeEffect: { 
+		crossFade: true 
+	},
+	speed: 100,
+	loop: false,
+	pagination: {
+		el: ".H_212_12_slide_swiper-pagination",
+		clickable: true,
+	},
+	navigation: {
+		nextEl: '.H_212_12_slide_next_btn',
+		prevEl: '.H_212_12_slide_prev_btn',
+	},
+	observer: true,
+	observeParents: true,
+	simulateTouch: false,
+	allowTouchMove: false
+});
+
+	
+</script>
+
+<script>
+	$(".full_popup_wrap .btn_close").on("click", function(){
+		const video = $(this).closest(".full_popup_wrap").find("video").get(0);
+		if (video && !video.paused) {
+			video.pause();
+		}
+		$(this).parents(".full_popup_wrap").hide();
+	});			
+</script>
+<script>
+	const contentId = 'H-212-12';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

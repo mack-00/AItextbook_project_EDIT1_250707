@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>변수명 생성 규칙</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="GoogleTranslate.css"> 
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+	
+	
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_321_06_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								변수명 생성 규칙
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01">
+						&nbsp;&nbsp;변수를 생성하기 위해 우선 변수명을 정하는데, 이때 프로그래밍 언어의 변수명 생성 규칙을 따라야 한다. 파이썬의 변수명 생성 규칙을 살펴보자.
+					</div>
+
+					<div class="sub_title_dot">파이썬의 변수명 생성 규칙</div>
+
+					<div class="rd_10 main_box">
+						<button class="after_hand" aria-label="파이썬의 변수명 생성 규칙 보기"></button>
+						<ul>
+							<li>
+								<span class="number_icon type_blue">1</span>
+								대소문자를 구별한다.
+							</li>
+							<li>
+								<span class="number_icon type_blue">2</span>
+								숫자로 시작할 수 없다.
+							</li>
+							<li>
+								<span class="number_icon type_blue">3</span>
+								공백과 특수 문자는 사용할 수 없다.
+							</li>
+							<li>
+								<span class="number_icon type_blue">4</span>
+								한글, 영문, 숫자, _(언더바)만 사용한다.
+							</li>
+							<li>
+								<span class="number_icon type_blue">5</span>
+								if, while, for 등 파이썬에서 미리 정의된 <span class="link_tooltip" role="button" aria-expanded="false" aria-controls="tooltip01">예약어</span>는 사용할 수 없다.
+							</li>
+
+						</ul>
+					</div>
+
+				</div>
+
+				<!-- 팝업 -->
+				<div class="text_popup_con H_321_06_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+					<div class="contents_con">
+						<div class="close_btn">
+							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+						</div>
+
+						<div class="title_con" tabindex="0" id="popup-title">
+							<span>
+								예약어
+							</span>
+						</div>
+
+						<div class="info_con" tabindex="0">
+							<span>
+								예약어는 프로그래밍 언어에서 이미 문법적인 용도로 사용되고 있기 때문에 개발자가 임의로 사용할 수 없는 단어<br>들을 말한다.<br />
+								파이썬의 예약어에는 if, while, for 외에 elif, else, or, and, not, in, with, try, import, class 등이 있다.							   
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- //팝업 -->
+			</div>
+		</main>
+
+	</div>
+<script>
+	$(document).ready(function(){
+		$(".after_hand").on("click", function() {
+			$(".main_box ul > li").addClass("on");
+			$(this).hide();
+		});
+
+		// 팝업열기
+		$(".H_321_06_con .link_tooltip").on("click", function(){
+			var popSelector = "#" + $(this).attr("aria-controls");
+			if($(popSelector).css("display") == "none") {
+				$(".H_321_06_con .text_popup_con").not(popSelector).hide();
+				$(popSelector).show();
+			}else {
+				$(popSelector).hide();
+			}
+		});
+		// 팝업닫기
+		$(".H_321_06_con .text_popup_con .a_btn").on("click", function(){
+			$(this).parents(".text_popup_con").hide();
+		});
+	});
+</script>
+
+<script>
+	const contentId = 'H-321-06';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

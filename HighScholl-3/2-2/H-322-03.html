@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>표준입출력</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_322_03_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h1>
+								표준입출력
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01">
+						&nbsp;&nbsp;계산기 프로그램은 사용자에게 값을 입력받고, 원하는 동작을 처리한 후, 사용자에게 계산한 결과를 출력하는 입력, 처리, 출력의 세 단계로 이루어진다. 
+						이때 키보드와 같은 기본 입력 장치를 통해 값을 입력받는 것은 <strong class="fw_700">표준 입력</strong>, 모니터와 같은 기본 출력 장치를 통해 결과를 보여 주는 것은 <strong class="fw_700">표준 출력</strong>이라고 한다.<br /> 
+						표준 입력과 표준 출력을 합쳐서 표준입출력이라고 하며, <strong class="fw_700">표준입출력</strong>은 기본 입출력 장치를 통해 데이터를 입력 또는 출력하는데 필요하다.
+					</div>
+					<div class="sub_title_dot">계산기 프로그램의 표준입출력</div>
+
+					<div class="main_box">
+						<div class="img H_322_03_img01"></div>
+
+						<div class="img arr"></div>
+						<div class="num">
+							<span>450</span>
+							<span>+</span>
+							<span>500</span>
+						</div>
+						<div class="txt_box rd_10 txt01">표준 입력</div>
+						<div class="txt_box rd_10 txt02">표준 출력</div>
+
+						<button class="after_hand" aria-label="입력"></button>
+					</div>
+
+					<div class="btn_con">
+						<button id="btn1" class="a_btn a_btn01" type="submit" aria-label="다시하기" tabindex="0">다시 하기</button>
+					</div>
+
+				</div>
+			</div>
+		</main>
+
+	</div>
+<script>
+$(document).ready(function(){
+	$(".after_hand").on("click", function(){
+		$(".main_box > div").addClass("show");
+		setTimeout(function(){
+			$(".H_322_03_img01").addClass("on");
+		}, 300);
+	});
+
+	$(".a_btn01").on("click", function(){
+		$(".main_box > div").removeClass("show");
+		$(".H_322_03_img01").removeClass("on");
+	});
+});	
+</script>
+
+<script>
+	const contentId = 'H-322-03';
+</script>
+<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>

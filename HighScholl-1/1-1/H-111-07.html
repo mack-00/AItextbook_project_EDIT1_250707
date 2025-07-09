@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>무선 네트워크	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<!-- 브라우저 번역(다국어 관련) -->
+	<link rel="stylesheet" href="./css/GoogleTranslate.css">
+	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/common_all.css">
+</head>
+<body>
+	<div id="wrap">
+		
+		<main class="H_111_07_con">
+			<div class="contents_con">
+				<div class="title_con">
+					<div class="contents_con">
+						<div class="text_bg">
+							<h2 class="text" tabindex="0">개념 학습</h2>
+							<div class="bg"></div>
+						</div>
+
+						<div class="text_con" tabindex="0">
+							<h2>
+								전송 매체에 따른 네트워크 종류
+							</h2>
+							<h1>
+								무선 네트워크
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents_con">
+					<div class="text_01">
+						&nbsp;&nbsp;무선 네트워크는 무선 주파수를 사용하여 데이터를 주고받는 네트워크이다. 이동이 자유롭고, 많은 사용자가 동시에 이용할 수 있는 장점이 있지만, 장애물이나 거리로 인한 속도 저하가 발생할 수 있으며 보안이 취약한 단점이 있다. 최근에는 사용자의 환경에 맞춰 유선과 무선을 결합한 형태가 널리 보급되고 있으며, 이러한 혼합 네트워크는 네트워크 효율을 더욱 높일 수 있다.
+					</div>
+
+					<div class="sub_title_dot">다음 화면에서 무선 네트워크를 사용한 예시를 찾아보자.</div>
+					
+					<div class="btn_con">
+						<button class="a_btn a_btn01 btn_reset" aria-label="다시 하기">다시 하기</button>
+					</div>
+
+					<div class="main_box img">
+						<div class="blind">
+							왼쪽에는 컴퓨터를 사용하는 사람이 있으며, 데스크톱 컴퓨터, 프린터, 모니터 등이 배치된 책상이 있다. 오른쪽에는 의자에 앉아 태블릿을 보고 있는 사람이 있다.
+						</div>
+
+						<button class="after_hand button01" aria-label="태블릿 사용" aria-expanded="false" aria-controls="tooltip01"></button>
+						<button class="after_hand button02" aria-label="무선 헤드폰 사용" aria-expanded="false" aria-controls="tooltip02"></button>
+
+						<!-- 팝업 -->
+						<div class="text_popup_con H_111_07_pop_01" id="tooltip01" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+						  <span id="popup-title"></span>
+							<div class="contents_con">
+								<div class="close_btn">
+									<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+								</div>
+
+								<div class="title_con" tabindex="0">
+									<span>
+										태블릿 사용
+									</span>
+								</div>
+
+								<div class="info_con" tabindex="0">
+									<span>
+										무선 네트워크에 연결된 태블릿을 사용하고 있다.
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="text_popup_con H_111_07_pop_02" id="tooltip02" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+							<div class="contents_con">
+								<div class="close_btn">
+									<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
+								</div>
+
+								<div class="title_con" tabindex="0">
+									<span>
+										무선 헤드폰 사용
+									</span>
+								</div>
+
+								<div class="info_con" tabindex="0">
+									<span>
+										블루투스로 연결된 무선 헤드폰으로 음악을 들을 수 있다.
+									</span>
+								</div>
+							</div>
+						</div>
+						<!-- //팝업 -->
+					</div>
+
+				</div>
+			</div>
+		</main>
+
+	</div>
+
+
+	<script>
+	$(document).ready(function(){
+		
+			// 그림 클릭
+			$(".main_box .after_hand").on("click", function(){
+				$('.text_popup_con').hide();
+				var popSelector = "#" + $(this).attr("aria-controls");
+				$(popSelector).show();
+				$(this).hide();
+				$(".H_111_07_con .btn_reset").show();
+			});
+
+			// 그림 팝업 닫기
+			$(".main_box .text_popup_con .a_btn").on("click", function(){
+				$(this).parents(".text_popup_con").hide();
+				// $(".after_hand[aria-controls=" + $(this).parents(".text_popup_con").attr("id") + "]").show();
+				$($(this).parents(".text_popup_con").attr("id") + "]").show();
+			});
+
+			// 다시하기
+			$(".H_111_07_con .btn_reset").on("click", function() {
+				$(".main_box .after_hand").show();
+				$(".main_box .text_popup_con").hide();
+				$(this).hide();
+			});
+
+			
+		});
+	</script>
+	<script>
+		const contentId = 'H-111-07';
+	</script>
+	<script type="text/javascript" src="./js/xapi.page.js"></script>
+</body>
+</html>
