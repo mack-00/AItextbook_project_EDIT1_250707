@@ -61,14 +61,14 @@
 
 					<div class="info02_con">
 						<div class="nav" role="navigation" aria-label="올바른 정보 보호 방법 탐색">
-							<ul>
+							<ul role="tablist">
 								<li tabindex="0">
-									<span class="on" value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
+									<span class="on" data-value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
 										전통적인 프로그래밍
 									</span>
 								</li>
 								<li tabindex="0">
-									<span value="info02" role="tab" id="tab-info02" aria-selected="false" aria-controls="panel-info02">
+									<span data-value="info02" role="tab" id="tab-info02" aria-selected="false" aria-controls="panel-info02">
 										기계학습
 									</span>
 								</li>
@@ -196,7 +196,7 @@
 							<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
 						</div>
 
-						<div class="title_con" tabindex="0">
+						<div class="title_con" tabindex="0" id="popup-title">
 							<span>
 								레이블
 							</span>
@@ -209,6 +209,7 @@
 						</div>
 					</div>
 				</div>
+			 </div>
 			</div>
 		</main>
 
@@ -223,7 +224,7 @@
 				});
 				$(this).addClass("on");
 				$(".H_421_04_con .info02_con > .contents_con .contents_div").hide();
-				$(".H_421_04_con .info02_con > .contents_con .contents_div."+$(this).attr("value")).show();
+				$(".H_421_04_con .info02_con > .contents_con .contents_div."+$(this).attr("data-value")).show();
 			} 
 		});
 

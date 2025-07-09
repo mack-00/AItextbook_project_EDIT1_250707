@@ -982,9 +982,9 @@ caption {overflow:hidden; width:0; height:0; font-size:0; line-height:0;}
 .H_424_18_con .table_con tbody td{border-top:solid 6px #f6f6f6;background:#fff;font-size:24px;line-height:normal;padding:15px}
 .H_424_18_con .table_con li + li{margin-top:8px}
 .H_424_18_con .num_text{width:30px;height:30px;border-radius:15px;background:#346DD0;font-size:22px;font-weight:700;color:#fff;border-bottom-right-radius:0;display:inline-flex;justify-content:center;align-items:center;line-height:normal}
-.H_424_18_con .exam_con span p {position: relative; padding-left: min(0.83vw, 16px); line-height: 140%;}
-.H_424_18_con .exam_con span p + p{margin-top:.4%}
-.H_424_18_con .exam_con span p::before {content: ""; position: absolute; top:19%; width: min(0.31vw, 6px); height: min(0.31vw, 6px); border-radius: min(1.04vw, 20px); background-color: #666; left: 0;}
+.H_424_18_con .exam_con div p {position: relative; padding-left: min(0.83vw, 16px); line-height: 140%;}
+.H_424_18_con .exam_con div p + p{margin-top:.4%}
+.H_424_18_con .exam_con div p::before {content: ""; position: absolute; top:19%; width: min(0.31vw, 6px); height: min(0.31vw, 6px); border-radius: min(1.04vw, 20px); background-color: #666; left: 0;}
 
 
 
