@@ -62,19 +62,19 @@
 						<div class="contents_con">
 							
 							<div class="nav" role="navigation" aria-label="지능 에이전트의 특성 탐색">
-								<ul>
+								<ul role="tablist">
 									<li tabindex="0">
-										<span class="on" value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
+										<span class="on" data-value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
 											자율성
 										</span>
 									</li>
 									<li tabindex="0">
-										<span value="info02" role="tab" id="tab-info02" aria-selected="false" aria-controls="panel-info02">
+										<span data-value="info02" role="tab" id="tab-info02" aria-selected="false" aria-controls="panel-info02">
 											협력성
 										</span>
 									</li>
 									<li tabindex="0">
-										<span value="info03" role="tab" id="tab-info03" aria-selected="false" aria-controls="panel-info03">
+										<span data-value="info03" role="tab" id="tab-info03" aria-selected="false" aria-controls="panel-info03">
 											목표 지향성
 										</span>
 									</li>
@@ -163,7 +163,7 @@
 				});
 				$(this).addClass("on");
 				$(".H_411_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div").hide();
-				$(".H_411_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div."+$(this).attr("value")).show();
+				$(".H_411_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div."+$(this).attr("data-value")).show();
 				//$(".H_411_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div > .img_con .img_div .over_con").show();
 			}
 		});

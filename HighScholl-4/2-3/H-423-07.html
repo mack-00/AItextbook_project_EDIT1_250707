@@ -20,6 +20,56 @@
 	<link rel="stylesheet" href="./css/GoogleTranslate.css">
 	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
 	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	    <style>
+	    	.drop-zone {
+	    		transition: all 0.2s ease;
+	    	}
+
+	    	.drop-zone.dragover {
+	    		background-color: #e9ecef;
+	    		border-color: #007bff;
+	    	}
+
+	    	.drop-zone.occupied {
+	    		border-style: solid;
+	    	}
+
+	    	.draggable {
+	    		cursor: move;
+	    		cursor: -webkit-grab;
+	    		cursor: grab;
+	    		user-select: none;
+	    		touch-action: none;
+	    		-webkit-touch-callout: none;
+	    		-webkit-user-select: none;
+	    		-webkit-tap-highlight-color: transparent;
+	    		position: relative;
+	    		display: inline-block;
+	    		-webkit-user-drag: none;
+	    		-khtml-user-drag: none;
+	    		-moz-user-drag: none;
+	    		-o-user-drag: none;
+	    	}
+
+	    	.draggable.dragging {
+	    		opacity: 0.8;
+	    		cursor: -webkit-grabbing;
+	    		cursor: grabbing;
+	    		z-index: 1000;
+	    		pointer-events: none;
+	    	}
+
+	    	.sr-only {
+	    		position: absolute;
+	    		width: 1px;
+	    		height: 1px;
+	    		padding: 0;
+	    		margin: -1px;
+	    		overflow: hidden;
+	    		clip: rect(0, 0, 0, 0);
+	    		border: 0;
+	    	}
+	    </style>
 
 </head>
 <body>
@@ -67,9 +117,9 @@
 										<div class="text_con" tabindex="0">
 											<div class="dot" aria-hidden="true"></div>
 											<span>
-												<div class="blank_con drop-zone" role="region" aria-label="첫번째 답변 영역" data-position="1" tabindex="0">
+												<span class="blank_con drop-zone" role="region" aria-label="첫번째 답변 영역" data-position="1" tabindex="0">
 													<span class="sr-only">답변을 이 곳에 놓으세요</span>
-												</div>
+												</span>
 												(이)가 없는 데이터를 사용해 군집 분석을 하면 서로 다른 특징을 가진 군집들로 나눌 수 있음.
 											</span>
 										</div>
@@ -83,9 +133,9 @@
 						<div class="title_con" tabindex="0">
 							<span class="num_text">2</span>
 							<h2>
-								<div class="blank_con drop-zone" role="region" aria-label="두번째 답변 영역" data-position="2" tabindex="0">
+								<span class="blank_con drop-zone" role="region" aria-label="두번째 답변 영역" data-position="2" tabindex="0">
 									<span class="sr-only">답변을 이 곳에 놓으세요</span>
-								</div>
+								</span>
 							</h2>
 						</div>
 
@@ -536,56 +586,6 @@
 	    	});
 	    </script>
 
-	    <style>
-	    	.drop-zone {
-	    		transition: all 0.2s ease;
-	    	}
-
-	    	.drop-zone.dragover {
-	    		background-color: #e9ecef;
-	    		border-color: #007bff;
-	    	}
-
-	    	.drop-zone.occupied {
-	    		border-style: solid;
-	    	}
-
-	    	.draggable {
-	    		cursor: move;
-	    		cursor: -webkit-grab;
-	    		cursor: grab;
-	    		user-select: none;
-	    		touch-action: none;
-	    		-webkit-touch-callout: none;
-	    		-webkit-user-select: none;
-	    		-webkit-tap-highlight-color: transparent;
-	    		position: relative;
-	    		display: inline-block;
-	    		-webkit-user-drag: none;
-	    		-khtml-user-drag: none;
-	    		-moz-user-drag: none;
-	    		-o-user-drag: none;
-	    	}
-
-	    	.draggable.dragging {
-	    		opacity: 0.8;
-	    		cursor: -webkit-grabbing;
-	    		cursor: grabbing;
-	    		z-index: 1000;
-	    		pointer-events: none;
-	    	}
-
-	    	.sr-only {
-	    		position: absolute;
-	    		width: 1px;
-	    		height: 1px;
-	    		padding: 0;
-	    		margin: -1px;
-	    		overflow: hidden;
-	    		clip: rect(0, 0, 0, 0);
-	    		border: 0;
-	    	}
-	    </style>
 
 		<script>
 			const contentId = 'H-423-07';

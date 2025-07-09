@@ -154,9 +154,9 @@
 							</ul>
 
 							<!-- 팝업 위치잡기 -->
-							<div class="text_popup_con ver01" id="computing-popup1" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+							<div class="text_popup_con ver01" id="computing-popup1" role="dialog" aria-modal="true" aria-labelledby="popup-title1">
 								<div class="contents_con">
-									<div class="title_con" tabindex="0">
+									<div class="title_con" tabindex="0" id="popup-title1">
 										<span>
 											트래픽
 										</span>
@@ -201,19 +201,19 @@
 
 						<div class="contents_con">
 							<div class="nav" role="navigation" aria-label="정보 보안 기술">
-								<ul>
+								<ul role="tablist">
 									<li tabindex="0">
-										<span class="on" value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
+										<span class="on" data-value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
 											암호화
 										</span>
 									</li>
 									<li tabindex="0">
-										<span value="info02" role="tab" id="tab-info02" aria-selected="false" aria-controls="panel-info02">
+										<span data-value="info02" role="tab" id="tab-info02" aria-selected="false" aria-controls="panel-info02">
 											방화벽
 										</span>
 									</li>
 									<li tabindex="0">
-										<span value="info03" role="tab" id="tab-info03" aria-selected="false" aria-controls="panel-info03">
+										<span data-value="info03" role="tab" id="tab-info03" aria-selected="false" aria-controls="panel-info03">
 											전자 서명
 										</span>
 									</li>
@@ -308,9 +308,9 @@
 									</div>
 
 									<!-- 팝업 위치잡기 -->
-									<div class="text_popup_con ver02" id="computing-popup2" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+									<div class="text_popup_con ver02" id="computing-popup2" role="dialog" aria-modal="true" aria-labelledby="popup-title2">
 										<div class="contents_con">
-											<div class="title_con" tabindex="0">
+											<div class="title_con" tabindex="0" id="popup-title2">
 												<span>
 													공동 인증서
 												</span>
@@ -417,7 +417,7 @@
 				$(".H_522_06_con > .contents_con > .contents_con > .info02_con > .contents_con > .nav > ul > li span").removeClass("on");
 				$target.find("span").addClass("on");
 
-				const targetValue = $target.find("span").attr("value");
+				const targetValue = $target.find("span").attr("data-value");
 				const $allPanels = $(".H_522_06_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div");
 
 				$allPanels.hide().removeClass("active");

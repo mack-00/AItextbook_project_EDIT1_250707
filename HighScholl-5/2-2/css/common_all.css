@@ -587,8 +587,10 @@ video::cue {
 .H_52_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table {border-top:min(5px, 0.31vw) solid #FFB380;}
 .H_52_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > thead > tr > td {border-bottom:min(6px, 0.38vw) solid #FFF; border-right:min(6px, 0.38vw) solid #FFF; padding:min(7px, 0.44vw) 0 min(12px, 0.75vw) 0;}
 .H_52_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > thead > tr > td span {font-size:min(27px, 1.69vw);}
-.H_52_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > td {border-bottom:min(6px, 0.38vw) solid #FFF; border-right:min(6px, 0.38vw) solid #FFF;}
-.H_52_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > td span {font-size:min(27px, 1.69vw);}
+.H_52_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > td,
+.H_52_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > th {border-bottom:min(6px, 0.38vw) solid #FFF; border-right:min(6px, 0.38vw) solid #FFF;}
+.H_52_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > td span,
+.H_52_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > th span {font-size:min(27px, 1.69vw);}
 .H_52_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > .title_td {width:min(232px, 14.5vw);}
 .H_52_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > .info02_td {width:min(413px, 25.81vw);}
 .H_52_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > .info02_td .radio_con > ul > li {width:min(45px, 2.81vw); height:min(45px, 2.81vw); margin:0 0 0 min(22px, 1.38vw);}

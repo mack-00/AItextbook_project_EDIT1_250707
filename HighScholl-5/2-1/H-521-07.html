@@ -59,10 +59,9 @@
 					<div class="info01_con">
 						<div class="text_con" tabindex="3">
 							<span>
-								<p>
 									&nbsp;&nbsp;나와 타인의 정보를 안전하게 보호하는 것은 사회 구성원의 사생활을 보호하고 존중하며 우리 사회 전반의 신뢰성을 유지하는 데 기본이 된다.
 									따라서 사회 구성원 모두가 정보 보호에 관심을 갖고 정보 보호를 생활 속에서 실천해야 한다.
-								</p>
+							
 							</span>
 						</div>
 					</div>
@@ -161,19 +160,19 @@
 
 					<div class="info02_con">
 						<div class="nav" role="navigation" aria-label="올바른 정보 보호 방법 탐색">
-							<ul>
+							<ul role="tablist">
 								<li tabindex="18">
-									<span class="on" value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
+									<span class="on" data-value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
 										개인의 정보 기기 보호
 									</span>
 								</li>
 								<li tabindex="57">
-									<span value="info02" role="tab" id="tab-info02" aria-selected="false" aria-controls="panel-info02">
+									<span data-value="info02" role="tab" id="tab-info02" aria-selected="false" aria-controls="panel-info02">
 										온라인 활동 시 개인 정보 보호
 									</span>
 								</li>
 								<li tabindex="65">
-									<span value="info03" role="tab" id="tab-info03" aria-selected="false" aria-controls="panel-info03">
+									<span data-value="info03" role="tab" id="tab-info03" aria-selected="false" aria-controls="panel-info03">
 										보안 기능을 활용하여 정보 보호
 									</span>
 								</li>
@@ -629,7 +628,7 @@
 					});
 					$(this).find("span").addClass("on");
 					$(".H_521_07_con > .contents_con > .contents_con > .info02_con > .contents_con .contents_div").hide();
-					$(".H_521_07_con > .contents_con > .contents_con > .info02_con > .contents_con .contents_div."+$(this).find("span").attr("value")).show();
+					$(".H_521_07_con > .contents_con > .contents_con > .info02_con > .contents_con .contents_div."+$(this).find("span").attr("data-value")).show();
 
 				} 
 			});
@@ -641,7 +640,7 @@
 						});
 						$(this).find("span").addClass("on");
 						$(".H_521_07_con > .contents_con > .contents_con > .info02_con > .contents_con .contents_div").hide();
-						$(".H_521_07_con > .contents_con > .contents_con > .info02_con > .contents_con .contents_div."+$(this).find("span").attr("value")).show();
+						$(".H_521_07_con > .contents_con > .contents_con > .info02_con > .contents_con .contents_div."+$(this).find("span").attr("data-value")).show();
 
 					} 
 				}

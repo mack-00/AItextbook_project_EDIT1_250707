@@ -369,12 +369,12 @@ video::cue {
 .H_423_08_con .exam_con{width:1316px;height:76px;background:#f4f4f4;padding:20px;font-size:24px;line-height:150%;letter-spacing:-0.02em;color:#666;border-radius:20px;margin:103px auto 0;display:flex;gap:18px}
 .H_423_08_slide_div_02 .exam_con{height:181px;margin-top:15px}
 .H_423_08_con .exam_con > strong{white-space:nowrap;display: flex; width:79px;height:40px;border-radius:10px;border-bottom-right-radius:0;background:#666;color:#fff;align-items:center;justify-content:center;font-weight:500;font-size:26px}
-.H_423_08_con .exam_con span{width:1169px;font-weight:500}
-.H_423_08_con .exam_con span p {position: relative; padding-left: min(0.83vw, 16px); line-height: 140%;}
-.H_423_08_con .exam_con span p + p{margin-top:.4%}
-.H_423_08_con .exam_con span p::before {content: ""; position: absolute; top:19%; width: min(0.31vw, 6px); height: min(0.31vw, 6px); border-radius: min(1.04vw, 20px); background-color: #666; left: 0;}
+.H_423_08_con .exam_con div{width:1169px;font-weight:500}
+.H_423_08_con .exam_con div p {position: relative; padding-left: min(0.83vw, 16px); line-height: 140%;}
+.H_423_08_con .exam_con div p + p{margin-top:.4%}
+.H_423_08_con .exam_con div p::before {content: ""; position: absolute; top:19%; width: min(0.31vw, 6px); height: min(0.31vw, 6px); border-radius: min(1.04vw, 20px); background-color: #666; left: 0;}
 .H_423_08_con .exam_con.on > strong{display:inline-flex}
-.H_423_08_con .exam_con.on span{display:inline-block}
+.H_423_08_con .exam_con.on div{display:inline-block}
 .H_423_08_con .btn_con {margin:20px 0 0;text-align:right} 
 .H_423_08_con .btn_con.on .a_btn01{display:none}
 .H_423_08_con .btn_con.on .a_btn02{display:inline-block}
