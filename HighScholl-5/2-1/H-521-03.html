@@ -63,19 +63,19 @@
 
 						<div class="contents_con">
 							<div class="nav" role="navigation" aria-label="정보 보호의 가치 탐색">
-								<ul>
+								<ul role="tablist">
 									<li tabindex="0">
-										<span class="on" value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01" role="button" tabindex="0" aria-pressed="true">
+										<span class="on" data-value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01" tabindex="0" >
 											개인
 										</span>
 									</li>
 									<li tabindex="0">
-										<span value="info02" role="tab" id="tab-info02" aria-selected="false" aria-controls="panel-info02" role="button" tabindex="0" aria-pressed="true">
+										<span data-value="info02" role="tab" id="tab-info02" aria-selected="false" aria-controls="panel-info02" tabindex="0" >
 											기업
 										</span>
 									</li>
 									<li tabindex="0">
-										<span value="info03" role="tab" id="tab-info03" aria-selected="false" aria-controls="panel-info03" role="button" tabindex="0" aria-pressed="true">
+										<span data-value="info03" role="tab" id="tab-info03" aria-selected="false" aria-controls="panel-info03" tabindex="0" >
 											국가
 										</span>
 									</li>
@@ -147,7 +147,7 @@
 										<div class="img_div img_div_03">	
 											<div class="over_con" aria-hidden="false">
 												<div class="question_mark"  aria-hidden="true"></div>
-												<button type="button"  role = "button" tabindex="0" aria-label="내용 확인하기" class="cursor"></button>
+												<button type="button"  role				="button" tabindex="0" aria-label="내용 확인하기" class="cursor"></button>
 											</div>
 
 											<div class="title_con" tabindex="0">
@@ -221,7 +221,7 @@
 
 											<div class="over_con">
 												<div class="question_mark"></div>
-												<div class="cursor" role = "button" tabindex="0" aria-label="내용 확인하기" class="cursor"></div>
+												<div class="cursor" role = "button" tabindex="0" aria-label="내용 확인하기"></div>
 											</div>
 
 											<div class="arrow"></div>
@@ -356,7 +356,7 @@
 					});
 					$(this).find("span").addClass("on");
 					$(".H_521_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div").hide();
-					$(".H_521_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div."+$(this).find("span").attr("value")).show();
+					$(".H_521_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div."+$(this).find("span").attr("data-value")).show();
 					$(".H_521_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div > .img_con .img_div .over_con").show();
 					// $(".H_521_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div > .img_con .img_div_03 > .title_con").css("visibility", "hidden");
 				} 
@@ -369,7 +369,7 @@
 						});
 						$(this).find("span").addClass("on");
 						$(".H_521_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div").hide();
-						$(".H_521_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div."+$(this).find("span").attr("value")).show();
+						$(".H_521_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div."+$(this).find("span").attr("data-value")).show();
 						$(".H_521_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div > .img_con .img_div .over_con").show();
 						// $(".H_521_03_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div > .img_con .img_div_03 > .title_con").css("visibility", "hidden");
 					} 

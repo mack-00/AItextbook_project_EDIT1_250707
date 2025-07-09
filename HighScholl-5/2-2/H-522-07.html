@@ -28,6 +28,14 @@
 			border-radius: 4px;
 		}
 		</style>
+		<style>
+		a:focus {
+			outline: 3px solid #FF9900;
+			box-shadow: 0 0 5px #FF9900;
+			border-radius: 4px;
+			background-color: #fff8e1;
+		}
+	</style>
 </head>
 <body>
 	<div id="wrap">
@@ -72,17 +80,17 @@
 							<div class="nav" role="navigation" aria-label="정보 보안 실천 방법">
 								<ul>
 									<li tabindex="0">
-										<span class="on" value="popup_info01" role="button" class="on" id="popup-tab-info01" aria-selected="true" aria-controls="popup-info01">
+										<span class="on" data-value="popup_info01" role="button" id="popup-tab-info01" aria-controls="popup-info01">
 											파일(폴더) 사용 권한 설정하기
 										</span>
 									</li>
 									<li tabindex="0">
-										<span value="popup_info02" role="button" id="popup-tab-info02" aria-selected="false" aria-controls="popup-info02">
+										<span data-value="popup_info02" role="button" id="popup-tab-info02" aria-controls="popup-info02">
 											웹 브라우저 보안 설정하기
 										</span>
 									</li>
 									<li tabindex="0">
-										<span value="popup_info03" role="button" id="popup-tab-info03" aria-selected="false" aria-controls="popup-info03">
+										<span data-value="popup_info03" role="button" id="popup-tab-info03" aria-controls="popup-info03">
 											방화벽 설정하기
 										</span>
 									</li>
@@ -112,7 +120,7 @@
 																	<div class="cursor-wrap">
 																		<button class="cursor01" tabindex="0" aria-label="선택하기"></button>
 																		<i class="cursor-effect"></i>
-																		<!-- <div class="cursor-text ver01">폴더</div> -->
+																		<!-- <span class="cursor-text ver01">폴더</span> -->
 																	</div>																
 																</div>
 
@@ -122,11 +130,11 @@
 																	</div>
 																
 																		<button class="cursor02" tabindex="0" aria-label="선택하기">
-																			<div class="cursor-text ver02">
+																			<span class="cursor-text ver02">
 																				폴더를 우클릭한 후 ‘속성’ 옵션을  <br/>
 																				선택하는 화면이다. 이 옵션을 통해 파일이나 <br/>
 																				폴더의 세부 정보를 확인하고 수정할 수 있다.
-																			</div>
+																			</span>
 																		</button>
 																
 																	
@@ -151,11 +159,11 @@
 																	</div>
 																	
 																	<button class="cursor02" tabindex="0" aria-label="선택하기">
-																		<div class="cursor-text ver02">
+																		<span class="cursor-text ver02">
 																			새 폴더 ‘속성’ 창에서 ‘보안’ 탭을 <br/>
 																			선택한 화면이다. 이 탭에서 폴더에 대한 <br/>
 																			보안 설정을 확인하고 수정할 수 있다.
-																		</div>
+																		</span>
 																	</button>
 																</div>
 
@@ -175,11 +183,11 @@
 																	</div>
 																	
 																	<button class="cursor02" tabindex="0" aria-label="선택하기">
-																		<div class="cursor-text ver03">
+																		<span class="cursor-text ver03">
 																			새 폴더의 사용 권한 설정 창이 보이며,  <br/>
 																			SYSTEM 사용자에 대한 권한을 <br/> 수정할 수 있는 화면이다.  
 																			이 창에서 모든 권한, <br/>수정, 읽기 실행 등<br/> 사용 권한을 설정할 수 있다.
-																		</div>
+																		</span>
 																	</button>
 																</div>
 															</div>
@@ -308,9 +316,9 @@
 																	</div>
 																	
 																	<button class="cursor02" tabindex="0" aria-label="선택하기">
-																		<div class="cursor-text ver04">
+																		<span class="cursor-text ver04">
 																			제어판에서 인터넷 옵션을 선택하는 화면이다.
-																		</div>
+																		</span>
 																	</button>
 																</div>
 
@@ -320,9 +328,9 @@
 																	</div>
 																	
 																	<button class="cursor02" tabindex="0" aria-label="선택하기">
-																		<div class="cursor-text ver02">
+																		<span class="cursor-text ver02">
 																			인터넷 속성 팝업 창에서 검색 기록을<br/> 삭제하는 옵션이 표시된 화면이다.
-																		</div>
+																		</span>
 																	</button>
 																</div>
 
@@ -332,16 +340,16 @@
 																	</div>
 																	
 																	<button class="cursor02" tabindex="0" aria-label="선택하기">
-																		<div class="cursor-text ver04">
+																		<span class="cursor-text ver04">
 																			검색 기록 삭제 창에서<br/> 쿠키 항목을 선택하는 화면이다.
-																		</div>
+																		</span>
 																	</button>
 																</div>
 
 																<!-- 팝업 위치잡기 -->
-																<div class="text_popup_con" id="computing-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+																<div class="text_popup_con"  role="dialog" aria-modal="true" aria-labelledby="popup-title">
 																	<div class="contents_con">
-																		<div class="title_con" tabindex="0">
+																		<div class="title_con" tabindex="0" id="popup-title">
 																			<span>
 																				쿠키
 																			</span>
@@ -391,10 +399,10 @@
 																	</div>
 																	
 																	<button class="cursor02" tabindex="0" aria-label="선택하기">
-																		<div class="cursor-text ver03">
+																		<span class="cursor-text ver03">
 																			Windows 시작 메뉴에서 '설정' 아이콘을 <br/>
 																			클릭하여 시스템 설정을 열 수 있는 화면이다.
-																		</div>
+																		</span>
 																	</button>
 																</div>
 
@@ -404,10 +412,10 @@
 																	</div>
 																	
 																	<button class="cursor02" tabindex="0" aria-label="선택하기">
-																		<div class="cursor-text ver03">
+																		<span class="cursor-text ver03">
 																			Windows 설정에서 '개인 정보 및 보안' 옵션을 <br/>
 																			클릭하여 개인 정보와 보안 설정을 관리하는 화면이다.
-																		</div>
+																		</span>
 																	</button>
 																</div>
 
@@ -417,11 +425,11 @@
 																	</div>
 																	
 																	<button class="cursor02" tabindex="0" aria-label="선택하기">
-																		<div class="cursor-text ver02">
+																		<span class="cursor-text ver02">
 																			Windows 보안 설정을 클릭하여 <br/>
 																			시스템의 보안 및 네트워크 보호 상태를 <br/>
 																			확인하고 관리하는 화면이다.
-																		</div>
+																		</span>
 																	</button>
 																</div>
 
@@ -431,11 +439,11 @@
 																	</div>
 																	
 																	<button class="cursor02" tabindex="0" aria-label="선택하기">
-																		<div class="cursor-text ver02">
+																		<span class="cursor-text ver02">
 																			Windows 보안 설정에서 방화벽 <br/>
 																			및 네트워크 보호 관련 정보를 <br/>
 																			확인하고 관리하는 화면이다.
-																		</div>
+																		</span>
 																	</button>
 																</div>
 															</div>
@@ -458,18 +466,18 @@
 																	</div>
 																	
 																	<button class="cursor02" tabindex="0" aria-label="선택하기">
-																		<div class="cursor-text ver02">
+																		<span class="cursor-text ver02">
 																			방화벽 설정에서 도메인, 개인, <br/>
 																			공용 네트워크별 방화벽 상태를 <br/>
 																			확인하고 관리하는 화면이다.
-																		</div>
+																		</span>
 																	</button>
 																</div>
 
 																<!-- 팝업 위치잡기 -->
-																<div class="text_popup_con" id="computing-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+																<div class="text_popup_con" id="computing-popup2" role="dialog" aria-modal="true" aria-labelledby="popup-title2">
 																	<div class="contents_con">
-																		<div class="title_con" tabindex="0">
+																		<div class="title_con" tabindex="0" id="popup-title2">
 																			<span>
 																				방화벽
 																			</span>
@@ -528,12 +536,12 @@
 							<div class="nav" role="navigation" aria-label="정보 보안 방법">
 								<ul>
 									<li tabindex="0">
-										<span class="on" value="info01" role="button" class="on" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
+										<span class="on" data-value="info01" role="button"  id="tab-info01" aria-controls="panel-info01">
 											정보 공급자
 										</span>
 									</li>
 									<li tabindex="0">
-										<span value="info02" role="button" id="tab-info02" aria-selected="false" aria-controls="panel-info02">
+										<span data-value="info02" role="button" id="tab-info02" aria-controls="panel-info02">
 											정보 사용자
 										</span>
 									</li>
@@ -666,9 +674,9 @@
 														</div>
 
 														<!-- 팝업 위치잡기 -->
-														<div class="text_popup_con" id="computing-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+														<div class="text_popup_con" id="computing-popup1" role="dialog" aria-modal="true" aria-labelledby="popup-title1">
 															<div class="contents_con">
-																<div class="title_con" tabindex="0">
+																<div class="title_con" tabindex="0" id="popup-title1">
 																	<span>
 																		비밀번호 안전 체크 사이트
 																	</span>
@@ -814,7 +822,7 @@
 					});
 					$(this).find("span").addClass("on");
 					$(".H_522_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div").hide();
-					$(".H_522_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div."+$(this).find("span").attr("value")).show();
+					$(".H_522_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div."+$(this).find("span").attr("data-value")).show();
 				}
 			});
 			$(document).on("keydown",".H_522_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .nav > ul > li",function(e){
@@ -825,7 +833,7 @@
 						});
 						$(this).find("span").addClass("on");
 						$(".H_522_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div").hide();
-						$(".H_522_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div."+$(this).find("span").attr("value")).show();
+						$(".H_522_07_con > .contents_con > .contents_con > .info02_con > .contents_con > .contents_con .contents_div."+$(this).find("span").attr("data-value")).show();
 					}
 				}
 			});
@@ -849,7 +857,7 @@
 					});
 					$(this).find("span").addClass("on");
 					$(".H_522_07_con > .contents_con > .popup_con > .contents_con > .contents_con > .contents_con .contents_div").hide();
-					$(".H_522_07_con > .contents_con > .popup_con > .contents_con > .contents_con > .contents_con .contents_div."+$(this).find("span").attr("value")).show();
+					$(".H_522_07_con > .contents_con > .popup_con > .contents_con > .contents_con > .contents_con .contents_div."+$(this).find("span").attr("data-value")).show();
 				}
 			});
 			$(document).on("keydown",".H_522_07_con > .contents_con > .popup_con > .contents_con > .contents_con > .nav > ul > li",function(e){
@@ -860,7 +868,7 @@
 						});
 						$(this).find("span").addClass("on");
 						$(".H_522_07_con > .contents_con > .popup_con > .contents_con > .contents_con > .contents_con .contents_div").hide();
-						$(".H_522_07_con > .contents_con > .popup_con > .contents_con > .contents_con > .contents_con .contents_div."+$(this).find("span").attr("value")).show();
+						$(".H_522_07_con > .contents_con > .popup_con > .contents_con > .contents_con > .contents_con .contents_div."+$(this).find("span").attr("data-value")).show();
 					}
 				}
 			});
@@ -1051,13 +1059,6 @@
 	const contentId = 'H-522-07';
 </script>
 <script type="text/javascript" src="./js/xapi.page.js"></script>
-<style>
-  a:focus {
-    outline: 3px solid #FF9900;
-    box-shadow: 0 0 5px #FF9900;
-    border-radius: 4px;
-    background-color: #fff8e1;
-  }
-</style>
+
 </body>
 </html>
