@@ -443,8 +443,11 @@ top:min(24px, 1.5vw);
     line-height: min(44px, 2.75vw);
     border-radius: min(10px, 0.63vw);
     box-shadow: 0px min(4px, 0.25vw) min(4px, 0.25vw) 0px rgba(0, 0, 0, 0.25);
+		padding-left: 0;
 }
-
+.H_111_08_con > .contents_con > .contents_con > .tab_con > table > tbody > tr > .info_td > ul > li .blank_con .draggable::before{
+	display: none;
+}
 
 .H_111_08_con > .contents_con > .contents_con > .tab_con  > .answer_con {
     margin: min(10px, 0.625vw) 0 0 0;
