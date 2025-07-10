@@ -566,10 +566,10 @@ video::cue {
 .H_411_12_slide_div_03 .box_con .head_con{font-size:min(32px, 2vw);padding-bottom:min(20px, 1.25vw);margin-bottom:min(20px, 1.25vw);border-bottom:dashed min(2px, 0.12vw) #ddd}
 .H_411_12_con .a_con > textarea{height:min(171px, 10.69vw);font-size:min(24px, 1.5vw);padding:min(20px, 1.25vw) 0}
 .H_411_12_con .a_con > textarea::placeholder{line-height:min(130px, 8.13vw)}
-.H_411_12_con .exam_con{width:min(1316px, 82.25vw);height:min(130px, 6.77vw);padding:min(20px, 1.25vw);font-size:min(24px, 1.5vw);border-radius:min(20px, 1.25vw);margin:min(1.25vw, 20px) auto 0;gap:min(18px, 1.13vw);}
+.H_411_12_con .exam_con{width:min(1316px, 82.25vw);height:min(130px, 6.77vw);padding:min(20px, 1.25vw);font-size:min(24px, 1.5vw);border-radius:min(20px, 1.25vw);margin:min(1.25vw, 20px) auto 0;gap:min(18px, 1.13vw); display: flex;}
 .H_411_12_slide_div_03 .exam_con{height:min(141px, 8.81vw);margin-top:min(15px, 0.93vw)}
-.H_411_12_con .exam_con strong{width:min(79px, 4.94vw);height:min(40px, 2.5vw);border-radius:min(10px, 0.63vw);border-bottom-right-radius:0;font-size:min(26px, 1.62vw)} 
-.H_411_12_con .exam_con span{width:min(1169px, 73.06vw)}
+.H_411_12_con .exam_con strong{min-width:min(79px, 4.94vw);height:min(40px, 2.5vw);border-radius:min(10px, 0.63vw);border-bottom-right-radius:0;font-size:min(26px, 1.62vw); } 
+.H_411_12_con .exam_con span{width:min(1169px, 73.06vw);}
 .H_411_12_con .btn_con{margin:min(20px, 1.25vw) auto 0; width: min(1316px, 82.25vw);} 
 .H_411_12_con .btn_con .a_btn{width:min(205px, 12.81vw);height:min(68px, 4.25vw)} 
 .H_411_12_con .list_con ul{gap:min(25px, 1.56vw)}

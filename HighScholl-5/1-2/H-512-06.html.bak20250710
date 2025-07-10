@@ -46,8 +46,11 @@
 						</div>
 
 						<div class="text_con">
+							<h2 tabindex="0">
+							디지털 사회와 직업 역량
+							</h2>
 							<h1 tabindex="0">
-								희망하는 진로 분야
+								희망하는 진로 분야 <b class="index">(1)</b>
 							</h1>
 						</div>
 					</div>

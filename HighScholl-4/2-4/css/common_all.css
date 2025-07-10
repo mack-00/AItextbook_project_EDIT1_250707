@@ -513,7 +513,7 @@ video::cue {
 .H_424_18_con .btn_con .a_btn{width:min(205px, 12.81vw);height:min(68px, 4.25vw)} 
 .H_424_18_con .list_con ul{gap:min(15px, 0.93vw)}
 .H_424_18_con .list_con li{gap:min(11px, 0.69vw)}
-.H_424_18_con .list_con li strong{width:min(270px, 16.87vw);height:min(131px, 8.18vw);border-radius:min(20px, 1.25vw);font-size:min(27px, 1.68vw)}
+.H_424_18_con .list_con li strong{width:min(290px, 18.125vw);height:min(131px, 8.18vw);border-radius:min(20px, 1.25vw);font-size:min(27px, 1.68vw)}
 .H_424_18_con .list_con li span{border-radius:min(20px, 1.25vw)}
 .H_424_18_con .list_con li .a_con > textarea{height:min(131px, 8.18vw);padding:min(20px, 1.25vw)}
 .H_424_18_con .list_con li .a_con > textarea::placeholder{line-height:min(90px, 5.62vw)}

@@ -167,7 +167,7 @@ video::cue {
 .H_323_05_con > .contents_con > .contents_con .detail_con > .right_con {width: 45%; height: auto;}
 .H_323_05_con > .contents_con > .contents_con .info02 .detail_con > .left_con > .list_con > ul > li {width: min(460px, 28.75vw); margin-right: min(40px, 2.50vw);}
 .H_323_05_con > .contents_con > .contents_con .info02 .detail_con > .left_con > .list_con > ul > li:first-child .title_con {padding: min(12px, 0.75vw) min(20px, 1.25vw);}
-.H_323_05_con > .contents_con > .contents_con .info02 .detail_con > .left_con .cursor {top: min(31px, 1.94vw); left: min(377px, 23.56vw);}
+.H_323_05_con > .contents_con > .contents_con .info02 .detail_con > .left_con .cursor {top: min(31px, 1.94vw); left: auto;  right: min(-43px, -2.688vw)}
 /* .H_323_05_con  .btn_con {right: min(15px, 0.94vw); bottom: min(24px, 1.5vw);} */
 .H_323_05_con  .btn_con > .btn_popup {width: min(120px, 7.5vw); height: min(43px, 2.69vw); margin-left: min(4px, 0.25vw);}
 .H_323_05_con .full_popup_wrap > .contents_con {padding: min(30px, 1.88vw) min(60px, 3.75vw) 0; margin: min(80px, 5vw) min(156px, 9.75vw); height: min(740px, 46.25vw); border-radius: min(20px, 1.25vw);}
