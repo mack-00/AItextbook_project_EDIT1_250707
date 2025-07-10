@@ -45,7 +45,7 @@ HighScholl-5/
 
 1. 저장소 복제
 ```bash
-git clone [https://github.com/[YOUR_ID]/[REPO_NAME]](https://github.com/mack-00/AItextbook_project_EDIT1_250707.git
+git clone https://github.com/mack-00/AItextbook_project_EDIT1_250707.git
 ```
 
 2. 로컬에서 학습 콘텐츠 실행
