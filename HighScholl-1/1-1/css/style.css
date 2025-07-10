@@ -698,7 +698,7 @@ button.after_hand::after {content:''; display:inline-block; width:72px; height:8
 .H_111_08_con > .contents_con > .contents_con > .tab_con > table > tbody > tr > .info_td > ul {}
 .H_111_08_con > .contents_con > .contents_con > .tab_con > table > tbody > tr > .info_td > ul > li {}
 .H_111_08_con > .contents_con > .contents_con > .tab_con > table > tbody > tr > .info_td > ul > li > span {display:inline-block; padding:0 0 0 24px; position:relative; top:0; left:0;}
-.H_111_08_con > .contents_con > .contents_con > .tab_con > table > tbody > tr > .info_td > ul > li > span:before {content:''; width:5px; height:5px; background:#000; position:absolute; top:12.5px; left:0; border-radius:100%;}
+.H_111_08_con > .contents_con > .contents_con > .tab_con > table > tbody > tr > .info_td > ul > li > .bullet:before {content:''; width:5px; height:5px; background:#000; position:absolute; top:12.5px; left:0; border-radius:100%;}
 .H_111_08_con > .contents_con > .contents_con > .tab_con > table > thead > tr > th:first-child {border-left:0;}
 .H_111_08_con > .contents_con > .contents_con > .tab_con > table > thead > tr:first-child > th {border-top:0;}
 
