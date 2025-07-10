@@ -169,6 +169,10 @@
 			$(document).ready(function () {
 				$(".after_hand").each(function (index) {
 						$(this).on("click", function () {
+							// 25.07.10 khr 음원 제거 (프로그래머의 2번째 말풍선) : 씨마스 AI교과서 고등 수정 사항_(0708)_취합본
+								if (index === 3) {
+									return; 
+								}
 								// 기존 오디오 정지
 								if (currentAudio) {
 										currentAudio.pause();

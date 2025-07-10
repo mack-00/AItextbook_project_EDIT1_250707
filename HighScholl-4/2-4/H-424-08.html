@@ -196,7 +196,8 @@
 			const $nextLi = $currentLi.next("li");
 
 			// 현재 버튼 숨기기
-			$currentBtn.hide();
+			//$currentBtn.hide();
+		 $currentBtn.removeClass("show"); // 25.07.10 khr 손가락 버튼 오류 : 씨마스 AI교과서 고등 수정 사항_(0708)_취합본 
 
 			// 다음 li의 hand_click 버튼에 .show 클래스 추가
 			$nextLi.find(".hand_click").addClass("show");
@@ -210,7 +211,8 @@
 
 		$(".btn_con .a_btn").on("click", function(){
 			// 모든 hand_click 다시 보이기 + .show 제거
-			$(".hand_click").show().removeClass("show");
+			//$(".hand_click").show().removeClass("show");
+			$(".hand_click").removeClass("show");// 25.07.10 khr 손가락 버튼 오류 : 씨마스 AI교과서 고등 수정 사항_(0708)_취합본 
 
 			// 두 번째 li의 hand_click에 .show 클래스 추가
 			$(".list_con ul li").eq(1).find(".hand_click").addClass("show");

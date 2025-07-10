@@ -946,7 +946,7 @@ video::cue {
 .H_511_12_con > .contents_con > .contents_con > form > .list_con > ul > li > .list_div > .r_con > .a_con > ul > li > .radio_label input[type=radio]:checked + .check_icon {background-image:url("../img/H_511_12_con_radio_icon_on.svg");}
 .H_511_12_con > .contents_con > .contents_con > form > .btn_con {margin:15px 0 0 0; text-align:right;}
 .H_511_12_con > .contents_con > .contents_con > form > .btn_con .a_btn {display:inline-block; width:222px; height:68px; background-repeat:no-repeat; background-size:222px; background-position:center; cursor:pointer;}
-.H_511_12_con > .contents_con > .contents_con > form > .btn_con .a_btn01 {background-image:url("../img/H_511_12_question_btn01.png");}
+.H_511_12_con > .contents_con > .contents_con > form > .btn_con .a_btn01 {background-image:url("../img/btn_bg_01.png");}
 .H_511_12_con > .contents_con > .contents_con > form > .btn_con .a_btn02 {background-image:url("../img/H_511_12_question_btn02.png");}
 .H_511_12_con > .contents_con > .contents_con > form > .btn_con #btn1 {}
 .H_511_12_con > .contents_con > .contents_con > form > .btn_con #btn1_1 {}
