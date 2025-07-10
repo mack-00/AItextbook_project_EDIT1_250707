@@ -452,7 +452,7 @@ top:min(24px, 1.5vw);
 }
 
 .H_111_08_con > .contents_con > .contents_con > .tab_con  > .answer_con > .title_con {
-    margin: 0 0 min(15px, 0.94vw) 0;
+    margin: 0 0 min(5px, 0.313vw) 0;
 }
 
 .H_111_08_con > .contents_con > .contents_con > .tab_con  > .answer_con > .title_con span {
@@ -476,7 +476,7 @@ top:min(24px, 1.5vw);
     font-weight: 700;
 }
 .H_111_08_con > .contents_con > .contents_con > .tab_con  > .answer_con > .contents_con span {
-    width: min(210px, 13.13vw);
+  width: min(260px, 16.25vw);
     border: min(3px, 0.19vw) solid #4296FF;
 		background-color: #A1CBFF;
     margin: 0 0 0 min(16px, 1vw);
