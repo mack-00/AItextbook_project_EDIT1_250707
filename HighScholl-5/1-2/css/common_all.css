@@ -176,49 +176,37 @@ video::cue {
 .H_512_06_con > .contents_con > .title_con > .contents_con > .text_bg {width:min(374px, 23.38vw); height:min(100px, 6.25vw); background-size:min(374px, 23.38vw); padding:min(29px, 1.81vw) 0 0 min(79px, 4.94vw); left:max(-30px, -1.88vw);}
 .H_512_06_con > .contents_con > .title_con > .contents_con > .text_bg .text {font-size:min(40px, 2.5vw);}
 .H_512_06_con > .contents_con > .title_con > .contents_con > .text_bg .bg {width:min(30px, 1.88vw); height:min(20px, 1.25vw); background-size:min(30px, 1.88vw); bottom:max(-20px, -1.25vw);}
-
-.H_512_06_con > .contents_con > .title_con > .contents_con > .text_con{
-	height: min(100px, 6.25vw);
-  padding: min(15px, 0.938vw) 0 0 0;
-}
-.H_512_06_con > .contents_con > .title_con > .contents_con > .text_con h2 {
-    margin: 0 0 min(6px, 0.38vw) 0;
-    font-size: min(18px, 1.13vw);
-		font-weight: 600;
-}
-.H_512_06_con > .contents_con > .title_con > .contents_con > .text_con h1 {font-size:min(38px, 2.38vw); line-height:1; letter-spacing:max(-0.38px, -0.02vw);}
+.H_512_06_con > .contents_con > .title_con > .contents_con > .text_con h1 {font-size:min(38px, 2.38vw); line-height:min(100px, 6.25vw); letter-spacing:max(-0.38px, -0.02vw);}
 .H_512_06_con > .contents_con > .contents_con {padding:min(29px, 1.81vw) min(49px, 3.06vw) 0;}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .title_con > span {padding:0 0 0 min(46px, 2.88vw); font-size:min(32px, 2.00vw); line-height:min(46px, 2.88vw); letter-spacing:max(-0.768px, -0.05vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .title_con > span .num_text {width:min(31px, 1.94vw); height:min(31px, 1.94vw); background-size:min(31px, 1.94vw); top:min(6px, 0.38vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .list_div {margin:min(30px, 1.875vw) 0 0 0;}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .list_div > ul {gap:min(8px, 0.50vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .list_div > ul > li > .list_div {gap:min(8px, 0.50vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .list_div > ul > li > .list_div > .title_con {width:min(365px, 22.81vw); height:min(265px, 16.56vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .list_div > ul > li > .list_div > .title_con > span {font-size:min(27px, 1.69vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .list_div > ul > li > .list_div > .txt_con {width:min(937px, 58.56vw); height:min(265px, 16.56vw); padding:min(18px, 1.13vw) min(22px, 1.38vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .list_div > ul > li > .list_div > .txt_con > .q_con {gap:min(17px, 1.06vw); border-bottom:min(2px, 0.13vw) dashed #DDD; padding:0 0 min(14px, 0.88vw); margin:0 0 min(14px, 0.88vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .list_div > ul > li > .list_div > .txt_con > .q_con > .text01_con {border:min(2px, 0.13vw) solid #888; width:min(80px, 5.00vw); height:min(40px, 2.50vw); border-radius:min(30px, 1.88vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .list_div > ul > li > .list_div > .txt_con > .q_con > .text01_con > span {font-size:min(26px, 1.63vw); letter-spacing:max(-0.26px, -0.02vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .list_div > ul > li > .list_div > .txt_con > .q_con > .text02_con > span {font-size:min(24px, 1.50vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .list_div > ul > li > .list_div > .txt_con > .a_con > textarea {height:min(160px, 10.00vw); font-size:min(28px, 1.75vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .list_div > ul > li > .list_div > .txt_con > .a_con > textarea::placeholder {font-size:min(26px, 1.63vw); line-height:min(160px, 10.00vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .txt_con {width:min(1310px, 81.88vw); height:min(476px, 29.75vw); margin-top:min(39px, 2.44vw); padding:min(18px, 1.13vw) min(22px, 1.38vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .txt_con > .q_con {gap:min(17px, 1.06vw); border-bottom:min(2px, 0.13vw) dashed #DDD; padding:0 0 min(14px, 0.88vw); margin:0 0 min(14px, 0.88vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .txt_con > .q_con > .text01_con {border:min(2px, 0.13vw) solid #888; width:min(80px, 5.00vw); height:min(40px, 2.50vw); border-radius:min(30px, 1.88vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .txt_con > .q_con > .text01_con > span {font-size:min(26px, 1.63vw); letter-spacing:max(-0.26px, -0.02vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .txt_con > .q_con > .text02_con > span {font-size:min(24px, 1.50vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .txt_con > .a_con > textarea {height:min(367px, 22.94vw); font-size:min(28px, 1.75vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .txt_con > .a_con > textarea::placeholder {font-size:min(26px, 1.63vw); line-height:min(367px, 22.94vw);}
-/*.H_512_06_con > .contents_con > .contents_con .contents_con > .title_con > span .num_text.num02 {left:min(47px, 2.94vw);}*/
-
-.H_512_06_con > .contents_con > .contents_con .contents_con > .title_con > span .group .num_text.num02 {left:min(47px, 2.94vw);}
-.H_512_06_con > .contents_con > .contents_con .contents_con > .title_con > span .group {padding:0 0 0 min(40px, 2.50vw);}
-/*.H_512_06_con > .contents_con > .contents_con .slide_con .swiper-pagination {bottom:max(-60px, -3.75vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .title_con > span {padding:0 0 0 min(46px, 2.88vw); font-size:min(32px, 2.00vw); line-height:min(46px, 2.88vw); letter-spacing:max(-0.768px, -0.05vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .title_con > span .num_text {width:min(31px, 1.94vw); height:min(31px, 1.94vw); background-size:min(31px, 1.94vw); top:min(6px, 0.38vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .list_div {margin:min(43px, 2.69vw) 0 0 0;}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .list_div > ul {gap:min(8px, 0.50vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .list_div > ul > li > .list_div {gap:min(8px, 0.50vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .list_div > ul > li > .list_div > .title_con {width:min(365px, 22.81vw); height:min(265px, 16.56vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .list_div > ul > li > .list_div > .title_con > span {font-size:min(27px, 1.69vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .list_div > ul > li > .list_div > .txt_con {width:min(937px, 58.56vw); height:min(265px, 16.56vw); padding:min(18px, 1.13vw) min(22px, 1.38vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .list_div > ul > li > .list_div > .txt_con > .q_con {gap:min(17px, 1.06vw); border-bottom:min(2px, 0.13vw) dashed #DDD; padding:0 0 min(14px, 0.88vw); margin:0 0 min(14px, 0.88vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .list_div > ul > li > .list_div > .txt_con > .q_con > .text01_con {border:min(2px, 0.13vw) solid #888; width:min(80px, 5.00vw); height:min(40px, 2.50vw); border-radius:min(30px, 1.88vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .list_div > ul > li > .list_div > .txt_con > .q_con > .text01_con > span {font-size:min(26px, 1.63vw); letter-spacing:max(-0.26px, -0.02vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .list_div > ul > li > .list_div > .txt_con > .q_con > .text02_con > span {font-size:min(24px, 1.50vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .list_div > ul > li > .list_div > .txt_con > .a_con > textarea {height:min(160px, 10.00vw); font-size:min(28px, 1.75vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .list_div > ul > li > .list_div > .txt_con > .a_con > textarea::placeholder {font-size:min(26px, 1.63vw); line-height:min(160px, 10.00vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .txt_con {width:min(1310px, 81.88vw); height:min(476px, 29.75vw); margin-top:min(39px, 2.44vw); padding:min(18px, 1.13vw) min(22px, 1.38vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .txt_con > .q_con {gap:min(17px, 1.06vw); border-bottom:min(2px, 0.13vw) dashed #DDD; padding:0 0 min(14px, 0.88vw); margin:0 0 min(14px, 0.88vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .txt_con > .q_con > .text01_con {border:min(2px, 0.13vw) solid #888; width:min(80px, 5.00vw); height:min(40px, 2.50vw); border-radius:min(30px, 1.88vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .txt_con > .q_con > .text01_con > span {font-size:min(26px, 1.63vw); letter-spacing:max(-0.26px, -0.02vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .txt_con > .q_con > .text02_con > span {font-size:min(24px, 1.50vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .txt_con > .a_con > textarea {height:min(367px, 22.94vw); font-size:min(28px, 1.75vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide > .contents_con > .txt_con > .a_con > textarea::placeholder {font-size:min(26px, 1.63vw); line-height:min(367px, 22.94vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide.H_512_06_slide_div_03 > .contents_con > .title_con > span .num_text.num02 {left:min(47px, 2.94vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con > .swiper-container .swiper-wrapper .swiper-slide.H_512_06_slide_div_03 > .contents_con > .title_con > span .group {padding:0 0 0 min(40px, 2.50vw);}
+.H_512_06_con > .contents_con > .contents_con .slide_con .swiper-pagination {bottom:max(-60px, -3.75vw);}
 .H_512_06_con > .contents_con > .contents_con .slide_con .swiper-pagination .swiper-pagination-bullet {width:min(20px, 1.25vw); height:min(20px, 1.25vw); margin:0 min(10px, 0.63vw); border-radius:min(20px, 1.25vw);}
 .H_512_06_con > .contents_con > .contents_con .slide_con .swiper-pagination .swiper-pagination-bullet-active {width:min(40px, 2.50vw);}
 .H_512_06_con > .contents_con > .contents_con .slide_con > .slide_btn {width:min(50px, 3.13vw); height:min(50px, 3.13vw); background-size:min(50px, 3.13vw);}
 .H_512_06_con > .contents_con > .contents_con .slide_con > .slide_btn.prev {left:max(-28px, -1.75vw);}
-.H_512_06_con > .contents_con > .contents_con .slide_con > .slide_btn.next {right:max(-28px, -1.75vw);}*/
+.H_512_06_con > .contents_con > .contents_con .slide_con > .slide_btn.next {right:max(-28px, -1.75vw);}
 /* .H_512_06_con > .contents_con > .contents_con .btn_con {bottom:min(49px, 3.06vw); right:min(50px, 3.13vw);} */
 /* .H_512_06_con > .contents_con > .contents_con .btn_con .a_btn {width:min(222px, 13.88vw); height:min(68px, 4.25vw); background-size:min(222px, 13.88vw);} */
 .H_512_06_con > .contents_con > .contents_con .popup_con {width:min(585px, 36.56vw); height:min(472px, 29.50vw); background-size:min(585px, 36.56vw);}
