@@ -239,7 +239,8 @@ button.after_hand::after {width:min(72px, 4.50vw); height:min(86px, 5.38vw);}
 .H_112_08_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .question_con > .list_con > ul > li > .text_con .text_div > .text_con span {font-size:min(32px, 2vw); line-height:min(41.6px, 2.6vw);}
 .H_112_08_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .question_con > .list_con > ul > li > .text_con .text_div > .blank_con + .text_con {margin:0 0 0 min(4px, 0.25vw);}
 .H_112_08_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .question_con > .list_con > ul > li > .text_con .text_div > .text_con + .blank_con {margin:0 0 0 min(4px, 0.25vw);}
-.H_112_08_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .answer_con {margin:min(293px, 18.31vw) 0 0 0; padding:0 min(209px, 13.06vw) 0 0;}
+.H_112_08_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .answer_con {
+	margin:min(245px, 15.313vw) 0 0 0; padding:0 min(209px, 13.06vw) 0 0;}
 .H_112_08_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .answer_con > .title_con {margin:0 0 min(15px, 0.94vw) 0;}
 .H_112_08_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .answer_con > .title_con span {font-size:min(32px, 2vw); line-height:min(51px, 3.19vw);}
 .H_112_08_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .answer_con > .contents_con {min-height:min(100px, 6.25vw); padding:min(25px, 1.56vw) 0; border-radius:min(20px, 1.25vw);}

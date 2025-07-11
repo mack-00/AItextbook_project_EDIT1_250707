@@ -703,6 +703,10 @@ button.after_hand::after {width:min(72px, 4.50vw); height:min(86px, 5.38vw);}
 .H_1_10_con .both_wrap .exam_tit {gap:min(7px, 0.44vw);}
 .H_1_10_con .both_wrap .exam_textarea .exam_tit .exam_icon {font-size:min(18px, 1.13vw); width:min(51px, 3.19vw); height:min(29px, 1.81vw); line-height:min(25px, 1.56vw); }
 .H_1_10_con .canvas_box {margin:min(40px, 2.50vw) auto 0; width:min(1325px, 82.81vw); height:min(496px, 31.00vw);}
+.H_1_10_con .canvas_box  textarea {
+	    font-size: min(26px, 1.63vw);
+    padding: min(20px, 1.25vw) !important;
+}
 
 
 /*H-1-11*/
