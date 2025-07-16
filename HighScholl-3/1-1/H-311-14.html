@@ -139,84 +139,101 @@
 
 	</div>
 <script>
-$(document).ready(function(){
+	//페이지 제어 시작
+	const parentURL = new URL(document.referrer);
 
-	let wrongCount = 0;
+	window.parent.postMessage({
+		actCd : "cont"
+	} ,parentURL.origin);
 
-	$(".btn_confirm").on("click", function(){
 
-		const val1 = $(".input01").val().trim();
-		const val2 = $(".input02").val().trim();
-		const val3 = $(".input03").val().trim();
+	$(document).ready(function(){
 
-		// 빈칸 확인
-		if(val1 === "" || val2 === "" || val3 === ""){
-			$(".H_311_14_con .popup_con_bg.popup03").fadeIn();
-			$(".H_311_14_con .popup_con.popup03").fadeIn();
+		let wrongCount = 0;
 
-			setTimeout(function(){
-				$(".H_311_14_con .popup_con_bg.popup03").fadeOut();
-				$(".H_311_14_con .popup_con.popup03").fadeOut();
-			}, 1000);
-			return;
-		}
+		$(".btn_confirm").on("click", function(){
 
-		// 정답일 경우
-		if(val1 === "1" && val2 === "3" && val3 === "7"){
-			$(".H_311_14_con .popup_con_bg.popup02").fadeIn();
-			$(".H_311_14_con .popup_con.popup02").fadeIn();
-			/* 정답일경우 다시하기 버튼 show 202507 */
-			$(".btn_confirm").hide();
-			$(".btn_reset").show();
-			setTimeout(function(){
-				$(".H_311_14_con .popup_con_bg.popup02").fadeOut();
-				$(".H_311_14_con .popup_con.popup02").fadeOut();
-			}, 1000);
-		} else {
-			wrongCount++;
+			const val1 = $(".input01").val().trim();
+			const val2 = $(".input02").val().trim();
+			const val3 = $(".input03").val().trim();
 
-			// 첫 번째 오답
-			if (wrongCount === 1) {
-				$(".H_311_14_con .popup_con_bg.popup01").fadeIn();
-				$(".H_311_14_con .popup_con.popup01").fadeIn();
-
-				// 입력 초기화
-				$(".input01, .input02, .input03").val("");
+			// 빈칸 확인
+			if(val1 === "" || val2 === "" || val3 === ""){
+				$(".H_311_14_con .popup_con_bg.popup03").fadeIn();
+				$(".H_311_14_con .popup_con.popup03").fadeIn();
 
 				setTimeout(function(){
-					$(".H_311_14_con .popup_con_bg.popup01").fadeOut();
-					$(".H_311_14_con .popup_con.popup01").fadeOut();
+					$(".H_311_14_con .popup_con_bg.popup03").fadeOut();
+					$(".H_311_14_con .popup_con.popup03").fadeOut();
 				}, 1000);
+				return;
 			}
-			// 두 번째 오답 이상
-			else if (wrongCount >= 2) {
-				$(".H_311_14_con .popup_con_bg.popup04").fadeIn();
-				$(".H_311_14_con .popup_con.popup04").fadeIn();
+
+			// 정답일 경우
+			if(val1 === "1" && val2 === "3" && val3 === "7"){
+				$(".H_311_14_con .popup_con_bg.popup02").fadeIn();
+				$(".H_311_14_con .popup_con.popup02").fadeIn();
 
 				setTimeout(function(){
-					$(".H_311_14_con .popup_con_bg.popup04").fadeOut();
-					$(".H_311_14_con .popup_con.popup04").fadeOut();
+					$(".H_311_14_con .popup_con_bg.popup02").fadeOut();
+					$(".H_311_14_con .popup_con.popup02").fadeOut();
 				}, 1000);
 
-				$(".input01").val("1");
-				$(".input02").val("3");
-				$(".input03").val("7");
-				$(".q_box").addClass("correct");
+				//페이지 제어 종료
+				window.parent.postMessage({
+					actCd : "comp"
+				} ,parentURL.origin);
 
-				$(".btn_confirm").hide();
-				$(".btn_reset").show();
+			} else {
+				wrongCount++;
+
+				// 첫 번째 오답
+				if (wrongCount === 1) {
+					$(".H_311_14_con .popup_con_bg.popup01").fadeIn();
+					$(".H_311_14_con .popup_con.popup01").fadeIn();
+
+					// 입력 초기화
+					$(".input01, .input02, .input03").val("");
+
+					setTimeout(function(){
+						$(".H_311_14_con .popup_con_bg.popup01").fadeOut();
+						$(".H_311_14_con .popup_con.popup01").fadeOut();
+					}, 1000);
+				}
+				// 두 번째 오답 이상
+				else if (wrongCount >= 2) {
+					$(".H_311_14_con .popup_con_bg.popup04").fadeIn();
+					$(".H_311_14_con .popup_con.popup04").fadeIn();
+
+					setTimeout(function(){
+						$(".H_311_14_con .popup_con_bg.popup04").fadeOut();
+						$(".H_311_14_con .popup_con.popup04").fadeOut();
+					}, 1000);
+
+					$(".input01").val("1");
+					$(".input02").val("3");
+					$(".input03").val("7");
+					$(".q_box").addClass("correct");
+
+					$(".btn_confirm").hide();
+					$(".btn_reset").show();
+
+					//페이지 제어 종료
+					window.parent.postMessage({
+						actCd : "comp"
+					} ,parentURL.origin);
+				}
 			}
-		}
-	});
+		});
 
-	$(".btn_reset").on("click", function(){
-		$(".input01, .input02, .input03").val("");
-		wrongCount = 0;
-		$(".btn_confirm").show();
-		$(".btn_reset").hide();
-		$(".q_box").removeClass("correct");
+		$(".btn_reset").on("click", function(){
+			$(".input01, .input02, .input03").val("");
+			wrongCount = 0;
+			$(".btn_confirm").show();
+			$(".btn_reset").hide();
+			$(".q_box").removeClass("correct");
+		});
 	});
-});
 </script>
 
 <script>
