@@ -18,8 +18,8 @@
 
 	<!-- 브라우저 번역(다국어 관련) -->
 	<link rel="stylesheet" href="./css/GoogleTranslate.css">
-	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
-	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script  src="./js/GoogleTranslate.js"></script>
+	<script  src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
 
 	    <script>
 	    	document.addEventListener('DOMContentLoaded', () => {
@@ -337,14 +337,15 @@
 	    			} else {
 	    				try_check++;
 	    				if (correct_answer === 4) {
+	    					// 버튼 전환 로직 추가
+	    					checkButton.style.display = 'none';
+	    					retryButton.style.display = 'inline-block';
 	    					isAnswered = true;
 	    					$(".popup04, .popup_con_bg.popup04").fadeIn();
 	    					setTimeout(() => {
 	    						$(".popup04, .popup_con_bg.popup04").fadeOut();
 	    					}, 1000);
 	    					swiperInstance.emit('slideChange');
-	    					checkButton.style.display = 'none';
-	    					retryButton.style.display = 'inline-block';
 	    				} else if (try_check === 1) {
 	    					$(".popup02, .popup_con_bg.popup02").fadeIn();
 	    					setTimeout(() => {
@@ -352,15 +353,15 @@
 	    						returnItemsToContainer();
 	    					}, 1000);
 	    				} else if (try_check === 2) {
+	    					// 버튼 전환 로직 추가
+	    					checkButton.style.display = 'none';
+	    					retryButton.style.display = 'inline-block';
 	    					$(".popup03, .popup_con_bg.popup03").fadeIn();
 	    					setTimeout(() => {
 	    						$(".popup03, .popup_con_bg.popup03").fadeOut();
 	    						swiperInstance.emit('slideChange');
 	    					}, 1000);
 	    					setTimeout(() => placeItemsInCorrectPositions(), 500);
-	    					// 버튼 전환 로직 추가
-	    					checkButton.style.display = 'none';
-	    					retryButton.style.display = 'inline-block';
 	    				}
 	    			}
 	    		});
@@ -502,7 +503,7 @@
 													<div class="text_con" tabindex="0">
 														<span>
 															하는 알고리즘이다.
-													</span>
+														</span>
 													</div>
 												</div>
 											</div>
@@ -536,7 +537,7 @@
 													<div class="text_con" tabindex="0">
 														<span>
 															(은)는 큰 문제를 작은 문제로 쪼개면서 해결해 나가는 분할 정복 방법으로 정렬하며,
-											    </span>
+														</span>
 													</div>
 												</div>
 
@@ -544,7 +545,7 @@
 													<div class="text_con" tabindex="0">
 														<span>
 															선택된 피벗의 위치에 따라 성능이 달라질 수 있다.
-												</span>
+														</span>
 													</div>
 												</div>
 											</div>
@@ -561,17 +562,17 @@
 								</div>
 
 								<div class="contents_con options-container" role="region" aria-label="사용 가능한 답변들">
-									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="2" tabindex="0">
+									<span class="draggable" draggable="true" data-answer="2" tabindex="0">
 										정렬
 									</span>
 
-									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="1" tabindex="0">
+									<span class="draggable" draggable="true" data-answer="1" tabindex="0">
 										버블 정렬
 									</span>
-									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="4" tabindex="0">
+									<span class="draggable" draggable="true" data-answer="4" tabindex="0">
 										퀵 정렬
 									</span>
-									<span class="draggable" draggable="true" role="button" aria-grabbed="false" data-answer="3" tabindex="0">
+									<span class="draggable" draggable="true" data-answer="3" tabindex="0">
 										삽입 정렬
 									</span>
 
@@ -581,8 +582,8 @@
 						</div>
 
 						<div class="btn_con">
-							<button  class="a_btn a_btn01 check-btn" type="button" aria-label="확인하기" tabindex="0">확인하기</button>
-							<button  class="a_btn a_btn02 retry-btn" type="button" aria-label="다시풀기" tabindex="0">다시 하기</button>
+							<button class="a_btn a_btn01 check-btn" type="button" aria-label="확인하기" tabindex="0">확인하기</button>
+							<button class="a_btn a_btn02 retry-btn" type="button" aria-label="다시풀기" tabindex="0">다시 하기</button>
 						</div>
 					</div>
 
@@ -606,6 +607,6 @@
 	<script>
 		const contentId = 'H-312-09';
 	</script>
-	<script type="text/javascript" src="./js/xapi.page.js"></script>
+	<script  src="./js/xapi.page.js"></script>
 </body>
 </html>

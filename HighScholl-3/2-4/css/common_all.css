@@ -571,7 +571,9 @@ video::cue {
 .H_324_11_con > .contents_con > .contents_con > .box_con > .right_con > .answer::before {left: min(20px, 1.25vw); top: min(25px, 1.56vw); width: min(36px, 2.25vw); height: min(28px, 1.75vw); background-size: min(36px, 2.25vw) min(28px, 1.75vw);}
 .H_324_11_con > .contents_con > .contents_con > .box_con > .right_con > .answer > span {font-size: min(26px, 1.63vw); line-height: min(33.8px, 2.11vw);}
 .H_324_11_con > .contents_con > .contents_con > .tab_con {margin-top: min(40px, 2.5vw);}
-.H_324_11_con > .contents_con > .contents_con > .tab_con table {width: min(1304px, 80.5vw);}
+/* table border-spacing border-collapse 추가 202507 */
+.H_324_11_con > .contents_con > .contents_con > .tab_con table {width: min(1304px, 80.5vw);border-collapse: separate;border-spacing: 0;}
+/* .H_324_11_con > .contents_con > .contents_con > .tab_con table {width: min(1304px, 80.5vw);} */
 .H_324_11_con > .contents_con > .contents_con > .tab_con table thead th {width: min(100px, 6.25vw); padding: min(14px, 0.88vw) 0 min(15px, 0.94vw); border-right: min(4px, 0.25vw) solid #fff;}
 .H_324_11_con > .contents_con > .contents_con > .tab_con table thead th:nth-child(1) {width: min(160px, 10vw);}
 .H_324_11_con > .contents_con > .contents_con > .tab_con table thead th span { font-size: min(26px, 1.63vw);}

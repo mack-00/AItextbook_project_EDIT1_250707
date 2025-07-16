@@ -19,8 +19,8 @@
 	
 	<!-- 브라우저 번역(다국어 관련) -->
 	<link rel="stylesheet" href="./css/GoogleTranslate.css">
-	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
-	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script  src="./js/GoogleTranslate.js"></script>
+	<script  src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
 	<style>
 		.H_324_07_con > .contents_con > .contents_con > .answer_con > ul > li:nth-child(1)::after {
 			left: calc(25% + 10px)	!important;
@@ -74,7 +74,7 @@
 								</div>
 								<div class="chk_con">
 									<label class="chk_label">
-										<input type="checkbox"  value="1번" />
+										<input type="checkbox" value="1번">
 										<span class="check_icon"></span>
 									</label>
 								</div>
@@ -89,7 +89,7 @@
 								</div>
 								<div class="chk_con">
 									<label class="chk_label"> 
-										<input type="checkbox"  value="2번" data-answer="true" />
+										<input type="checkbox" value="2번" data-answer="true">
 										<span class="check_icon"></span>
 									</label>
 								</div>
@@ -105,7 +105,7 @@
 								</div>
 								<div class="chk_con">
 									<label class="chk_label">
-										<input type="checkbox"  value="3번" />
+										<input type="checkbox" value="3번">
 										<span class="check_icon"></span>
 									</label>
 								</div>
@@ -123,7 +123,7 @@
 								</div>
 								<div class="chk_con">
 									<label class="chk_label">
-										<input type="checkbox"  value="4번" data-answer="true"  />
+										<input type="checkbox" value="4번" data-answer="true">
 										<span class="check_icon"></span>
 									</label>
 								</div>
@@ -139,7 +139,7 @@
 								</div>
 								<div class="chk_con">
 									<label class="chk_label">
-										<input type="checkbox"  value="5번" />
+										<input type="checkbox" value="5번">
 										<span class="check_icon"></span>
 									</label>
 								</div>
@@ -157,7 +157,7 @@
 								</div>
 								<div class="chk_con">
 									<label class="chk_label">
-										<input type="checkbox"  value="6번" data-answer="true"  />
+										<input type="checkbox" value="6번" data-answer="true">
 										<span class="check_icon"></span>
 									</label>
 								</div>
@@ -210,7 +210,8 @@
 						</ul>
 					</div>
 					<div class="btn_con">
-						<button type="button" class="a_btn btn_confirm" aria-label="확인하기">확인하기</button>
+							<button class="a_btn a_btn01 btn_confirm" type="button" aria-label="확인하기" tabindex="0">확인하기</button>
+							<button class="a_btn a_btn02 btn_retry" type="button" aria-label="다시 하기" style="display: none;" tabindex="0">다시 하기</button>
 					</div>
 				</div>
 				<div class="popup_con_bg popup01"></div>
@@ -230,7 +231,8 @@
 		<script>
 		$(document).ready(function(){
 			let tryCount = 0;
-
+			const checkButton = document.querySelector('.btn_confirm');
+			const retryButton = document.querySelector('.btn_retry');
 			// 체크 여부 확인
 			function isChecked() {
 				return $(".H_324_07_con input[type=checkbox]:checked").length > 0;
@@ -269,6 +271,9 @@
 						$(".H_324_07_con .popup_con.popup03").fadeOut();
 					}, 1000);
 				} else if (answerCheck()) {
+					// 버튼 전환 로직 추가
+					checkButton.style.display = 'none';
+					retryButton.style.display = 'inline-block';
 					// 정답일 때
 					$(".H_324_07_con .popup_con_bg.popup02").fadeIn();
 					$(".H_324_07_con .popup_con.popup02").fadeIn();
@@ -291,6 +296,9 @@
 							$(".H_324_07_con .popup_con.popup01").fadeOut();
 						}, 1000);
 					} else if (tryCount === 2) {
+						// 버튼 전환 로직 추가
+						checkButton.style.display = 'none';
+						retryButton.style.display = 'inline-block';
 						// 2회 오답 시 정답 자동 체크 + popup04 + 버튼 전환
 						selectCorrectAnswers();
 						$(".H_324_07_con .answer_con").addClass("on");
@@ -314,6 +322,9 @@
 
 			// 다시 하기 버튼
 			$(document).on("click", ".btn_retry", function(){
+				// 버튼 전환 로직 추가
+				checkButton.style.display = 'inline-block';
+				retryButton.style.display = 'none';
 				tryCount = 0;
 				$(".H_324_07_con input[type=checkbox]").prop("checked", false);
 				$(".btn_confirm").show();
@@ -327,7 +338,7 @@
 		<script>
 			const contentId = 'H-324-07';
 		</script>
-		<script type="text/javascript" src="./js/xapi.page.js"></script>
+		<script  src="./js/xapi.page.js"></script>
 		
 
 	</div>

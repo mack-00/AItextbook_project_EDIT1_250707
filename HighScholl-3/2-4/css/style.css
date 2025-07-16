@@ -573,7 +573,9 @@ video::cue {
 .H_324_07_con > .contents_con > .contents_con > .answer_con > ul > li > .code_con > span {color: #000; font-size: 24px; font-weight: 400; line-height: 31.2px;}
 .H_324_07_con > .contents_con > .contents_con > .answer_con > ul > li > .code_con > span > .indent {margin-left: 20px;}
 .H_324_07_con > .contents_con > .contents_con > .btn_con {position: absolute; right: 20px; top: 649px;}
-.H_324_07_con > .contents_con > .contents_con > .btn_con > .btn_confirm {display: inline-block; width: 222px !important; height: 68px !important; background-size: contain; cursor: pointer}
+/* btn_confirm 사이즈 수정 202507 */
+.H_324_07_con > .contents_con > .contents_con > .btn_con > .btn_confirm {display: inline-block; width: min(12.12vw, 222px) !important; height: min(3.71vw, 68px) !important; background-size: contain; cursor: pointer}
+/* .H_324_07_con > .contents_con > .contents_con > .btn_con > .btn_confirm {display: inline-block; width: 222px !important; height: 68px !important; background-size: contain; cursor: pointer} */
 .H_324_07_con .popup_con_bg {display: none;width: 100%;height: 100%;margin: 0 auto;background-color: #000;background-color: rgba(0,0,0,0.73);position: absolute;top: 0;left: 0;right: 0;z-index: 20;}
 .H_324_07_con .popup_con {display: none;width: 585px;height: 472px;margin: 0 auto;background-repeat: no-repeat;background-size: 585px;background-position: center;position: absolute;top: 50%;left: 0;right: 0;z-index: 30;transform: translateY(-50%);}
 .H_324_07_con .popup_con.popup01 {background-image: url("../img/H_324_07_popup01.png");}

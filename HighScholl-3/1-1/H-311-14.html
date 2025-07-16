@@ -12,15 +12,15 @@
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./css/common_all.css">
 	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
-	<script type="text/javascript" src="GoogleTranslate.js"></script> 
-	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script  src="GoogleTranslate.js"></script> 
+	<script  src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="./js/jquery-ui.min.js"></script>
 
 	<!-- 브라우저 번역(다국어 관련) -->
 	<link rel="stylesheet" href="./css/GoogleTranslate.css">
-	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
-	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script  src="./js/GoogleTranslate.js"></script>
+	<script  src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
 </head>
 <body>
 	<div id="wrap">
@@ -94,22 +94,22 @@
 							<div class="rd_10 q_box">
 								<ul>
 									<li>
-									  1. 원반이 1개일 때 원반 이동 횟수
-										<label class="input_wrap">
-													<input type="text" class="input01" /> 번
-										</label>
+										1. 원반이 1개일 때 원반 이동 횟수
+										<div class="input_wrap">
+											<input type="text" class="input01"> 번
+										</div>
 									</li>
 									<li>
-							    	2. 원반이 2개일 때 원반 이동 횟수
-										<label class="input_wrap">
-											<input type="text" class="input02" /> 번
-										</label>
+										2. 원반이 2개일 때 원반 이동 횟수
+										<div class="input_wrap">
+											<input type="text" class="input02"> 번
+										</div>
 									</li>
 									<li>
-								    3. 원반이 3개일 때 원반 이동 횟수
-										<label class="input_wrap">
-											<input type="text" class="input03" /> 번
-										</label>
+										3. 원반이 3개일 때 원반 이동 횟수
+										<div class="input_wrap">
+											<input type="text" class="input03"> 번
+										</div>
 									</li>
 								</ul>
 							</div>
@@ -165,7 +165,9 @@ $(document).ready(function(){
 		if(val1 === "1" && val2 === "3" && val3 === "7"){
 			$(".H_311_14_con .popup_con_bg.popup02").fadeIn();
 			$(".H_311_14_con .popup_con.popup02").fadeIn();
-
+			/* 정답일경우 다시하기 버튼 show 202507 */
+			$(".btn_confirm").hide();
+			$(".btn_reset").show();
 			setTimeout(function(){
 				$(".H_311_14_con .popup_con_bg.popup02").fadeOut();
 				$(".H_311_14_con .popup_con.popup02").fadeOut();
@@ -220,6 +222,6 @@ $(document).ready(function(){
 <script>
 	const contentId = 'H-311-14';
 </script>
-<script type="text/javascript" src="./js/xapi.page.js"></script>
+<script  src="./js/xapi.page.js"></script>
 </body>
 </html>

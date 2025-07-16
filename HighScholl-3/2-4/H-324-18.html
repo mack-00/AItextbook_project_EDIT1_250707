@@ -21,8 +21,8 @@
 
 	<!-- 브라우저 번역(다국어 관련) -->
 	<link rel="stylesheet" href="./css/GoogleTranslate.css">
-	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
-	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script  src="./js/GoogleTranslate.js"></script>
+	<script  src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
 </head>
 <body>
 	<div id="wrap">
@@ -54,9 +54,9 @@
 
 					<div class="contents_con">
 						<div class="nav" role="navigation" aria-label="함수의 종류">
-							<ul role="tablist">
+							<ul role=tablist>
 								<li tabindex="0">
-									<span class="on" data-value="info01" role="tab" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
+									<span data-value="info01" role="tab" class="on" id="tab-info01" aria-selected="true" aria-controls="panel-info01">
 										내장 함수
 									</span>
 								</li>
@@ -190,15 +190,15 @@
 																<li>• m 이상 n 이하의 정수 중 난수를 생성하여 반환한다.</li>
 															</ul>
 														</div>
-														<button class="btn_data" aria-label="예시 보기"></button>
+														<button class="btn_data" aria-label="예시 보기" aria-describedby="list-popup"></button>
 													</div>
 													<!-- 팝업1-->
-													<div class="text_popup_con text_popup_con01" id="list-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+													<div class="text_popup_con text_popup_con01" id="list-popup"  role="tooltip" aria-label="randint(m,n) 예시 설명">
 														<div class="contents_con">
 															<div class="close_btn">
 																<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
 															</div>
-															<div class="title_con" tabindex="0" id="popup-title">
+															<div class="title_con" tabindex="0">
 																<span>randint(m,n) 예시</span>
 															</div>
 															<div class="text_con" tabindex="0">
@@ -221,24 +221,24 @@
 														<div class="text_con" tabindex="0">
 															<ul class="list_con">
 																<li>• matplotlib.pyplot 모듈에 정의된 함수</li>
-																<li>• 선그래프를 출력한다.</li>
+																<li>• 선 그래프를 출력한다.</li>
 															</ul>
 														</div>
-														<button class="btn_data" aria-label="예시 보기"></button> 
+														<button class="btn_data" aria-label="예시 보기" aria-describedby="list-popup2"></button> 
 													</div>
 													<!-- 팝업2-->
-													<div class="text_popup_con text_popup_con02" id="list-popup02" role="dialog" aria-modal="true" aria-labelledby="popup-title02">
+													<div class="text_popup_con text_popup_con02" id="list-popup2" role="tooltip" aria-label="plot( ) 예시 설명">
 														<div class="contents_con">
 															<div class="close_btn">
 																<a href="javascript:void(0);" class="a_btn" aria-label="팝업 닫기"></a>
 															</div>
-															<div class="title_con" tabindex="0" id="popup-title02">
+															<div class="title_con" tabindex="0">
 																<span>plot( ) 예시</span>
 															</div>
 															<div class="text_con" tabindex="0">
 																<span class="blue"># as는 모듈에 별칭을 정하는 예약어이다.</span>
 																<span>import matplotlib.pyplot as plt</span>
-																<span class="blue"># y축의 1, 4, 2, 7 값을 연결하여 선그래프를 출력한다.</span>
+																<span class="blue"># y축의 1, 4, 2, 7 값을 연결하여 선 그래프를 출력한다.</span>
 																<span>plt.plot([1, 4, 2, 7])</span>
 															</div>
 														</div>
@@ -357,6 +357,7 @@
 						});
 						$(this).addClass("on");
 						$(".H_324_18_con > .contents_con > .contents_con .detail_con .contents_div").hide();
+						/* value = > data-value 변경 202507 */
 						$(".H_324_18_con > .contents_con > .contents_con .detail_con .contents_div."+$(this).attr("data-value")).show();
 						$(".H_324_18_con .text_popup_con").hide();
 					}
@@ -369,7 +370,7 @@
 		<script>
 			const contentId = 'H-324-18';
 		</script>
-		<script type="text/javascript" src="./js/xapi.page.js"></script>
+		<script  src="./js/xapi.page.js"></script>
 	</div>
 </body>
 </html>

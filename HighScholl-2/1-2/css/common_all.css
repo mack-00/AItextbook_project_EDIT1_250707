@@ -440,7 +440,11 @@ button.after_hand::after {width:min(72px, 4.50vw); height:min(86px, 5.38vw);}
 
 .H_212_13_con .tab_con > table > thead > tr > th span{font-size:min(26px, 1.63vw);}
 .H_212_13_con .tab_con > table > thead > tr > th{background-color:#D0E9E7;}
-.H_212_13_con .tab_con > table > thead > tr > th{padding:min(9px, 0.56vw) 0 min(11px, 0.69vw) 0; border-bottom:min(6px, 0.38vw) solid #FFF; border-left:min(6px, 0.38vw) solid #FFF;}
+/* th border bottom 삭제 202507 */
+.H_212_13_con .tab_con > table > thead > tr > th{padding:min(9px, 0.56vw) 0 min(11px, 0.69vw) 0; border-bottom:none; border-left:min(6px, 0.38vw) solid #FFF;}
+/* th first child border left 삭제 202507 */
+.H_212_13_con .tab_con > table > thead > tr > th:first-child{border-left: none;}
+/* .H_212_13_con .tab_con > table > thead > tr > th{padding:min(9px, 0.56vw) 0 min(11px, 0.69vw) 0; border-bottom:min(6px, 0.38vw) solid #FFF; border-left:min(6px, 0.38vw) solid #FFF;} */
 .H_212_13_con .tab_con > table > tbody > tr > th span{font-weight:400; font-size:min(26px, 1.63vw);}
 .H_212_13_con .tab_con > table > tbody > tr > th:first-child{text-align:left;}
 .H_212_13_con .tab_con > table > tbody > tr > th{border-top:min(6px, 0.38vw) solid #FFF; border-left:min(6px, 0.38vw) solid #FFF;}
