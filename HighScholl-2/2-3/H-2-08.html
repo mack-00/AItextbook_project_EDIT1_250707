@@ -122,6 +122,12 @@
 
 <script>
 	const child = new ClientAPI(); //본 코드는 데이터 전송 페이지마다 각각 별도로 들어있어야 하고, 내부 스크립트의 최상단에 위치해야함. 
+			
+	//페이지 제어 시작
+	const parentURL = new URL(document.referrer);
+	window.parent.postMessage({
+		actCd: "cont"
+	}, parentURL.origin);
 
 	//제출 여부 받아서 버튼 제어
 	child.receiveMessage((data)=>{
@@ -183,6 +189,11 @@
 
 		// 실제 데이터 전송
 		child.sendFormData('frm1');
+
+		//페이지 제어 종료
+		window.parent.postMessage({
+			actCd: "comp"
+		}, parentURL.origin);
 
 		setTimeout(function(){
 			$(".H_2_08_con .popup_con_bg.popup02").fadeOut();

@@ -181,6 +181,12 @@
 		
 		<script>
 			const child = new ClientAPI(); //본 코드는 데이터 전송 페이지마다 각각 별도로 들어있어야 하고, 내부 스크립트의 최상단에 위치해야함. 
+			
+			//페이지 제어 시작
+			const parentURL = new URL(document.referrer);
+			window.parent.postMessage({
+				actCd: "cont"
+			}, parentURL.origin);
 
 			//제출 여부 받아서 버튼 제어
 			child.receiveMessage((data)=>{
@@ -236,11 +242,19 @@
 
 			// 제출하기
 			function sendFormData(){
-				if( $(".H_22_01_con > .contents_con > .contents_con > .right_con .question_con > .write_con > .input_con .textarea").val() == "" ){
+				//if( $(".H_22_01_con > .contents_con > .contents_con > .right_con .question_con > .write_con > .input_con .textarea").val() == "" ){
+				//	btn_event01();
+				//}else{
+				//	if (player) player.pause();
+				//	btn_event02()
+				//}
+				const textareaVal = $(".H_22_01_con .textarea").val();
+				const videoElement = document.getElementById('player01'); // ← 여기에서 바로 DOM 참조
+				if (textareaVal == "") {
 					btn_event01();
-				}else{
-					if (player) player.pause();
-					btn_event02()
+				} else {
+					if (videoElement && !videoElement.paused) videoElement.pause(); // 영상 일시정지
+					btn_event02();
 				}
 			}
 
@@ -269,6 +283,11 @@
 				// 실제 데이터 전송
 				child.sendFormData('frm1');
 
+				//페이지 제어 종료
+				window.parent.postMessage({
+					actCd: "comp"
+				}, parentURL.origin);
+
 				setTimeout(function(){
 					$(".H_22_01_con .popup_con_bg.popup02").fadeOut();
 					$(".H_22_01_con .popup_con.popup02").fadeOut();
@@ -276,16 +295,16 @@
 			}
 		</script>
 		<script>
-			function sendFormData(){
-				const textareaVal = $(".H_12_01_con .textarea").val();
-				const videoElement = document.getElementById('player01'); // ← 여기에서 바로 DOM 참조
-				if (textareaVal == "") {
-					btn_event01();
-				} else {
-					if (videoElement && !videoElement.paused) videoElement.pause(); // 영상 일시정지
-					btn_event02();
-				}
-			}
+			//function sendFormData(){
+			//	const textareaVal = $(".H_12_01_con .textarea").val();
+			//	const videoElement = document.getElementById('player01'); // ← 여기에서 바로 DOM 참조
+			//	if (textareaVal == "") {
+			//		btn_event01();
+			//	} else {
+			//		if (videoElement && !videoElement.paused) videoElement.pause(); // 영상 일시정지
+			//		btn_event02();
+			//	}
+			//}//sendFormData 함수 머지
 		</script>
 		<script>
 			const contentId = 'H-22-01';

@@ -170,6 +170,13 @@
 		
 		<script>
 			const child = new ClientAPI();
+			
+			//페이지 제어 시작
+			const parentURL = new URL(document.referrer);
+			window.parent.postMessage({
+				actCd: "cont"
+			}, parentURL.origin);
+
 
 			// 제출 여부 받아서 버튼 전환
 			child.receiveMessage((data) => {
@@ -181,12 +188,23 @@
 
 			// 공통 제출 함수
 			function sendFormData() {
-				const val = $('.textarea').val().trim();
+				//const val = $('.textarea').val().trim();
+
+				//if (val === "") {
+				//	btn_event01(); // 빈 값일 경우 팝업01
+				//} else {
+				//	if (typeof player !== 'undefined' && player) player.pause();
+				//	btn_event02(); // 내용 있을 경우 팝업02
+				//}
+				
+				
+				const val = $('.H_31_01_con .textarea').val().trim();
+				const videoElement = document.getElementById('player01');
 
 				if (val === "") {
 					btn_event01(); // 빈 값일 경우 팝업01
 				} else {
-					if (typeof player !== 'undefined' && player) player.pause();
+					if (videoElement && !videoElement.paused) videoElement.pause();
 					btn_event02(); // 내용 있을 경우 팝업02
 				}
 			}
@@ -222,6 +240,11 @@
 				// 실제 데이터 전송
 				child.sendFormData('frm1');
 
+				//페이지 제어 종료
+				window.parent.postMessage({
+					actCd: "comp"
+				}, parentURL.origin);
+
 				setTimeout(() => {
 					$(".H_31_01_con .popup_con_bg.popup02").fadeOut();
 					$(".H_31_01_con .popup_con.popup02").fadeOut();
@@ -231,17 +254,17 @@
 		
 		 
 		 <script>
-			function sendFormData() {
-				const val = $('.H_31_01_con .textarea').val().trim();
-				const videoElement = document.getElementById('player01');
+			//function sendFormData() {
+			//	const val = $('.H_31_01_con .textarea').val().trim();
+			//	const videoElement = document.getElementById('player01');
 
-				if (val === "") {
-					btn_event01();
-				} else {
-					if (videoElement && !videoElement.paused) videoElement.pause();
-					btn_event02();
-				}
-			}
+			//	if (val === "") {
+			//		btn_event01();
+			//	} else {
+			//		if (videoElement && !videoElement.paused) videoElement.pause();
+			//		btn_event02();
+			//	}
+			//}//sendFormData 함수 머지
 
 		</script>
 		<script>

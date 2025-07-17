@@ -261,6 +261,12 @@
 	</div>
 	<script>
 	$(document).ready(function(){
+	//페이지 제어 시작
+	const parentURL = new URL(document.referrer);
+	window.parent.postMessage({
+		actCd: "cont"
+	}, parentURL.origin);
+
 		let tryCount = 0;
 
 		const $confirmBtn = $(".btn_confirm");
@@ -331,9 +337,18 @@
 				$(".popup_con_bg.popup02, .popup02").fadeIn().delay(1000).fadeOut();
 				tryCount = 0;
 				updateButtons();
+			
+				//페이지 제어 종료
+				window.parent.postMessage({
+					actCd: "comp"
+				}, parentURL.origin);
+				
 				/* 정답일경우 다시하기 버튼 show 202507 */
 				$confirmBtn.hide();
 				$resetBtn.show();
+				
+			
+
 				return;
 			}
 
@@ -344,6 +359,12 @@
 			} else if (tryCount === 2) {
 				$(".popup_con_bg.popup04, .popup04").fadeIn().delay(1000).fadeOut();
 				showAnswers();
+				// 두 번째 오답 이상
+				
+				//페이지 제어 종료
+				window.parent.postMessage({
+					actCd: "comp"
+				}, parentURL.origin);
 			}
 			updateButtons();
 		});

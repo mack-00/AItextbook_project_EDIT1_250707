@@ -288,6 +288,13 @@
 
 	</div>
 	<script>
+ $(function() {	
+	//페이지 제어 시작
+	const parentURL = new URL(document.referrer);
+	window.parent.postMessage({
+		actCd: "cont"
+	}, parentURL.origin);
+	
 	let tryCount = 0; // 시도 횟수
 	let isCorrect = false; // 마지막 시도가 정답인지 여부
 	let reachedMaxTry = false; // 2차 시도 이상 여부
@@ -338,6 +345,12 @@
 		if (tryCount >= 2) {
 			reachedMaxTry = true;
 			popupShownOnce = true; // ✅ 정답창 떠 있음 상태 기록
+			
+			//// 두 번째 오답  페이지 제어 종료
+			window.parent.postMessage({
+				actCd: "comp"
+			}, parentURL.origin);
+
 			setTimeout(function () {
 			$(".H_313_08_full_popup").fadeIn();
 			}, 500);
@@ -346,6 +359,11 @@
 
 		$(".btn_confirm").hide();
 		$(".btn_rebtn").show();
+		
+		//페이지 제어 종료
+		window.parent.postMessage({
+			actCd: "comp"
+		}, parentURL.origin);
 		return;
 	}
 
@@ -360,6 +378,11 @@
 		$(".H_313_08_full_popup").fadeIn();
 		}, 1000);
 	}, 1000);
+
+		//페이지 제어 종료
+		window.parent.postMessage({
+			actCd: "comp"
+		}, parentURL.origin);
 
 	$(".btn_confirm").hide();
 	$(".btn_rebtn").show();
@@ -393,7 +416,7 @@
 	});
 
 
-
+  });
 
 	</script>
 </body>

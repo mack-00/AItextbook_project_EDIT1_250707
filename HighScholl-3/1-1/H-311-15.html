@@ -159,6 +159,7 @@
 	</div>
 
 <script>
+
 	document.addEventListener("DOMContentLoaded", function () {
 		const towers = [document.getElementById('tower1'), document.getElementById('tower2'), document.getElementById('tower3')];
 		const resetButton = document.getElementById('resetButton');
@@ -286,6 +287,11 @@
 </script>
 <script>
 	$(document).ready(function(){
+	//페이지 제어 시작
+	const parentURL = new URL(document.referrer);
+	window.parent.postMessage({
+		actCd: "cont"
+	}, parentURL.origin);
 
 		let attemptCount = 0; // 오답 횟수 카운트
 
@@ -311,6 +317,7 @@
 				// 정답
 				$(".H_311_15_con .popup_con_bg.popup02").fadeIn();
 				$(".H_311_15_con .popup_con.popup02").fadeIn();
+				
 				setTimeout(function(){
 					$(".H_311_15_con .popup_con_bg.popup02").fadeOut();
 					$(".H_311_15_con .popup_con.popup02").fadeOut();
@@ -318,6 +325,11 @@
 				attemptCount = 0; // 정답 시 초기화
 				$(".btn_confirm").hide();
 				$(".btn_reset").show();
+			
+				//페이지 제어 종료
+				window.parent.postMessage({
+					actCd: "comp"
+				}, parentURL.origin);
 			} else {
 				attemptCount++;
 
@@ -347,6 +359,11 @@
 					// 버튼 전환
 					$(".sub_both .btn_confirm").hide();
 					$(".sub_both .btn_reset").show();
+					
+					//페이지 제어 종료
+					window.parent.postMessage({
+						actCd: "comp"
+					}, parentURL.origin);
 				}
 			}
 		});

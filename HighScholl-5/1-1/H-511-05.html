@@ -244,6 +244,15 @@
 
 		<script>
 	const child = new ClientAPI(); // 메시지 처리용 객체
+
+			//페이지 제어 시작
+			const parentURL = new URL(document.referrer);
+			window.parent.postMessage({
+				actCd: "cont"
+			}, parentURL.origin);
+
+
+
 	let isSubmitted = false; // 제출 여부 상태 저장
 
 	// 버튼 DOM 참조
@@ -341,6 +350,12 @@
 		updateButtons();    // 버튼 갱신
 
 		child.sendFormData('frm1');
+
+			//페이지 제어 종료
+			window.parent.postMessage({
+				actCd: "comp"
+			}, parentURL.origin);
+
 		setTimeout(() => {
 			$(".popup_con_bg.popup02, .popup_con.popup02").fadeOut();
 		}, 1000);

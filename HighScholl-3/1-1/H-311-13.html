@@ -156,6 +156,13 @@
 	</div>
 <script>
 $(document).ready(function () {
+//페이지 제어 시작
+const parentURL = new URL(document.referrer);
+window.parent.postMessage({
+	actCd: "cont"
+}, parentURL.origin);
+
+
 	let tryCount = 0;
 
 	// 팝업 닫기
@@ -187,6 +194,11 @@ $(document).ready(function () {
 			// 정답 팝업 표시
 			$(".popup_con_bg.popup02, .popup02").fadeIn();
 
+				//페이지 제어 종료
+				window.parent.postMessage({
+					actCd: "comp"
+				}, parentURL.origin);
+
 			setTimeout(function () {
 				// 정답 팝업 숨기기
 				$(".popup_con_bg.popup02, .popup02").fadeOut();
@@ -212,6 +224,11 @@ $(document).ready(function () {
 					$('.btn_confirm').hide();
 					$('.btn_reset').show();
 					labels[1].checked=true; // [250602] : 수정
+
+					//페이지 제어 종료
+					window.parent.postMessage({
+						actCd: "comp"
+					}, parentURL.origin);
 				}
 			}, 1000);
 		}

@@ -123,6 +123,13 @@
 
 	</div>
 	<script>
+	  $(function() {	
+		//페이지 제어 시작
+		const parentURL = new URL(document.referrer);
+		window.parent.postMessage({
+			actCd: "cont"
+		}, parentURL.origin);
+
 		const correctValue = "3";
 		let attemptCount = 0;
 
@@ -153,6 +160,12 @@
 				}, 1000);
 				$('.check-btn').hide();
 				$('.btn_reset').show();
+
+				//페이지 제어 종료
+				window.parent.postMessage({
+					actCd: "comp"
+				}, parentURL.origin);
+
 				return;
 			}
 
@@ -181,6 +194,11 @@
 
 				$('.check-btn').hide();
 				$('.btn_reset').show();
+
+				//페이지 제어 종료
+				window.parent.postMessage({
+					actCd: "comp"
+				}, parentURL.origin);
 			}
 		});
 
@@ -190,6 +208,7 @@
 			$('.btn_reset').hide();
 			$('.check-btn').show();
 		});
+});
 </script>
 <script>
 	const contentId = 'H-422-11';

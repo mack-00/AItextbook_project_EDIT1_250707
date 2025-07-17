@@ -229,7 +229,14 @@
 		</main>
 
 		<script>
+
 		$(document).ready(function(){
+		//페이지 제어 시작
+		const parentURL = new URL(document.referrer);
+		window.parent.postMessage({
+			actCd: "cont"
+		}, parentURL.origin);
+		
 			let tryCount = 0;
 			const checkButton = document.querySelector('.btn_confirm');
 			const retryButton = document.querySelector('.btn_retry');
@@ -284,6 +291,11 @@
 						$(".H_324_07_con .popup_con_bg.popup02").fadeOut();
 						$(".H_324_07_con .popup_con.popup02").fadeOut();
 					}, 1000);
+
+						//페이지 제어 종료
+						window.parent.postMessage({
+							actCd: "comp"
+						}, parentURL.origin);
 				} else {
 					// 오답일 때
 					tryCount++;
@@ -295,20 +307,25 @@
 							$(".H_324_07_con .popup_con_bg.popup01").fadeOut();
 							$(".H_324_07_con .popup_con.popup01").fadeOut();
 						}, 1000);
-					} else if (tryCount === 2) {
+					} else if (tryCount >= 2) {
 						// 버튼 전환 로직 추가
 						checkButton.style.display = 'none';
 						retryButton.style.display = 'inline-block';
 						// 2회 오답 시 정답 자동 체크 + popup04 + 버튼 전환
 						selectCorrectAnswers();
 						$(".H_324_07_con .answer_con").addClass("on");
-
 						$(".H_324_07_con .popup_con_bg.popup04").fadeIn();
 						$(".H_324_07_con .popup_con.popup04").fadeIn();
 						setTimeout(function(){
 							$(".H_324_07_con .popup_con_bg.popup04").fadeOut();
 							$(".H_324_07_con .popup_con.popup04").fadeOut();
 						}, 1000);
+						
+
+						//페이지 제어 종료
+						window.parent.postMessage({
+							actCd: "comp"
+						}, parentURL.origin);
 
 						$(".btn_confirm").hide();
 						if ($(".btn_retry").length === 0) {
@@ -316,6 +333,7 @@
 						} else {
 							$(".btn_retry").show();
 						}
+						
 					}
 				}
 			});
@@ -329,7 +347,7 @@
 				$(".H_324_07_con input[type=checkbox]").prop("checked", false);
 				$(".btn_confirm").show();
 				$(this).hide();
-				$(".H_324_07_con .answer_con").hide();
+				//$(".H_324_07_con .answer_con").hide();
 				$(".H_324_07_con .answer_con").removeClass("on");
 			});
 		});

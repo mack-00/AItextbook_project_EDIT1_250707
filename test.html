@@ -1,0 +1,52 @@
+<!-- 부모 페이지 (parent.html) -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>부모 페이지</title>
+</head>
+<body>
+  <h1>부모 페이지</h1>
+
+  <!-- 1. iframe 삽입: src에 자식 페이지 URL을 지정 -->
+  <iframe
+    id="childFrame"
+    src="/HighScholl-5/2-2/H-5-11.html"
+    width="1600"
+    height="900"
+    style="border:1px solid #ccc;"
+  ></iframe>
+
+  <script>
+    // 2. message 이벤트 리스너 등록
+    window.addEventListener("message", (event) => {
+      // **보안 처리**: 메시지를 보낸 도메인이 올바른지 확인
+      const ALLOWED = "http://127.0.0.1:5500";
+      if (event.origin !== ALLOWED) return;
+
+      //console.log("✨[Parent] 수신 데이터:", event.data);
+
+      switch (event.data.actCd) {
+        case "cont":
+          console.log("→ ✨자식 페이지가 시작 신호를 보냈습니다.",event.data);
+          // 예) 로딩 스피너 표시
+          break;
+        case "comp":
+          console.log("→ ❤️❤️❤️자식 페이지가 완료 신호를 보냈습니다.",event.data,event.data);
+          // 예) 결과 표시, iframe 제거 등
+          break;
+        default:
+          //console.warn("😪알 수 없는 actCd:", event.data.actCd);
+      }
+    });
+
+    // (선택) 부모 → 자식 메시지 보내기 예시
+    const iframeEl = document.getElementById("childFrame");
+    iframeEl.onload = () => {
+      const targetOrigin = "http://127.0.0.1:5500";
+      console.log("[Parent] 자식에게 ready 신호 전송");
+      iframeEl.contentWindow.postMessage({ actCd: "ready" }, targetOrigin);
+    };
+  </script>
+</body>
+</html>

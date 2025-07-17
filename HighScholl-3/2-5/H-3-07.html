@@ -108,6 +108,13 @@
 
 	<script>
 		const child = new ClientAPI();
+
+			//페이지 제어 시작
+			const parentURL = new URL(document.referrer);
+			window.parent.postMessage({
+				actCd: "cont"
+			}, parentURL.origin);
+			
 	$(document).ready(function() {
 
 	function showPopup(type) {
@@ -131,6 +138,11 @@
 		} else {
 		showPopup("popup02");
         child.sendFormData('frm1');
+
+				//페이지 제어 종료
+				window.parent.postMessage({
+					actCd: "comp"
+				}, parentURL.origin);
 		$("#btn1").hide();
 		$("#a_btn02").show();
 		}

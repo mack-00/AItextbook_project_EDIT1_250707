@@ -174,7 +174,8 @@
 								</div>
 
 								<div class="btn_con">
-									<button  class="a_btn" type="button" aria-label="확인하기" tabindex="0" onclick="javascript:btn_event();">확인하기</button>
+									<button  class="a_btn btn_confirm" type="button" aria-label="확인하기" tabindex="0" onclick="javascript:btn_event();">확인하기</button>						  
+								 	<button type="button" class="a_btn btn_reset" aria-label="다시 하기" style="display: none;">다시 하기</button>
 								</div>
 							</div>
 
@@ -186,6 +187,9 @@
 
 							<div class="popup_con_bg popup03"></div>
 							<div class="popup_con popup03" role="alert"></div>
+
+							<div class="popup_con_bg popup04"></div>
+							<div class="popup_con popup04"  role="alert"></div>
 						</div>
 					</div>
 				</div>
@@ -193,6 +197,18 @@
 		</main>
 
 		<script>
+  $(function() {
+
+			//페이지 제어 시작
+			const parentURL = new URL(document.referrer);
+			window.parent.postMessage({
+				actCd: "cont"
+			}, parentURL.origin);
+
+			
+		  let wrongCount = 0;
+			
+
 			// 확인하기
 			function btn_event(){
 				console.log("확인 버튼 클릭됨");
@@ -212,13 +228,19 @@
 						$("input[name='aidt_input1']").prop("checked", false);
 					}, 1000);
 				} else {
+					
 					// 오답 선택했을 때
-					btn_event02();
-
+				  wrongCount++;
 					setTimeout(function(){
 						// 라디오 버튼 해제
 						$("input[name='aidt_input1']").prop("checked", false);
 					}, 1000);
+						if (wrongCount >=  2) {
+							// 두 번째 오답 이상
+							btn_event04();
+					}else{
+				     	btn_event02();
+					}
 				}
 			};
 
@@ -253,7 +275,40 @@
 					$(".H_424_11_con > .contents_con > .contents_con > .info02_con .write_con .popup_con_bg.popup03").fadeOut();
 					$(".H_424_11_con > .contents_con > .contents_con > .info02_con .write_con .popup_con.popup03").fadeOut();
 				}, 1000);
+					
+				//페이지 제어 종료
+				window.parent.postMessage({
+					actCd: "comp"
+				}, parentURL.origin);
 			}
+
+			// 확인하기 - 오답 (정답확인)
+			function btn_event04(){
+					$(".H_424_11_con .popup_con_bg.popup04").fadeIn();
+					$(".H_424_11_con .popup_con.popup04").fadeIn();
+
+					setTimeout(function(){
+						$(".H_424_11_con .popup_con_bg.popup04").fadeOut();
+						$(".H_424_11_con .popup_con.popup04").fadeOut();
+						$("input[name='aidt_input1'][value='분류']").prop("checked", true); //정답 확인 
+					}, 1000);
+					$(".btn_confirm").hide();
+					$(".btn_reset").show();
+					
+				//페이지 제어 종료
+				window.parent.postMessage({
+					actCd: "comp"
+				}, parentURL.origin);
+
+			}		
+			
+			$(".btn_reset").on("click", function(){					
+			$("input[name='aidt_input1']").prop("checked", false); 
+			wrongCount = 0;
+			$(".btn_confirm").show();
+			$(".btn_reset").hide();
+		});
+	});
 		</script>
 
 		<script>

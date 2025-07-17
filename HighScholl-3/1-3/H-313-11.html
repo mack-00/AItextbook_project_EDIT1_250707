@@ -285,6 +285,12 @@
 	</div>
 <script>
 $(document).ready(function(){
+	//페이지 제어 시작
+	const parentURL = new URL(document.referrer);
+	window.parent.postMessage({
+		actCd: "cont"
+	}, parentURL.origin);
+
 	let tryCount = 0;
 
 	// 빈값 체크
@@ -327,10 +333,18 @@ $(document).ready(function(){
 		}
 
 		if (answerCheck()) {
+			//정답
 			tryCount = 0;
 			$(".popup_con_bg.popup02, .popup02").fadeIn().delay(1000).fadeOut();
 			$(".btn_confirm").hide();
 			$(".btn_reset").show();
+
+			//페이지 제어 시작
+			const parentURL = new URL(document.referrer);
+			window.parent.postMessage({
+				actCd: "cont"
+			}, parentURL.origin);
+			
 		} else {
 			tryCount++;
 
@@ -341,6 +355,12 @@ $(document).ready(function(){
 				$(".popup_con_bg.popup04, .popup04").fadeIn().delay(1000).fadeOut();
 				$(".btn_confirm").hide();
 				$(".btn_reset").show();
+			
+				// 두 번째 오답  페이지 제어 종료
+				const parentURL = new URL(document.referrer);
+				window.parent.postMessage({
+					actCd: "cont"
+				}, parentURL.origin);
 			}
 		}
 	});

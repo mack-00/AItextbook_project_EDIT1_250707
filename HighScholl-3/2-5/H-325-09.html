@@ -267,6 +267,12 @@
 	</div>
 	<script>
 		$(document).ready(function(){
+			//페이지 제어 시작
+			const parentURL = new URL(document.referrer);
+			window.parent.postMessage({
+				actCd: "cont"
+			}, parentURL.origin);
+
 			let tryCount = 0;
 
 			// 오른쪽 게임 이미지
@@ -352,6 +358,12 @@
 				if (isCorrect) {
 					$(".popup_con_bg.popup02, .popup_con.popup02").fadeIn().delay(500).fadeOut();
 					toggleButtons($scope, true);
+
+				//페이지 제어 종료
+				window.parent.postMessage({
+					actCd: "comp"
+				}, parentURL.origin);
+
 				} else {
 					tryCount++;
 
@@ -361,6 +373,12 @@
 
 						// ✅ 두 번째 오답일 때 popup04 띄우기
 						$(".popup_con_bg.popup04, .popup_con.popup04").fadeIn().delay(500).fadeOut();
+
+
+						//페이지 제어 종료
+						window.parent.postMessage({
+							actCd: "comp"
+						}, parentURL.origin);
 					} else {
 						// 첫 번째 오답일 때만 popup01 띄우기
 						$(".popup_con_bg.popup01, .popup_con.popup01").fadeIn().delay(500).fadeOut();

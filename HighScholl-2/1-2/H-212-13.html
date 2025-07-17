@@ -204,6 +204,13 @@
 		</main>
 
 		<script>
+$(function () {
+			//페이지 제어 시작
+			const parentURL = new URL(document.referrer);
+			window.parent.postMessage({
+				actCd: "cont"
+			}, parentURL.origin);
+
 			
 			// H_212_13 슬라이드
 			H_212_13_slide = new Swiper ('.H_212_13_slide', {
@@ -252,7 +259,7 @@
 
 			// 제출하기 - 내용 있음
 			function btn_event02(){
-				child.sendFormData('frm1');
+				//child.sendFormData('frm1'); //sendFormData 없음 주석처리
 				//$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn").blur();
 				$(".H_212_13_con > .contents_con > .contents_con .popup_con_bg.popup02").fadeIn();
 				$(".H_212_13_con > .contents_con > .contents_con .popup_con.popup02").fadeIn();
@@ -262,6 +269,10 @@
 					$(".H_212_13_con > .contents_con > .contents_con .popup_con.popup02").fadeOut();
 				}, 1000);
 			}
+     //정답 여부
+			let correct1 = false;
+			let correct2=  false;
+			let correct3 = false;
 
 			// 정답
 			function btn_event03(){
@@ -274,7 +285,13 @@
 					$(".H_212_13_con > .contents_con > .contents_con .popup_con.popup04").fadeOut();
 					//$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn01").css("display","none");
 					//$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn02").css("display","inline-block");
-
+					if (correct1 && correct2 && correct3) {
+						//페이지 제어 종료
+						window.parent.postMessage({
+							actCd: "comp"
+						}, parentURL.origin);
+					}
+							
 				}, 1000);
 			}
 
@@ -286,6 +303,7 @@
 				}else if(text === "안녕하세요.") {
 					$(".result01").text("E53e643c131b8fe3c4ba6c58a355064c5d4c31f7");
 					btn_event03();
+					correct1 = true
 				}else {
 					btn_event02();
 				}
@@ -299,6 +317,7 @@
 				}else if(text === "안녕하세요?") {
 					$(".result02").text("2bd829f45a18b75bb0ae5371959feca3e9348aba");
 					btn_event03();
+					correct2 = true
 				}else {
 					btn_event02();
 				}
@@ -310,10 +329,12 @@
 					btn_event01();
 				}else if($("input[name=aidt_input1]:checked").val() == "예" && $("input[name=aidt_input2]:checked").val() == "아니오") {
 					btn_event03();
+					correct3 = true
 					$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn01").css("display","none");
 					$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn02").css("display","inline-block");
 				}else {
 					btn_event02();
+					
 				}
 			});
 
@@ -324,6 +345,8 @@
 				$(this).hide();
 				$(".a_btn01").show();
 			});
+
+		});
 		</script>
 
 	</div>

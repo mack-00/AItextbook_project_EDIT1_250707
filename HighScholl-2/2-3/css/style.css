@@ -931,7 +931,7 @@ button.after_hand::after {content:''; display:inline-block; width:72px; height:8
 .H_2_11_con > .contents_con > .contents_con > .info01_con {}
 .H_2_11_con > .contents_con > .contents_con > .info01_con > .text_con {}
 .H_2_11_con > .contents_con > .contents_con > .info01_con > .text_con span {font-size:32px; color:#191919; line-height:46px; letter-spacing:-0.768px;}
-.H_2_11_con .btn_con {text-align:right; position:relative; margin-top: min(2.08vw, 40px) !important}
+.H_2_11_con .btn_con {text-align:right; position:relative; margin-top: min(1.04vw, 20px) !important}
 
 .H_2_11_con .btn_con #btn1 {}
 .H_2_11_con .btn_con #btn1_1 {}

@@ -150,6 +150,12 @@
 
 		<script>
 			const child = new ClientAPI(); //본 코드는 데이터 전송 페이지마다 각각 별도로 들어있어야 하고, 내부 스크립트의 최상단에 위치해야함. 
+			
+			//페이지 제어 시작
+			const parentURL = new URL(document.referrer);
+			window.parent.postMessage({
+				actCd: "cont"
+			}, parentURL.origin);
 
 			//제출 여부 받아서 버튼 제어
 			child.receiveMessage((data)=>{
@@ -185,6 +191,11 @@
 					console.log("여기 오나?");
 				} else {
 					btn_event02(); // 모든 항목이 채워진 경우
+
+					//페이지 제어 종료
+					window.parent.postMessage({
+						actCd: "comp"
+					}, parentURL.origin);
 				}
 			}
 

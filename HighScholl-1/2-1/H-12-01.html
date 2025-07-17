@@ -251,10 +251,6 @@
 					//if (player) player.pause();
 					if (videoElement && !videoElement.paused) videoElement.pause();//videoElement가 존재하고 재생 중일 때만 pause 실행
 					btn_event02();
-					//페이지 제어 종료
-					window.parent.postMessage({
-					actCd : "comp"
-					} ,parentURL.origin);
 				}
 			}
 
@@ -282,6 +278,10 @@
 
 				// 실제 데이터 전송
 				child.sendFormData('frm1');
+					//페이지 제어 종료
+					window.parent.postMessage({
+					actCd : "comp"
+					} ,parentURL.origin);
 
 
 				setTimeout(function(){

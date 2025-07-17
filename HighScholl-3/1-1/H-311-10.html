@@ -276,11 +276,17 @@
 			boxes.forEach(box => box.classList.remove('on'));
 		});
 
-
 	</script>
 
 	<script>
 		$(document).ready(function () {
+			
+		//페이지 제어 시작
+		const parentURL = new URL(document.referrer);
+		window.parent.postMessage({
+			actCd: "cont"
+		}, parentURL.origin);
+
 			let tryCount = 0;
 
 			$("#btnCheck").on("click", function () {
@@ -333,6 +339,12 @@
 								const $item = $(this).closest(".sudoku-puzzle__item");
 
 								$("#fullpopup01").fadeIn();
+									// 두 번째 오답 
+					
+								//페이지 제어 종료
+								window.parent.postMessage({
+									actCd: "comp"
+								}, parentURL.origin);
 
 							});
 
@@ -346,11 +358,18 @@
 							$(".popup_con_bg.popup02, .popup_con.popup02").fadeOut();
 						}, 1500);
 						tryCount++;
+						
 					}
 
 					// 정답
 				} else {
 					$(".popup_con_bg.popup04, .popup_con.popup04").fadeIn();
+					
+						//페이지 제어 종료
+						window.parent.postMessage({
+							actCd: "comp"
+						}, parentURL.origin);
+
 					setTimeout(function () {
 						$(".popup_con_bg.popup04, .popup_con.popup04").fadeOut();
 

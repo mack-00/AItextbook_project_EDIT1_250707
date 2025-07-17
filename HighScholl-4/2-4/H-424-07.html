@@ -290,6 +290,7 @@
 		</main>
 
 		<script>
+
 			// SDGs 항목 선택
 			$(document).on("click",".H_424_07_con > .contents_con > .contents_con .write_con > .contents_con > .list_con > .contents_con > ul > li .list_div > .img_con img",function(){
 				$(".H_424_07_con > .contents_con > .contents_con .write_con > .contents_con > .list_con > .contents_con > ul > li .list_div > .img_con img").each(function(){
@@ -304,6 +305,11 @@
 			});
 		
 			const child = new ClientAPI(); //본 코드는 데이터 전송 페이지마다 각각 별도로 들어있어야 하고, 내부 스크립트의 최상단에 위치해야함. 
+			//페이지 제어 시작
+			const parentURL = new URL(document.referrer);
+			window.parent.postMessage({
+				actCd: "cont"
+			}, parentURL.origin);
 
 			//제출 여부 받아서 버튼 제어
 			child.receiveMessage((data)=>{
@@ -365,6 +371,11 @@
 
 				// 실제 데이터 전송
 				child.sendFormData('frm1');
+
+				//페이지 제어 종료
+				window.parent.postMessage({
+					actCd: "comp"
+				}, parentURL.origin);
 
 				setTimeout(function(){
 					$(".H_424_07_con .popup_con_bg.popup02").fadeOut();

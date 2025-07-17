@@ -113,6 +113,12 @@
 	</div>
 
 <script>
+$(function () {
+	//페이지 제어 시작
+	const parentURL = new URL(document.referrer);
+	window.parent.postMessage({
+		actCd: "cont"
+	}, parentURL.origin);
 
 const txtList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 const answer = "HELLO";
@@ -136,6 +142,7 @@ function btn_event02(){
 	$(".H_212_06_con > .contents_con .btn_con2 button").blur();
 	$(".H_212_06_con > .contents_con .popup_con_bg.popup02").fadeIn();
 	$(".H_212_06_con > .contents_con .popup_con.popup02").fadeIn();
+	
 
 	setTimeout(function(){
 		$(".H_212_06_con > .contents_con .popup_con_bg.popup02").fadeOut();
@@ -164,6 +171,11 @@ function btn_event04(){
 	$(".H_212_06_con > .contents_con .popup_con_bg.popup04").fadeIn();
 	$(".H_212_06_con > .contents_con .popup_con.popup04").fadeIn();
 
+		//페이지 제어 종료
+		window.parent.postMessage({
+			actCd: "comp"
+		}, parentURL.origin);
+
 	setTimeout(function(){
 		$(".H_212_06_con > .contents_con .popup_con_bg.popup04").fadeOut();
 		$(".H_212_06_con > .contents_con .popup_con.popup04").fadeOut();
@@ -187,6 +199,7 @@ function btn_event04(){
 			setTimeout(function(){
 				$(".pwd_wrap").addClass("on");
 			}, 1700);
+			
 		}else {
 			if(answerCnt === 1){
 				btn_event03();
@@ -215,7 +228,7 @@ function btn_event04(){
 });
 
 
-
+});
 
 </script>
 <script>

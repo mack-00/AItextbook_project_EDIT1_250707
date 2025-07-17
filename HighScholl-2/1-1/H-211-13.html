@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="utf-8">
 	<title>영상 압축의 원리</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=3, user-scalable=yes">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
 
@@ -20,14 +22,16 @@
 	<!-- 브라우저 번역(다국어 관련) -->
 	<link rel="stylesheet" href="./css/GoogleTranslate.css">
 	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
-	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script type="text/javascript"
+		src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
 
 	<script src="https://acv001.aiktbook.com/api/static/message-channel-iframe.js"></script>
 	<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
 </head>
+
 <body>
 	<div id="wrap">
-		
+
 		<main class="H_211_13_con">
 			<div class="contents_con">
 				<div class="title_con">
@@ -46,9 +50,9 @@
 				</div>
 
 				<div class="contents_con">
-					
+
 					<form id="frm1" onsubmit="return false">
-					<input type="hidden" name="aidt_pageTitle" value="영상 압축의 원리">
+						<input type="hidden" name="aidt_pageTitle" value="영상 압축의 원리">
 						<div class="write_con">
 							<div class="slide_con">
 								<div class="swiper-container H_211_13_slide">
@@ -67,30 +71,35 @@
 														<ul class="both_wrap main_both">
 															<li>
 																<div class="f_center tit">첫 번째 프레임</div>
-																<div class="img H_211_13_img01" role="img" aria-labelledby="나비가 있는 꽃밭 사진 위에 격자무늬가 표시되어 있으며, 변화된 부분의 격자 개수를 시각적으로 보여주고 있다."></div>
+																<div class="img H_211_13_img01" role="img"
+																	aria-labelledby="나비가 있는 꽃밭 사진 위에 격자무늬가 표시되어 있으며, 변화된 부분의 격자 개수를 시각적으로 보여주고 있다."></div>
 																<div class="txt">달라진 부분의 격자 개수</div>
 															</li>
 															<li>
 																<div class="f_center tit">두 번째 프레임</div>
-																<div class="img H_211_13_img02" role="img" aria-labelledby="같은 장면이지만 나비가 다른 위치로 이동해 있으며, 변화된 영역 두 곳이 빨간 사각형으로 표시되어 있다. "></div>
+																<div class="img H_211_13_img02" role="img"
+																	aria-labelledby="같은 장면이지만 나비가 다른 위치로 이동해 있으며, 변화된 영역 두 곳이 빨간 사각형으로 표시되어 있다. "></div>
 																<div class="txt">2개</div>
 															</li>
 															<li>
 																<div class="f_center tit">세 번째 프레임</div>
-																<div class="img H_211_13_img03" role="img" aria-labelledby="나비가 중앙으로 이동해 있는 장면이며, 격자 내 변화 영역이 분명히 드러나 있다. "></div>
+																<div class="img H_211_13_img03" role="img"
+																	aria-labelledby="나비가 중앙으로 이동해 있는 장면이며, 격자 내 변화 영역이 분명히 드러나 있다. "></div>
 																<div class="txt">
 																	<input type="text" class="input01" placeholder="입력" /> 개
 																</div>
 															</li>
 														</ul>
-														
-														
+
+
 													</div>
 												</div>
 											</div>
 											<div class="btn_con">
-												<button id="btn1" class="a_btn a_btn01" type="submit" aria-label="확인하기" tabindex="0">확인하기</button>
-												<button id="btn1_1" class="a_btn a_btn02" type="button" aria-label="다시 하기" style="display:none;" tabindex="0">다시 하기</button>
+												<button id="btn1" class="a_btn a_btn01" type="submit" aria-label="확인하기"
+													tabindex="0">확인하기</button>
+												<button id="btn1_1" class="a_btn a_btn02" type="button" aria-label="다시 하기" style="display:none;"
+													tabindex="0">다시 하기</button>
 											</div>
 										</div>
 										<div class="swiper-slide H_211_13_slide_div">
@@ -99,7 +108,8 @@
 													<div class="text_01 fw_600">그림은 영상의 연속된 프레임을 나열한 것이다. 영상 압축의 원리를 확인해 보자.</div>
 													<div class="text_01 num_title">
 														<span class="number_icon">2</span>
-														3개의 프레임 이미지를 모두 저장할 때와 달라진 격자 부분만 저장할 때 필요한 저장 공간의 크기를 계산하여 적어 보자. (단, 프레임의 격자 1개의 용량은 10bytes라고 가정한다.)
+														3개의 프레임 이미지를 모두 저장할 때와 달라진 격자 부분만 저장할 때 필요한 저장 공간의 크기를 계산하여 적어 보자. (단, 프레임의 격자 1개의 용량은
+														10bytes라고 가정한다.)
 													</div>
 
 													<div class="contents_con">
@@ -126,8 +136,10 @@
 												</div>
 											</div>
 											<div class="btn_con">
-												<button id="btn1_2" class="a_btn a_btn01" type="submit" aria-label="확인하기" tabindex="0">확인하기</button>
-												<button id="btn1_1_2" class="a_btn a_btn02" type="button" aria-label="다시 하기" style="display:none;" tabindex="0">다시 하기</button>
+												<button id="btn1_2" class="a_btn a_btn01" type="submit" aria-label="확인하기"
+													tabindex="0">확인하기</button>
+												<button id="btn1_1_2" class="a_btn a_btn02" type="button" aria-label="다시 하기"
+													style="display:none;" tabindex="0">다시 하기</button>
 											</div>
 										</div>
 									</div>
@@ -135,9 +147,11 @@
 
 								<div class="swiper-pagination H_211_13_slide_swiper-pagination"></div>
 
-								<div class="slide_btn prev H_211_13_slide_prev_btn swiper-button-prev" aria-label="슬라이드 이전 버튼" tabindex="0"></div>
-								<div class="slide_btn next H_211_13_slide_next_btn swiper-button-next" aria-label="슬라이드 다음 버튼" tabindex="0"></div>
-							</div>							
+								<div class="slide_btn prev H_211_13_slide_prev_btn swiper-button-prev" aria-label="슬라이드 이전 버튼"
+									tabindex="0"></div>
+								<div class="slide_btn next H_211_13_slide_next_btn swiper-button-next" aria-label="슬라이드 다음 버튼"
+									tabindex="0"></div>
+							</div>
 
 							<div class="popup_con_bg popup01"></div>
 							<div class="popup_con popup01" role="alert"></div>
@@ -157,104 +171,134 @@
 			</div>
 		</main>
 
-<script>
-	// Swiper 슬라이드 초기화
-	const H_211_13_slide = new Swiper('.H_211_13_slide', {
-		slidesPerView: 'auto',
-		effect: 'fade',
-		fadeEffect: { crossFade: true },
-		speed: 100,
-		loop: false,
-		pagination: {
-			el: ".H_211_13_slide_swiper-pagination",
-			clickable: true,
-		},
-		navigation: {
-			nextEl: '.H_211_13_slide_next_btn',
-			prevEl: '.H_211_13_slide_prev_btn',
-		},
-		observer: true,
-		observeParents: true,
-		simulateTouch: false,
-		allowTouchMove: false
-	});
-
-	// 정답 데이터: 슬라이드별로
-	const answerList = [
-		{ inputs: [".input01"], answers: ["6"] },
-		{ inputs: [".input02", ".input03"], answers: ["6", "330"] }
-	];
+		<script>
+			$(function () {
+				//페이지 제어 시작
+				const parentURL = new URL(document.referrer);
+				window.parent.postMessage({
+					actCd: "cont"
+				}, parentURL.origin);
 
 
+				// Swiper 슬라이드 초기화
+				const H_211_13_slide = new Swiper('.H_211_13_slide', {
+					slidesPerView: 'auto',
+					effect: 'fade',
+					fadeEffect: { crossFade: true },
+					speed: 100,
+					loop: false,
+					pagination: {
+						el: ".H_211_13_slide_swiper-pagination",
+						clickable: true,
+					},
+					navigation: {
+						nextEl: '.H_211_13_slide_next_btn',
+						prevEl: '.H_211_13_slide_prev_btn',
+					},
+					observer: true,
+					observeParents: true,
+					simulateTouch: false,
+					allowTouchMove: false
+				});
 
-	// 확인하기 버튼 클릭
-	$(".a_btn01").on("click", function (e) {
-		e.preventDefault(); // 새로고침 방지
+				// 정답 데이터: 슬라이드별로
+				const answerList = [
+					{ inputs: [".input01"], answers: ["6"] },
+					{ inputs: [".input02", ".input03"], answers: ["6", "330"] }
+				];
 
-		const $slide = $(this).closest(".swiper-slide");
-		const slideIndex = $slide.index();
-		const answerData = answerList[slideIndex];
 
-		let isEmpty = false;
-		let isCorrect = true;
-		let answerCnt1 = $slide.data('answerCnt1') || 0;
+				let isCorrect1 = false;
+				let isCorrect2 = false;
+				// 확인하기 버튼 클릭
+				$(".a_btn01").on("click", function (e) {
+					e.preventDefault(); // 새로고침 방지
 
-		answerData.inputs.forEach((selector, idx) => {
-			const val = $slide.find(selector).val().trim();
-			if (val === "") {
-				isEmpty = true;
-				isCorrect = false;
-			} else if (val !== answerData.answers[idx]) {
-				isCorrect = false;
-			}
-		});
+					let id = $(this).attr('id');
 
-        // 팝업 처리 함수
-        const showPopup = (popupNum) => {
-            $(".popup_con_bg, .popup_con").hide();
-            $(`.popup_con_bg.popup0${popupNum}, .popup_con.popup0${popupNum}`).fadeIn();
-            setTimeout(() => {
-                $(`.popup_con_bg.popup0${popupNum}, .popup_con.popup0${popupNum}`).fadeOut();
-            }, 1000);
-        };
 
-        // 로직 분기
-        if (isEmpty) {
-            showPopup(1); // 빈칸 있음
-        } else if (isCorrect) {
-            showPopup(4); // 정답
-            $slide.find(".a_btn01").hide();
-            $slide.find(".a_btn02").show();
-            $slide.data('answerCnt1', 0); // 정답 맞추면 시도횟수 초기화
-        } else {
-            if(answerCnt1 === 1) {
-                // 두 번째 시도에서 정답이 틀린 경우
-                showPopup(3); // 정답 보기 팝업
-                $slide.data('answerCnt1', 0); // 시도횟수 초기화
-                $slide.find(".a_btn01").hide();
-                $slide.find(".a_btn02").show();
+					const $slide = $(this).closest(".swiper-slide");
+					const slideIndex = $slide.index();
+					const answerData = answerList[slideIndex];
 
-																// 정답 자동 채우기
-																answerData.inputs.forEach((selector, idx) => {
-																				$slide.find(selector).val(answerData.answers[idx]);
-																});
-            }else {
-                showPopup(2); // 오답
-                answerCnt1++;
-                $slide.data('answerCnt1', answerCnt1); // 시도횟수 저장
-            }
-        }
-    });
+					let isEmpty = false;
+					let isCorrect = true;
+					let answerCnt1 = $slide.data('answerCnt1') || 0;
 
-    // 다시 하기 버튼
-    $(".a_btn02").on("click", function () {
-        const $slide = $(this).closest(".swiper-slide");
-        $slide.find("input[type='text']").val("");
-        $slide.find(".a_btn02").hide();
-        $slide.find(".a_btn01").show();
-        $slide.data('answerCnt1', 0); // 시도횟수 초기화
-    });
-</script>
+					answerData.inputs.forEach((selector, idx) => {
+						const val = $slide.find(selector).val().trim();
+						if (val === "") {
+							isEmpty = true;
+							isCorrect = false;
+						} else if (val !== answerData.answers[idx]) {
+							isCorrect = false;
+						}
+					});
+
+					// 팝업 처리 함수
+					const showPopup = (popupNum) => {
+						$(".popup_con_bg, .popup_con").hide();
+						$(`.popup_con_bg.popup0${popupNum}, .popup_con.popup0${popupNum}`).fadeIn();
+						setTimeout(() => {
+							$(`.popup_con_bg.popup0${popupNum}, .popup_con.popup0${popupNum}`).fadeOut();
+						}, 1000);
+					};
+
+					// 로직 분기
+					if (isEmpty) {
+						showPopup(1); // 빈칸 있음
+					} else if (isCorrect) {
+						showPopup(4); // 정답
+						$slide.find(".a_btn01").hide();
+						$slide.find(".a_btn02").show();
+						$slide.data('answerCnt1', 0); // 정답 맞추면 시도횟수 초기화
+						// 각각 정답 상태
+						if (id === 'btn1') {
+							isCorrect1 = true
+						} else if (id === 'btn1_2') {
+							isCorrect2 = true
+						}
+
+						// 둘 다 정답일 때 완료 처리
+						if (isCorrect1 && isCorrect2) {
+
+							//페이지 제어 종료
+							window.parent.postMessage({
+								actCd: "comp"
+							}, parentURL.origin);
+						}
+
+
+					} else {
+						if (answerCnt1 === 1) {
+							// 두 번째 시도에서 정답이 틀린 경우
+							showPopup(3); // 정답 보기 팝업
+							$slide.data('answerCnt1', 0); // 시도횟수 초기화
+							$slide.find(".a_btn01").hide();
+							$slide.find(".a_btn02").show();
+
+							// 정답 자동 채우기
+							answerData.inputs.forEach((selector, idx) => {
+								$slide.find(selector).val(answerData.answers[idx]);
+							});
+						} else {
+							showPopup(2); // 오답
+							answerCnt1++;
+							$slide.data('answerCnt1', answerCnt1); // 시도횟수 저장
+						}
+					}
+				});
+
+				// 다시 하기 버튼
+				$(".a_btn02").on("click", function () {
+					const $slide = $(this).closest(".swiper-slide");
+					$slide.find("input[type='text']").val("");
+					$slide.find(".a_btn02").hide();
+					$slide.find(".a_btn01").show();
+					$slide.data('answerCnt1', 0); // 시도횟수 초기화
+				});
+			});
+		</script>
 
 	</div>
 	<script>
@@ -262,4 +306,5 @@
 	</script>
 	<script type="text/javascript" src="./js/xapi.page.js"></script>
 </body>
+
 </html>
