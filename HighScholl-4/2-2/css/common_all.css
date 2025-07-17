@@ -144,7 +144,9 @@ video::cue {
 .H_422_06_con > .contents_con > .contents_con{padding:min(29px, 1.81vw) min(40px, 2.5vw) 0 min(40px, 2.5vw)}
 .H_422_06_con .write_con > .text_con > span{font-size:min(32px, 2vw);line-height:min(46px, 2.88vw)}
 .H_422_06_con .write_con > .input_con > .tab_con{margin:min(20px, 1.25vw) 0 0 0}
-.H_422_06_con .write_con > .input_con > .tab_con > table{border-top:min(5px, 0.31vw) solid #00A799}
+/* table border-spacing border-collapse 추가 202507 */
+.H_422_06_con .write_con > .input_con > .tab_con > table{border-top:min(5px, 0.31vw) solid #00A799; border-collapse: separate;border-spacing: 0;}
+/* .H_422_06_con .write_con > .input_con > .tab_con > table{border-top:min(5px, 0.31vw) solid #00A799} */
 .H_422_06_con .write_con > .input_con > .tab_con > table > thead > tr > td{height:min(60px, 3.75vw);border-bottom:min(6px, 0.38vw) solid #FFF;border-right:min(6px, 0.38vw) solid #FFF;padding:min(3px, 0.19vw) 0}
 .H_422_06_con .write_con > .input_con > .tab_con > table > thead > tr > td span{font-size:min(27px, 1.68vw)}
 .H_422_06_con .write_con > .input_con > .tab_con > table > thead > tr:first-child > td:last-child{border-right:0}

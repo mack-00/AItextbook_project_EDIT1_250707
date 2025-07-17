@@ -24,6 +24,11 @@ ul > li {display:block;}
 button {border:0; background-color:transparent; margin:0; padding:0;}
 h1, h2, h3, h4, h5, h6 {margin:0; padding:0;}
 
+/* table collapse, caption , td, th css 추가 202507 */
+table { border-collapse: collapse;} 
+caption { overflow: hidden; width: 0; height: 0; font-size: 0; line-height: 0; } 
+table td, table th { vertical-align: middle; padding: 0;} 
+
 span {display:inline-block;}
 
 img.fx{max-width:100%;}
@@ -847,7 +852,9 @@ caption {overflow:hidden; width:0; height:0; font-size:0; line-height:0;}
 .H_424_15_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .answer_con > .contents_con {min-height:184px; background-color:#EBEBEB; padding:22px 0; border-radius:20px; text-align:center;}
 .H_424_15_con > .contents_con > .contents_con > .blank_word_test_con > .contents_con > .answer_con > .contents_con span {display:inline-block; width:320px; border:3px solid #EF5E5E; background-color:#FFAEAE; margin:10px 8px; text-align:center; font-size:28px; color:#222; font-weight:600; line-height:44px; border-radius:10px; box-shadow:0px 4px 4px 0px rgba(0,0,0,0.25);}
 .H_424_15_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con {position:absolute; bottom:49px; right:50px; z-index:10;}
-.H_424_15_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn {font-size: 25px;color: #502b00;font-family: 'WAGURI';background-image:url("../img/btn_bg_01.png");display:inline-block; width:170px; height:68px; background-repeat:no-repeat; background-size:170px; background-position:center; cursor:pointer;}
+/* font size 수정 202507 */
+.H_424_15_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn {font-size: min(25px, 1.5vw);color: #502b00;font-family: 'WAGURI';background-image:url("../img/btn_bg_01.png");display:inline-block; width:170px; height:68px; background-repeat:no-repeat; background-size:170px; background-position:center; cursor:pointer;}
+/* .H_424_15_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn {font-size: 25px;color: #502b00;font-family: 'WAGURI';background-image:url("../img/btn_bg_01.png");display:inline-block; width:170px; height:68px; background-repeat:no-repeat; background-size:170px; background-position:center; cursor:pointer;} */
 .H_424_15_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn01 {}
 .H_424_15_con > .contents_con > .contents_con > .blank_word_test_con > .btn_con .a_btn02 {display:none;}
 .H_424_15_con > .contents_con > .contents_con .popup_con_bg {display:none; width:100%; height:100%; margin:0 auto; background-color:#000; background-color:rgba(0,0,0,0.73); position:absolute; top:0; left:0; right:0; z-index:20;}

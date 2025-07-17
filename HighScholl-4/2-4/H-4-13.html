@@ -20,8 +20,8 @@
 
 	<!-- 브라우저 번역(다국어 관련) -->
 	<link rel="stylesheet" href="./css/GoogleTranslate.css">
-	<script type="text/javascript" src="./js/GoogleTranslate.js"></script>
-	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
+	<script src="./js/GoogleTranslate.js"></script>
+	<script src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
 </head>
 <body>
 	<div id="wrap">
@@ -123,17 +123,13 @@
 										<td class="info_td info01_td" tabindex="0"><span>지속가능발전목표 달성에 적합한 주제를 선정하였는가?</span></td>
 										<td class="info_td info02_td">
 											<div class="radio_con">
-												<input type="hidden" name="aidt_examId" value="1">
-												<input type="hidden" name="aidt_exam" value="지속가능발전목표 달성에 적합한 주제를 선정하였는가?">
-												<input type="hidden" name="aidt_answer" value="">
-												<input type="hidden" name="aidt_mcqYn" value="N">
-												<input type="hidden" name="aidt_type" value="radio">
+											<!-- hidden inputs 생략 가능 -->
 											<ul>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input1" data-group-id="1" value="매우 잘함"><span class="check_icon icon01"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input1" data-group-id="1" value="잘함"><span class="check_icon icon02"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input1" data-group-id="1" value="보통"><span class="check_icon icon03"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input1" data-group-id="1" value="조금 미흡함"><span class="check_icon icon04"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input1" data-group-id="1" value="미흡함"><span class="check_icon icon05"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input1" value="매우 잘함"><span class="check_icon icon01"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input1" value="잘함"><span class="check_icon icon02"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input1" value="보통"><span class="check_icon icon03"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input1" value="조금 미흡함"><span class="check_icon icon04"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input1" value="미흡함"><span class="check_icon icon05"></span></label></li>
 											</ul>
 											</div>
 										</td>
@@ -143,17 +139,12 @@
 										<td class="info_td info01_td" tabindex="0"><span>문제 해결에 적합한 데이터를 수집하고 적절한 전처리를 하였는가?</span></td>
 										<td class="info_td info02_td">
 											<div class="radio_con">
-												<input type="hidden" name="aidt_examId" value="2">
-												<input type="hidden" name="aidt_exam" value="문제 해결에 적합한 데이터를 수집하고 적절한 전처리를 하였는가?">
-												<input type="hidden" name="aidt_answer" value="">
-												<input type="hidden" name="aidt_mcqYn" value="N">
-												<input type="hidden" name="aidt_type" value="radio">
 											<ul>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input2" data-group-id="2" value="매우 잘함"><span class="check_icon icon01"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input2" data-group-id="2" value="잘함"><span class="check_icon icon02"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input2" data-group-id="2" value="보통"><span class="check_icon icon03"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input2" data-group-id="2" value="조금 미흡함"><span class="check_icon icon04"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input2" data-group-id="2" value="미흡함"><span class="check_icon icon05"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input2" value="매우 잘함"><span class="check_icon icon01"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input2" value="잘함"><span class="check_icon icon02"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input2" value="보통"><span class="check_icon icon03"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input2" value="조금 미흡함"><span class="check_icon icon04"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input2" value="미흡함"><span class="check_icon icon05"></span></label></li>
 											</ul>
 											</div>
 										</td>
@@ -163,17 +154,12 @@
 										<td class="info_td info01_td" tabindex="0"><span>모둠원과 힘을 합쳐서 문제를 해결하였는가?</span></td>
 										<td class="info_td info02_td">
 											<div class="radio_con">
-												<input type="hidden" name="aidt_examId" value="3">
-												<input type="hidden" name="aidt_exam" value="모둠원과 힘을 합쳐서 문제를 해결하였는가?">
-												<input type="hidden" name="aidt_answer" value="">
-												<input type="hidden" name="aidt_mcqYn" value="N">
-												<input type="hidden" name="aidt_type" value="radio">
 											<ul>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input3" data-group-id="3" value="매우 잘함"><span class="check_icon icon01"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input3" data-group-id="3" value="잘함"><span class="check_icon icon02"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input3" data-group-id="3" value="보통"><span class="check_icon icon03"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input3" data-group-id="3" value="조금 미흡함"><span class="check_icon icon04"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input3" data-group-id="3" value="미흡함"><span class="check_icon icon05"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_1" value="매우 잘함"><span class="check_icon icon01"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_1" value="잘함"><span class="check_icon icon02"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_1" value="보통"><span class="check_icon icon03"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_1" value="조금 미흡함"><span class="check_icon icon04"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_1" value="미흡함"><span class="check_icon icon05"></span></label></li>
 											</ul>
 											</div>
 										</td>
@@ -182,17 +168,12 @@
 										<td class="info_td info01_td" tabindex="0"><span>제작한 인공지능 모델을 통해 문제를 정확하게 해결하였는가?</span></td>
 										<td class="info_td info02_td">
 											<div class="radio_con">
-												<input type="hidden" name="aidt_examId" value="4">
-												<input type="hidden" name="aidt_exam" value="제작한 인공지능 모델을 통해 문제를 정확하게 해결하였는가?">
-												<input type="hidden" name="aidt_answer" value="">
-												<input type="hidden" name="aidt_mcqYn" value="N">
-												<input type="hidden" name="aidt_type" value="radio">
 											<ul>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4" data-group-id="4" value="매우 잘함"><span class="check_icon icon01"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4" data-group-id="4" value="잘함"><span class="check_icon icon02"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4" data-group-id="4" value="보통"><span class="check_icon icon03"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4" data-group-id="4" value="조금 미흡함"><span class="check_icon icon04"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4" data-group-id="4" value="미흡함"><span class="check_icon icon05"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_2" value="매우 잘함"><span class="check_icon icon01"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_2" value="잘함"><span class="check_icon icon02"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_2" value="보통"><span class="check_icon icon03"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_2" value="조금 미흡함"><span class="check_icon icon04"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_2" value="미흡함"><span class="check_icon icon05"></span></label></li>
 											</ul>
 											</div>
 										</td>
@@ -201,17 +182,12 @@
 										<td class="info_td info01_td" tabindex="0"><span>프로젝트 전 과정을 통해 배우고 느낀 점을 잘 정리하였는가?</span></td>
 										<td class="info_td info02_td">
 											<div class="radio_con">
-												<input type="hidden" name="aidt_examId" value="5">
-												<input type="hidden" name="aidt_exam" value="프로젝트 전 과정을 통해 배우고 느낀 점을 잘 정리하였는가?">
-												<input type="hidden" name="aidt_answer" value="">
-												<input type="hidden" name="aidt_mcqYn" value="N">
-												<input type="hidden" name="aidt_type" value="radio">
 											<ul>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input5" data-group-id="5" value="매우 잘함"><span class="check_icon icon01"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input5" data-group-id="5" value="잘함"><span class="check_icon icon02"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input5" data-group-id="5" value="보통"><span class="check_icon icon03"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input5" data-group-id="5" value="조금 미흡함"><span class="check_icon icon04"></span></label></li>
-												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input5" data-group-id="5" value="미흡함"><span class="check_icon icon05"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_3" value="매우 잘함"><span class="check_icon icon01"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_3" value="잘함"><span class="check_icon icon02"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_3" value="보통"><span class="check_icon icon03"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_3" value="조금 미흡함"><span class="check_icon icon04"></span></label></li>
+												<li><label class="radio_label" tabindex="0"><input type="radio" name="aidt_input4_3" value="미흡함"><span class="check_icon icon05"></span></label></li>
 											</ul>
 											</div>
 										</td>
@@ -322,7 +298,7 @@
 		<script>
 			const contentId = 'H-4-13';
 		</script>
-		<script type="text/javascript" src="./js/xapi.page.js"></script>
+		<script src="./js/xapi.page.js"></script>
 
 	</div>
 </body>
