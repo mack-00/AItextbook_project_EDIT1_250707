@@ -290,10 +290,12 @@
 	<script>
  $(function() {	
 	//페이지 제어 시작
-	const parentURL = new URL(document.referrer);
-	window.parent.postMessage({
-		actCd: "cont"
-	}, parentURL.origin);
+    if (document.referrer) {
+        const parentURL = new URL(document.referrer);
+        window.parent.postMessage({
+            actCd: "cont"
+        }, parentURL.origin);
+    }
 	
 	let tryCount = 0; // 시도 횟수
 	let isCorrect = false; // 마지막 시도가 정답인지 여부
@@ -333,14 +335,10 @@
 		return;
 	}
 
-	tryCount++;
 
 	if (!allCorrect) {
 		isCorrect = false;
-
-		$(".popup_con_bg.popup01, .popup_con.popup01").fadeIn();
-		setTimeout(function () {
-		$(".popup_con_bg.popup01, .popup_con.popup01").fadeOut();
+	   tryCount++;
 
 		if (tryCount >= 2) {
 			reachedMaxTry = true;
@@ -354,18 +352,18 @@
 			setTimeout(function () {
 			$(".H_313_08_full_popup").fadeIn();
 			}, 500);
-		}
-		}, 1000);
+				$(".btn_confirm").hide();
+	    	$(".btn_rebtn").show();
+		 }else{
 
-		$(".btn_confirm").hide();
-		$(".btn_rebtn").show();
-		
-		//페이지 제어 종료
-		window.parent.postMessage({
-			actCd: "comp"
-		}, parentURL.origin);
-		return;
-	}
+				$(".popup_con_bg.popup01, .popup_con.popup01").fadeIn();
+				setTimeout(function () {
+				$(".popup_con_bg.popup01, .popup_con.popup01").fadeOut();
+				}, 1000);
+
+		 }
+
+	}else{
 
 	// 정답일 경우
 	isCorrect = true;
@@ -386,6 +384,8 @@
 
 	$(".btn_confirm").hide();
 	$(".btn_rebtn").show();
+
+	}
 	});
 
 	// ✅ 다시하기 버튼

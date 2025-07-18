@@ -775,23 +775,34 @@ video::cue {
 .H_324_18_con > .contents_con > .contents_con .title_sub span::before {width: min(13px, 0.81vw); height: min(13px, 0.81vw);}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info01 .text_con {margin-bottom: min(12px, 0.75vw);}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info01 .title_sub {margin-bottom: min(20px, 1.25vw);}
-.H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info01 .tab_con {width: min(984px, 61.5vw);}
-.H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info01 .tab_con > table > thead th {padding: min(7px, 0.44vw) 0;}
+.H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info01 .tab_con {
+ width: 100%;
+ font-size: min(28px, 1.75vw);
+}
+.H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info01 .tab_con > table > thead th {	font-size: min(24px, 1.5vw);;; padding: min(7px, 0.44vw) 0;}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info01 .tab_con > table > thead th:nth-child(1) {width: min(380px, 23.75vw); border-right: min(2px, 0.13vw) solid #fff;}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info01 .tab_con > table > thead th:nth-child(2) {width: min(600px, 37.5vw); border-left: min(2px, 0.13vw) solid #fff;}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info01 .tab_con > table > thead th span { font-size: min(24px, 1.5vw);}
-.H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info01 .tab_con > table > tbody td {padding: min(5px, 0.31vw) min(19px, 1.19vw); border-top: min(4px, 0.25vw) solid #fff;}
+.H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info01 .tab_con > table > tbody td {	font-size: min(24px, 1.5vw);padding: min(5px, 0.31vw) min(19px, 1.19vw); border-top: min(4px, 0.25vw) solid #fff;}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info01 .tab_con > table > tbody td:nth-child(odd) {border-right: min(2px, 0.13vw) solid #fff;}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info01 .tab_con > table > tbody td:nth-child(even) {border-left: min(2px, 0.13vw) solid #fff;}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info01 .tab_con > table > tbody td span{font-size: min(24px, 1.5vw); line-height: min(31.2px, 1.95vw);}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .text_con {margin-bottom: min(17px, 1.06vw);}
-.H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .title_sub {margin-bottom: min(55px, 3.44vw);}
-.H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .tab_con {width: min(944px, 59vw);}
-.H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .tab_con > table > thead th {padding: min(7px, 0.44vw) 0;}
+.H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .title_sub 
+{margin-bottom: min(20px, 1.25vw);}
+.H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .tab_con {
+	width: 100%;
+}
+.H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .tab_con > table > thead th 
+{padding: min(7px, 0.44vw) 0; font-size: min(24px, 1.5vw);
+}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .tab_con > table > thead th:nth-child(1) {width: min(200px, 12.50vw); border-right: min(2px, 0.13vw) solid #fff;}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .tab_con > table > thead th:nth-child(2)  {width: min(740px, 46.25vw); border-left: min(2px, 0.13vw) solid #fff;}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .tab_con > table > thead th span {font-size: min(24px, 1.5vw);}
-.H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .tab_con > table > tbody td {padding: min(12px, 0.75vw) min(20px, 1.25vw) min(11px, 0.69vw); border-top: min(4px, 0.25vw) solid #fff;}
+.H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .tab_con > table > tbody td {
+	padding: min(12px, 0.75vw) min(20px, 1.25vw) min(11px, 0.69vw); border-top: min(4px, 0.25vw) solid #fff;
+font-size: min(24px, 1.5vw);
+}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .tab_con > table > tbody td:nth-child(odd) {border-right: min(2px, 0.13vw) solid #fff;}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .tab_con > table > tbody td:nth-child(even) {border-left: min(2px, 0.13vw) solid #fff;}
 .H_324_18_con > .contents_con > .contents_con > .contents_con > .detail_con > .info02 .tab_con > table > tbody td span{font-size: min(24px, 1.5vw); line-height: min(31.2px, 1.95vw);}
