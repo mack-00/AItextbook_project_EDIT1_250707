@@ -156,10 +156,11 @@
 		<script>
 		const child = new ClientAPI();
 			//페이지 제어 시작
-			const parentURL = new URL(document.referrer);
+			if (document.referrer) { 
+const parentURL = new URL(document.referrer);
 			window.parent.postMessage({
 				actCd: "cont"
-			}, parentURL.origin);
+			}, parentURL.origin); }
 
 
 		// 제출 여부 받아서 버튼 제어 (수정기능용 응답 대기)

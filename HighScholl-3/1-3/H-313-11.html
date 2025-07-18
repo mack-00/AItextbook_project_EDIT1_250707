@@ -286,7 +286,8 @@
 <script>
 $(document).ready(function(){
 	//페이지 제어 시작
-	const parentURL = new URL(document.referrer);
+	if (document.referrer) { 
+const parentURL = new URL(document.referrer);
 	window.parent.postMessage({
 		actCd: "cont"
 	}, parentURL.origin);
@@ -340,10 +341,11 @@ $(document).ready(function(){
 			$(".btn_reset").show();
 
 			//페이지 제어 시작
-			const parentURL = new URL(document.referrer);
+			if (document.referrer) { 
+const parentURL = new URL(document.referrer);
 			window.parent.postMessage({
 				actCd: "cont"
-			}, parentURL.origin);
+			}, parentURL.origin); }
 			
 		} else {
 			tryCount++;
@@ -357,7 +359,8 @@ $(document).ready(function(){
 				$(".btn_reset").show();
 			
 				// 두 번째 오답  페이지 제어 종료
-				const parentURL = new URL(document.referrer);
+				if (document.referrer) { 
+const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "cont"
 				}, parentURL.origin);

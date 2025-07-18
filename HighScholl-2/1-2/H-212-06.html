@@ -115,7 +115,8 @@
 <script>
 $(function () {
 	//페이지 제어 시작
-	const parentURL = new URL(document.referrer);
+	if (document.referrer) { 
+const parentURL = new URL(document.referrer);
 	window.parent.postMessage({
 		actCd: "cont"
 	}, parentURL.origin);
