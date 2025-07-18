@@ -195,10 +195,12 @@
 			const child = new ClientAPI();
 
 			//페이지 제어 시작
-			const parentURL = new URL(document.referrer);
-			window.parent.postMessage({
-			actCd : "cont"
-			} ,parentURL.origin);
+    if (document.referrer) {
+        const parentURL = new URL(document.referrer);
+        window.parent.postMessage({
+            actCd: "cont"
+        }, parentURL.origin);
+    }
 
 
 			// 제출 여부 받아서 버튼 제어
