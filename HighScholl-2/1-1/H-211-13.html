@@ -122,7 +122,7 @@
 																</div>
 															</div>
 															<div>
-																<div class="tit f_center">모든 격자를 저장할 때 필요한 저장 공간</div>
+																<div class="tit f_center">달라진 부분의 격자만 저장할 때 필요한 저장 공간</div>
 																<div class="con f_center">
 																	<div>
 																		10bytes × (25개 + 2개 + <input type="text" class="input02" placeholder="입력" />
@@ -174,10 +174,12 @@
 		<script>
 			$(function () {
 				//페이지 제어 시작
-				const parentURL = new URL(document.referrer);
-				window.parent.postMessage({
-					actCd: "cont"
-				}, parentURL.origin);
+		   if (document.referrer) {
+        const parentURL = new URL(document.referrer);
+        window.parent.postMessage({
+            actCd: "cont"
+        }, parentURL.origin);
+    }
 
 
 				// Swiper 슬라이드 초기화

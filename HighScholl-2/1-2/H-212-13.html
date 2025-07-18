@@ -204,14 +204,14 @@
 		</main>
 
 		<script>
-$(function () {
-			//페이지 제어 시작
-			const parentURL = new URL(document.referrer);
-			window.parent.postMessage({
-				actCd: "cont"
-			}, parentURL.origin);
-
-			
+  $(function () {
+				//페이지 제어 시작
+		   if (document.referrer) {
+        const parentURL = new URL(document.referrer);
+        window.parent.postMessage({
+            actCd: "cont"
+        }, parentURL.origin);
+    }
 			// H_212_13 슬라이드
 			H_212_13_slide = new Swiper ('.H_212_13_slide', {
 				slidesPerView: 'auto',
@@ -273,6 +273,8 @@ $(function () {
 			let correct1 = false;
 			let correct2=  false;
 			let correct3 = false;
+			// 시도 횟수
+	    let tryCount = 0;
 
 			// 정답
 			function btn_event03(){
@@ -292,6 +294,17 @@ $(function () {
 						}, parentURL.origin);
 					}
 							
+				}, 1000);
+			}
+
+			//두번째 오답
+			function btn_event04(){
+				$(".H_212_13_con > .contents_con > .contents_con .popup_con_bg.popup03").fadeIn();
+				$(".H_212_13_con > .contents_con > .contents_con .popup_con.popup03").fadeIn();
+
+				setTimeout(function(){
+					$(".H_212_13_con > .contents_con > .contents_con .popup_con_bg.popup03").fadeOut();
+					$(".H_212_13_con > .contents_con > .contents_con .popup_con.popup03").fadeOut();
 				}, 1000);
 			}
 
@@ -328,12 +341,28 @@ $(function () {
 				if($("input[type=radio]:checked").length < 2) {
 					btn_event01();
 				}else if($("input[name=aidt_input1]:checked").val() == "예" && $("input[name=aidt_input2]:checked").val() == "아니오") {
+	       tryCount = 0;
 					btn_event03();
 					correct3 = true
 					$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn01").css("display","none");
 					$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn02").css("display","inline-block");
 				}else {
+      	  tryCount++;
 					btn_event02();
+				   	//두 번째 오답 
+						if (tryCount >= 2) {
+				    	btn_event04();
+			  		$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn01").css("display","none");
+			   		$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn02").css("display","inline-block");
+						//정답 보기
+						$("input[name='aidt_input1'][value='예']").prop('checked', true);
+						$("input[name='aidt_input2'][value='아니오']").prop('checked', true);
+		
+							//페이지 제어 종료
+							window.parent.postMessage({
+								actCd: "comp"
+							}, parentURL.origin);
+						}
 					
 				}
 			});
@@ -344,6 +373,7 @@ $(function () {
 				$("input[type=radio]").prop("checked", false);
 				$(this).hide();
 				$(".a_btn01").show();
+				tryCount = 0;
 			});
 
 		});

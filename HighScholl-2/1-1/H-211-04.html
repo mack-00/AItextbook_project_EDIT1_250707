@@ -206,7 +206,7 @@
 										<tr>
 											<th class="title_td" scope="row">
 												<span>
-													<span class="color_text01" role="button" aria-expanded="false" aria-controls="computing-popup">압축률</span>
+													<button class="color_text01" role="button" aria-expanded="false" aria-controls="computing-popup">압축률</button>
 												</span>
 												<div class="popup_con text_popup_con" id="computing-popup" role="dialog" aria-modal="true">
 													<div class="contents_con">
@@ -305,13 +305,17 @@
 		</main>
 
 		<script>
-			// 압축률 텍스트 팝업 열기/닫기
-			$(document).on("click",".H_211_04_con > .contents_con > .contents_con > .popup_con > .contents_con > .tab_con > table > tbody > tr > td .color_text01",function(){
-				if( $(".H_211_04_con > .contents_con > .contents_con > .popup_con > .contents_con > .tab_con > table > tbody > tr > td > .popup_con").css("display") == "none" ){
-					$(".H_211_04_con > .contents_con > .contents_con > .popup_con > .contents_con > .tab_con > table > tbody > tr > td > .popup_con").show();
+			// 압축률 텍스트 팝업 열기/닫기 (토글)
+			$(document).on("click",".H_211_04_con > .contents_con > .contents_con > .popup_con .color_text01",function(){
+				if( $(".H_211_04_con  .text_popup_con").css("display") == "none" ){
+					$(".H_211_04_con .text_popup_con").show();
 				}else{
-					$(".H_211_04_con > .contents_con > .contents_con > .popup_con > .contents_con > .tab_con > table > tbody > tr > td > .popup_con").hide();
+					$(".H_211_04_con .text_popup_con").hide();
 				}
+			});
+			// 압축률 텍스트 팝업 닫기
+			$(document).on("click", ".text_popup_con", function () {					
+				$(".H_211_04_con .text_popup_con").hide();
 			});
 
 			// 압축률 팝업 버튼 열기/닫기
