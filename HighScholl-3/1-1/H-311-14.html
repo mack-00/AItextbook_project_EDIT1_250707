@@ -145,7 +145,7 @@ const parentURL = new URL(document.referrer);
 
 	window.parent.postMessage({
 		actCd : "cont"
-	} ,parentURL.origin);
+	} ,parentURL.origin)};
 
 
 	$(document).ready(function(){
@@ -181,9 +181,11 @@ const parentURL = new URL(document.referrer);
 				}, 1000);
 
 				//페이지 제어 종료
+				if (document.referrer) {
+					const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd : "comp"
-				} ,parentURL.origin);
+				} ,parentURL.origin)};
 
 			} else {
 				wrongCount++;
@@ -220,9 +222,11 @@ const parentURL = new URL(document.referrer);
 					$(".btn_reset").show();
 
 					//페이지 제어 종료
+    if (document.referrer) {
+					const parentURL = new URL(document.referrer);
 					window.parent.postMessage({
 						actCd : "comp"
-					} ,parentURL.origin);
+					} ,parentURL.origin)};
 				}
 			}
 		});

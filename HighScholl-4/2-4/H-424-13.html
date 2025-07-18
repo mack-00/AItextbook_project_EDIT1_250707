@@ -309,9 +309,12 @@ const parentURL = new URL(document.referrer);
 					$(".H_424_13_con > .contents_con > .contents_con > .info02_con .write_con .popup_con.popup03").fadeOut();
 				}, 1000);
 				//페이지 제어 종료
+  if (document.referrer) {
+const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "comp"
-				}, parentURL.origin);
+				}, parentURL.origin); 
+}
 			}		
 			
 			
@@ -329,9 +332,12 @@ const parentURL = new URL(document.referrer);
 					$(".btn_reset").show();
 					
 				//페이지 제어 종료
+  if (document.referrer) {
+const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "comp"
-				}, parentURL.origin);
+				}, parentURL.origin); 
+}
 
 			}
 		 $(".btn_reset").on("click", function(){					

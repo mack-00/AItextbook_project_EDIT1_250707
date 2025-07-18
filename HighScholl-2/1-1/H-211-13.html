@@ -265,9 +265,11 @@ const parentURL = new URL(document.referrer);
 						if (isCorrect1 && isCorrect2) {
 
 							//페이지 제어 종료
+											if (document.referrer) {
+					const parentURL = new URL(document.referrer);
 							window.parent.postMessage({
 								actCd: "comp"
-							}, parentURL.origin);
+							}, parentURL.origin)};
 						}
 
 

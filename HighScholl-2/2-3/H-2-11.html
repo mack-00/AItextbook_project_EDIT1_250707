@@ -382,9 +382,12 @@ const parentURL = new URL(document.referrer);
 			child.sendFormData('frm1');
 
 			//페이지 제어 종료
+			
+	if (document.referrer) { 
+const parentURL = new URL(document.referrer);
 			window.parent.postMessage({
 				actCd: "comp"
-			}, parentURL.origin);
+			}, parentURL.origin)};
 
 			$(".H_2_11_con .btn_con .a_btn").blur();
 			$(".H_2_11_con .popup_con_bg.popup02").fadeIn();

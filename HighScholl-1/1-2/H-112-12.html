@@ -142,7 +142,7 @@
 const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "cont"
-				}, parentURL.origin);
+				}, parentURL.origin)};
 
 
 
@@ -173,9 +173,11 @@ const parentURL = new URL(document.referrer);
 					$("#btn1_1").show();
 					child.sendFormData('frm1');
 						//페이지 제어 종료
+												if (document.referrer) {
+					const parentURL = new URL(document.referrer);
 						window.parent.postMessage({
 							actCd: "comp"
-						}, parentURL.origin);
+						}, parentURL.origin)};
 				}
 			}
 

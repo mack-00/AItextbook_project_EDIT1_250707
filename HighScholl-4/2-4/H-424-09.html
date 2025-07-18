@@ -272,9 +272,12 @@ const parentURL = new URL(document.referrer);
 				}, 1000);
 
 				//페이지 제어 종료
+  if (document.referrer) {
+const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "comp"
-				}, parentURL.origin);
+				}, parentURL.origin); 
+}
 				
 			}
 
@@ -292,9 +295,12 @@ const parentURL = new URL(document.referrer);
 					$(".btn_reset").show();
 					
 				//페이지 제어 종료
+  if (document.referrer) {
+const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "comp"
-				}, parentURL.origin);
+				}, parentURL.origin); 
+}
 
 			}
 

@@ -106,7 +106,7 @@
 const parentURL = new URL(document.referrer);
 		window.parent.postMessage({
 			actCd: "cont"
-		}, parentURL.origin);
+		}, parentURL.origin)};
 
 	//제출 여부 받아서 버튼 제어
 	child.receiveMessage((data)=>{
@@ -169,9 +169,11 @@ const parentURL = new URL(document.referrer);
 		child.sendFormData('frm1');
 
 			//페이지 제어 종료
+	if (document.referrer) { 
+const parentURL = new URL(document.referrer);
 			window.parent.postMessage({
 				actCd: "comp"
-			}, parentURL.origin);
+			}, parentURL.origin)};
 
 		setTimeout(function(){
 			$(".H_2_10_con .popup_con_bg.popup02").fadeOut();

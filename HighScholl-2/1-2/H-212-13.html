@@ -289,9 +289,11 @@ const parentURL = new URL(document.referrer);
 					//$(".H_212_13_con > .contents_con > .contents_con .btn_con .a_btn02").css("display","inline-block");
 					if (correct1 && correct2 && correct3) {
 						//페이지 제어 종료
+					if (document.referrer) {
+					const parentURL = new URL(document.referrer);
 						window.parent.postMessage({
 							actCd: "comp"
-						}, parentURL.origin);
+						}, parentURL.origin)};
 					}
 							
 				}, 1000);
@@ -359,9 +361,11 @@ const parentURL = new URL(document.referrer);
 						$("input[name='aidt_input2'][value='아니오']").prop('checked', true);
 		
 							//페이지 제어 종료
+											if (document.referrer) {
+					const parentURL = new URL(document.referrer);
 							window.parent.postMessage({
 								actCd: "comp"
-							}, parentURL.origin);
+							}, parentURL.origin)};
 						}
 					
 				}

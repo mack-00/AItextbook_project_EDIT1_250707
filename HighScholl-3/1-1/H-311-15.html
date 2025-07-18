@@ -292,7 +292,7 @@
 const parentURL = new URL(document.referrer);
 	window.parent.postMessage({
 		actCd: "cont"
-	}, parentURL.origin);
+	}, parentURL.origin)};
 
 		let attemptCount = 0; // 오답 횟수 카운트
 
@@ -328,9 +328,12 @@ const parentURL = new URL(document.referrer);
 				$(".btn_reset").show();
 			
 				//페이지 제어 종료
+  if (document.referrer) {
+const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "comp"
-				}, parentURL.origin);
+				}, parentURL.origin); 
+}
 			} else {
 				attemptCount++;
 
@@ -362,9 +365,12 @@ const parentURL = new URL(document.referrer);
 					$(".sub_both .btn_reset").show();
 					
 					//페이지 제어 종료
+    if (document.referrer) {
+const parentURL = new URL(document.referrer);
 					window.parent.postMessage({
 						actCd: "comp"
 					}, parentURL.origin);
+}
 				}
 			}
 		});

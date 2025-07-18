@@ -119,7 +119,7 @@ $(function () {
 const parentURL = new URL(document.referrer);
 	window.parent.postMessage({
 		actCd: "cont"
-	}, parentURL.origin);
+	}, parentURL.origin)};
 
 const txtList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 const answer = "HELLO";
@@ -173,9 +173,11 @@ function btn_event04(){
 	$(".H_212_06_con > .contents_con .popup_con.popup04").fadeIn();
 
 		//페이지 제어 종료
+						if (document.referrer) {
+					const parentURL = new URL(document.referrer);
 		window.parent.postMessage({
 			actCd: "comp"
-		}, parentURL.origin);
+		}, parentURL.origin)};
 
 	setTimeout(function(){
 		$(".H_212_06_con > .contents_con .popup_con_bg.popup04").fadeOut();

@@ -261,7 +261,7 @@ $(document).ready(function(){
 const parentURL = new URL(document.referrer);
 	window.parent.postMessage({
 		actCd: "cont"
-	}, parentURL.origin);
+	}, parentURL.origin)};
 
 	let try_count = 0;
 
@@ -323,9 +323,12 @@ const parentURL = new URL(document.referrer);
 			$("#btn1_1").show();
 
 				//페이지 제어 종료
+  if (document.referrer) {
+const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "comp"
-				}, parentURL.origin);
+				}, parentURL.origin); 
+}
 		} else {
 			// 오답일 때
 			try_count++;
@@ -353,9 +356,12 @@ const parentURL = new URL(document.referrer);
 				$("#btn1_1").show();
 				
 				//페이지 제어 종료
+  if (document.referrer) {
+const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "comp"
-				}, parentURL.origin);
+				}, parentURL.origin); 
+}
 			}
 		}
 	});

@@ -271,9 +271,12 @@ const parentURL = new URL(document.referrer);
 				$("#btn1_1").show();
 
 				//페이지 제어 종료
+  if (document.referrer) {
+const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "comp"
-				}, parentURL.origin);
+				}, parentURL.origin); 
+}
 	
 			}
 

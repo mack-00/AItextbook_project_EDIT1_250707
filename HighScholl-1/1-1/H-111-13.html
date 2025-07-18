@@ -126,7 +126,7 @@
 const parentURL = new URL(document.referrer);
 		window.parent.postMessage({
 		actCd : "cont"
-		} ,parentURL.origin);
+		} ,parentURL.origin);}
 
 
 		// 제출 여부 받아서 버튼 제어 (수정기능용 응답 대기)
@@ -167,9 +167,12 @@ const parentURL = new URL(document.referrer);
 				child.sendFormData('frm1'); // 실제 전송
 				
 				//페이지 제어 종료
-				window.parent.postMessage({
-					actCd : "comp"
-				} ,parentURL.origin);
+						if (document.referrer) { 
+		     		const parentURL = new URL(document.referrer);
+								window.parent.postMessage({
+									actCd : "comp"
+						} ,parentURL.origin);
+				}
 			}
 		}
 

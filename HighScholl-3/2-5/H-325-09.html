@@ -361,9 +361,12 @@ const parentURL = new URL(document.referrer);
 					toggleButtons($scope, true);
 
 				//페이지 제어 종료
+  if (document.referrer) {
+const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "comp"
-				}, parentURL.origin);
+				}, parentURL.origin); 
+}
 
 				} else {
 					tryCount++;
@@ -377,9 +380,11 @@ const parentURL = new URL(document.referrer);
 
 
 						//페이지 제어 종료
+							if (document.referrer) { 
+const parentURL = new URL(document.referrer);
 						window.parent.postMessage({
 							actCd: "comp"
-						}, parentURL.origin);
+						}, parentURL.origin)};
 					} else {
 						// 첫 번째 오답일 때만 popup01 띄우기
 						$(".popup_con_bg.popup01, .popup_con.popup01").fadeIn().delay(500).fadeOut();

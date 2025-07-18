@@ -280,9 +280,12 @@ const parentURL = new URL(document.referrer);
 					btn_event02(); // 모든 항목이 채워진 경우
 
 					//페이지 제어 종료
+    if (document.referrer) {
+const parentURL = new URL(document.referrer);
 					window.parent.postMessage({
 						actCd: "comp"
 					}, parentURL.origin);
+}
 				}
 				
 			}

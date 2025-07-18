@@ -161,7 +161,7 @@ if (document.referrer) {
 const parentURL = new URL(document.referrer);
 window.parent.postMessage({
 	actCd: "cont"
-}, parentURL.origin);
+}, parentURL.origin)};
 
 
 	let tryCount = 0;
@@ -196,9 +196,12 @@ window.parent.postMessage({
 			$(".popup_con_bg.popup02, .popup02").fadeIn();
 
 				//페이지 제어 종료
+  if (document.referrer) {
+const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "comp"
-				}, parentURL.origin);
+				}, parentURL.origin); 
+}
 
 			setTimeout(function () {
 				// 정답 팝업 숨기기
@@ -227,9 +230,12 @@ window.parent.postMessage({
 					labels[1].checked=true; // [250602] : 수정
 
 					//페이지 제어 종료
+    if (document.referrer) {
+const parentURL = new URL(document.referrer);
 					window.parent.postMessage({
 						actCd: "comp"
 					}, parentURL.origin);
+}
 				}
 			}, 1000);
 		}

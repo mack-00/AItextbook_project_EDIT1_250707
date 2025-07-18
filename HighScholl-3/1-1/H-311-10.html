@@ -286,7 +286,7 @@
 const parentURL = new URL(document.referrer);
 		window.parent.postMessage({
 			actCd: "cont"
-		}, parentURL.origin);
+		}, parentURL.origin)};
 
 			let tryCount = 0;
 
@@ -343,9 +343,12 @@ const parentURL = new URL(document.referrer);
 									// 두 번째 오답 
 					
 								//페이지 제어 종료
+								
+	             if (document.referrer) { 
+              const parentURL = new URL(document.referrer);
 								window.parent.postMessage({
 									actCd: "comp"
-								}, parentURL.origin);
+								}, parentURL.origin)};
 
 							});
 
@@ -367,9 +370,12 @@ const parentURL = new URL(document.referrer);
 					$(".popup_con_bg.popup04, .popup_con.popup04").fadeIn();
 					
 						//페이지 제어 종료
+						
+	if (document.referrer) { 
+const parentURL = new URL(document.referrer);
 						window.parent.postMessage({
 							actCd: "comp"
-						}, parentURL.origin);
+						}, parentURL.origin)};
 
 					setTimeout(function () {
 						$(".popup_con_bg.popup04, .popup_con.popup04").fadeOut();

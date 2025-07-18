@@ -266,7 +266,7 @@
 const parentURL = new URL(document.referrer);
 	window.parent.postMessage({
 		actCd: "cont"
-	}, parentURL.origin);
+	}, parentURL.origin)};
 
 		let tryCount = 0;
 
@@ -340,9 +340,12 @@ const parentURL = new URL(document.referrer);
 				updateButtons();
 			
 				//페이지 제어 종료
+  if (document.referrer) {
+const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "comp"
-				}, parentURL.origin);
+				}, parentURL.origin); 
+}
 				
 				/* 정답일경우 다시하기 버튼 show 202507 */
 				$confirmBtn.hide();
@@ -363,9 +366,12 @@ const parentURL = new URL(document.referrer);
 				// 두 번째 오답 이상
 				
 				//페이지 제어 종료
+  if (document.referrer) {
+const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "comp"
-				}, parentURL.origin);
+				}, parentURL.origin); 
+}
 			}
 			updateButtons();
 		});

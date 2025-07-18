@@ -203,7 +203,7 @@ $(document).ready(function(){
 const parentURL = new URL(document.referrer);
 	window.parent.postMessage({
 		actCd: "cont"
-	}, parentURL.origin);
+	}, parentURL.origin)};
 	
 	let tryCount = 0;
 
@@ -257,9 +257,11 @@ const parentURL = new URL(document.referrer);
 			tryCount = 0;
 		
 			//페이지 제어 종료
+				if (document.referrer) { 
+const parentURL = new URL(document.referrer);
 			window.parent.postMessage({
 				actCd: "comp"
-			}, parentURL.origin);
+			}, parentURL.origin)};
 		} else {
 			tryCount++;
 
@@ -272,9 +274,12 @@ const parentURL = new URL(document.referrer);
 				$(".btn_reset").show();
 
 				// 두 번째 오답  페이지 제어 종료
+  if (document.referrer) {
+const parentURL = new URL(document.referrer);
 				window.parent.postMessage({
 					actCd: "comp"
-				}, parentURL.origin);
+				}, parentURL.origin); 
+}
 			}
 		}
 	});

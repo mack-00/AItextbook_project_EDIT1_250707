@@ -345,9 +345,12 @@ const parentURL = new URL(document.referrer);
 			popupShownOnce = true; // ✅ 정답창 떠 있음 상태 기록
 			
 			//// 두 번째 오답  페이지 제어 종료
+			
+	if (document.referrer) { 
+const parentURL = new URL(document.referrer);
 			window.parent.postMessage({
 				actCd: "comp"
-			}, parentURL.origin);
+			}, parentURL.origin)};
 
 			setTimeout(function () {
 			$(".H_313_08_full_popup").fadeIn();
@@ -378,9 +381,12 @@ const parentURL = new URL(document.referrer);
 	}, 1000);
 
 		//페이지 제어 종료
+		
+	if (document.referrer) { 
+const parentURL = new URL(document.referrer);
 		window.parent.postMessage({
 			actCd: "comp"
-		}, parentURL.origin);
+		}, parentURL.origin)};
 
 	$(".btn_confirm").hide();
 	$(".btn_rebtn").show();

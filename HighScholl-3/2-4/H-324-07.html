@@ -236,7 +236,7 @@
 const parentURL = new URL(document.referrer);
 		window.parent.postMessage({
 			actCd: "cont"
-		}, parentURL.origin);
+		}, parentURL.origin)};
 		
 			let tryCount = 0;
 			const checkButton = document.querySelector('.btn_confirm');
@@ -294,9 +294,11 @@ const parentURL = new URL(document.referrer);
 					}, 1000);
 
 						//페이지 제어 종료
+							if (document.referrer) { 
+const parentURL = new URL(document.referrer);
 						window.parent.postMessage({
 							actCd: "comp"
-						}, parentURL.origin);
+						}, parentURL.origin)};
 				} else {
 					// 오답일 때
 					tryCount++;
@@ -324,9 +326,11 @@ const parentURL = new URL(document.referrer);
 						
 
 						//페이지 제어 종료
+							if (document.referrer) { 
+const parentURL = new URL(document.referrer);
 						window.parent.postMessage({
 							actCd: "comp"
-						}, parentURL.origin);
+						}, parentURL.origin)};
 
 						$(".btn_confirm").hide();
 						if ($(".btn_retry").length === 0) {
