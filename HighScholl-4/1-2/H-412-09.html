@@ -173,10 +173,13 @@
 				const $btn = $(this);
 				const $btnCon = $btn.closest(".btn_con");
 				const $exampleBox = $btnCon.siblings(".exam_con");
+				const $textArea= $('.textarea01');
 
 				$exampleBox.removeClass("on").hide();
 				$btn.hide();
 				$btnCon.find(".a_btn01").show();
+				$textArea.val('');
+
 			});
 		});
 	</script>

@@ -132,7 +132,7 @@ span.link_tooltip{cursor:pointer;font-size:inherit;font-weight:700;color:#4296FF
 /*H-4-01*/
 .H_4_01_con {width:100%; max-width:1600px; margin:0 auto; background-image:url("../img/H_4_01_con_bg.png"); background-repeat:no-repeat; background-size:1600px; background-position:center;}
 .H_4_01_con > .contents_con {height:900px; padding:60px 56px 0 50px;}
-.H_4_01_con > .contents_con > .title_con {width:627px; height:199px; background-image:url("../img/H_4_01_title_text.png"); background-repeat:no-repeat; background-size:627px; background-position:center; margin:0 0 69px 0; text-indent:-999px; font-size:0;}
+.H_4_01_con > .contents_con > .title_con {width:auto; height:199px; background-image:url("../img/H_4_01_title_text.png"); background-repeat:no-repeat; background-size:627px; background-position:center; margin:0 0 69px 0; text-indent:-999px; font-size:0;}
 .H_4_01_con > .contents_con > .contents_con {position:relative; top:0; left:0;}
 .H_4_01_con > .contents_con > .contents_con:after {content:""; display:block; clear:both;}
 .H_4_01_con > .contents_con > .contents_con > .nav {float:left; padding:190px 0 0 0;}
