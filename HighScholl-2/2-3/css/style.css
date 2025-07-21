@@ -739,7 +739,7 @@ button.after_hand::after {content:''; display:inline-block; width:72px; height:8
 .H_22_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > .info02_td .radio_con {display:inline-block; text-align:left;}
 .H_22_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > .info02_td .radio_con > ul {}
 .H_22_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > .info02_td .radio_con > ul > li {float:left; margin:0 0 0 22px;}
-.H_22_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > .info02_td .radio_con > ul > li > .radio_label {display:inline-block; cursor:pointer;}
+.H_22_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > .info02_td .radio_con > ul > li > .radio_label {display:inline-block !important; cursor:pointer;}
 .H_22_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > .info02_td .radio_con > ul > li > .radio_label input[type=radio] {display:none;}
 .H_22_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > .info02_td .radio_con > ul > li > .radio_label .check_icon { display:inline-block; width:45px; height:45px; background-repeat:no-repeat; background-size:45px; background-position:center;}
 .H_22_03_con > .contents_con > .contents_con .write_con > .input_con > .tab_con > table > tbody > tr > .info02_td .radio_con > ul > li > .radio_label .check_icon.icon01 {background-image:url("../img/H_22_03_write_radio_icon01_off.png");}
@@ -972,7 +972,7 @@ button.after_hand::after {content:''; display:inline-block; width:72px; height:8
 .H_2_11_con .info02_td .radio_con {display:inline-block; text-align:left; vertical-align: middle;}
 .H_2_11_con .info02_td .radio_con > ul:after {display:none;}
 .H_2_11_con .info02_td .radio_con > ul > li {float:left; margin:0 0 0 12px;}
-.H_2_11_con .info02_td .radio_con > ul > li > .radio_label {display:inline-block; cursor:pointer;}
+.H_2_11_con .info02_td .radio_con > ul > li > .radio_label {display:inline-block !important; cursor:pointer;}
 .H_2_11_con .info02_td .radio_con > ul > li > .radio_label input[type=radio] {display:none;}
 .H_2_11_con .info02_td .radio_con > ul > li > .radio_label .check_icon { display:inline-block; width:45px; height:45px; background-repeat:no-repeat; background-size:45px; background-position:center;}
 .H_2_11_con .info02_td .radio_con > ul > li > .radio_label .check_icon.icon01 {background-image:url("../img/H_2_11_write_radio_icon01_off.png");}

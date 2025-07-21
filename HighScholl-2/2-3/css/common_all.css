@@ -563,7 +563,7 @@ button.after_hand::after {width:min(72px, 4.50vw); height:min(86px, 5.38vw);}
 .H_2_11_con .tab_con > table > tbody > tr > * {border-top-width:min(6px, 0.38vw);}
 .H_2_11_con .tab_con > table > tbody > tr > .info_td {padding:min(3px, 0.19vw) min(20px, 1.25vw); height:min(56px, 3.50vw); border-left-width:min(6px, 0.38vw);}
 .H_2_11_con .info02_td .radio_con > ul > li { margin:0 0 0 min(12px, 0.75vw);}
-.H_2_11_con .info02_td .radio_con > ul > li > .radio_label .check_icon { display:inline-block; width:min(45px, 2.81vw); height:min(45px, 2.81vw); background-size:min(45px, 2.81vw);}
+.H_2_11_con .info02_td .radio_con > ul > li > .radio_label .check_icon { display:inline-block !important; width:min(45px, 2.81vw); height:min(45px, 2.81vw); background-size:min(45px, 2.81vw);}
 
 
 /*H-2-12*/
