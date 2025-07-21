@@ -696,7 +696,7 @@ video::cue {
 .H_324_15_con > .contents_con > .title_con > .contents_con > .text_bg {width:min(270px, 16.88vw); height:min(100px, 6.25vw); background-size:min(270px, 16.88vw); padding:min(29px, 1.81vw) 0 0 min(79px, 4.94vw); left:max(-30px, -1.88vw);}
 .H_324_15_con > .contents_con > .title_con > .contents_con > .text_bg .text {font-size:min(40px, 2.5vw);}
 .H_324_15_con > .contents_con > .title_con > .contents_con > .text_bg .bg {width:min(30px, 1.88vw); height:min(20px, 1.25vw); background-size:min(30px, 1.88vw); bottom:max(-20px, -1.25vw);}
-.H_324_15_con > .contents_con > .title_con > .contents_con > .text_con {height:min(100px, 6.25vw); padding:min(11px, 0.69vw) 0 0 0;}
+.H_324_15_con > .contents_con > .title_con > .contents_con > .text_con {height:min(100px, 6.25vw); padding:0; display: flex; align-items: center;}
 .H_324_15_con > .contents_con > .title_con > .contents_con > .text_con h2 {margin:0 0 min(6px, 0.38vw) 0; font-size:min(24px, 1.5vw);}
 .H_324_15_con > .contents_con > .title_con > .contents_con > .text_con h1 {font-size:min(38px, 2.38vw); letter-spacing:max(-0.38px, -0.02vw);}
 .H_324_15_con > .contents_con > .contents_con {padding: min(29px, 1.81vw) min(40px, 2.5vw) 0;}

@@ -168,7 +168,7 @@
 								</div>
 
 								<div class="btn_con">
-									<button  class="a_btn btn_confirm" type="button" aria-label="확인하기" tabindex="0" onclick="javascript:btn_event();">확인하기</button>
+									<button  class="a_btn btn_confirm" type="button" aria-label="확인하기" tabindex="0" onclick="btn_event()">확인하기</button>
 						     	<button type="button" class="a_btn btn_reset" aria-label="다시 하기" style="display: none;">다시 하기</button>
 								</div>
 							</div>
@@ -191,7 +191,6 @@
 
 		<script>
 
-  $(function() {
 
 			//페이지 제어 시작
 			if (document.referrer) { 
@@ -311,7 +310,6 @@ const parentURL = new URL(document.referrer);
 			$(".btn_reset").hide();
 		});
 
-	});
 		</script>
 
 		<script>
