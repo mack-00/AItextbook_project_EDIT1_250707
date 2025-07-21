@@ -7,15 +7,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="format-detection" content="telephone=no">
 		<script src="https://tbacdn.kosac.re.kr/js/aidtScript.js"></script>
-		<link rel="stylesheet" href="./css/jquery-ui.min.css?v=20250721">
-		<link rel="stylesheet" href="./css/fonts.css?v=20250721">
-		<link rel="stylesheet" href="./css/style.css?v=20250721">
-		<link rel="stylesheet" href="./css/common_all.css?v=20250721">
+		<link rel="stylesheet" href="./css/jquery-ui.min.css">
+		<link rel="stylesheet" href="./css/fonts.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/common_all.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="./js/jquery-ui.min.js"></script>
 
 		<!-- 브라우저 번역(다국어 관련) -->
-		<link rel="stylesheet" href="./css/GoogleTranslate.css?v=20250721">
+		<link rel="stylesheet" href="./css/GoogleTranslate.css">
 		<script  src="./js/GoogleTranslate.js"></script>
 		<script  src="https://translate.google.com/translate_a/element.js?cb=GoogleTranslateInitCallback"></script>
 		<script>
@@ -69,10 +69,13 @@
 				const placeItemsInCorrectPositions = () => {
 					returnItemsToContainer();
 					draggables.forEach(item => {
-						const correctZone = Array.from(dropZones).find(zone => zone.dataset.position === item.dataset.answer);
+						const correctZone = Array.from(dropZones).find(zone => zone.dataset.position === item.dataset.answer );
 						if (correctZone) {
 							correctZone.appendChild(item);
 							correctZone.classList.add('occupied');
+
+							console.log('ddd');
+							
 						}
 					});
 				};
@@ -320,11 +323,16 @@
 				// 정답 확인 이벤트 처리
 				const checkButton = document.querySelector('.check-btn');
 				checkButton.addEventListener('click', () => {
+					
 					dropZones.forEach(zone => {
 						const answer = zone.querySelector('.draggable');
 						if (answer) {
 							adapt_answer++; // 답변 수
-							const isCorrect = answer.dataset.answer === zone.dataset.position;
+							const isCorrect = answer.dataset.answer === zone.dataset.position  || zone.dataset.position === answer.dataset.answer2 ;
+						
+							
+
+					console.log('asdfasdf');
 							if (isCorrect) correct_answer++; // 정답 수
 						}
 					});
@@ -493,7 +501,7 @@
 															<span class="sr-only">답변을 이 곳에 놓으세요</span>
 														</div>
 														<div class="text_con" tabindex="0">
-															<span> (은)는 정렬된 데이터에서 특정 값을 효율적으로 찾기 위한 알고리즘이다. </span>
+															<span> (은)는 정렬된 데이터에서 특정값을 효율적으로 찾기 위한 알고리즘이다. </span>
 														</div>
 													</div>
 												</div>
@@ -519,8 +527,8 @@
 										<span> 빈칸에 알맞은 말을 옮겨 보자. </span>
 									</div>
 									<div class="contents_con options-container" role="region" aria-label="사용 가능한 답변들">
-										<span class="draggable" draggable="true" role="button" data-answer="1" tabindex="0"> 순차 탐색 </span>
-										<span class="draggable" draggable="true" role="button" data-answer="3" tabindex="0"> 순차 탐색 </span>
+										<span class="draggable" draggable="true" role="button" data-answer="1"  data-answer2="3"  tabindex="0"> 순차 탐색 </span>
+										<span class="draggable" draggable="true" role="button" data-answer="3" data-answer2="1" tabindex="0"> 순차 탐색 </span>
 										<span class="draggable" draggable="true" role="button" data-answer="2" tabindex="0"> 이진 탐색 </span>
 									</div>
 								</div>
